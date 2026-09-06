@@ -1,0 +1,60 @@
+:root{
+/* ---------- Navy — primary / ink / dark bands ---------- */
+--mbs-navy:#273F63;
+--mbs-navy-mid:#2F4A72;
+--mbs-navy-900:#1E3150;
+
+/* ---------- Gold — accent, CTA, labels, rules ---------- */
+--mbs-gold:#B59D54;
+--mbs-gold-light:#C7AF66;
+--mbs-gold-dark:#9A8544;
+--mbs-gold-dim:rgba(181,157,84,.07);
+--mbs-gold-soft:rgba(181,157,84,.12);
+--mbs-gold-border:rgba(181,157,84,.18);
+--mbs-gold-tile:rgba(181,157,84,.15);
+--mbs-gold-tile-border:rgba(181,157,84,.25);
+
+/* ---------- Neutrals ---------- */
+--mbs-white:#FFFFFF;
+--mbs-off:#F5F6F8;
+--mbs-gray:#5E6D80;
+--mbs-gray-light:#8C97A5;
+--mbs-border:#E2E5EA;
+
+/* ---------- Status ---------- */
+--mbs-ok:#3E7D5A;      --mbs-ok-bg:#E7F1EB;
+--mbs-warn:#9A8544;    --mbs-warn-bg:#F4EFDD;
+--mbs-info:#273F63;    --mbs-info-bg:#E9EDF3;
+--mbs-danger:#A6432F;  --mbs-danger-bg:#F5E4DF;
+
+/* ---------- On-navy scale (text & hairlines over dark bands) ---------- */
+--mbs-on-navy:#FFFFFF;
+--mbs-on-navy-70:rgba(255,255,255,.65);
+--mbs-on-navy-50:rgba(255,255,255,.5);
+--mbs-on-navy-35:rgba(255,255,255,.35);
+--mbs-on-navy-25:rgba(255,255,255,.25);
+--mbs-on-navy-fill:rgba(255,255,255,.04);
+--mbs-on-navy-fill-hi:rgba(255,255,255,.06);
+--mbs-on-navy-border:rgba(255,255,255,.08);
+
+/* ---------- Semantic aliases ---------- */
+--mbs-text-heading:var(--mbs-navy);
+--mbs-text-body:var(--mbs-gray);
+--mbs-text-muted:var(--mbs-gray-light);
+--mbs-text-accent:var(--mbs-gold);
+--mbs-link:var(--mbs-gold-dark);
+--mbs-link-hover:var(--mbs-gold);
+--mbs-surface:var(--mbs-white);
+--mbs-surface-alt:var(--mbs-off);
+--mbs-surface-dark:var(--mbs-navy);
+--mbs-surface-card:var(--mbs-white);
+--mbs-border-default:var(--mbs-border);
+--mbs-border-hover:var(--mbs-gold-border);
+--mbs-action-primary:var(--mbs-gold);
+--mbs-action-primary-hover:var(--mbs-gold-light);
+--mbs-action-primary-text:var(--mbs-navy);
+--mbs-action-secondary:var(--mbs-navy);
+--mbs-action-secondary-hover:var(--mbs-navy-mid);
+--mbs-action-secondary-text:var(--mbs-white);
+--mbs-scrim-navy:rgba(39,63,99,.5);
+}

@@ -1,0 +1,52 @@
+:root{
+/* ---------- Families ---------- */
+--mbs-font-serif:'Fraunces',Georgia,'Times New Roman',serif;   /* display & headings */
+--mbs-font-sans:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif; /* UI & body */
+--mbs-font-display:var(--mbs-font-serif);
+--mbs-font-body:var(--mbs-font-sans);
+
+/* ---------- Sizes (exact values from the site) ---------- */
+--mbs-fs-display:clamp(38px,5.5vw,64px); /* @kind font */   /* hero h1 */
+--mbs-fs-h1:clamp(28px,4vw,44px); /* @kind font */          /* page-header h1 */
+--mbs-fs-h2:clamp(26px,3.5vw,36px); /* @kind font */        /* section title */
+--mbs-fs-h3:20px; /* @kind font */
+--mbs-fs-card-title:16px; /* @kind font */
+--mbs-fs-h4:15px; /* @kind font */
+--mbs-fs-lead:16px; /* @kind font */
+--mbs-fs-body:15px; /* @kind font */
+--mbs-fs-body-sm:14px; /* @kind font */
+--mbs-fs-card:13.5px; /* @kind font */
+--mbs-fs-ui:13px; /* @kind font */
+--mbs-fs-meta:12.5px; /* @kind font */
+--mbs-fs-nav:11.5px; /* @kind font */
+--mbs-fs-form-label:11px; /* @kind font */
+--mbs-fs-label:10.5px; /* @kind font */
+--mbs-fs-badge:10px; /* @kind font */
+--mbs-fs-micro:9px; /* @kind font */
+
+/* ---------- Weights ---------- */
+--mbs-fw-regular:400; /* @kind font */
+--mbs-fw-medium:500; /* @kind font */
+--mbs-fw-semibold:600; /* @kind font */
+--mbs-fw-bold:700; /* @kind font */
+--mbs-fw-black:800; /* @kind font */
+
+/* ---------- Line heights ---------- */
+--mbs-lh-display:1.08; /* @kind font */
+--mbs-lh-heading:1.15; /* @kind font */
+--mbs-lh-title:1.2; /* @kind font */
+--mbs-lh-body:1.7; /* @kind font */
+--mbs-lh-prose:1.8; /* @kind font */
+--mbs-lh-tight:1.5; /* @kind font */
+--mbs-lh-ui:1.65; /* @kind font */
+
+/* ---------- Tracking ---------- */
+--mbs-tr-display:-.5px; /* @kind font */
+--mbs-tr-title:-.3px; /* @kind font */
+--mbs-tr-label:2.5px; /* @kind font */   /* uppercase gold section label */
+--mbs-tr-badge:1px; /* @kind font */
+--mbs-tr-nav:.6px; /* @kind font */
+--mbs-tr-btn:.3px; /* @kind font */
+--mbs-tr-brand:1.5px; /* @kind font */
+--mbs-tr-brand-sub:2px; /* @kind font */
+}

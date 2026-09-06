@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MBS — Site overview</title>
+<link rel="icon" href="assets/mbs-mark.svg">
+<link rel="stylesheet" href="design-system/styles.css">
+<link rel="stylesheet" href="site.css">
+<style>
+html,body{margin:0}
+body{background:var(--mbs-off);padding:64px 48px;font-family:var(--mbs-font-sans)}
+.wrap{max-width:1060px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+a.card{display:block;padding:24px;background:var(--mbs-white);border:1px solid var(--mbs-border);border-radius:12px;box-shadow:0 2px 8px rgba(39,63,99,.04);text-decoration:none;transition:all .25s ease}
+a.card:hover{border-color:var(--mbs-gold-border);box-shadow:0 8px 24px rgba(39,63,99,.08);transform:translateY(-3px)}
+a.card h3{font-family:var(--mbs-font-serif);font-size:17px;font-weight:600;color:var(--mbs-navy);margin:0 0 5px}
+a.card p{font-size:13px;color:var(--mbs-gray);margin:0;line-height:1.6}
+a.card.wide{grid-column:1 / -1}
+.note{margin-top:40px;padding:24px 28px;background:var(--mbs-white);border:1px solid var(--mbs-border);border-left:3px solid var(--mbs-gold);border-radius:12px}
+.note h4{font-size:13px;margin:0 0 10px;color:var(--mbs-navy)}
+.note p{font-size:13px;line-height:1.7;margin:0 0 8px;max-width:760px}
+.note p:last-child{margin-bottom:0}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;background:var(--mbs-off);padding:1px 5px;border-radius:4px;color:var(--mbs-navy)}
+@media (max-width:680px){body{padding:40px 24px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mbs-label">Local website — site overview</div>
+  <h1 style="font-family:var(--mbs-font-serif);font-size:40px;font-weight:700;color:var(--mbs-navy);margin:8px 0 0;letter-spacing:-.3px">Munich <em style="font-style:normal;color:var(--mbs-gold)">Business Society</em></h1>
+  <div class="mbs-divider" style="margin:18px 0 20px"></div>
+  <p style="font-size:15px;line-height:1.8;max-width:640px;margin:0">The EN relaunch: ten real pages wired together — navigation, logo, buttons and the event dialog all work across pages. Cross-university positioning throughout; every <code>[X]</code> is a board placeholder. Runs locally, no server needed.</p>
+
+  <div class="grid">
+    <a class="card wide" href="index.html"><h3>Home — start here →</h3><p>The entry point. Every other page is reachable from the navigation.</p></a>
+    <a class="card" href="about.html"><h3>About →</h3><p>Who we are, our story, what makes us different, values, how we're organised</p></a>
+    <a class="card" href="network.html"><h3>The Network →</h3><p>The USP made explicit: who's in it, universities represented, how it works, campus reps</p></a>
+    <a class="card" href="what-we-do.html"><h3>What We Do →</h3><p>Six formats, partner projects, and the semester's programme</p></a>
+    <a class="card" href="membership.html"><h3>Membership →</h3><p>Who can join, what you get, the fee, how to join</p></a>
+    <a class="card" href="for-companies.html"><h3>For Companies →</h3><p>The sales page: why MBS, ways to work together, how it works</p></a>
+    <a class="card" href="team.html"><h3>Team →</h3><p>The board, the five teams, open roles</p></a>
+    <a class="card" href="faq.html"><h3>FAQ →</h3><p>The ten questions students ask before applying</p></a>
+    <a class="card" href="join.html"><h3>Join MBS →</h3><p>The application form, with validation and its success state</p></a>
+    <a class="card" href="contact.html"><h3>Contact →</h3><p>Three routes, a working contact form, where to find us</p></a>
+    <a class="card wide" href="what-we-do.html?event=launch"><h3>Event dialog (deep link) →</h3><p><code>what-we-do.html?event=launch</code> — opens the event dialog directly</p></a>
+  </div>
+
+  <div class="note">
+    <h4>What's still placeholder — on purpose</h4>
+    <p>Anything shown with a dashed gold underline (<code>[X]</code>, <code>[date]</code>, member quotes, the fee, board roles) is a board fill-in the copy deck says must not be invented. The navy image boxes and dashed <strong>Partner logo</strong> slots are intentional placeholders too — no photos or partner logos exist yet.</p>
+    <p>Legal pages (Imprint, Privacy policy, Statutes) and the social handles are marked <em>in preparation</em> rather than linked to nowhere. This overview is a review aid and isn't linked from the site itself.</p>
+  </div>
+</div>
+</body>
+</html>

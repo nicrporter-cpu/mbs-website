@@ -1,0 +1,39 @@
+:root{
+/* ---------- 4px base scale ---------- */
+--mbs-sp-1:4px;
+--mbs-sp-2:8px;
+--mbs-sp-3:12px;
+--mbs-sp-4:16px;
+--mbs-sp-5:24px;
+--mbs-sp-6:32px;
+--mbs-sp-7:48px;
+--mbs-sp-8:64px;
+--mbs-sp-9:96px;
+--mbs-sp-10:128px;
+
+/* ---------- Radius ---------- */
+--mbs-r-sm:8px;
+--mbs-r:12px;
+--mbs-r-lg:16px;
+--mbs-r-pill:999px;
+
+/* ---------- Layout ---------- */
+--mbs-content-max:1060px;   /* every section on the site */
+--mbs-prose-max:760px;
+--mbs-form-max:640px;
+--mbs-gutter:48px;
+--mbs-gutter-sm:24px;
+--mbs-section-y:80px;
+--mbs-nav-h:72px;
+--mbs-page-header-h:300px;
+--mbs-grid-gap:20px;
+--mbs-grid-gap-lg:28px;
+--mbs-grid-gap-xl:56px;
+
+/* ---------- Border widths ---------- */
+--mbs-bw-hairline:1px;
+--mbs-bw-btn:1.5px;
+--mbs-bw-rule:2px;
+--mbs-bw-accent:3px;
+--mbs-divider-w:48px;
+}

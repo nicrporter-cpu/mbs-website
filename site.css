@@ -1,0 +1,668 @@
+/* MBS site layer — loaded after design-system/styles.css.
+   Everything here is site-owned. It does three jobs the vendored design system
+   does not do on its own:
+
+     1. lifts the palette's text colours to WCAG AA (the brand hues are kept;
+        only the values used *as text* move),
+     2. supplies the responsive layout classes the screens use in place of
+        hard-coded inline grids,
+     3. themes the browser surfaces — focus, selection, caret, scrollbar.
+
+   A refresh from the design system overwrites design-system/ and screens/ but
+   never this file. See README "Changing things". */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   0. Box model
+
+   base.css scopes `box-sizing: border-box` to `.mbs`, for embedding the kit
+   inside a foreign page. These pages render it unscoped, so nothing set it and
+   the document ran on content-box — a full-width Input came out 30px wider than
+   its column (its padding and border added on top), pushing the form 6px past
+   the viewport on a phone. The kit is authored for border-box; this states it.
+   ═══════════════════════════════════════════════════════════════════════════ */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   1. Contrast — AA-safe text values
+
+   The brand gold #B59D54 is a 2.65:1 foreground on white and 2.45:1 on the
+   off-white band: fine as a fill, a rule or a divider, unreadable as text.
+   Gold stays exactly as it is for graphics; text gets its own two values.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  /* Gold as text on a light ground — 5.10:1 on white, 4.71:1 on --mbs-off.
+     Same hue and saturation as the brand gold, dropped in lightness only. */
+  --mbs-gold-text: #7E6D37;
+
+  /* Gold as text on navy, and as a fill carrying navy text — 4.93:1 both ways.
+     This is the design system's own --mbs-gold-light, promoted to a role. */
+  --mbs-gold-on-navy: var(--mbs-gold-light);
+  --mbs-gold-surface: var(--mbs-gold-light);
+
+  /* Muted grey as text — #8C97A5 was 2.96:1 on white. The scale value itself
+     moves too: every place it is used is text (timeline dates, event meta),
+     and the one graphic use is the scrollbar thumb, which is unaffected. */
+  --mbs-gray-muted-text: #667282;
+  --mbs-gray-light: #667282;
+
+  /* Status text on its own tinted chip. ok was 4.24:1, warn 3.14:1. */
+  --mbs-ok: #3B7755;
+  --mbs-warn: #7B6A36;
+
+  /* The on-navy scale was built for decoration and then used for body copy.
+     Every step is lifted past 4.5:1 while the scale stays ordered, so the
+     hierarchy still reads — it is carried by weight and size, not by fading
+     text below legibility. */
+  --mbs-on-navy-70: rgba(255, 255, 255, .78); /* 6.5:1 */
+  --mbs-on-navy-50: rgba(255, 255, 255, .68); /* 5.8:1 — body text on navy   */
+  --mbs-on-navy-35: rgba(255, 255, 255, .62); /* 5.2:1 — was 3.0:1           */
+  --mbs-on-navy-25: rgba(255, 255, 255, .56); /* 4.5:1 — was 2.1:1           */
+
+  /* Semantic aliases that resolve to gold text now point at the safe value. */
+  --mbs-text-accent: var(--mbs-gold-text);
+  --mbs-link: var(--mbs-gold-text);
+  --mbs-link-hover: var(--mbs-navy);
+  --mbs-action-primary: var(--mbs-gold-surface);
+  --mbs-text-muted: var(--mbs-gray-muted-text);
+
+  /* Focus ring with enough contrast to be seen against both grounds. */
+  --mbs-focus-ring: 0 0 0 3px rgba(130, 112, 56, .45);
+  --mbs-focus-ring-on-navy: 0 0 0 3px rgba(199, 175, 102, .65);
+
+  /* Responsive layout values, overridden per breakpoint below. */
+  --mbs-gutter: 48px;
+  --mbs-section-y: 80px;
+}
+
+/* .mbs-label is the gold uppercase eyebrow used on every section. */
+.mbs-label { color: var(--mbs-gold-text); }
+.mbs-band .mbs-label,
+.mbs-label-light { color: var(--mbs-gold-on-navy); }
+.mbs-muted { color: var(--mbs-gray-muted-text); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   2. Layout — the grids the screens compose with
+
+   These replace inline gridTemplateColumns so the composition can actually
+   respond. Gaps match the design system's spacing tokens.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Section band + its centred inner column. */
+.mbs-sec { background: var(--mbs-white); }
+.mbs-sec--alt {
+  background: var(--mbs-off);
+  border-top: 1px solid var(--mbs-border);
+  border-bottom: 1px solid var(--mbs-border);
+}
+.mbs-sec--navy { background: var(--mbs-navy); }
+.mbs-sec-inner {
+  /* --mbs-content-max measures the content column. Under border-box the gutters
+     sit inside max-width, so they are added back to keep the column at 1060px. */
+  max-width: calc(var(--mbs-content-max) + 2 * var(--mbs-gutter));
+  margin: 0 auto;
+  padding: var(--mbs-section-y) var(--mbs-gutter);
+}
+
+/* Two-column content split (prose beside a supporting column). */
+.mbs-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--mbs-grid-gap-xl);
+  align-items: center;
+}
+.mbs-split--top { align-items: start; }
+
+/* Card grids. */
+.mbs-grid-2,
+.mbs-grid-3,
+.mbs-grid-4 {
+  display: grid;
+  gap: var(--mbs-grid-gap);
+}
+.mbs-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.mbs-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.mbs-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.mbs-grid--lg { gap: var(--mbs-grid-gap-lg); }
+
+/* The 2×2 figure block beside the "Wer wir sind" prose. */
+.mbs-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 40px;
+}
+
+/* Paired form fields. */
+.mbs-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--mbs-grid-gap);
+}
+
+/* A wide table keeps its shape and scrolls inside its own box. */
+.mbs-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.mbs-table-scroll > table { min-width: 520px; }
+
+/* Section header row: heading left, action right, wrapping when tight. */
+.mbs-sec-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--mbs-sp-4);
+  margin-bottom: 36px;
+}
+
+/* ── Tablet ─────────────────────────────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .mbs-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .mbs-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --mbs-gutter: 32px;
+    --mbs-section-y: 64px;
+  }
+  .mbs-split {
+    grid-template-columns: 1fr;
+    gap: var(--mbs-sp-7);
+  }
+}
+
+/* ── Phone ──────────────────────────────────────────────────────────────── */
+@media (max-width: 680px) {
+  :root {
+    --mbs-gutter: var(--mbs-gutter-sm);
+    --mbs-section-y: 56px;
+  }
+  .mbs-grid-2,
+  .mbs-grid-3 { grid-template-columns: 1fr; }
+  .mbs-form-row { grid-template-columns: 1fr; }
+  .mbs-sec-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .mbs-grid-4 { grid-template-columns: 1fr; }
+  .mbs-stats { gap: var(--mbs-sp-5) var(--mbs-sp-5); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   3. Browser surfaces
+
+   Focus, selection, caret and scrollbar ship as browser defaults that belong
+   to no design system. They are part of the page.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Keyboard focus only — pointer users never see the ring. Scoped with :not()
+   so a browser without :focus-visible keeps its own ring rather than none. */
+:focus:not(:focus-visible) { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--mbs-gold-text);
+  outline-offset: 2px;
+  border-radius: var(--mbs-r-sm);
+}
+.mbs-sec--navy :focus-visible,
+.mbs-band :focus-visible,
+footer :focus-visible,
+[data-on-navy] :focus-visible {
+  outline-color: var(--mbs-gold-on-navy);
+}
+
+/* Skip link — first stop for a keyboard user on every page. */
+.mbs-skip {
+  position: absolute;
+  left: var(--mbs-sp-4);
+  top: var(--mbs-sp-4);
+  z-index: 400;
+  transform: translateY(-200%);
+  padding: 12px 20px;
+  border-radius: var(--mbs-r-sm);
+  background: var(--mbs-navy);
+  color: var(--mbs-white);
+  font-size: var(--mbs-fs-body-sm);
+  font-weight: var(--mbs-fw-semibold);
+  text-decoration: none;
+  box-shadow: var(--mbs-sh-md);
+  transition: transform var(--mbs-dur) var(--mbs-ease);
+}
+.mbs-skip:focus-visible {
+  transform: translateY(0);
+  color: var(--mbs-white);
+}
+
+::selection {
+  background: var(--mbs-gold-soft);
+  color: var(--mbs-navy);
+}
+.mbs-sec--navy ::selection,
+footer ::selection {
+  background: var(--mbs-gold-on-navy);
+  color: var(--mbs-navy);
+}
+
+input,
+textarea,
+select { caret-color: var(--mbs-gold-text); }
+
+::placeholder {
+  color: var(--mbs-gray-muted-text);
+  opacity: 1; /* Firefox dims placeholders on top of the colour */
+}
+
+/* Scrollbar, themed from the palette rather than the platform. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--mbs-gray-light) transparent;
+}
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--mbs-gray-light);
+  border: 3px solid var(--mbs-white);
+  border-radius: var(--mbs-r-pill);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--mbs-gray); }
+
+/* Tabular figures wherever numbers are meant to line up. */
+.mbs-tabular { font-variant-numeric: tabular-nums; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   4. Motion
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   5. Patched components
+
+   Styles for the components replaced in screens/_patches.jsx. They live here
+   rather than inline so they can respond to a breakpoint.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Visually hidden, still announced. */
+.mbs-sr {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+.mbs-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--mbs-sp-4);
+  height: var(--mbs-nav-h);
+  padding: 0 var(--mbs-gutter);
+  background: var(--mbs-white);
+  border-bottom: 1px solid var(--mbs-border);
+}
+.mbs-nav-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.mbs-nav-brand img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+.mbs-nav-links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.mbs-navlink {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 15px;
+  color: var(--mbs-gray);
+  font-size: var(--mbs-fs-nav);
+  font-weight: var(--mbs-fw-medium);
+  letter-spacing: var(--mbs-tr-nav);
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color var(--mbs-dur) var(--mbs-ease),
+              border-color var(--mbs-dur) var(--mbs-ease);
+}
+.mbs-navlink:hover,
+.mbs-navlink.is-active {
+  color: var(--mbs-navy);
+  border-bottom-color: var(--mbs-gold);
+}
+.mbs-nav-cta {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-left: 8px;
+  padding: 0 22px;
+  background: var(--mbs-gold-surface);
+  color: var(--mbs-navy);
+  border-radius: var(--mbs-r-sm);
+  font-size: var(--mbs-fs-nav);
+  font-weight: var(--mbs-fw-semibold);
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--mbs-dur) var(--mbs-ease);
+}
+.mbs-nav-cta:hover {
+  background: var(--mbs-gold);
+  color: var(--mbs-navy);
+}
+.mbs-nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--mbs-border);
+  border-radius: var(--mbs-r-sm);
+  color: var(--mbs-navy);
+  cursor: pointer;
+}
+.mbs-nav-toggle:hover { border-color: var(--mbs-gold); }
+
+.mbs-drawer {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 250;
+  flex-direction: column;
+  padding: var(--mbs-sp-3) var(--mbs-gutter) var(--mbs-sp-5);
+  background: var(--mbs-white);
+  border-bottom: 1px solid var(--mbs-border);
+  box-shadow: var(--mbs-sh-md);
+}
+.mbs-drawer.is-open { display: flex; }
+.mbs-drawer-link {
+  padding: 14px 0;
+  color: var(--mbs-navy);
+  font-size: var(--mbs-fs-body);
+  font-weight: var(--mbs-fw-medium);
+  letter-spacing: var(--mbs-tr-nav);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid var(--mbs-border);
+}
+.mbs-drawer-link.is-active { color: var(--mbs-gold-text); }
+.mbs-drawer-cta {
+  margin: var(--mbs-sp-4) 0 0;
+  justify-content: center;
+  height: 48px;
+}
+
+@media (max-width: 900px) {
+  .mbs-nav-links { display: none; }
+  .mbs-nav-toggle { display: flex; }
+}
+@media (min-width: 901px) {
+  .mbs-drawer { display: none !important; }
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────────── */
+.mbs-hero {
+  display: flex;
+  align-items: center;
+  gap: var(--mbs-sp-7);
+  max-width: calc(var(--mbs-content-max) + 2 * var(--mbs-gutter));
+  margin: 0 auto;
+  padding: 100px var(--mbs-gutter) 80px;
+  background: var(--mbs-white);
+}
+.mbs-hero-copy { flex: 1; }
+.mbs-hero-media {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .mbs-hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--mbs-sp-7);
+    padding: 64px var(--mbs-gutter) 56px;
+  }
+  .mbs-hero-media {
+    order: 2;
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ── Page header ────────────────────────────────────────────────────────── */
+.mbs-page-header {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: var(--mbs-ph-h, var(--mbs-page-header-h));
+  padding: var(--mbs-sp-7) 0;
+  background: var(--mbs-navy);
+}
+@media (max-width: 680px) {
+  .mbs-page-header {
+    min-height: 0;
+    padding: var(--mbs-sp-8) 0;
+  }
+}
+
+/* ── Footer ─────────────────────────────────────────────────────────────── */
+.mbs-footer-inner {
+  max-width: calc(var(--mbs-content-max) + 2 * var(--mbs-gutter));
+  margin: 0 auto;
+  padding: 48px var(--mbs-gutter) 32px;
+}
+.mbs-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--mbs-sp-7);
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.mbs-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--mbs-sp-4);
+}
+
+/* ── Card whose whole surface is one target ─────────────────────────────────
+   The visible control is the title button; the pseudo-element stretches its hit
+   area over the card. Keeps the heading a heading, gives the button a real name,
+   and leaves one tab stop per card instead of none. */
+.mbs-rowcard { position: relative; }
+.mbs-rowcard-target {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+.mbs-rowcard-target::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+.mbs-rowcard:has(.mbs-rowcard-target:focus-visible) {
+  outline: 2px solid var(--mbs-gold-text);
+  outline-offset: 2px;
+}
+.mbs-rowcard-target:focus-visible { outline: none; }
+
+/* Consent and option boxes get a comfortable target. */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Event row ──────────────────────────────────────────────────────────────
+   The gold date block sits beside the copy on wide screens. Stretched down a
+   narrow column it became a tall empty slab, so on phones it becomes a compact
+   bar across the top instead. */
+.mbs-eventrow {
+  display: flex;
+  align-items: stretch;
+}
+.mbs-eventrow-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 80px;
+  padding: 20px 24px;
+  background: var(--mbs-gold-surface);
+  color: var(--mbs-navy);
+}
+.mbs-eventrow-day {
+  font-size: 24px;
+  font-weight: var(--mbs-fw-black);
+  line-height: 1;
+}
+.mbs-eventrow-month {
+  margin-top: 2px;
+  font-size: var(--mbs-fs-badge);
+  font-weight: var(--mbs-fw-semibold);
+  letter-spacing: var(--mbs-tr-badge);
+  text-transform: uppercase;
+}
+.mbs-eventrow-body {
+  flex: 1;
+  padding: 20px 24px;
+}
+
+@media (max-width: 680px) {
+  .mbs-eventrow { flex-direction: column; }
+  .mbs-eventrow-date {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 8px;
+    min-width: 0;
+    padding: 10px 20px;
+  }
+  .mbs-eventrow-day { font-size: 18px; }
+  .mbs-eventrow-month { margin-top: 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   6. EN relaunch — placeholders, four-column footer, newsletter
+
+   The copy deck is a draft for board review: every [X], [date], [University]
+   must stay visibly a fill-in, never mistaken for real data.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Board placeholder — a dashed gold underline says "not final". */
+.mbs-ph {
+  color: var(--mbs-gray-muted-text);
+  border-bottom: 1px dashed var(--mbs-gold-border);
+  font-style: italic;
+  white-space: nowrap;
+}
+.mbs-ph--on-navy {
+  color: var(--mbs-on-navy-50);
+  border-bottom-color: var(--mbs-on-navy-border);
+}
+
+/* ── Footer columns ─────────────────────────────────────────────────────── */
+.mbs-footer-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--mbs-grid-gap);
+  margin-bottom: 40px;
+}
+@media (max-width: 900px) {
+  .mbs-footer-cols { grid-template-columns: repeat(2, 1fr); gap: 32px var(--mbs-grid-gap); }
+}
+@media (max-width: 520px) {
+  .mbs-footer-cols { grid-template-columns: 1fr; }
+}
+
+/* ── Newsletter ─────────────────────────────────────────────────────────── */
+.mbs-footer-news {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--mbs-sp-6);
+  flex-wrap: wrap;
+  padding: 28px;
+  border-radius: var(--mbs-r);
+  background: var(--mbs-on-navy-fill);
+  border: 1px solid var(--mbs-on-navy-border);
+}
+.mbs-news-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.mbs-news-input {
+  height: 44px;
+  min-width: 220px;
+  padding: 0 16px;
+  border-radius: var(--mbs-r-sm);
+  border: 1px solid var(--mbs-on-navy-border);
+  background: var(--mbs-white);
+  color: var(--mbs-navy);
+  font-family: var(--mbs-font-sans);
+  font-size: var(--mbs-fs-body-sm);
+}
+.mbs-news-input::placeholder { color: var(--mbs-gray-muted-text); }
+.mbs-news-btn {
+  height: 44px;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--mbs-font-sans);
+}
+.mbs-news-err {
+  flex-basis: 100%;
+  font-size: 12px;
+  color: var(--mbs-gold-on-navy);
+}
+@media (max-width: 680px) {
+  .mbs-footer-news { flex-direction: column; align-items: stretch; }
+  .mbs-news-form { flex-direction: column; align-items: stretch; }
+  .mbs-news-input { min-width: 0; }
+  .mbs-news-btn { justify-content: center; }
+}

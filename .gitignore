@@ -1,0 +1,4 @@
+# nothing to ignore — the site is deliberately self-contained (React, Babel,
+# fonts and the design system are vendored so it runs with no network). Keeping
+# them tracked is what makes a fresh clone open by double-click.
+.DS_Store

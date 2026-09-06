@@ -1,0 +1,9 @@
+:root{
+--mbs-sh-xs:0 2px 8px rgba(39,63,99,.04);   /* resting cards */
+--mbs-sh-sm:0 2px 8px rgba(39,63,99,.08);   /* navy tiles */
+--mbs-sh-md:0 8px 24px rgba(39,63,99,.08);  /* card hover */
+--mbs-sh-lg:0 12px 36px rgba(39,63,99,.12); /* lifted card hover */
+--mbs-sh-xl:0 24px 64px rgba(39,63,99,.2);  /* modal */
+--mbs-focus-ring:0 0 0 3px var(--mbs-gold-dim);
+--mbs-blur-scrim:blur(6px); /* @kind other */
+}

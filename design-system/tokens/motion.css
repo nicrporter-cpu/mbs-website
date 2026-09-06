@@ -1,0 +1,8 @@
+:root{
+--mbs-dur-fast:.2s; /* @kind other */
+--mbs-dur:.25s; /* @kind other */
+--mbs-dur-slow:.3s; /* @kind other */
+--mbs-ease:ease; /* @kind other */
+--mbs-lift:-1px;        /* button hover translate */
+--mbs-lift-card:-3px;   /* card hover translate */
+}

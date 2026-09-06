@@ -1,0 +1,5 @@
+/* MBS webfonts — local override of the design system's Google Fonts import.
+   The upstream token file (tokens/fonts.css in the design system) pulls Fraunces and
+   DM Sans from fonts.googleapis.com; this build self-hosts the identical variable
+   fonts under /fonts so the mockup renders offline. */
+@import url("../../fonts/fonts.css");

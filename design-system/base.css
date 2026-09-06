@@ -1,0 +1,33 @@
+/* MBS base + utilities. Unscoped: link styles.css and the page inherits brand type.
+   Every rule here is also available scoped under .mbs for embedding inside foreign pages. */
+body,.mbs{font-family:var(--mbs-font-sans);color:var(--mbs-navy);background:var(--mbs-white);-webkit-font-smoothing:antialiased;line-height:var(--mbs-lh-ui)}
+.mbs *,.mbs *::before,.mbs *::after{box-sizing:border-box}
+h1,h2,h3,h4,h5,.mbs h1,.mbs h2,.mbs h3,.mbs h4,.mbs h5{font-family:var(--mbs-font-serif);color:var(--mbs-navy);line-height:var(--mbs-lh-heading);margin:0 0 .4em;font-weight:var(--mbs-fw-semibold);letter-spacing:-.01em}
+h1,.mbs h1{font-size:var(--mbs-fs-h1);font-weight:var(--mbs-fw-bold)}
+h2,.mbs h2{font-size:var(--mbs-fs-h2);font-weight:var(--mbs-fw-bold);letter-spacing:var(--mbs-tr-title)}
+h3,.mbs h3{font-size:var(--mbs-fs-h3)}
+h4,.mbs h4{font-size:var(--mbs-fs-h4);font-family:var(--mbs-font-sans);font-weight:var(--mbs-fw-semibold)}
+p,.mbs p{margin:0 0 1em;color:var(--mbs-gray);line-height:var(--mbs-lh-body)}
+a,.mbs a{color:var(--mbs-link);text-decoration:none;transition:color var(--mbs-dur) var(--mbs-ease)}
+a:hover,.mbs a:hover{color:var(--mbs-link-hover)}
+strong{color:var(--mbs-navy)}
+
+/* Display heading — "Munich" navy / "Business Society" gold via <em> */
+.mbs-display{font-family:var(--mbs-font-serif);font-weight:var(--mbs-fw-bold);font-size:var(--mbs-fs-display);line-height:var(--mbs-lh-display);letter-spacing:var(--mbs-tr-display);color:var(--mbs-navy);margin:0}
+.mbs-display em{font-style:normal;color:var(--mbs-gold)}
+
+/* Section label + 48px gold divider */
+.mbs-label{font-family:var(--mbs-font-sans);font-size:var(--mbs-fs-label);font-weight:var(--mbs-fw-bold);letter-spacing:var(--mbs-tr-label);text-transform:uppercase;color:var(--mbs-gold)}
+.mbs-label-light{color:rgba(181,157,84,.8)}
+.mbs-divider{width:var(--mbs-divider-w);height:var(--mbs-bw-rule);background:var(--mbs-gold);border-radius:2px;margin:10px 0 28px}
+.mbs-section-title{font-family:var(--mbs-font-serif);font-size:var(--mbs-fs-h2);font-weight:var(--mbs-fw-bold);color:var(--mbs-navy);line-height:var(--mbs-lh-title);letter-spacing:var(--mbs-tr-title);margin:0 0 18px}
+.mbs-section-desc{font-size:var(--mbs-fs-body);color:var(--mbs-gray);max-width:560px;line-height:var(--mbs-lh-prose)}
+.mbs-section{max-width:var(--mbs-content-max);margin:0 auto;padding:var(--mbs-section-y) var(--mbs-gutter)}
+.mbs-band{background:var(--mbs-navy);color:var(--mbs-white)}
+.mbs-band .mbs-section-title,.mbs-band h2,.mbs-band h3{color:var(--mbs-white)}
+.mbs-band .mbs-section-desc,.mbs-band p{color:var(--mbs-on-navy-50)}
+.mbs-muted{color:var(--mbs-gray-light)}
+.mbs-gold-text{color:var(--mbs-gold)}
+.mbs-serif{font-family:var(--mbs-font-serif)}
+.mbs-rule{height:1px;background:var(--mbs-border);border:0;margin:var(--mbs-sp-5) 0}
+.mbs-icon{width:1.15em;height:1.15em;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.15em}
