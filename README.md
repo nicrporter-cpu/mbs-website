@@ -1,14 +1,20 @@
 # Munich Business Society — local website
 
-Ten pages wired into a browsable website, in English (EN-GB) with the
-cross-university positioning from the copy deck (v1.0). Every nav item, logo, and
-in-page button loads a real page; the event dialog opens, closes on Esc, and can be
-deep-linked. Nothing is fetched from the internet — React, Babel and both webfonts
-are vendored locally.
+Ten pages wired into a browsable website, **bilingual (English EN-GB + German)**,
+with the cross-university positioning from the copy deck (v1.0). Every nav item,
+logo, and in-page button loads a real page; the event dialog opens, closes on Esc,
+and can be deep-linked. Nothing is fetched from the internet — React, Babel and both
+webfonts are vendored locally.
+
+**Language switch.** The header carries a DE/EN tab. Both languages ship inside every
+page (`screens/data.js` holds `MBS_CONTENT.en` and `MBS_CONTENT.de`), so the switch
+re-renders in place — no navigation, no reload — and the choice is remembered in
+`localStorage`, carrying across page loads. The home hero shows the "Munich Business
+Society" wordmark in both languages.
 
 Everything a bracket marks — `[X]`, `[date]`, member quotes, the fee, board roles —
 is a board placeholder the deck says must not be invented. It renders with a dashed
-gold underline so it's visibly a fill-in.
+gold underline so it's visibly a fill-in, in both languages.
 
 ## Open it
 
@@ -115,10 +121,13 @@ Edit the copies in `screens/`, then regenerate:
 python3 /Users/np/projects/mbs-website/build/build.py
 ```
 
-To pull a fresh design system (new screens or new component bundle):
+To pull a fresh design system — **tokens and the component bundle only**. The
+`screens/` and `screens/data.js` in this repo are project-owned now (bilingual copy,
+the new page structure), so the old snippet that copied `ui_kits/website/*.jsx` over
+them would wipe the whole site — don't. Refresh just the system:
 
 ```bash
-cd "/Users/np/Downloads/MBS Design System" && cp styles.css base.css _ds_bundle.js /Users/np/projects/mbs-website/design-system/ && cp tokens/*.css /Users/np/projects/mbs-website/design-system/tokens/ && cp ui_kits/website/*.jsx ui_kits/website/data.js /Users/np/projects/mbs-website/screens/ && cp assets/* /Users/np/projects/mbs-website/assets/
+cd "/Users/np/Downloads/MBS Design System" && cp styles.css base.css _ds_bundle.js /Users/np/projects/mbs-website/design-system/ && cp tokens/*.css /Users/np/projects/mbs-website/design-system/tokens/ && cp assets/* /Users/np/projects/mbs-website/assets/
 ```
 
 Then restore the local font override (that copy overwrites it) and rebuild:

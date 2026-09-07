@@ -22,77 +22,61 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SCREENS = ROOT / 'screens'
 PATCHES = SCREENS / '_patches.jsx'
 
-# file, nav id, screen component, <title>, JSX element for the screen
+# file, nav id, screen component, initial <title> (English; JS updates on lang
+# switch), JSX element for the screen. Every screen takes the active-language
+# content object C, computed in the shell.
 PAGES = [
     ('index.html',        'home',       'HomeScreen',       "Munich's Student Business Network",
-     '<HomeScreen />'),
+     '<HomeScreen C={C} />'),
     ('about.html',        'about',      'AboutScreen',      'About',
-     '<AboutScreen />'),
+     '<AboutScreen C={C} />'),
     ('network.html',      'network',    'NetworkScreen',    'The Network',
-     '<NetworkScreen />'),
+     '<NetworkScreen C={C} />'),
     ('what-we-do.html',   'whatwedo',   'WhatWeDoScreen',   'What We Do',
-     '<WhatWeDoScreen openEvent={openEvent} />'),
+     '<WhatWeDoScreen C={C} openEvent={openEvent} />'),
     ('membership.html',   'membership', 'MembershipScreen', 'Membership',
-     '<MembershipScreen />'),
+     '<MembershipScreen C={C} />'),
     ('for-companies.html', 'companies', 'CompaniesScreen',  'For Companies',
-     '<CompaniesScreen />'),
+     '<CompaniesScreen C={C} />'),
     ('team.html',         'team',       'TeamScreen',       'Team',
-     '<TeamScreen />'),
+     '<TeamScreen C={C} />'),
     ('faq.html',          'faq',        'FaqScreen',        'FAQ',
-     '<FaqScreen />'),
+     '<FaqScreen C={C} />'),
     ('join.html',         'join',       'JoinScreen',       'Join MBS',
-     '<JoinScreen />'),
+     '<JoinScreen C={C} />'),
     ('contact.html',      'contact',    'ContactScreen',    'Contact',
-     '<ContactScreen />'),
+     '<ContactScreen C={C} />'),
 ]
 
 SHELL = '''
 /* ---------- page shell -----------------------------------------------------
    Navigation is plain hrefs (see screens/_patches.jsx), so the header works
    without JavaScript and every nav item is keyboard reachable. `go` remains for
-   the one place a script still has to navigate: the dialog's own CTA. */
+   the one place a script still has to navigate: the dialog's own CTA.
+
+   Both languages ship in data.js; the shell holds the active language in state,
+   the header's DE/EN tab flips it in place, and the choice persists in
+   localStorage so it carries across page loads. */
 
 const ROUTES = window.MBS_ROUTES;
+const ACTIVE = '__ACTIVE__';
 const go = id => { window.location.href = ROUTES[id] || ROUTES.home; };
 
-/* A destination with href: null is not set up yet. The footer renders those as
-   marked plain text rather than as links that go nowhere. */
-const SOCIAL = [
-  { label: 'LinkedIn', icon: 'linkedin', href: null },
-  { label: 'Instagram', icon: 'instagram', href: null },
-  { label: 'Email us', icon: 'mail', href: 'mailto:hello@' + D.brand.domain }
-];
-const FOOTER_COLUMNS = [
-  { title: 'Society', items: [
-    { label: 'About', href: ROUTES.about },
-    { label: 'The Network', href: ROUTES.network },
-    { label: 'Team', href: ROUTES.team },
-    { label: 'What We Do', href: ROUTES.whatwedo }
-  ] },
-  { title: 'Get involved', items: [
-    { label: 'Membership', href: ROUTES.membership },
-    { label: 'Events', href: ROUTES.whatwedo },
-    { label: 'Open roles', href: null },
-    { label: 'Contact', href: ROUTES.contact }
-  ] },
-  { title: 'Companies', items: [
-    { label: 'For Companies', href: ROUTES.companies },
-    { label: 'Partner pack', href: null },
-    { label: 'partners@' + D.brand.domain, href: 'mailto:partners@' + D.brand.domain }
-  ] },
-  { title: 'Legal', items: [
-    { label: 'Imprint', href: null },
-    { label: 'Privacy policy', href: null },
-    { label: 'Statutes', href: null }
-  ] }
-];
-
 function Page() {
+  const [lang, setLangState] = React.useState(window.MBS_GET_LANG());
+  const C = window.MBS_CONTENT[lang];
+  const setLang = l => { window.MBS_SET_LANG(l); setLangState(l); };
+
   const [eventId, setEventId] = React.useState(window.MBS_INITIAL_EVENT);
-  const ev = D.events.find(e => e.id === eventId);
+  const ev = C.events.find(e => e.id === eventId);
 
   const openEvent = id => { setEventId(id); window.MBS_SET_EVENT_PARAM(id); };
   const closeEvent = () => { setEventId(null); window.MBS_SET_EVENT_PARAM(null); };
+
+  React.useEffect(() => {
+    document.documentElement.lang = lang;
+    document.title = 'MBS — ' + C.title[ACTIVE];
+  }, [lang]);
 
   React.useEffect(() => {
     if (!ev) return;
@@ -102,25 +86,29 @@ function Page() {
     return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
   }, [ev]);
 
+  const dlg = C.ui.dialog;
+
   return (
     <div style={{ position: 'relative' }}>
-      <a className="mbs-skip" href="#main">Skip to content</a>
-      <SiteHeader links={D.nav} active="__ACTIVE__" logoSrc="assets/mbs-logo-horizontal.png" />
+      <a className="mbs-skip" href="#main">{C.ui.skip}</a>
+      <SiteHeader links={C.nav} active={ACTIVE} logoSrc="assets/mbs-logo-horizontal.png"
+        applyLabel={C.ui.join} lang={lang} setLang={setLang} ui={C.ui} />
       <main id="main">
         __SCREEN__
       </main>
-      <SiteFooter descriptor={D.brand.footerDescriptor} columns={FOOTER_COLUMNS} social={SOCIAL}
-        copyright="© 2026 Munich Business Society" tagline={D.brand.tagline} />
+      <SiteFooter descriptor={C.brand.footerDescriptor} columns={C.ui.footerCols} social={C.ui.social}
+        newsletter={C.ui.newsletter} inPrep={C.ui.inPrep}
+        copyright={C.ui.copyright} tagline={C.brand.tagline} />
       {ev && (
         <div style={{ position: 'fixed', inset: 0, zIndex: 300 }}>
-          <Modal tag={ev.tag} title={ev.title} onClose={closeEvent}
+          <Modal tag={ev.tag} title={ev.title} onClose={closeEvent} closeLabel={dlg.close}
             meta={[ev.date, ev.time, ev.location]}
-            footer={<Button variant="gold" block onClick={() => { closeEvent(); go('join'); }}>Join MBS &amp; attend →</Button>}>
-            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '0 0 8px' }}>About this event</h3>
+            footer={<Button variant="gold" block onClick={() => { closeEvent(); go('join'); }}>{dlg.cta}</Button>}>
+            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '0 0 8px' }}>{dlg.about}</h3>
             <p style={{ fontSize: '14px', lineHeight: 1.8 }}>{ev.about}</p>
-            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>What to expect</h3>
+            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>{dlg.expect}</h3>
             <p style={{ fontSize: '14px', lineHeight: 1.8 }}>{ev.expect}</p>
-            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>Who's it for?</h3>
+            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>{dlg.who}</h3>
             <p style={{ fontSize: '14px', lineHeight: 1.8 }}>{ev.audience}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginTop: '24px', paddingTop: '24px', borderTop: '1px solid var(--mbs-border)', fontSize: '13px', color: 'var(--mbs-gray)' }}>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}><Icon name="pin" size="15px" />{ev.location}</span>

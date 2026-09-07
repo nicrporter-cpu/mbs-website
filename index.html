@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MBS — Munich's Student Business Network</title>
 <link rel="icon" href="assets/mbs-mark.svg">
-<link rel="stylesheet" href="design-system/styles.css?v=56a1d6e280">
-<link rel="stylesheet" href="site.css?v=56a1d6e280">
+<link rel="stylesheet" href="design-system/styles.css?v=1fb27d30b2">
+<link rel="stylesheet" href="site.css?v=1fb27d30b2">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -15,9 +15,9 @@
 <script src="vendor/react.development.js"></script>
 <script src="vendor/react-dom.development.js"></script>
 <script src="vendor/babel.min.js"></script>
-<script src="design-system/_ds_bundle.js?v=56a1d6e280"></script>
-<script src="screens/data.js?v=56a1d6e280"></script>
-<script src="site.js?v=56a1d6e280"></script>
+<script src="design-system/_ds_bundle.js?v=1fb27d30b2"></script>
+<script src="screens/data.js?v=1fb27d30b2"></script>
+<script src="site.js?v=1fb27d30b2"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -103,10 +103,27 @@ function Section({ children, tone, className = '', style }) {
    keyboard reachable, middle-clickable and openable in a new tab. Below 900px
    the row collapses into a drawer. */
 
-function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', style }) {
+/* The DE/EN switch. A two-button segmented control — real buttons, so it is
+   keyboard operable and announced; the active language is pressed. Setting the
+   language re-renders the whole app in place, so the switch is instant. */
+function LangSwitch({ lang, setLang, ui }) {
+  const langs = [{ code: 'en', label: 'EN' }, { code: 'de', label: 'DE' }];
+  return (
+    <div className="mbs-lang" role="group" aria-label={(ui && ui.langLabel) || 'Language'}>
+      {langs.map(l => (
+        <button key={l.code} type="button"
+          className={'mbs-lang-btn' + (lang === l.code ? ' is-active' : '')}
+          aria-pressed={lang === l.code} onClick={() => setLang(l.code)}>{l.label}</button>
+      ))}
+    </div>
+  );
+}
+
+function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', lang = 'en', setLang, ui = {}, style }) {
   const [open, setOpen] = React.useState(false);
   const toggleRef = React.useRef(null);
   const href = id => (R && R[id]) || '#';
+  const setL = setLang || function () {};
 
   React.useEffect(() => {
     if (!open) return;
@@ -118,24 +135,28 @@ function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', styl
   }, [open]);
 
   return (
-    <nav className="mbs-nav" style={style} aria-label="Main navigation">
-      <a className="mbs-nav-brand" href={href('home')} aria-label="Munich Business Society — home">
+    <nav className="mbs-nav" style={style} aria-label={ui.home ? undefined : 'Main navigation'}>
+      <a className="mbs-nav-brand" href={href('home')} aria-label={ui.home || 'Munich Business Society — home'}>
         <img src={logoSrc} alt="" width="204" height="102" />
       </a>
 
-      <div className="mbs-nav-links">
-        {links.map(l => (
-          <a key={l.id} className={'mbs-navlink' + (active === l.id ? ' is-active' : '')}
-            href={href(l.id)} aria-current={active === l.id ? 'page' : undefined}>{l.label}</a>
-        ))}
-        <a className="mbs-nav-cta" href={href('join')}>{applyLabel}</a>
-      </div>
+      <div className="mbs-nav-right">
+        <div className="mbs-nav-links">
+          {links.map(l => (
+            <a key={l.id} className={'mbs-navlink' + (active === l.id ? ' is-active' : '')}
+              href={href(l.id)} aria-current={active === l.id ? 'page' : undefined}>{l.label}</a>
+          ))}
+          <a className="mbs-nav-cta" href={href('join')}>{applyLabel}</a>
+        </div>
 
-      <button ref={toggleRef} type="button" className="mbs-nav-toggle" aria-expanded={open}
-        aria-controls="mbs-drawer" onClick={() => setOpen(v => !v)}>
-        <Icon name={open ? 'close' : 'menu'} size="22px" />
-        <span className="mbs-sr">{open ? 'Close menu' : 'Open menu'}</span>
-      </button>
+        <LangSwitch lang={lang} setLang={setL} ui={ui} />
+
+        <button ref={toggleRef} type="button" className="mbs-nav-toggle" aria-expanded={open}
+          aria-controls="mbs-drawer" onClick={() => setOpen(v => !v)}>
+          <Icon name={open ? 'close' : 'menu'} size="22px" />
+          <span className="mbs-sr">{open ? (ui.menuClose || 'Close menu') : (ui.menuOpen || 'Open menu')}</span>
+        </button>
+      </div>
 
       <div id="mbs-drawer" className={'mbs-drawer' + (open ? ' is-open' : '')} hidden={!open}>
         {links.map(l => (
@@ -183,7 +204,7 @@ function SocialTile({ item }) {
 
 /* Newsletter — no backend; it validates the address and shows the deck's
    confirmation locally, the same honest-mockup pattern as the forms. */
-function Newsletter() {
+function Newsletter({ nl = {} }) {
   const [done, setDone] = React.useState(false);
   const [error, setError] = React.useState(null);
   const doneRef = React.useRef(null);
@@ -195,7 +216,7 @@ function Newsletter() {
     e.preventDefault();
     const email = String(new FormData(e.currentTarget).get('news_email') || '').trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
-      setError('Please enter a valid email address.');
+      setError(nl.err || 'Please enter a valid email address.');
       return;
     }
     setError(null);
@@ -205,20 +226,18 @@ function Newsletter() {
   return (
     <div className="mbs-footer-news">
       <div>
-        <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 6px' }}>One email a month. Everything happening in Munich.</h2>
-        <p style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>Events, openings, partner formats and the odd opportunity we've been asked to pass on. No spam, unsubscribe in one click.</p>
+        <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 6px' }}>{nl.h}</h2>
+        <p style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>{nl.body}</p>
       </div>
       {done ? (
-        <p ref={doneRef} tabIndex={-1} role="status" style={{ outline: 'none', fontSize: '13px', color: 'var(--mbs-gold-on-navy)', margin: 0, alignSelf: 'center' }}>
-          You're on the list. First email lands at the start of next month.
-        </p>
+        <p ref={doneRef} tabIndex={-1} role="status" style={{ outline: 'none', fontSize: '13px', color: 'var(--mbs-gold-on-navy)', margin: 0, alignSelf: 'center' }}>{nl.done}</p>
       ) : (
         <form onSubmit={onSubmit} noValidate className="mbs-news-form">
-          <label htmlFor={id} className="mbs-sr">Your email</label>
-          <input id={id} name="news_email" type="email" inputMode="email" placeholder="Your email"
+          <label htmlFor={id} className="mbs-sr">{nl.srEmail}</label>
+          <input id={id} name="news_email" type="email" inputMode="email" placeholder={nl.placeholder}
             aria-invalid={error ? 'true' : undefined} aria-describedby={error ? id + '-err' : undefined}
             className="mbs-news-input" />
-          <button type="submit" className="mbs-nav-cta mbs-news-btn">Keep me posted</button>
+          <button type="submit" className="mbs-nav-cta mbs-news-btn">{nl.btn}</button>
           {error && <span id={id + '-err'} role="alert" className="mbs-news-err">{error}</span>}
         </form>
       )}
@@ -226,30 +245,34 @@ function Newsletter() {
   );
 }
 
-function FooterCol({ col }) {
+function FooterCol({ col, inPrep = 'in preparation' }) {
+  const href = it => it.href || (it.to && R && R[it.to]) || null;
   return (
     <div>
       <div className="mbs-label mbs-label-light" style={{ marginBottom: '14px' }}>{col.title}</div>
       <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        {col.items.map(it => (
-          <li key={it.label}>
-            {it.href ? (
-              <a href={it.href} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', textDecoration: 'none' }}
-                {...(/^https?:/.test(it.href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{it.label}</a>
-            ) : (
-              <span title={it.label + ' — in preparation'} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-35)', cursor: 'default' }}>
-                {it.label} <span style={{ fontSize: '10px' }}>(in preparation)</span>
-              </span>
-            )}
-          </li>
-        ))}
+        {col.items.map(it => {
+          const h = href(it);
+          return (
+            <li key={it.label}>
+              {h ? (
+                <a href={h} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', textDecoration: 'none' }}
+                  {...(/^https?:/.test(h) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{it.label}</a>
+              ) : (
+                <span title={it.label + ' — ' + inPrep} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-35)', cursor: 'default' }}>
+                  {it.label} <span style={{ fontSize: '10px' }}>({inPrep})</span>
+                </span>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 }
 
 function SiteFooter({
-  descriptor = '', columns = [], social = [],
+  descriptor = '', columns = [], social = [], newsletter = {}, inPrep = 'in preparation',
   copyright = '© 2026 Munich Business Society', tagline = 'Every campus. One network.', style
 }) {
   return (
@@ -270,11 +293,11 @@ function SiteFooter({
 
         {columns.length > 0 && (
           <div className="mbs-footer-cols">
-            {columns.map(c => <FooterCol key={c.title} col={c} />)}
+            {columns.map(c => <FooterCol key={c.title} col={c} inPrep={inPrep} />)}
           </div>
         )}
 
-        <Newsletter />
+        <Newsletter nl={newsletter} />
 
         <div style={{ height: '1px', background: 'var(--mbs-on-navy-border)', margin: '32px 0 24px' }} />
 
@@ -359,7 +382,7 @@ function PageHeader({ title, subtitle, height = 300, imageSrc, style }) {
    Real dialog semantics: labelled by its own title, focus moved in on open,
    tab cycled inside, focus returned to the opener on close. */
 
-function Modal({ open = true, tag, title, meta = [], children, footer, onClose, style }) {
+function Modal({ open = true, tag, title, meta = [], children, footer, onClose, closeLabel = 'Close dialog', style }) {
   const panelRef = React.useRef(null);
   const openerRef = React.useRef(null);
   const titleId = useUid();
@@ -406,7 +429,7 @@ function Modal({ open = true, tag, title, meta = [], children, footer, onClose, 
           borderRadius: 'var(--mbs-r-lg) var(--mbs-r-lg) 0 0', position: 'relative'
         }} data-on-navy="">
           {onClose && (
-            <button type="button" onClick={onClose} aria-label="Close dialog" style={{
+            <button type="button" onClick={onClose} aria-label={closeLabel} style={{
               position: 'absolute', top: '16px', right: '16px', width: '36px', height: '36px',
               borderRadius: '50%', background: 'rgba(255,255,255,.12)', border: 'none',
               color: 'var(--mbs-on-navy-70)', cursor: 'pointer',
@@ -893,39 +916,23 @@ const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
   SiteHeader, SiteFooter, Hero, PageHeader, PrincipleCard, StepCard, EventCard,
   EventListItem, MemberCard, ProfileCard, FaqItem, Timeline, DataTable, Modal,
   Section } = window.MBSDesignSystem_f206f7;
-const D = window.MBS_DATA;
-/* ROUTES is declared by the page shell in the same scope; screens read it at render time. */
+/* C (active-language content) and ROUTES are supplied by the page shell. */
 
-function HomeScreen() {
+function HomeScreen({ C }) {
+  const H = C.home;
   return (
     <div>
-      {/* Hero — the deck's H1 is the value sentence; the signature gold-italic
-          Fraunces accent moves onto its closing phrase. */}
-      <section className="mbs-hero">
-        <div className="mbs-hero-copy">
-          <div className="mbs-label" style={{ marginBottom: '16px' }}>Munich's cross-university business network</div>
-          <h1 className="mbs-display" style={{ maxWidth: '560px', margin: '0 0 24px' }}>
-            Your network shouldn't stop at <em>your campus.</em>
-          </h1>
-          <p style={{ fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-gray)', maxWidth: '480px', lineHeight: 'var(--mbs-lh-body)', margin: '0 0 40px' }}>
-            Munich Business Society brings together business-minded students from every university in Munich — one platform to build your network, grow real skills, and get on the radar of the companies you actually want to work for.
-          </p>
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-            <Button variant="gold" href={ROUTES.join}>Join MBS →</Button>
-            <Button variant="outline" href={ROUTES.whatwedo}>See what's coming up</Button>
-          </div>
-        </div>
-        <div className="mbs-hero-media">
-          <div aria-hidden="true" style={{ width: '100%', aspectRatio: '4 / 5', borderRadius: 'var(--mbs-r-lg)',
-            background: 'var(--mbs-navy)', boxShadow: '0 4px 20px rgba(39,63,99,.1)' }} />
-        </div>
-      </section>
+      {/* Hero — the "Munich Business Society" wordmark, restored per request; the
+          Hero component renders the gold-italic split. Lead + CTAs localise. */}
+      <Hero lead={H.heroLead}
+        primary={{ label: C.ui.joinArrow, href: ROUTES.join }}
+        secondary={{ label: H.seeEvents, href: ROUTES.whatwedo }} />
 
       {/* Proof bar — numbers are board placeholders until true today. */}
       <div className="mbs-sec mbs-sec--navy" data-on-navy="">
         <div className="mbs-sec-inner" style={{ paddingTop: '48px', paddingBottom: '48px' }}>
           <ul className="mbs-grid-4" style={{ listStyle: 'none', margin: 0, padding: 0, textAlign: 'center' }}>
-            {D.proof.map(p => (
+            {C.proof.map(p => (
               <li key={p.label}>
                 <div className="mbs-tabular" style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '40px', fontWeight: 700, color: 'var(--mbs-gold-on-navy)', lineHeight: 1 }}>
                   <span className="mbs-ph mbs-ph--on-navy">{p.value}</span>
@@ -940,17 +947,17 @@ function HomeScreen() {
       {/* Why we exist */}
       <Section>
         <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
-          <SectionHeading label="Why we exist" title="Munich is one business city. Its students are split across a dozen campuses." />
-          <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>LMU, TUM, the universities of applied sciences, the private schools — each one has strong people and its own bubble. Recruiters see one Munich talent pool; students only ever meet their own seminar group.</p>
-          <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>Munich Business Society exists to close that gap. We're deliberately not owned by one university. Whichever lecture hall you sit in, you join the same network, on the same terms.</p>
+          <SectionHeading label={H.whyLabel} title={H.whyTitle} />
+          <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{H.whyP1}</p>
+          <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{H.whyP2}</p>
         </div>
       </Section>
 
       {/* The three pillars */}
       <Section tone="alt">
-        <SectionHeading align="center" label="What you get" title="What you actually get out of it." style={{ marginBottom: '40px' }} />
+        <SectionHeading align="center" label={H.pillarsLabel} title={H.pillarsTitle} style={{ marginBottom: '40px' }} />
         <div className="mbs-grid-3">
-          {D.pillars.map(p => (
+          {C.pillars.map(p => (
             <Card key={p.title} padding="32px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '16px', lineHeight: 1 }}><Icon name={p.icon} size="28px" /></div>
               <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '20px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 4px' }}>{p.title}</h3>
@@ -965,12 +972,12 @@ function HomeScreen() {
       <Section>
         <div className="mbs-split">
           <div>
-            <SectionHeading label="What we do" title="Six formats, every semester." />
-            <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>Speaker nights, case workshops, company visits, skill labs, the founders' table and the socials that make the rest of it work. Members get first access; most events are open to any student in Munich.</p>
-            <Button variant="navy" href={ROUTES.whatwedo}>See the full programme →</Button>
+            <SectionHeading label={H.formatsLabel} title={H.formatsTitle} />
+            <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>{H.formatsText}</p>
+            <Button variant="navy" href={ROUTES.whatwedo}>{H.formatsLink}</Button>
           </div>
           <ul className="mbs-grid-2" style={{ listStyle: 'none', margin: 0, padding: 0, alignSelf: 'start' }}>
-            {D.formats.map(f => (
+            {C.formats.map(f => (
               <li key={f.title} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', padding: '14px 0' }}>
                 <span style={{ color: 'var(--mbs-gold-text)', flexShrink: 0, marginTop: '1px' }}><Icon name={f.icon} size="20px" /></span>
                 <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--mbs-navy)' }}>{f.title}</span>
@@ -984,12 +991,10 @@ function HomeScreen() {
       <Section tone="navy">
         <figure data-on-navy="" style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ color: 'var(--mbs-gold-on-navy)', marginBottom: '20px' }}><Icon name="star" size="26px" /></div>
-          <blockquote style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: 'clamp(22px,3vw,30px)', lineHeight: 1.4, color: 'var(--mbs-white)', margin: '0 0 20px', fontWeight: 500 }}>
-            "I came for the case workshop and left with a working-student job. Neither of them was at my university."
-          </blockquote>
+          <blockquote style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: 'clamp(22px,3vw,30px)', lineHeight: 1.4, color: 'var(--mbs-white)', margin: '0 0 20px', fontWeight: 500 }}>{H.voiceQuote}</blockquote>
           <figcaption style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)' }}>
-            <span className="mbs-ph mbs-ph--on-navy">[First name], [Programme], [University]</span>
-            <span style={{ display: 'block', marginTop: '8px', fontSize: '11px' }}>Collect two real member quotes before launch.</span>
+            <span className="mbs-ph mbs-ph--on-navy">{H.voiceAttr}</span>
+            <span style={{ display: 'block', marginTop: '8px', fontSize: '11px' }}>{H.voiceNote}</span>
           </figcaption>
         </figure>
       </Section>
@@ -998,14 +1003,14 @@ function HomeScreen() {
       <Section tone="alt">
         <div className="mbs-grid-2 mbs-grid--lg">
           <div style={{ padding: '40px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
-            <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>Applications are open.</h2>
-            <p style={{ fontSize: '14px', lineHeight: 1.8, margin: '0 0 24px' }}>Membership runs by semester and is open to students at any university in Munich. Takes five minutes to apply.</p>
-            <Button variant="gold" href={ROUTES.join}>Join MBS →</Button>
+            <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>{H.studentH}</h2>
+            <p style={{ fontSize: '14px', lineHeight: 1.8, margin: '0 0 24px' }}>{H.studentText}</p>
+            <Button variant="gold" href={ROUTES.join}>{C.ui.joinArrow}</Button>
           </div>
           <div data-on-navy="" style={{ padding: '40px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }}>
-            <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-white)', margin: '0 0 12px' }}>Hiring in Munich?</h2>
-            <p style={{ fontSize: '14px', lineHeight: 1.8, color: 'var(--mbs-on-navy-50)', margin: '0 0 24px' }}>Reach ambitious business students across every university in the city through one point of contact, instead of negotiating with five separate campus clubs.</p>
-            <Button variant="gold" href={ROUTES.companies}>Partner with us →</Button>
+            <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-white)', margin: '0 0 12px' }}>{H.companyH}</h2>
+            <p style={{ fontSize: '14px', lineHeight: 1.8, color: 'var(--mbs-on-navy-50)', margin: '0 0 24px' }}>{H.companyText}</p>
+            <Button variant="gold" href={ROUTES.companies}>{H.partnerBtn}</Button>
           </div>
         </div>
       </Section>
@@ -1016,49 +1021,31 @@ Object.assign(window, { HomeScreen });
 /* ---------- page shell -----------------------------------------------------
    Navigation is plain hrefs (see screens/_patches.jsx), so the header works
    without JavaScript and every nav item is keyboard reachable. `go` remains for
-   the one place a script still has to navigate: the dialog's own CTA. */
+   the one place a script still has to navigate: the dialog's own CTA.
+
+   Both languages ship in data.js; the shell holds the active language in state,
+   the header's DE/EN tab flips it in place, and the choice persists in
+   localStorage so it carries across page loads. */
 
 const ROUTES = window.MBS_ROUTES;
+const ACTIVE = 'home';
 const go = id => { window.location.href = ROUTES[id] || ROUTES.home; };
 
-/* A destination with href: null is not set up yet. The footer renders those as
-   marked plain text rather than as links that go nowhere. */
-const SOCIAL = [
-  { label: 'LinkedIn', icon: 'linkedin', href: null },
-  { label: 'Instagram', icon: 'instagram', href: null },
-  { label: 'Email us', icon: 'mail', href: 'mailto:hello@' + D.brand.domain }
-];
-const FOOTER_COLUMNS = [
-  { title: 'Society', items: [
-    { label: 'About', href: ROUTES.about },
-    { label: 'The Network', href: ROUTES.network },
-    { label: 'Team', href: ROUTES.team },
-    { label: 'What We Do', href: ROUTES.whatwedo }
-  ] },
-  { title: 'Get involved', items: [
-    { label: 'Membership', href: ROUTES.membership },
-    { label: 'Events', href: ROUTES.whatwedo },
-    { label: 'Open roles', href: null },
-    { label: 'Contact', href: ROUTES.contact }
-  ] },
-  { title: 'Companies', items: [
-    { label: 'For Companies', href: ROUTES.companies },
-    { label: 'Partner pack', href: null },
-    { label: 'partners@' + D.brand.domain, href: 'mailto:partners@' + D.brand.domain }
-  ] },
-  { title: 'Legal', items: [
-    { label: 'Imprint', href: null },
-    { label: 'Privacy policy', href: null },
-    { label: 'Statutes', href: null }
-  ] }
-];
-
 function Page() {
+  const [lang, setLangState] = React.useState(window.MBS_GET_LANG());
+  const C = window.MBS_CONTENT[lang];
+  const setLang = l => { window.MBS_SET_LANG(l); setLangState(l); };
+
   const [eventId, setEventId] = React.useState(window.MBS_INITIAL_EVENT);
-  const ev = D.events.find(e => e.id === eventId);
+  const ev = C.events.find(e => e.id === eventId);
 
   const openEvent = id => { setEventId(id); window.MBS_SET_EVENT_PARAM(id); };
   const closeEvent = () => { setEventId(null); window.MBS_SET_EVENT_PARAM(null); };
+
+  React.useEffect(() => {
+    document.documentElement.lang = lang;
+    document.title = 'MBS — ' + C.title[ACTIVE];
+  }, [lang]);
 
   React.useEffect(() => {
     if (!ev) return;
@@ -1068,25 +1055,29 @@ function Page() {
     return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
   }, [ev]);
 
+  const dlg = C.ui.dialog;
+
   return (
     <div style={{ position: 'relative' }}>
-      <a className="mbs-skip" href="#main">Skip to content</a>
-      <SiteHeader links={D.nav} active="home" logoSrc="assets/mbs-logo-horizontal.png" />
+      <a className="mbs-skip" href="#main">{C.ui.skip}</a>
+      <SiteHeader links={C.nav} active={ACTIVE} logoSrc="assets/mbs-logo-horizontal.png"
+        applyLabel={C.ui.join} lang={lang} setLang={setLang} ui={C.ui} />
       <main id="main">
-        <HomeScreen />
+        <HomeScreen C={C} />
       </main>
-      <SiteFooter descriptor={D.brand.footerDescriptor} columns={FOOTER_COLUMNS} social={SOCIAL}
-        copyright="© 2026 Munich Business Society" tagline={D.brand.tagline} />
+      <SiteFooter descriptor={C.brand.footerDescriptor} columns={C.ui.footerCols} social={C.ui.social}
+        newsletter={C.ui.newsletter} inPrep={C.ui.inPrep}
+        copyright={C.ui.copyright} tagline={C.brand.tagline} />
       {ev && (
         <div style={{ position: 'fixed', inset: 0, zIndex: 300 }}>
-          <Modal tag={ev.tag} title={ev.title} onClose={closeEvent}
+          <Modal tag={ev.tag} title={ev.title} onClose={closeEvent} closeLabel={dlg.close}
             meta={[ev.date, ev.time, ev.location]}
-            footer={<Button variant="gold" block onClick={() => { closeEvent(); go('join'); }}>Join MBS &amp; attend →</Button>}>
-            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '0 0 8px' }}>About this event</h3>
+            footer={<Button variant="gold" block onClick={() => { closeEvent(); go('join'); }}>{dlg.cta}</Button>}>
+            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '0 0 8px' }}>{dlg.about}</h3>
             <p style={{ fontSize: '14px', lineHeight: 1.8 }}>{ev.about}</p>
-            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>What to expect</h3>
+            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>{dlg.expect}</h3>
             <p style={{ fontSize: '14px', lineHeight: 1.8 }}>{ev.expect}</p>
-            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>Who's it for?</h3>
+            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>{dlg.who}</h3>
             <p style={{ fontSize: '14px', lineHeight: 1.8 }}>{ev.audience}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginTop: '24px', paddingTop: '24px', borderTop: '1px solid var(--mbs-border)', fontSize: '13px', color: 'var(--mbs-gray)' }}>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}><Icon name="pin" size="15px" />{ev.location}</span>

@@ -3,20 +3,19 @@ const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
   SiteHeader, SiteFooter, Hero, PageHeader, PrincipleCard, StepCard, EventCard,
   EventListItem, MemberCard, ProfileCard, FaqItem, Timeline, DataTable, Modal,
   Section } = window.MBSDesignSystem_f206f7;
-const D = window.MBS_DATA;
 
-function WhatWeDoScreen({ openEvent }) {
+function WhatWeDoScreen({ C, openEvent }) {
+  const W = C.whatwedo;
   return (
     <div>
-      <PageHeader title="What We Do" subtitle="Six formats. One semester. All of Munich." />
+      <PageHeader title={C.title.whatwedo} subtitle={W.subtitle} />
 
       <Section tone="alt">
         <div style={{ maxWidth: 'var(--mbs-prose-max)', marginBottom: '40px' }}>
-          <SectionHeading label="The formats" title="Widen your network, grow a skill, or get noticed."
-            desc="Every format is built to do one of three things. Most are open to any student in Munich; members get early access and the smaller rooms." />
+          <SectionHeading label={W.formatsLabel} title={W.formatsTitle} desc={W.formatsDesc} />
         </div>
         <div className="mbs-grid-2">
-          {D.formats.map(f => (
+          {C.formats.map(f => (
             <Card key={f.title} padding="28px">
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '14px' }}>
                 <span style={{ color: 'var(--mbs-gold-text)', lineHeight: 1 }}><Icon name={f.icon} size="24px" /></span>
@@ -33,36 +32,32 @@ function WhatWeDoScreen({ openEvent }) {
       <Section>
         <div className="mbs-split">
           <div>
-            <SectionHeading label="Partner projects" title="Sometimes a company gives us a real problem." />
-            <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>A small team of members works on a defined question over four to six weeks and presents to the client at the end. Paid or credited depending on the partner. It's the closest thing to consulting work you can do before you're hired to do it.</p>
-            <Button variant="navy" href={ROUTES.companies}>Companies — set up a project →</Button>
+            <SectionHeading label={W.projLabel} title={W.projTitle} />
+            <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>{W.projText}</p>
+            <Button variant="navy" href={ROUTES.companies}>{W.projLink}</Button>
           </div>
           <Card tone="navy" padding="32px">
             <div data-on-navy="" style={{ color: 'var(--mbs-gold-on-navy)', marginBottom: '16px' }}><Icon name="briefcase" size="28px" /></div>
-            <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, margin: 0 }}>
-              Four to six weeks. A small member team. A defined question and a documented deliverable, presented to the partner's leadership. Real work, before anyone's paying you to do it.
-            </p>
+            <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, margin: 0 }}>{W.projCard}</p>
           </Card>
         </div>
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label="Programme" title="Coming up this semester" />
-        {D.events.length ? (
+        <SectionHeading label={W.progLabel} title={W.progTitle} />
+        {C.events.length ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {D.events.map(e => (
+            {C.events.map(e => (
               <EventListItem key={e.id} day={e.day} month={e.month} title={e.title} tag={e.tag}
                 location={e.location} time={e.time} onClick={() => openEvent(e.id)}>{e.teaser}</EventListItem>
             ))}
           </div>
         ) : (
           <div style={{ textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r)', background: 'var(--mbs-white)', border: '1px solid var(--mbs-border)' }}>
-            <p style={{ fontSize: '15px', color: 'var(--mbs-gray)', margin: 0 }}>The next semester's programme is being finalised. Join the newsletter and you'll hear first.</p>
+            <p style={{ fontSize: '15px', color: 'var(--mbs-gray)', margin: 0 }}>{W.progEmpty}</p>
           </div>
         )}
-        <p className="mbs-ph" style={{ marginTop: '20px', fontSize: '13px' }}>
-          Sample programme — the board replaces these with the real semester's events. Venues show as “Munich” until each is confirmed.
-        </p>
+        <p className="mbs-ph" style={{ marginTop: '20px', fontSize: '13px' }}>{W.progNote}</p>
       </Section>
     </div>
   );

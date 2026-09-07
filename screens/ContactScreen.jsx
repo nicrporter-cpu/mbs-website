@@ -3,16 +3,9 @@ const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
   SiteHeader, SiteFooter, Hero, PageHeader, PrincipleCard, StepCard, EventCard,
   EventListItem, MemberCard, ProfileCard, FaqItem, Timeline, DataTable, Modal,
   Section } = window.MBSDesignSystem_f206f7;
-const D = window.MBS_DATA;
 
-const DOMAIN = D.brand.domain;
-const ROUTES_MAIL = [
-  { icon: 'users', label: 'Students & membership', addr: 'hello@' + DOMAIN },
-  { icon: 'briefcase', label: 'Companies & partnerships', addr: 'partners@' + DOMAIN },
-  { icon: 'mail', label: 'Press & everything else', addr: 'info@' + DOMAIN }
-];
-
-function ContactForm() {
+function ContactForm({ C }) {
+  const K = C.contact;
   const [sent, setSent] = React.useState(false);
   const [errors, setErrors] = React.useState({});
   const formRef = React.useRef(null);
@@ -26,11 +19,10 @@ function ContactForm() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const err = {};
-    if (!String(data.get('name') || '').trim()) err.name = 'Please add your name.';
+    if (!String(data.get('name') || '').trim()) err.name = K.errName;
     const email = String(data.get('email') || '').trim();
-    if (!email) err.email = 'Please add your email address.';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) err.email = "That email address doesn't look complete — please check it.";
-    if (!String(data.get('message') || '').trim()) err.message = 'Please add a message.';
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) err.email = K.errEmail;
+    if (!String(data.get('message') || '').trim()) err.message = K.errMsg;
     setErrors(err);
     if (Object.keys(err).length) {
       const first = ['name', 'email', 'role', 'message'].find(k => err[k]);
@@ -46,9 +38,9 @@ function ContactForm() {
       <Card padding="40px" hover={false} style={{ textAlign: 'center' }}>
         <div ref={statusRef} tabIndex={-1} role="status" style={{ outline: 'none' }}>
           <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px' }}><Icon name="check" size="34px" /></div>
-          <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '20px', margin: '0 0 8px' }}>Message sent.</h3>
+          <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '20px', margin: '0 0 8px' }}>{K.sentTitle}</h3>
           <p style={{ fontSize: '14px', lineHeight: 1.8, maxWidth: '360px', margin: '0 auto' }}>
-            We'll come back to you within <span className="mbs-ph">[X]</span> working days.
+            {K.sentA}<span className="mbs-ph">[X]</span>{K.sentB}
           </p>
         </div>
       </Card>
@@ -57,42 +49,39 @@ function ContactForm() {
 
   return (
     <form ref={formRef} onSubmit={onSubmit} noValidate>
-      <Field label="Name" required error={errors.name}>
-        <Input name="name" autoComplete="name" placeholder="Your name" onInput={clear('name')} />
+      <Field label={K.f.name} required error={errors.name}>
+        <Input name="name" autoComplete="name" placeholder={K.ph.name} onInput={clear('name')} />
       </Field>
-      <Field label="Email" required error={errors.email}>
-        <Input type="email" name="email" autoComplete="email" inputMode="email" placeholder="you@example.com" onInput={clear('email')} />
+      <Field label={K.f.email} required error={errors.email}>
+        <Input type="email" name="email" autoComplete="email" inputMode="email" placeholder={K.ph.email} onInput={clear('email')} />
       </Field>
-      <Field label="I'm a…">
+      <Field label={K.f.role}>
         <Select name="role" defaultValue="student">
-          <option value="student">Student</option>
-          <option value="company">Company</option>
-          <option value="other">Other</option>
+          {K.roles.map(r => <option key={r.v} value={r.v}>{r.label}</option>)}
         </Select>
       </Field>
-      <Field label="Your message" required error={errors.message}>
-        <Textarea name="message" placeholder="What's on your mind?" onInput={clear('message')} />
+      <Field label={K.f.message} required error={errors.message}>
+        <Textarea name="message" placeholder={K.ph.message} onInput={clear('message')} />
       </Field>
-      <Button variant="navy" block type="submit">Send it →</Button>
-      <p style={{ marginTop: '14px', fontSize: '12px', color: 'var(--mbs-gray)', textAlign: 'center' }}>
-        Or write to us directly at hello@{DOMAIN}.
-      </p>
+      <Button variant="navy" block type="submit">{K.send}</Button>
+      <p style={{ marginTop: '14px', fontSize: '12px', color: 'var(--mbs-gray)', textAlign: 'center' }}>{K.direct}</p>
     </form>
   );
 }
 
-function ContactScreen() {
+function ContactScreen({ C }) {
+  const K = C.contact;
   return (
     <div>
-      <PageHeader title="Contact" subtitle="Ask us anything — student, company, or just curious." />
+      <PageHeader title={C.title.contact} subtitle={K.subtitle} />
 
       <Section>
         <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
-          <SectionHeading label="Ask us anything" title="Ask us anything."
-            desc={<span>Whether you're a student weighing up joining, a company thinking about a partnership, or someone with an idea for a format — write to us. We answer within <span className="mbs-ph">[X]</span> working days.</span>} />
+          <SectionHeading align="center" label={K.label} title={K.title}
+            desc={<span>{K.descA}<span className="mbs-ph">[X]</span>{K.descB}</span>} />
         </div>
         <div className="mbs-grid-3" style={{ marginTop: '32px' }}>
-          {ROUTES_MAIL.map(r => (
+          {K.routes.map(r => (
             <a key={r.label} href={'mailto:' + r.addr} style={{ display: 'block', padding: '24px', borderRadius: 'var(--mbs-r)', background: 'var(--mbs-off)', border: '1px solid var(--mbs-border)', textDecoration: 'none' }}>
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '12px' }}><Icon name={r.icon} size="22px" /></div>
               <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--mbs-navy)', marginBottom: '4px' }}>{r.label}</div>
@@ -105,18 +94,18 @@ function ContactScreen() {
       <Section tone="alt">
         <div className="mbs-split mbs-split--top">
           <div>
-            <SectionHeading label="Send a message" title="Straight to the right person." />
-            <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>Tell us who you are and what you're after — the form routes your message to the team that can actually help.</p>
+            <SectionHeading label={K.formLabel} title={K.formTitle} />
+            <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{K.formText}</p>
             <div style={{ marginTop: '28px' }}>
-              <div className="mbs-label" style={{ marginBottom: '12px' }}>Find us</div>
-              <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.8, margin: '0 0 8px' }}>We meet across Munich rather than on one campus — venues are listed with each event.</p>
+              <div className="mbs-label" style={{ marginBottom: '12px' }}>{K.findLabel}</div>
+              <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.8, margin: '0 0 8px' }}>{K.findText}</p>
               <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', margin: 0 }}>
-                Follow: <span className="mbs-ph">LinkedIn · Instagram [handles]</span>
+                {K.follow}<span className="mbs-ph">{K.followPh}</span>
               </p>
             </div>
           </div>
           <div style={{ maxWidth: 'var(--mbs-form-max)' }}>
-            <ContactForm />
+            <ContactForm C={C} />
           </div>
         </div>
       </Section>

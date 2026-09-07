@@ -666,3 +666,44 @@ input[type="radio"] {
   .mbs-news-input { min-width: 0; }
   .mbs-news-btn { justify-content: center; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   7. Language switch + bilingual header layout
+
+   The DE/EN toggle stays visible at every width (desktop beside the CTA, mobile
+   beside the hamburger), so the language is always one tap away.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.mbs-nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--mbs-sp-3);
+}
+
+.mbs-lang {
+  display: inline-flex;
+  flex-shrink: 0;
+  border: 1px solid var(--mbs-border);
+  border-radius: var(--mbs-r-pill);
+  padding: 2px;
+  background: var(--mbs-off);
+}
+.mbs-lang-btn {
+  min-width: 34px;
+  height: 28px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--mbs-r-pill);
+  background: transparent;
+  color: var(--mbs-gray);
+  font-family: var(--mbs-font-sans);
+  font-size: var(--mbs-fs-nav);
+  font-weight: var(--mbs-fw-semibold);
+  letter-spacing: var(--mbs-tr-nav);
+  cursor: pointer;
+  transition: background var(--mbs-dur) var(--mbs-ease), color var(--mbs-dur) var(--mbs-ease);
+}
+.mbs-lang-btn:hover { color: var(--mbs-navy); }
+.mbs-lang-btn.is-active {
+  background: var(--mbs-navy);
+  color: var(--mbs-white);
+}

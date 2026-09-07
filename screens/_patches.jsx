@@ -82,10 +82,27 @@ function Section({ children, tone, className = '', style }) {
    keyboard reachable, middle-clickable and openable in a new tab. Below 900px
    the row collapses into a drawer. */
 
-function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', style }) {
+/* The DE/EN switch. A two-button segmented control — real buttons, so it is
+   keyboard operable and announced; the active language is pressed. Setting the
+   language re-renders the whole app in place, so the switch is instant. */
+function LangSwitch({ lang, setLang, ui }) {
+  const langs = [{ code: 'en', label: 'EN' }, { code: 'de', label: 'DE' }];
+  return (
+    <div className="mbs-lang" role="group" aria-label={(ui && ui.langLabel) || 'Language'}>
+      {langs.map(l => (
+        <button key={l.code} type="button"
+          className={'mbs-lang-btn' + (lang === l.code ? ' is-active' : '')}
+          aria-pressed={lang === l.code} onClick={() => setLang(l.code)}>{l.label}</button>
+      ))}
+    </div>
+  );
+}
+
+function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', lang = 'en', setLang, ui = {}, style }) {
   const [open, setOpen] = React.useState(false);
   const toggleRef = React.useRef(null);
   const href = id => (R && R[id]) || '#';
+  const setL = setLang || function () {};
 
   React.useEffect(() => {
     if (!open) return;
@@ -97,24 +114,28 @@ function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', styl
   }, [open]);
 
   return (
-    <nav className="mbs-nav" style={style} aria-label="Main navigation">
-      <a className="mbs-nav-brand" href={href('home')} aria-label="Munich Business Society — home">
+    <nav className="mbs-nav" style={style} aria-label={ui.home ? undefined : 'Main navigation'}>
+      <a className="mbs-nav-brand" href={href('home')} aria-label={ui.home || 'Munich Business Society — home'}>
         <img src={logoSrc} alt="" width="204" height="102" />
       </a>
 
-      <div className="mbs-nav-links">
-        {links.map(l => (
-          <a key={l.id} className={'mbs-navlink' + (active === l.id ? ' is-active' : '')}
-            href={href(l.id)} aria-current={active === l.id ? 'page' : undefined}>{l.label}</a>
-        ))}
-        <a className="mbs-nav-cta" href={href('join')}>{applyLabel}</a>
-      </div>
+      <div className="mbs-nav-right">
+        <div className="mbs-nav-links">
+          {links.map(l => (
+            <a key={l.id} className={'mbs-navlink' + (active === l.id ? ' is-active' : '')}
+              href={href(l.id)} aria-current={active === l.id ? 'page' : undefined}>{l.label}</a>
+          ))}
+          <a className="mbs-nav-cta" href={href('join')}>{applyLabel}</a>
+        </div>
 
-      <button ref={toggleRef} type="button" className="mbs-nav-toggle" aria-expanded={open}
-        aria-controls="mbs-drawer" onClick={() => setOpen(v => !v)}>
-        <Icon name={open ? 'close' : 'menu'} size="22px" />
-        <span className="mbs-sr">{open ? 'Close menu' : 'Open menu'}</span>
-      </button>
+        <LangSwitch lang={lang} setLang={setL} ui={ui} />
+
+        <button ref={toggleRef} type="button" className="mbs-nav-toggle" aria-expanded={open}
+          aria-controls="mbs-drawer" onClick={() => setOpen(v => !v)}>
+          <Icon name={open ? 'close' : 'menu'} size="22px" />
+          <span className="mbs-sr">{open ? (ui.menuClose || 'Close menu') : (ui.menuOpen || 'Open menu')}</span>
+        </button>
+      </div>
 
       <div id="mbs-drawer" className={'mbs-drawer' + (open ? ' is-open' : '')} hidden={!open}>
         {links.map(l => (
@@ -162,7 +183,7 @@ function SocialTile({ item }) {
 
 /* Newsletter — no backend; it validates the address and shows the deck's
    confirmation locally, the same honest-mockup pattern as the forms. */
-function Newsletter() {
+function Newsletter({ nl = {} }) {
   const [done, setDone] = React.useState(false);
   const [error, setError] = React.useState(null);
   const doneRef = React.useRef(null);
@@ -174,7 +195,7 @@ function Newsletter() {
     e.preventDefault();
     const email = String(new FormData(e.currentTarget).get('news_email') || '').trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
-      setError('Please enter a valid email address.');
+      setError(nl.err || 'Please enter a valid email address.');
       return;
     }
     setError(null);
@@ -184,20 +205,18 @@ function Newsletter() {
   return (
     <div className="mbs-footer-news">
       <div>
-        <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 6px' }}>One email a month. Everything happening in Munich.</h2>
-        <p style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>Events, openings, partner formats and the odd opportunity we've been asked to pass on. No spam, unsubscribe in one click.</p>
+        <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 6px' }}>{nl.h}</h2>
+        <p style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>{nl.body}</p>
       </div>
       {done ? (
-        <p ref={doneRef} tabIndex={-1} role="status" style={{ outline: 'none', fontSize: '13px', color: 'var(--mbs-gold-on-navy)', margin: 0, alignSelf: 'center' }}>
-          You're on the list. First email lands at the start of next month.
-        </p>
+        <p ref={doneRef} tabIndex={-1} role="status" style={{ outline: 'none', fontSize: '13px', color: 'var(--mbs-gold-on-navy)', margin: 0, alignSelf: 'center' }}>{nl.done}</p>
       ) : (
         <form onSubmit={onSubmit} noValidate className="mbs-news-form">
-          <label htmlFor={id} className="mbs-sr">Your email</label>
-          <input id={id} name="news_email" type="email" inputMode="email" placeholder="Your email"
+          <label htmlFor={id} className="mbs-sr">{nl.srEmail}</label>
+          <input id={id} name="news_email" type="email" inputMode="email" placeholder={nl.placeholder}
             aria-invalid={error ? 'true' : undefined} aria-describedby={error ? id + '-err' : undefined}
             className="mbs-news-input" />
-          <button type="submit" className="mbs-nav-cta mbs-news-btn">Keep me posted</button>
+          <button type="submit" className="mbs-nav-cta mbs-news-btn">{nl.btn}</button>
           {error && <span id={id + '-err'} role="alert" className="mbs-news-err">{error}</span>}
         </form>
       )}
@@ -205,30 +224,34 @@ function Newsletter() {
   );
 }
 
-function FooterCol({ col }) {
+function FooterCol({ col, inPrep = 'in preparation' }) {
+  const href = it => it.href || (it.to && R && R[it.to]) || null;
   return (
     <div>
       <div className="mbs-label mbs-label-light" style={{ marginBottom: '14px' }}>{col.title}</div>
       <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        {col.items.map(it => (
-          <li key={it.label}>
-            {it.href ? (
-              <a href={it.href} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', textDecoration: 'none' }}
-                {...(/^https?:/.test(it.href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{it.label}</a>
-            ) : (
-              <span title={it.label + ' — in preparation'} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-35)', cursor: 'default' }}>
-                {it.label} <span style={{ fontSize: '10px' }}>(in preparation)</span>
-              </span>
-            )}
-          </li>
-        ))}
+        {col.items.map(it => {
+          const h = href(it);
+          return (
+            <li key={it.label}>
+              {h ? (
+                <a href={h} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', textDecoration: 'none' }}
+                  {...(/^https?:/.test(h) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{it.label}</a>
+              ) : (
+                <span title={it.label + ' — ' + inPrep} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-35)', cursor: 'default' }}>
+                  {it.label} <span style={{ fontSize: '10px' }}>({inPrep})</span>
+                </span>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 }
 
 function SiteFooter({
-  descriptor = '', columns = [], social = [],
+  descriptor = '', columns = [], social = [], newsletter = {}, inPrep = 'in preparation',
   copyright = '© 2026 Munich Business Society', tagline = 'Every campus. One network.', style
 }) {
   return (
@@ -249,11 +272,11 @@ function SiteFooter({
 
         {columns.length > 0 && (
           <div className="mbs-footer-cols">
-            {columns.map(c => <FooterCol key={c.title} col={c} />)}
+            {columns.map(c => <FooterCol key={c.title} col={c} inPrep={inPrep} />)}
           </div>
         )}
 
-        <Newsletter />
+        <Newsletter nl={newsletter} />
 
         <div style={{ height: '1px', background: 'var(--mbs-on-navy-border)', margin: '32px 0 24px' }} />
 
@@ -338,7 +361,7 @@ function PageHeader({ title, subtitle, height = 300, imageSrc, style }) {
    Real dialog semantics: labelled by its own title, focus moved in on open,
    tab cycled inside, focus returned to the opener on close. */
 
-function Modal({ open = true, tag, title, meta = [], children, footer, onClose, style }) {
+function Modal({ open = true, tag, title, meta = [], children, footer, onClose, closeLabel = 'Close dialog', style }) {
   const panelRef = React.useRef(null);
   const openerRef = React.useRef(null);
   const titleId = useUid();
@@ -385,7 +408,7 @@ function Modal({ open = true, tag, title, meta = [], children, footer, onClose, 
           borderRadius: 'var(--mbs-r-lg) var(--mbs-r-lg) 0 0', position: 'relative'
         }} data-on-navy="">
           {onClose && (
-            <button type="button" onClick={onClose} aria-label="Close dialog" style={{
+            <button type="button" onClick={onClose} aria-label={closeLabel} style={{
               position: 'absolute', top: '16px', right: '16px', width: '36px', height: '36px',
               borderRadius: '50%', background: 'rgba(255,255,255,.12)', border: 'none',
               color: 'var(--mbs-on-navy-70)', cursor: 'pointer',

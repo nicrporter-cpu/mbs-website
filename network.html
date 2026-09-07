@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MBS — The Network</title>
 <link rel="icon" href="assets/mbs-mark.svg">
-<link rel="stylesheet" href="design-system/styles.css?v=56a1d6e280">
-<link rel="stylesheet" href="site.css?v=56a1d6e280">
+<link rel="stylesheet" href="design-system/styles.css?v=1fb27d30b2">
+<link rel="stylesheet" href="site.css?v=1fb27d30b2">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -15,9 +15,9 @@
 <script src="vendor/react.development.js"></script>
 <script src="vendor/react-dom.development.js"></script>
 <script src="vendor/babel.min.js"></script>
-<script src="design-system/_ds_bundle.js?v=56a1d6e280"></script>
-<script src="screens/data.js?v=56a1d6e280"></script>
-<script src="site.js?v=56a1d6e280"></script>
+<script src="design-system/_ds_bundle.js?v=1fb27d30b2"></script>
+<script src="screens/data.js?v=1fb27d30b2"></script>
+<script src="site.js?v=1fb27d30b2"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -103,10 +103,27 @@ function Section({ children, tone, className = '', style }) {
    keyboard reachable, middle-clickable and openable in a new tab. Below 900px
    the row collapses into a drawer. */
 
-function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', style }) {
+/* The DE/EN switch. A two-button segmented control — real buttons, so it is
+   keyboard operable and announced; the active language is pressed. Setting the
+   language re-renders the whole app in place, so the switch is instant. */
+function LangSwitch({ lang, setLang, ui }) {
+  const langs = [{ code: 'en', label: 'EN' }, { code: 'de', label: 'DE' }];
+  return (
+    <div className="mbs-lang" role="group" aria-label={(ui && ui.langLabel) || 'Language'}>
+      {langs.map(l => (
+        <button key={l.code} type="button"
+          className={'mbs-lang-btn' + (lang === l.code ? ' is-active' : '')}
+          aria-pressed={lang === l.code} onClick={() => setLang(l.code)}>{l.label}</button>
+      ))}
+    </div>
+  );
+}
+
+function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', lang = 'en', setLang, ui = {}, style }) {
   const [open, setOpen] = React.useState(false);
   const toggleRef = React.useRef(null);
   const href = id => (R && R[id]) || '#';
+  const setL = setLang || function () {};
 
   React.useEffect(() => {
     if (!open) return;
@@ -118,24 +135,28 @@ function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', styl
   }, [open]);
 
   return (
-    <nav className="mbs-nav" style={style} aria-label="Main navigation">
-      <a className="mbs-nav-brand" href={href('home')} aria-label="Munich Business Society — home">
+    <nav className="mbs-nav" style={style} aria-label={ui.home ? undefined : 'Main navigation'}>
+      <a className="mbs-nav-brand" href={href('home')} aria-label={ui.home || 'Munich Business Society — home'}>
         <img src={logoSrc} alt="" width="204" height="102" />
       </a>
 
-      <div className="mbs-nav-links">
-        {links.map(l => (
-          <a key={l.id} className={'mbs-navlink' + (active === l.id ? ' is-active' : '')}
-            href={href(l.id)} aria-current={active === l.id ? 'page' : undefined}>{l.label}</a>
-        ))}
-        <a className="mbs-nav-cta" href={href('join')}>{applyLabel}</a>
-      </div>
+      <div className="mbs-nav-right">
+        <div className="mbs-nav-links">
+          {links.map(l => (
+            <a key={l.id} className={'mbs-navlink' + (active === l.id ? ' is-active' : '')}
+              href={href(l.id)} aria-current={active === l.id ? 'page' : undefined}>{l.label}</a>
+          ))}
+          <a className="mbs-nav-cta" href={href('join')}>{applyLabel}</a>
+        </div>
 
-      <button ref={toggleRef} type="button" className="mbs-nav-toggle" aria-expanded={open}
-        aria-controls="mbs-drawer" onClick={() => setOpen(v => !v)}>
-        <Icon name={open ? 'close' : 'menu'} size="22px" />
-        <span className="mbs-sr">{open ? 'Close menu' : 'Open menu'}</span>
-      </button>
+        <LangSwitch lang={lang} setLang={setL} ui={ui} />
+
+        <button ref={toggleRef} type="button" className="mbs-nav-toggle" aria-expanded={open}
+          aria-controls="mbs-drawer" onClick={() => setOpen(v => !v)}>
+          <Icon name={open ? 'close' : 'menu'} size="22px" />
+          <span className="mbs-sr">{open ? (ui.menuClose || 'Close menu') : (ui.menuOpen || 'Open menu')}</span>
+        </button>
+      </div>
 
       <div id="mbs-drawer" className={'mbs-drawer' + (open ? ' is-open' : '')} hidden={!open}>
         {links.map(l => (
@@ -183,7 +204,7 @@ function SocialTile({ item }) {
 
 /* Newsletter — no backend; it validates the address and shows the deck's
    confirmation locally, the same honest-mockup pattern as the forms. */
-function Newsletter() {
+function Newsletter({ nl = {} }) {
   const [done, setDone] = React.useState(false);
   const [error, setError] = React.useState(null);
   const doneRef = React.useRef(null);
@@ -195,7 +216,7 @@ function Newsletter() {
     e.preventDefault();
     const email = String(new FormData(e.currentTarget).get('news_email') || '').trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
-      setError('Please enter a valid email address.');
+      setError(nl.err || 'Please enter a valid email address.');
       return;
     }
     setError(null);
@@ -205,20 +226,18 @@ function Newsletter() {
   return (
     <div className="mbs-footer-news">
       <div>
-        <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 6px' }}>One email a month. Everything happening in Munich.</h2>
-        <p style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>Events, openings, partner formats and the odd opportunity we've been asked to pass on. No spam, unsubscribe in one click.</p>
+        <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 6px' }}>{nl.h}</h2>
+        <p style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>{nl.body}</p>
       </div>
       {done ? (
-        <p ref={doneRef} tabIndex={-1} role="status" style={{ outline: 'none', fontSize: '13px', color: 'var(--mbs-gold-on-navy)', margin: 0, alignSelf: 'center' }}>
-          You're on the list. First email lands at the start of next month.
-        </p>
+        <p ref={doneRef} tabIndex={-1} role="status" style={{ outline: 'none', fontSize: '13px', color: 'var(--mbs-gold-on-navy)', margin: 0, alignSelf: 'center' }}>{nl.done}</p>
       ) : (
         <form onSubmit={onSubmit} noValidate className="mbs-news-form">
-          <label htmlFor={id} className="mbs-sr">Your email</label>
-          <input id={id} name="news_email" type="email" inputMode="email" placeholder="Your email"
+          <label htmlFor={id} className="mbs-sr">{nl.srEmail}</label>
+          <input id={id} name="news_email" type="email" inputMode="email" placeholder={nl.placeholder}
             aria-invalid={error ? 'true' : undefined} aria-describedby={error ? id + '-err' : undefined}
             className="mbs-news-input" />
-          <button type="submit" className="mbs-nav-cta mbs-news-btn">Keep me posted</button>
+          <button type="submit" className="mbs-nav-cta mbs-news-btn">{nl.btn}</button>
           {error && <span id={id + '-err'} role="alert" className="mbs-news-err">{error}</span>}
         </form>
       )}
@@ -226,30 +245,34 @@ function Newsletter() {
   );
 }
 
-function FooterCol({ col }) {
+function FooterCol({ col, inPrep = 'in preparation' }) {
+  const href = it => it.href || (it.to && R && R[it.to]) || null;
   return (
     <div>
       <div className="mbs-label mbs-label-light" style={{ marginBottom: '14px' }}>{col.title}</div>
       <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        {col.items.map(it => (
-          <li key={it.label}>
-            {it.href ? (
-              <a href={it.href} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', textDecoration: 'none' }}
-                {...(/^https?:/.test(it.href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{it.label}</a>
-            ) : (
-              <span title={it.label + ' — in preparation'} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-35)', cursor: 'default' }}>
-                {it.label} <span style={{ fontSize: '10px' }}>(in preparation)</span>
-              </span>
-            )}
-          </li>
-        ))}
+        {col.items.map(it => {
+          const h = href(it);
+          return (
+            <li key={it.label}>
+              {h ? (
+                <a href={h} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', textDecoration: 'none' }}
+                  {...(/^https?:/.test(h) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{it.label}</a>
+              ) : (
+                <span title={it.label + ' — ' + inPrep} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-35)', cursor: 'default' }}>
+                  {it.label} <span style={{ fontSize: '10px' }}>({inPrep})</span>
+                </span>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 }
 
 function SiteFooter({
-  descriptor = '', columns = [], social = [],
+  descriptor = '', columns = [], social = [], newsletter = {}, inPrep = 'in preparation',
   copyright = '© 2026 Munich Business Society', tagline = 'Every campus. One network.', style
 }) {
   return (
@@ -270,11 +293,11 @@ function SiteFooter({
 
         {columns.length > 0 && (
           <div className="mbs-footer-cols">
-            {columns.map(c => <FooterCol key={c.title} col={c} />)}
+            {columns.map(c => <FooterCol key={c.title} col={c} inPrep={inPrep} />)}
           </div>
         )}
 
-        <Newsletter />
+        <Newsletter nl={newsletter} />
 
         <div style={{ height: '1px', background: 'var(--mbs-on-navy-border)', margin: '32px 0 24px' }} />
 
@@ -359,7 +382,7 @@ function PageHeader({ title, subtitle, height = 300, imageSrc, style }) {
    Real dialog semantics: labelled by its own title, focus moved in on open,
    tab cycled inside, focus returned to the opener on close. */
 
-function Modal({ open = true, tag, title, meta = [], children, footer, onClose, style }) {
+function Modal({ open = true, tag, title, meta = [], children, footer, onClose, closeLabel = 'Close dialog', style }) {
   const panelRef = React.useRef(null);
   const openerRef = React.useRef(null);
   const titleId = useUid();
@@ -406,7 +429,7 @@ function Modal({ open = true, tag, title, meta = [], children, footer, onClose, 
           borderRadius: 'var(--mbs-r-lg) var(--mbs-r-lg) 0 0', position: 'relative'
         }} data-on-navy="">
           {onClose && (
-            <button type="button" onClick={onClose} aria-label="Close dialog" style={{
+            <button type="button" onClick={onClose} aria-label={closeLabel} style={{
               position: 'absolute', top: '16px', right: '16px', width: '36px', height: '36px',
               borderRadius: '50%', background: 'rgba(255,255,255,.12)', border: 'none',
               color: 'var(--mbs-on-navy-70)', cursor: 'pointer',
@@ -893,24 +916,23 @@ const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
   SiteHeader, SiteFooter, Hero, PageHeader, PrincipleCard, StepCard, EventCard,
   EventListItem, MemberCard, ProfileCard, FaqItem, Timeline, DataTable, Modal,
   Section } = window.MBSDesignSystem_f206f7;
-const D = window.MBS_DATA;
 
-function NetworkScreen() {
+function NetworkScreen({ C }) {
+  const N = C.network;
   return (
     <div>
-      <PageHeader title="The Network" subtitle="MBS isn't attached to a university. It's attached to a city." />
+      <PageHeader title={C.title.network} subtitle={N.subtitle} />
 
       <Section>
         <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
-          <SectionHeading label="Every campus. One room." title="A network is worth the doors it opens."
-            desc="MBS isn't attached to a university. It's attached to a city. That single decision changes what membership is worth — because the value of a network is the number of doors it opens that you couldn't have opened yourself." />
+          <SectionHeading label={N.introLabel} title={N.introTitle} desc={N.introDesc} />
         </div>
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label="Who's in the network" title="Four groups, one room." style={{ marginBottom: '40px' }} />
+        <SectionHeading label={N.whoLabel} title={N.whoTitle} style={{ marginBottom: '40px' }} />
         <div className="mbs-grid-2 mbs-grid--lg">
-          {D.networkWho.map(w => (
+          {N.who.map(w => (
             <Card key={w.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={w.icon} size="24px" /></div>
               <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{w.title}</h3>
@@ -922,33 +944,30 @@ function NetworkScreen() {
 
       <Section>
         <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
-          <SectionHeading label="Universities represented" title="Listed alphabetically. No ranking, ever."
-            desc="Members' universities, in plain text and A–Z — any other order would read as a hierarchy, and the whole point is that there isn't one." />
+          <SectionHeading label={N.uniLabel} title={N.uniTitle} desc={N.uniDesc} />
         </div>
         <ul className="mbs-grid-3" style={{ listStyle: 'none', margin: '32px 0 0', padding: 0 }}>
-          {D.universities.slice().sort((a, b) => a.localeCompare(b)).map(u => (
+          {C.universities.slice().sort((a, b) => a.localeCompare(b)).map(u => (
             <li key={u} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '14px 18px', borderRadius: 'var(--mbs-r-sm)', background: 'var(--mbs-off)', border: '1px solid var(--mbs-border)', fontSize: '13.5px', color: 'var(--mbs-navy)', fontWeight: 500 }}>
               <span style={{ color: 'var(--mbs-gold-text)', flexShrink: 0 }}><Icon name="building" size="16px" /></span>{u}
             </li>
           ))}
         </ul>
-        <p className="mbs-ph" style={{ marginTop: '20px', fontSize: '13px' }}>
-          Placeholder list — replace with every university currently represented in the membership. If a member's university isn't listed yet, they'd be the first.
-        </p>
+        <p className="mbs-ph" style={{ marginTop: '20px', fontSize: '13px' }}>{N.uniNote}</p>
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label="How the network works" title="One membership, four moves." style={{ marginBottom: '40px' }} />
+        <SectionHeading label={N.worksLabel} title={N.worksTitle} style={{ marginBottom: '40px' }} />
         <div className="mbs-grid-4">
-          {D.networkSteps.map(s => <StepCard key={s.n} number={s.n} title={s.title}>{s.text}</StepCard>)}
+          {N.steps.map(s => <StepCard key={s.n} number={s.n} title={s.title}>{s.text}</StepCard>)}
         </div>
       </Section>
 
       <Section>
         <div style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }} data-on-navy="">
-          <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-white)', margin: '0 0 12px' }}>Be the first MBS voice at your university.</h2>
-          <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, margin: '0 auto 24px', maxWidth: '480px' }}>Every university in Munich should have someone in the network who makes it visible there. Campus representatives run local outreach, bring people to events and sit in on the programme planning. It's a real role with a real title, and we're actively looking for people to fill it.</p>
-          <Button variant="gold" href={ROUTES.join}>Represent your university →</Button>
+          <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-white)', margin: '0 0 12px' }}>{N.repH}</h2>
+          <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, margin: '0 auto 24px', maxWidth: '480px' }}>{N.repText}</p>
+          <Button variant="gold" href={ROUTES.join}>{N.repBtn}</Button>
         </div>
       </Section>
     </div>
@@ -958,49 +977,31 @@ Object.assign(window, { NetworkScreen });
 /* ---------- page shell -----------------------------------------------------
    Navigation is plain hrefs (see screens/_patches.jsx), so the header works
    without JavaScript and every nav item is keyboard reachable. `go` remains for
-   the one place a script still has to navigate: the dialog's own CTA. */
+   the one place a script still has to navigate: the dialog's own CTA.
+
+   Both languages ship in data.js; the shell holds the active language in state,
+   the header's DE/EN tab flips it in place, and the choice persists in
+   localStorage so it carries across page loads. */
 
 const ROUTES = window.MBS_ROUTES;
+const ACTIVE = 'network';
 const go = id => { window.location.href = ROUTES[id] || ROUTES.home; };
 
-/* A destination with href: null is not set up yet. The footer renders those as
-   marked plain text rather than as links that go nowhere. */
-const SOCIAL = [
-  { label: 'LinkedIn', icon: 'linkedin', href: null },
-  { label: 'Instagram', icon: 'instagram', href: null },
-  { label: 'Email us', icon: 'mail', href: 'mailto:hello@' + D.brand.domain }
-];
-const FOOTER_COLUMNS = [
-  { title: 'Society', items: [
-    { label: 'About', href: ROUTES.about },
-    { label: 'The Network', href: ROUTES.network },
-    { label: 'Team', href: ROUTES.team },
-    { label: 'What We Do', href: ROUTES.whatwedo }
-  ] },
-  { title: 'Get involved', items: [
-    { label: 'Membership', href: ROUTES.membership },
-    { label: 'Events', href: ROUTES.whatwedo },
-    { label: 'Open roles', href: null },
-    { label: 'Contact', href: ROUTES.contact }
-  ] },
-  { title: 'Companies', items: [
-    { label: 'For Companies', href: ROUTES.companies },
-    { label: 'Partner pack', href: null },
-    { label: 'partners@' + D.brand.domain, href: 'mailto:partners@' + D.brand.domain }
-  ] },
-  { title: 'Legal', items: [
-    { label: 'Imprint', href: null },
-    { label: 'Privacy policy', href: null },
-    { label: 'Statutes', href: null }
-  ] }
-];
-
 function Page() {
+  const [lang, setLangState] = React.useState(window.MBS_GET_LANG());
+  const C = window.MBS_CONTENT[lang];
+  const setLang = l => { window.MBS_SET_LANG(l); setLangState(l); };
+
   const [eventId, setEventId] = React.useState(window.MBS_INITIAL_EVENT);
-  const ev = D.events.find(e => e.id === eventId);
+  const ev = C.events.find(e => e.id === eventId);
 
   const openEvent = id => { setEventId(id); window.MBS_SET_EVENT_PARAM(id); };
   const closeEvent = () => { setEventId(null); window.MBS_SET_EVENT_PARAM(null); };
+
+  React.useEffect(() => {
+    document.documentElement.lang = lang;
+    document.title = 'MBS — ' + C.title[ACTIVE];
+  }, [lang]);
 
   React.useEffect(() => {
     if (!ev) return;
@@ -1010,25 +1011,29 @@ function Page() {
     return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
   }, [ev]);
 
+  const dlg = C.ui.dialog;
+
   return (
     <div style={{ position: 'relative' }}>
-      <a className="mbs-skip" href="#main">Skip to content</a>
-      <SiteHeader links={D.nav} active="network" logoSrc="assets/mbs-logo-horizontal.png" />
+      <a className="mbs-skip" href="#main">{C.ui.skip}</a>
+      <SiteHeader links={C.nav} active={ACTIVE} logoSrc="assets/mbs-logo-horizontal.png"
+        applyLabel={C.ui.join} lang={lang} setLang={setLang} ui={C.ui} />
       <main id="main">
-        <NetworkScreen />
+        <NetworkScreen C={C} />
       </main>
-      <SiteFooter descriptor={D.brand.footerDescriptor} columns={FOOTER_COLUMNS} social={SOCIAL}
-        copyright="© 2026 Munich Business Society" tagline={D.brand.tagline} />
+      <SiteFooter descriptor={C.brand.footerDescriptor} columns={C.ui.footerCols} social={C.ui.social}
+        newsletter={C.ui.newsletter} inPrep={C.ui.inPrep}
+        copyright={C.ui.copyright} tagline={C.brand.tagline} />
       {ev && (
         <div style={{ position: 'fixed', inset: 0, zIndex: 300 }}>
-          <Modal tag={ev.tag} title={ev.title} onClose={closeEvent}
+          <Modal tag={ev.tag} title={ev.title} onClose={closeEvent} closeLabel={dlg.close}
             meta={[ev.date, ev.time, ev.location]}
-            footer={<Button variant="gold" block onClick={() => { closeEvent(); go('join'); }}>Join MBS &amp; attend →</Button>}>
-            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '0 0 8px' }}>About this event</h3>
+            footer={<Button variant="gold" block onClick={() => { closeEvent(); go('join'); }}>{dlg.cta}</Button>}>
+            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '0 0 8px' }}>{dlg.about}</h3>
             <p style={{ fontSize: '14px', lineHeight: 1.8 }}>{ev.about}</p>
-            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>What to expect</h3>
+            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>{dlg.expect}</h3>
             <p style={{ fontSize: '14px', lineHeight: 1.8 }}>{ev.expect}</p>
-            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>Who's it for?</h3>
+            <h3 style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', margin: '24px 0 8px' }}>{dlg.who}</h3>
             <p style={{ fontSize: '14px', lineHeight: 1.8 }}>{ev.audience}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginTop: '24px', paddingTop: '24px', borderTop: '1px solid var(--mbs-border)', fontSize: '13px', color: 'var(--mbs-gray)' }}>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}><Icon name="pin" size="15px" />{ev.location}</span>
