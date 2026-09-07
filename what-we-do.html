@@ -973,10 +973,10 @@ function WhatWeDoScreen({ C, openEvent }) {
       <PageHeader title={C.title.whatwedo} subtitle={W.subtitle} />
 
       <Section tone="alt">
-        <div style={{ maxWidth: 'var(--mbs-prose-max)', marginBottom: '40px' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)', marginBottom: '40px' }}>
           <SectionHeading label={W.formatsLabel} title={W.formatsTitle} desc={W.formatsDesc} />
         </div>
-        <div className="mbs-grid-2">
+        <div className="mbs-grid-2" data-stagger>
           {C.formats.map(f => (
             <Card key={f.title} padding="28px">
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '14px' }}>
@@ -993,7 +993,7 @@ function WhatWeDoScreen({ C, openEvent }) {
 
       <Section>
         <div className="mbs-split">
-          <div>
+          <div data-reveal>
             <SectionHeading label={W.projLabel} title={W.projTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>{W.projText}</p>
             <Button variant="navy" href={ROUTES.companies}>{W.projLink}</Button>
@@ -1008,7 +1008,7 @@ function WhatWeDoScreen({ C, openEvent }) {
       <Section tone="alt">
         <SectionHeading label={W.progLabel} title={W.progTitle} />
         {C.events.length ? (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div data-stagger style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {C.events.map(e => (
               <EventListItem key={e.id} day={e.day} month={e.month} title={e.title} tag={e.tag}
                 location={e.location} time={e.time} onClick={() => openEvent(e.id)}>{e.teaser}</EventListItem>

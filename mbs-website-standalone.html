@@ -39567,14 +39567,14 @@ function NetworkScreen({ C }) {
       <PageHeader title={C.title.network} subtitle={N.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={N.introLabel} title={N.introTitle} desc={N.introDesc} />
         </div>
       </Section>
 
       <Section tone="alt">
         <SectionHeading label={N.whoLabel} title={N.whoTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-2 mbs-grid--lg">
+        <div className="mbs-grid-2 mbs-grid--lg" data-stagger>
           {N.who.map(w => (
             <Card key={w.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={w.icon} size="24px" /></div>
@@ -39586,10 +39586,10 @@ function NetworkScreen({ C }) {
       </Section>
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={N.uniLabel} title={N.uniTitle} desc={N.uniDesc} />
         </div>
-        <ul className="mbs-grid-3" style={{ listStyle: 'none', margin: '32px 0 0', padding: 0 }}>
+        <ul className="mbs-grid-3" data-stagger style={{ listStyle: 'none', margin: '32px 0 0', padding: 0 }}>
           {C.universities.slice().sort((a, b) => a.localeCompare(b)).map(u => (
             <li key={u} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '14px 18px', borderRadius: 'var(--mbs-r-sm)', background: 'var(--mbs-off)', border: '1px solid var(--mbs-border)', fontSize: '13.5px', color: 'var(--mbs-navy)', fontWeight: 500 }}>
               <span style={{ color: 'var(--mbs-gold-text)', flexShrink: 0 }}><Icon name="building" size="16px" /></span>{u}
@@ -39601,13 +39601,13 @@ function NetworkScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={N.worksLabel} title={N.worksTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-4">
+        <div className="mbs-grid-4" data-stagger>
           {N.steps.map(s => <StepCard key={s.n} number={s.n} title={s.title}>{s.text}</StepCard>)}
         </div>
       </Section>
 
       <Section>
-        <div style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }} data-on-navy="">
+        <div data-reveal style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }} data-on-navy="">
           <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-white)', margin: '0 0 12px' }}>{N.repH}</h2>
           <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, margin: '0 auto 24px', maxWidth: '480px' }}>{N.repText}</p>
           <Button variant="gold" href={ROUTES.join}>{N.repBtn}</Button>
@@ -39634,10 +39634,10 @@ function WhatWeDoScreen({ C, openEvent }) {
       <PageHeader title={C.title.whatwedo} subtitle={W.subtitle} />
 
       <Section tone="alt">
-        <div style={{ maxWidth: 'var(--mbs-prose-max)', marginBottom: '40px' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)', marginBottom: '40px' }}>
           <SectionHeading label={W.formatsLabel} title={W.formatsTitle} desc={W.formatsDesc} />
         </div>
-        <div className="mbs-grid-2">
+        <div className="mbs-grid-2" data-stagger>
           {C.formats.map(f => (
             <Card key={f.title} padding="28px">
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '14px' }}>
@@ -39654,7 +39654,7 @@ function WhatWeDoScreen({ C, openEvent }) {
 
       <Section>
         <div className="mbs-split">
-          <div>
+          <div data-reveal>
             <SectionHeading label={W.projLabel} title={W.projTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>{W.projText}</p>
             <Button variant="navy" href={ROUTES.companies}>{W.projLink}</Button>
@@ -39669,7 +39669,7 @@ function WhatWeDoScreen({ C, openEvent }) {
       <Section tone="alt">
         <SectionHeading label={W.progLabel} title={W.progTitle} />
         {C.events.length ? (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div data-stagger style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {C.events.map(e => (
               <EventListItem key={e.id} day={e.day} month={e.month} title={e.title} tag={e.tag}
                 location={e.location} time={e.time} onClick={() => openEvent(e.id)}>{e.teaser}</EventListItem>
@@ -39703,10 +39703,10 @@ function MembershipScreen({ C }) {
       <PageHeader title={C.title.membership} subtitle={M.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={M.whoLabel} title={M.whoTitle} desc={M.whoDesc} />
         </div>
-        <ul className="mbs-grid-2" style={{ listStyle: 'none', margin: '32px 0 0', padding: 0 }}>
+        <ul className="mbs-grid-2" data-stagger style={{ listStyle: 'none', margin: '32px 0 0', padding: 0 }}>
           {M.canJoin.map(item => (
             <li key={item} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', padding: '16px 20px', borderRadius: 'var(--mbs-r-sm)', background: 'var(--mbs-off)', border: '1px solid var(--mbs-border)' }}>
               <span style={{ color: 'var(--mbs-gold-text)', flexShrink: 0, marginTop: '1px' }}><Icon name="check" size="18px" /></span>
@@ -39718,7 +39718,7 @@ function MembershipScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={M.getLabel} title={M.getTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg">
+        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {M.get.map(g => (
             <Card key={g.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={g.icon} size="24px" /></div>
@@ -39731,7 +39731,7 @@ function MembershipScreen({ C }) {
 
       <Section>
         <div className="mbs-split mbs-split--top">
-          <div>
+          <div data-reveal>
             <SectionHeading label={M.expectLabel} title={M.expectTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{M.expectText}</p>
           </div>
@@ -39747,7 +39747,7 @@ function MembershipScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading align="center" label={M.howLabel} title={M.howTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3">
+        <div className="mbs-grid-3" data-stagger>
           {M.steps.map(s => <StepCard key={s.n} number={s.n} title={s.title}>{s.text}</StepCard>)}
         </div>
         <div style={{ marginTop: '40px', textAlign: 'center' }}>
@@ -39757,7 +39757,7 @@ function MembershipScreen({ C }) {
       </Section>
 
       <Section>
-        <div style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto' }}>
+        <div data-reveal style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto' }}>
           <SectionHeading align="center" label={M.faqLabel} title={M.faqTitle} desc={M.faqDesc} />
           <div style={{ marginTop: '24px' }}><Button variant="outline" href={ROUTES.faq}>{M.faqBtn}</Button></div>
         </div>
@@ -39784,7 +39784,7 @@ function CompaniesScreen({ C }) {
       <PageHeader title={C.title.companies} subtitle={K.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.whyLabel} title={K.whyTitle} desc={K.whyDesc} />
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '28px' }}>
             <Button variant="gold" href={'mailto:' + partnersMail + '?subject=Partner%20pack'}>{K.packBtn}</Button>
@@ -39795,7 +39795,7 @@ function CompaniesScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={K.whyLabel} title={K.why[0].title} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg">
+        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {K.why.map(w => (
             <Card key={w.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={w.icon} size="24px" /></div>
@@ -39808,7 +39808,7 @@ function CompaniesScreen({ C }) {
 
       <Section>
         <SectionHeading label={K.waysLabel} title={K.waysTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-2 mbs-grid--lg">
+        <div className="mbs-grid-2 mbs-grid--lg" data-stagger>
           {K.ways.map(w => (
             <Card key={w.title} tone="navy" padding="28px">
               <h3 data-on-navy="" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 8px' }}>
@@ -39822,7 +39822,7 @@ function CompaniesScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={K.partnersLabel} title={K.partnersTitle} desc={K.partnersDesc} />
-        <ul className="mbs-grid-4" style={{ listStyle: 'none', margin: '28px 0 0', padding: 0 }}>
+        <ul className="mbs-grid-4" data-stagger style={{ listStyle: 'none', margin: '28px 0 0', padding: 0 }}>
           {[1, 2, 3, 4].map(i => (
             <li key={i} style={{ height: '96px', borderRadius: 'var(--mbs-r)', border: '1px dashed var(--mbs-border)',
               display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--mbs-white)',
@@ -39834,10 +39834,10 @@ function CompaniesScreen({ C }) {
 
       <Section>
         <SectionHeading label={K.howLabel} title={K.howTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-4">
+        <div className="mbs-grid-4" data-stagger>
           {K.steps.map(s => <StepCard key={s.n} number={s.n} title={s.title}>{s.text}</StepCard>)}
         </div>
-        <div style={{ marginTop: '48px', textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }} data-on-navy="">
+        <div data-reveal style={{ marginTop: '48px', textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }} data-on-navy="">
           <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', color: 'var(--mbs-white)', margin: '0 0 10px' }}>{K.closeH}</h2>
           <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, maxWidth: '460px', margin: '0 auto 24px' }}>{K.closeText}</p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -39867,12 +39867,12 @@ function TeamScreen({ C }) {
       <PageHeader title={C.title.team} subtitle={T.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={T.whoLabel} title={T.whoTitle} desc={T.whoDesc} />
         </div>
         <div style={{ marginTop: '48px' }}>
           <SectionHeading label={T.boardLabel} title={T.boardTitle} style={{ marginBottom: '32px' }} />
-          <div className="mbs-grid-3 mbs-grid--lg">
+          <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
             {T.board.map(p => <MemberCard key={p.name} {...p} />)}
           </div>
           <FormNote tone="alt" style={{ marginTop: '28px' }}>{T.boardNote}</FormNote>
@@ -39881,7 +39881,7 @@ function TeamScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={T.teamsLabel} title={T.teamsTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg">
+        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {T.teams.map(t => (
             <Card key={t.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={t.icon} size="24px" /></div>
@@ -39893,7 +39893,7 @@ function TeamScreen({ C }) {
       </Section>
 
       <Section>
-        <div style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
+        <div data-reveal style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
           <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>{T.rolesH}</h2>
           <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.8, maxWidth: '480px', margin: '0 auto 8px' }}>{T.rolesText}</p>
           <p className="mbs-ph" style={{ fontSize: '13px', margin: '0 auto 24px' }}>{T.rolesOpenings}</p>
@@ -39920,13 +39920,13 @@ function FaqScreen({ C }) {
     <div>
       <PageHeader title={C.title.faq} subtitle={F.subtitle} />
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)', margin: '0 auto' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)', margin: '0 auto' }}>
           <SectionHeading align="center" label={F.label} title={F.title} style={{ marginBottom: '40px' }} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {F.items.map((item, i) => <FaqItem key={item.q} question={item.q} defaultOpen={i === 0}>{item.a}</FaqItem>)}
           </div>
         </div>
-        <div style={{ marginTop: '48px', textAlign: 'center' }}>
+        <div data-reveal style={{ marginTop: '48px', textAlign: 'center' }}>
           <p style={{ fontSize: '15px', color: 'var(--mbs-gray)', marginBottom: '20px' }}>{F.stillText}</p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Button variant="gold" href={ROUTES.join}>{F.joinBtn}</Button>
@@ -39991,7 +39991,7 @@ function JoinScreen({ C }) {
     <div>
       <PageHeader height={220} title={C.title.join} subtitle={J.subtitle} />
       <Section tone="alt">
-        <div style={{ maxWidth: 'var(--mbs-form-max)', margin: '0 auto' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-form-max)', margin: '0 auto' }}>
           {sent ? (
             <Card padding="40px" hover={false} style={{ textAlign: 'center' }}>
               <div ref={successRef} tabIndex={-1} role="status" style={{ outline: 'none' }}>
@@ -40153,11 +40153,11 @@ function ContactScreen({ C }) {
       <PageHeader title={C.title.contact} subtitle={K.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading align="center" label={K.label} title={K.title}
             desc={<span>{K.descA}<span className="mbs-ph">[X]</span>{K.descB}</span>} />
         </div>
-        <div className="mbs-grid-3" style={{ marginTop: '32px' }}>
+        <div className="mbs-grid-3" data-stagger style={{ marginTop: '32px' }}>
           {K.routes.map(r => (
             <a key={r.label} href={'mailto:' + r.addr} style={{ display: 'block', padding: '24px', borderRadius: 'var(--mbs-r)', background: 'var(--mbs-off)', border: '1px solid var(--mbs-border)', textDecoration: 'none' }}>
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '12px' }}><Icon name={r.icon} size="22px" /></div>
@@ -40170,7 +40170,7 @@ function ContactScreen({ C }) {
 
       <Section tone="alt">
         <div className="mbs-split mbs-split--top">
-          <div>
+          <div data-reveal>
             <SectionHeading label={K.formLabel} title={K.formTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{K.formText}</p>
             <div style={{ marginTop: '28px' }}>
@@ -40181,7 +40181,7 @@ function ContactScreen({ C }) {
               </p>
             </div>
           </div>
-          <div style={{ maxWidth: 'var(--mbs-form-max)' }}>
+          <div data-reveal style={{ maxWidth: 'var(--mbs-form-max)' }}>
             <ContactForm C={C} />
           </div>
         </div>

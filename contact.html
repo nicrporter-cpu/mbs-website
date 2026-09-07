@@ -1038,11 +1038,11 @@ function ContactScreen({ C }) {
       <PageHeader title={C.title.contact} subtitle={K.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading align="center" label={K.label} title={K.title}
             desc={<span>{K.descA}<span className="mbs-ph">[X]</span>{K.descB}</span>} />
         </div>
-        <div className="mbs-grid-3" style={{ marginTop: '32px' }}>
+        <div className="mbs-grid-3" data-stagger style={{ marginTop: '32px' }}>
           {K.routes.map(r => (
             <a key={r.label} href={'mailto:' + r.addr} style={{ display: 'block', padding: '24px', borderRadius: 'var(--mbs-r)', background: 'var(--mbs-off)', border: '1px solid var(--mbs-border)', textDecoration: 'none' }}>
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '12px' }}><Icon name={r.icon} size="22px" /></div>
@@ -1055,7 +1055,7 @@ function ContactScreen({ C }) {
 
       <Section tone="alt">
         <div className="mbs-split mbs-split--top">
-          <div>
+          <div data-reveal>
             <SectionHeading label={K.formLabel} title={K.formTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{K.formText}</p>
             <div style={{ marginTop: '28px' }}>
@@ -1066,7 +1066,7 @@ function ContactScreen({ C }) {
               </p>
             </div>
           </div>
-          <div style={{ maxWidth: 'var(--mbs-form-max)' }}>
+          <div data-reveal style={{ maxWidth: 'var(--mbs-form-max)' }}>
             <ContactForm C={C} />
           </div>
         </div>

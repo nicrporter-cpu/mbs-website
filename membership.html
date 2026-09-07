@@ -973,10 +973,10 @@ function MembershipScreen({ C }) {
       <PageHeader title={C.title.membership} subtitle={M.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={M.whoLabel} title={M.whoTitle} desc={M.whoDesc} />
         </div>
-        <ul className="mbs-grid-2" style={{ listStyle: 'none', margin: '32px 0 0', padding: 0 }}>
+        <ul className="mbs-grid-2" data-stagger style={{ listStyle: 'none', margin: '32px 0 0', padding: 0 }}>
           {M.canJoin.map(item => (
             <li key={item} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', padding: '16px 20px', borderRadius: 'var(--mbs-r-sm)', background: 'var(--mbs-off)', border: '1px solid var(--mbs-border)' }}>
               <span style={{ color: 'var(--mbs-gold-text)', flexShrink: 0, marginTop: '1px' }}><Icon name="check" size="18px" /></span>
@@ -988,7 +988,7 @@ function MembershipScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={M.getLabel} title={M.getTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg">
+        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {M.get.map(g => (
             <Card key={g.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={g.icon} size="24px" /></div>
@@ -1001,7 +1001,7 @@ function MembershipScreen({ C }) {
 
       <Section>
         <div className="mbs-split mbs-split--top">
-          <div>
+          <div data-reveal>
             <SectionHeading label={M.expectLabel} title={M.expectTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{M.expectText}</p>
           </div>
@@ -1017,7 +1017,7 @@ function MembershipScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading align="center" label={M.howLabel} title={M.howTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3">
+        <div className="mbs-grid-3" data-stagger>
           {M.steps.map(s => <StepCard key={s.n} number={s.n} title={s.title}>{s.text}</StepCard>)}
         </div>
         <div style={{ marginTop: '40px', textAlign: 'center' }}>
@@ -1027,7 +1027,7 @@ function MembershipScreen({ C }) {
       </Section>
 
       <Section>
-        <div style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto' }}>
+        <div data-reveal style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto' }}>
           <SectionHeading align="center" label={M.faqLabel} title={M.faqTitle} desc={M.faqDesc} />
           <div style={{ marginTop: '24px' }}><Button variant="outline" href={ROUTES.faq}>{M.faqBtn}</Button></div>
         </div>

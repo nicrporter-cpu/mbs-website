@@ -11,12 +11,12 @@ function TeamScreen({ C }) {
       <PageHeader title={C.title.team} subtitle={T.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={T.whoLabel} title={T.whoTitle} desc={T.whoDesc} />
         </div>
         <div style={{ marginTop: '48px' }}>
           <SectionHeading label={T.boardLabel} title={T.boardTitle} style={{ marginBottom: '32px' }} />
-          <div className="mbs-grid-3 mbs-grid--lg">
+          <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
             {T.board.map(p => <MemberCard key={p.name} {...p} />)}
           </div>
           <FormNote tone="alt" style={{ marginTop: '28px' }}>{T.boardNote}</FormNote>
@@ -25,7 +25,7 @@ function TeamScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={T.teamsLabel} title={T.teamsTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg">
+        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {T.teams.map(t => (
             <Card key={t.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={t.icon} size="24px" /></div>
@@ -37,7 +37,7 @@ function TeamScreen({ C }) {
       </Section>
 
       <Section>
-        <div style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
+        <div data-reveal style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
           <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>{T.rolesH}</h2>
           <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.8, maxWidth: '480px', margin: '0 auto 8px' }}>{T.rolesText}</p>
           <p className="mbs-ph" style={{ fontSize: '13px', margin: '0 auto 24px' }}>{T.rolesOpenings}</p>

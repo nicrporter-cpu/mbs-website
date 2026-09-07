@@ -12,7 +12,7 @@ function CompaniesScreen({ C }) {
       <PageHeader title={C.title.companies} subtitle={K.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.whyLabel} title={K.whyTitle} desc={K.whyDesc} />
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '28px' }}>
             <Button variant="gold" href={'mailto:' + partnersMail + '?subject=Partner%20pack'}>{K.packBtn}</Button>
@@ -23,7 +23,7 @@ function CompaniesScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={K.whyLabel} title={K.why[0].title} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg">
+        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {K.why.map(w => (
             <Card key={w.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={w.icon} size="24px" /></div>
@@ -36,7 +36,7 @@ function CompaniesScreen({ C }) {
 
       <Section>
         <SectionHeading label={K.waysLabel} title={K.waysTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-2 mbs-grid--lg">
+        <div className="mbs-grid-2 mbs-grid--lg" data-stagger>
           {K.ways.map(w => (
             <Card key={w.title} tone="navy" padding="28px">
               <h3 data-on-navy="" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 8px' }}>
@@ -50,7 +50,7 @@ function CompaniesScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={K.partnersLabel} title={K.partnersTitle} desc={K.partnersDesc} />
-        <ul className="mbs-grid-4" style={{ listStyle: 'none', margin: '28px 0 0', padding: 0 }}>
+        <ul className="mbs-grid-4" data-stagger style={{ listStyle: 'none', margin: '28px 0 0', padding: 0 }}>
           {[1, 2, 3, 4].map(i => (
             <li key={i} style={{ height: '96px', borderRadius: 'var(--mbs-r)', border: '1px dashed var(--mbs-border)',
               display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--mbs-white)',
@@ -62,10 +62,10 @@ function CompaniesScreen({ C }) {
 
       <Section>
         <SectionHeading label={K.howLabel} title={K.howTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-4">
+        <div className="mbs-grid-4" data-stagger>
           {K.steps.map(s => <StepCard key={s.n} number={s.n} title={s.title}>{s.text}</StepCard>)}
         </div>
-        <div style={{ marginTop: '48px', textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }} data-on-navy="">
+        <div data-reveal style={{ marginTop: '48px', textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }} data-on-navy="">
           <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', color: 'var(--mbs-white)', margin: '0 0 10px' }}>{K.closeH}</h2>
           <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, maxWidth: '460px', margin: '0 auto 24px' }}>{K.closeText}</p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>

@@ -1009,7 +1009,7 @@ function JoinScreen({ C }) {
     <div>
       <PageHeader height={220} title={C.title.join} subtitle={J.subtitle} />
       <Section tone="alt">
-        <div style={{ maxWidth: 'var(--mbs-form-max)', margin: '0 auto' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-form-max)', margin: '0 auto' }}>
           {sent ? (
             <Card padding="40px" hover={false} style={{ textAlign: 'center' }}>
               <div ref={successRef} tabIndex={-1} role="status" style={{ outline: 'none' }}>
