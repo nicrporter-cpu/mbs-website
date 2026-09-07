@@ -18,7 +18,7 @@ function HomeScreen({ C }) {
       {/* Proof bar — numbers are board placeholders until true today. */}
       <div className="mbs-sec mbs-sec--navy" data-on-navy="">
         <div className="mbs-sec-inner" style={{ paddingTop: '48px', paddingBottom: '48px' }}>
-          <ul className="mbs-grid-4" style={{ listStyle: 'none', margin: 0, padding: 0, textAlign: 'center' }}>
+          <ul className="mbs-grid-4" data-stagger style={{ listStyle: 'none', margin: 0, padding: 0, textAlign: 'center' }}>
             {C.proof.map(p => (
               <li key={p.label}>
                 <div className="mbs-tabular" style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '40px', fontWeight: 700, color: 'var(--mbs-gold-on-navy)', lineHeight: 1 }}>
@@ -33,7 +33,7 @@ function HomeScreen({ C }) {
 
       {/* Why we exist */}
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={H.whyLabel} title={H.whyTitle} />
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{H.whyP1}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{H.whyP2}</p>
@@ -43,7 +43,7 @@ function HomeScreen({ C }) {
       {/* The three pillars */}
       <Section tone="alt">
         <SectionHeading align="center" label={H.pillarsLabel} title={H.pillarsTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3">
+        <div className="mbs-grid-3" data-stagger>
           {C.pillars.map(p => (
             <Card key={p.title} padding="32px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '16px', lineHeight: 1 }}><Icon name={p.icon} size="28px" /></div>
@@ -58,12 +58,12 @@ function HomeScreen({ C }) {
       {/* Formats teaser */}
       <Section>
         <div className="mbs-split">
-          <div>
+          <div data-reveal>
             <SectionHeading label={H.formatsLabel} title={H.formatsTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>{H.formatsText}</p>
             <Button variant="navy" href={ROUTES.whatwedo}>{H.formatsLink}</Button>
           </div>
-          <ul className="mbs-grid-2" style={{ listStyle: 'none', margin: 0, padding: 0, alignSelf: 'start' }}>
+          <ul className="mbs-grid-2" data-stagger style={{ listStyle: 'none', margin: 0, padding: 0, alignSelf: 'start' }}>
             {C.formats.map(f => (
               <li key={f.title} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', padding: '14px 0' }}>
                 <span style={{ color: 'var(--mbs-gold-text)', flexShrink: 0, marginTop: '1px' }}><Icon name={f.icon} size="20px" /></span>
@@ -76,7 +76,7 @@ function HomeScreen({ C }) {
 
       {/* Member voice */}
       <Section tone="navy">
-        <figure data-on-navy="" style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
+        <figure data-on-navy="" data-reveal style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ color: 'var(--mbs-gold-on-navy)', marginBottom: '20px' }}><Icon name="star" size="26px" /></div>
           <blockquote style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: 'clamp(22px,3vw,30px)', lineHeight: 1.4, color: 'var(--mbs-white)', margin: '0 0 20px', fontWeight: 500 }}>{H.voiceQuote}</blockquote>
           <figcaption style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)' }}>
@@ -88,7 +88,7 @@ function HomeScreen({ C }) {
 
       {/* Closing bands */}
       <Section tone="alt">
-        <div className="mbs-grid-2 mbs-grid--lg">
+        <div className="mbs-grid-2 mbs-grid--lg" data-stagger>
           <div style={{ padding: '40px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
             <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>{H.studentH}</h2>
             <p style={{ fontSize: '14px', lineHeight: 1.8, margin: '0 0 24px' }}>{H.studentText}</p>

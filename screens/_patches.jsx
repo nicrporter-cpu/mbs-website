@@ -302,12 +302,12 @@ function Hero({ line1 = 'Munich', line2 = 'Business Society', lead, primary, sec
           fontWeight: 'var(--mbs-fw-bold)', lineHeight: 'var(--mbs-lh-display)',
           letterSpacing: 'var(--mbs-tr-display)', color: 'var(--mbs-navy)',
           maxWidth: '500px', margin: '0 0 24px'
-        }}>{line1}<br /><em style={{ fontStyle: 'normal', color: 'var(--mbs-gold)' }}>{line2}</em></h1>
-        {lead && <p style={{
+        }}><span className="mbs-hero-l1">{line1}</span><br /><em className="mbs-hero-l2" style={{ fontStyle: 'normal', color: 'var(--mbs-gold)' }}>{line2}</em></h1>
+        {lead && <p className="mbs-hero-lead" style={{
           fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-gray)', maxWidth: '440px',
           lineHeight: 'var(--mbs-lh-body)', margin: '0 0 40px'
         }}>{lead}</p>}
-        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+        <div className="mbs-hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           {primary && <Button variant="gold" href={primary.href} onClick={primary.onClick}>{primary.label}</Button>}
           {secondary && <Button variant="outline" href={secondary.href} onClick={secondary.onClick}>{secondary.label}</Button>}
         </div>
@@ -889,4 +889,53 @@ Object.assign(DS, { Icon, Section, SiteHeader, SiteFooter, Hero, PageHeader,
   Badge, PrincipleCard, StepCard, FaqItem, Timeline, EventListItem,
   EventCard, Checkbox });
 
+})();
+
+/* ── Scroll-reveal engine ────────────────────────────────────────────────────
+   Content is fully visible by default. This engine — and only when motion is
+   allowed — adds `mbs-reveal` to <html>, which switches on the hidden pre-state
+   for [data-reveal]/[data-stagger] elements, then adds `is-in` as each enters
+   the viewport so CSS can bring it home. If the engine never runs (reduced
+   motion, or a script error), nothing is ever hidden. A MutationObserver picks
+   up nodes React renders after mount, so it works for the multi-page pages and
+   the standalone SPA alike. */
+(function () {
+  if (typeof document === 'undefined' || !window.IntersectionObserver || !window.MutationObserver) return;
+  try { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch (e) { /* no matchMedia — proceed */ }
+
+  document.documentElement.classList.add('mbs-reveal');
+
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+  const observe = el => { if (el && !el.__mbsSeen) { el.__mbsSeen = true; io.observe(el); } };
+  const scan = root => {
+    if (root.matches && root.matches('[data-reveal],[data-stagger]')) observe(root);
+    if (root.querySelectorAll) root.querySelectorAll('[data-reveal],[data-stagger]').forEach(observe);
+  };
+
+  const mo = new MutationObserver(function (muts) {
+    muts.forEach(function (m) {
+      m.addedNodes.forEach(function (n) { if (n.nodeType === 1) scan(n); });
+    });
+  });
+
+  const start = () => { scan(document); if (document.body) mo.observe(document.body, { childList: true, subtree: true }); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+
+  /* A hidden tab freezes CSS transitions, so a scroll reveal caught mid-hide can
+     sit at opacity 0 until the tab is shown again. Re-scan when the page becomes
+     visible so the observer re-evaluates what is now on screen. */
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) scan(document); });
+
+  /* Ultimate failsafe: content must never stay hidden. After a grace period drop
+     the arming class entirely — the hidden pre-state stops applying and every
+     block is visible at once, with no dependence on a transition completing.
+     The timer is throttled while hidden and fires once the tab is shown, so a
+     backgrounded tab reveals as soon as it is looked at. */
+  setTimeout(function () { document.documentElement.classList.remove('mbs-reveal'); }, 6000);
 })();

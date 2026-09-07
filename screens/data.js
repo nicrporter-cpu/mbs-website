@@ -725,3 +725,15 @@ window.MBS_GET_LANG = function () {
 window.MBS_SET_LANG = function (lang) {
   try { window.localStorage.setItem('mbs-lang', lang); } catch (e) { /* ignore */ }
 };
+
+/* Arm motion before React renders (so the hero's entrance never flashes). Adds
+   `mbs-motion` to <html> only when the visitor hasn't asked for reduced motion;
+   the CSS gates every load animation on it. The scroll-reveal engine in
+   screens/_patches.jsx adds its own `mbs-reveal` class separately. */
+(function () {
+  try {
+    if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('mbs-motion');
+    }
+  } catch (e) { /* no matchMedia — leave motion off rather than risk a flash */ }
+})();

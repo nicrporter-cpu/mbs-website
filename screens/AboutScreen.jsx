@@ -11,11 +11,11 @@ function AboutScreen({ C }) {
       <PageHeader title={C.title.about} subtitle={A.subtitle} />
 
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={A.whoLabel} title={A.whoTitle} desc={A.whoDesc} />
         </div>
 
-        <div style={{ marginTop: '56px', maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ marginTop: '56px', maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={A.storyLabel} title={A.storyTitle} />
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{A.storyP1}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{A.storyP2}</p>
@@ -25,7 +25,7 @@ function AboutScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={A.diffLabel} title={A.diffTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-2 mbs-grid--lg">
+        <div className="mbs-grid-2 mbs-grid--lg" data-stagger>
           {A.different.map(item => (
             <Card key={item.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={item.icon} size="24px" /></div>
@@ -38,7 +38,7 @@ function AboutScreen({ C }) {
 
       <Section>
         <SectionHeading align="center" label={A.valuesLabel} title={A.valuesTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg">
+        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {C.values.map(v => (
             <Card key={v.title} tone="navy" padding="32px">
               <div data-on-navy="" style={{ marginBottom: '16px', lineHeight: 1, color: 'var(--mbs-gold-on-navy)' }}><Icon name={v.icon} size="28px" /></div>
@@ -50,7 +50,7 @@ function AboutScreen({ C }) {
       </Section>
 
       <Section tone="alt">
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={A.orgLabel} title={A.orgTitle} />
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>
             {A.orgP1}<span className="mbs-ph">{A.orgPh}</span>{A.orgP2}

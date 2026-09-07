@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MBS — Munich's Student Business Network</title>
 <link rel="icon" href="assets/mbs-mark.svg">
-<link rel="stylesheet" href="design-system/styles.css?v=1fb27d30b2">
-<link rel="stylesheet" href="site.css?v=1fb27d30b2">
+<link rel="stylesheet" href="design-system/styles.css?v=66caf378cd">
+<link rel="stylesheet" href="site.css?v=66caf378cd">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -15,9 +15,9 @@
 <script src="vendor/react.development.js"></script>
 <script src="vendor/react-dom.development.js"></script>
 <script src="vendor/babel.min.js"></script>
-<script src="design-system/_ds_bundle.js?v=1fb27d30b2"></script>
-<script src="screens/data.js?v=1fb27d30b2"></script>
-<script src="site.js?v=1fb27d30b2"></script>
+<script src="design-system/_ds_bundle.js?v=66caf378cd"></script>
+<script src="screens/data.js?v=66caf378cd"></script>
+<script src="site.js?v=66caf378cd"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -323,12 +323,12 @@ function Hero({ line1 = 'Munich', line2 = 'Business Society', lead, primary, sec
           fontWeight: 'var(--mbs-fw-bold)', lineHeight: 'var(--mbs-lh-display)',
           letterSpacing: 'var(--mbs-tr-display)', color: 'var(--mbs-navy)',
           maxWidth: '500px', margin: '0 0 24px'
-        }}>{line1}<br /><em style={{ fontStyle: 'normal', color: 'var(--mbs-gold)' }}>{line2}</em></h1>
-        {lead && <p style={{
+        }}><span className="mbs-hero-l1">{line1}</span><br /><em className="mbs-hero-l2" style={{ fontStyle: 'normal', color: 'var(--mbs-gold)' }}>{line2}</em></h1>
+        {lead && <p className="mbs-hero-lead" style={{
           fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-gray)', maxWidth: '440px',
           lineHeight: 'var(--mbs-lh-body)', margin: '0 0 40px'
         }}>{lead}</p>}
-        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+        <div className="mbs-hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           {primary && <Button variant="gold" href={primary.href} onClick={primary.onClick}>{primary.label}</Button>}
           {secondary && <Button variant="outline" href={secondary.href} onClick={secondary.onClick}>{secondary.label}</Button>}
         </div>
@@ -911,6 +911,55 @@ Object.assign(DS, { Icon, Section, SiteHeader, SiteFooter, Hero, PageHeader,
   EventCard, Checkbox });
 
 })();
+
+/* ── Scroll-reveal engine ────────────────────────────────────────────────────
+   Content is fully visible by default. This engine — and only when motion is
+   allowed — adds `mbs-reveal` to <html>, which switches on the hidden pre-state
+   for [data-reveal]/[data-stagger] elements, then adds `is-in` as each enters
+   the viewport so CSS can bring it home. If the engine never runs (reduced
+   motion, or a script error), nothing is ever hidden. A MutationObserver picks
+   up nodes React renders after mount, so it works for the multi-page pages and
+   the standalone SPA alike. */
+(function () {
+  if (typeof document === 'undefined' || !window.IntersectionObserver || !window.MutationObserver) return;
+  try { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch (e) { /* no matchMedia — proceed */ }
+
+  document.documentElement.classList.add('mbs-reveal');
+
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+  const observe = el => { if (el && !el.__mbsSeen) { el.__mbsSeen = true; io.observe(el); } };
+  const scan = root => {
+    if (root.matches && root.matches('[data-reveal],[data-stagger]')) observe(root);
+    if (root.querySelectorAll) root.querySelectorAll('[data-reveal],[data-stagger]').forEach(observe);
+  };
+
+  const mo = new MutationObserver(function (muts) {
+    muts.forEach(function (m) {
+      m.addedNodes.forEach(function (n) { if (n.nodeType === 1) scan(n); });
+    });
+  });
+
+  const start = () => { scan(document); if (document.body) mo.observe(document.body, { childList: true, subtree: true }); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+
+  /* A hidden tab freezes CSS transitions, so a scroll reveal caught mid-hide can
+     sit at opacity 0 until the tab is shown again. Re-scan when the page becomes
+     visible so the observer re-evaluates what is now on screen. */
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) scan(document); });
+
+  /* Ultimate failsafe: content must never stay hidden. After a grace period drop
+     the arming class entirely — the hidden pre-state stops applying and every
+     block is visible at once, with no dependence on a transition completing.
+     The timer is throttled while hidden and fires once the tab is shown, so a
+     backgrounded tab reveals as soon as it is looked at. */
+  setTimeout(function () { document.documentElement.classList.remove('mbs-reveal'); }, 6000);
+})();
 const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
   Field, Input, Select, Textarea, Checkbox, FormNote,
   SiteHeader, SiteFooter, Hero, PageHeader, PrincipleCard, StepCard, EventCard,
@@ -931,7 +980,7 @@ function HomeScreen({ C }) {
       {/* Proof bar — numbers are board placeholders until true today. */}
       <div className="mbs-sec mbs-sec--navy" data-on-navy="">
         <div className="mbs-sec-inner" style={{ paddingTop: '48px', paddingBottom: '48px' }}>
-          <ul className="mbs-grid-4" style={{ listStyle: 'none', margin: 0, padding: 0, textAlign: 'center' }}>
+          <ul className="mbs-grid-4" data-stagger style={{ listStyle: 'none', margin: 0, padding: 0, textAlign: 'center' }}>
             {C.proof.map(p => (
               <li key={p.label}>
                 <div className="mbs-tabular" style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '40px', fontWeight: 700, color: 'var(--mbs-gold-on-navy)', lineHeight: 1 }}>
@@ -946,7 +995,7 @@ function HomeScreen({ C }) {
 
       {/* Why we exist */}
       <Section>
-        <div style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={H.whyLabel} title={H.whyTitle} />
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{H.whyP1}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{H.whyP2}</p>
@@ -956,7 +1005,7 @@ function HomeScreen({ C }) {
       {/* The three pillars */}
       <Section tone="alt">
         <SectionHeading align="center" label={H.pillarsLabel} title={H.pillarsTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3">
+        <div className="mbs-grid-3" data-stagger>
           {C.pillars.map(p => (
             <Card key={p.title} padding="32px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '16px', lineHeight: 1 }}><Icon name={p.icon} size="28px" /></div>
@@ -971,12 +1020,12 @@ function HomeScreen({ C }) {
       {/* Formats teaser */}
       <Section>
         <div className="mbs-split">
-          <div>
+          <div data-reveal>
             <SectionHeading label={H.formatsLabel} title={H.formatsTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>{H.formatsText}</p>
             <Button variant="navy" href={ROUTES.whatwedo}>{H.formatsLink}</Button>
           </div>
-          <ul className="mbs-grid-2" style={{ listStyle: 'none', margin: 0, padding: 0, alignSelf: 'start' }}>
+          <ul className="mbs-grid-2" data-stagger style={{ listStyle: 'none', margin: 0, padding: 0, alignSelf: 'start' }}>
             {C.formats.map(f => (
               <li key={f.title} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', padding: '14px 0' }}>
                 <span style={{ color: 'var(--mbs-gold-text)', flexShrink: 0, marginTop: '1px' }}><Icon name={f.icon} size="20px" /></span>
@@ -989,7 +1038,7 @@ function HomeScreen({ C }) {
 
       {/* Member voice */}
       <Section tone="navy">
-        <figure data-on-navy="" style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
+        <figure data-on-navy="" data-reveal style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ color: 'var(--mbs-gold-on-navy)', marginBottom: '20px' }}><Icon name="star" size="26px" /></div>
           <blockquote style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: 'clamp(22px,3vw,30px)', lineHeight: 1.4, color: 'var(--mbs-white)', margin: '0 0 20px', fontWeight: 500 }}>{H.voiceQuote}</blockquote>
           <figcaption style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)' }}>
@@ -1001,7 +1050,7 @@ function HomeScreen({ C }) {
 
       {/* Closing bands */}
       <Section tone="alt">
-        <div className="mbs-grid-2 mbs-grid--lg">
+        <div className="mbs-grid-2 mbs-grid--lg" data-stagger>
           <div style={{ padding: '40px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
             <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>{H.studentH}</h2>
             <p style={{ fontSize: '14px', lineHeight: 1.8, margin: '0 0 24px' }}>{H.studentText}</p>
