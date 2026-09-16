@@ -219,11 +219,11 @@ window.MBS_CONTENT = {
       projText: "A small team of members works on a defined question over four to six weeks and presents to the client at the end. Paid or credited depending on the partner. It's the closest thing to consulting work you can do before you're hired to do it.",
       projLink: 'Companies — set up a project →',
       projCard: "Four to six weeks. A small member team. A defined question and a documented deliverable, presented to the partner's leadership. Real work, before anyone's paying you to do it.",
-      progLabel: ‘Programme’, progTitle: ‘Coming up this semester’,
-      progEmpty: “The next semester’s programme is being finalised. Join the newsletter and you’ll hear first.”,
-      progNote: ‘Sample programme — the board replaces these with the real semester’s events. Venues show as “Munich” until each is confirmed.’,
-      recapLabel: ‘Event recaps’, recapTitle: ‘Catch up on Instagram’,
-      recapText: ‘We share highlights and key takeaways from every event on our socials. Follow us to stay in the loop.’
+      progLabel: 'Programme', progTitle: 'Coming up this semester',
+      progEmpty: "The next semester's programme is being finalised. Join the newsletter and you'll hear first.",
+      progNote: "Sample programme — the board replaces these with the real semester's events. Venues show as \"Munich\" until each is confirmed.",
+      recapLabel: 'Event recaps', recapTitle: 'Catch up on Instagram',
+      recapText: 'We share highlights and key takeaways from every event on our socials. Follow us to stay in the loop.'
     },
     membership: {
       subtitle: 'Open to every university in Munich — any subject, any degree level.',
@@ -384,12 +384,13 @@ window.MBS_CONTENT = {
       footerDescriptor: 'Munich Business Society — das hochschulübergreifende Business-Netzwerk für Studierende in München. Offen für jede Hochschule der Stadt.'
     },
     nav: [
+      { id: 'home', label: 'Start' },
       { id: 'about', label: 'Über Uns' },
+      { id: 'team', label: 'Team' },
       { id: 'network', label: 'Das Netzwerk' },
       { id: 'whatwedo', label: 'Was wir tun' },
       { id: 'membership', label: 'Mitgliedschaft' },
       { id: 'companies', label: 'Für Unternehmen' },
-      { id: 'team', label: 'Team' },
       { id: 'contact', label: 'Kontakt' }
     ],
     ui: {
