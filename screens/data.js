@@ -218,9 +218,11 @@ window.MBS_CONTENT = {
       projText: "A small team of members works on a defined question over four to six weeks and presents to the client at the end. Paid or credited depending on the partner. It's the closest thing to consulting work you can do before you're hired to do it.",
       projLink: 'Companies — set up a project →',
       projCard: "Four to six weeks. A small member team. A defined question and a documented deliverable, presented to the partner's leadership. Real work, before anyone's paying you to do it.",
-      progLabel: 'Programme', progTitle: 'Coming up this semester',
-      progEmpty: "The next semester's programme is being finalised. Join the newsletter and you'll hear first.",
-      progNote: 'Sample programme — the board replaces these with the real semester’s events. Venues show as “Munich” until each is confirmed.'
+      progLabel: ‘Programme’, progTitle: ‘Coming up this semester’,
+      progEmpty: “The next semester’s programme is being finalised. Join the newsletter and you’ll hear first.”,
+      progNote: ‘Sample programme — the board replaces these with the real semester’s events. Venues show as “Munich” until each is confirmed.’,
+      recapLabel: ‘Event recaps’, recapTitle: ‘Catch up on Instagram’,
+      recapText: ‘We share highlights and key takeaways from every event on our socials. Follow us to stay in the loop.’
     },
     membership: {
       subtitle: 'Open to every university in Munich — any subject, any degree level.',
@@ -560,7 +562,9 @@ window.MBS_CONTENT = {
       projCard: 'Vier bis sechs Wochen. Ein kleines Mitgliederteam. Eine definierte Fragestellung und ein dokumentiertes Ergebnis, präsentiert vor der Führung des Partners. Echte Arbeit, bevor dich jemand dafür bezahlt.',
       progLabel: 'Programm', progTitle: 'Demnächst in diesem Semester',
       progEmpty: 'Das Programm für das nächste Semester wird gerade finalisiert. Melde dich zum Newsletter an, dann hörst du es zuerst.',
-      progNote: 'Beispielprogramm — der Vorstand ersetzt dies durch die echten Events des Semesters. Locations stehen als „München", bis sie bestätigt sind.'
+      progNote: 'Beispielprogramm — der Vorstand ersetzt dies durch die echten Events des Semesters. Locations stehen als „München", bis sie bestätigt sind.',
+      recapLabel: 'Event-Nachbesprechnungen', recapTitle: 'Schau auf Instagram vorbei',
+      recapText: 'Wir teilen Highlights und wichtige Erkenntnisse von jedem Event auf unseren Socials. Folge uns, um auf dem Laufenden zu bleiben.'
     },
     membership: {
       subtitle: 'Offen für jede Münchner Hochschule — jedes Fach, jedes Studienniveau.',

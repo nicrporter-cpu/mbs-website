@@ -59,6 +59,19 @@ function WhatWeDoScreen({ C, openEvent }) {
         )}
         <p className="mbs-ph" style={{ marginTop: '20px', fontSize: '13px' }}>{W.progNote}</p>
       </Section>
+
+      <Section>
+        <SectionHeading label={W.recapLabel} title={W.recapTitle} />
+        <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '32px', maxWidth: 'var(--mbs-prose-max)' }}>{W.recapText}</p>
+        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+          {C.ui.social.filter(s => s.href).map(s => (
+            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', background: 'var(--mbs-gold)', color: 'var(--mbs-navy)', borderRadius: 'var(--mbs-r)', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>
+              <Icon name={s.icon} size="18px" /> {s.label}
+            </a>
+          ))}
+        </div>
+      </Section>
     </div>
   );
 }
