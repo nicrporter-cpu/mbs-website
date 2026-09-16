@@ -41,16 +41,17 @@ window.MBS_CONTENT = {
       footerDescriptor: 'Munich Business Society — the cross-university business network for students in Munich. Open to every university in the city.'
     },
     nav: [
+      { id: 'home', label: 'Home' },
       { id: 'about', label: 'About' },
+      { id: 'team', label: 'Team' },
       { id: 'network', label: 'The Network' },
       { id: 'whatwedo', label: 'What We Do' },
       { id: 'membership', label: 'Membership' },
       { id: 'companies', label: 'For Companies' },
-      { id: 'team', label: 'Team' },
       { id: 'contact', label: 'Contact' }
     ],
     ui: {
-      join: 'Join MBS', joinArrow: 'Join MBS →', menuOpen: 'Open menu', menuClose: 'Close menu',
+      join: 'Apply', joinArrow: 'Apply →', menuOpen: 'Open menu', menuClose: 'Close menu',
       skip: 'Skip to content', home: 'Munich Business Society — home', langLabel: 'Language',
       dialog: { about: 'About this event', expect: 'What to expect', who: "Who's it for?",
         cta: 'Join MBS & attend →', close: 'Close dialog' },
@@ -392,7 +393,7 @@ window.MBS_CONTENT = {
       { id: 'contact', label: 'Kontakt' }
     ],
     ui: {
-      join: 'Mitglied werden', joinArrow: 'Mitglied werden →', menuOpen: 'Menü öffnen', menuClose: 'Menü schließen',
+      join: 'Bewerben', joinArrow: 'Bewerben →', menuOpen: 'Menü öffnen', menuClose: 'Menü schließen',
       skip: 'Zum Inhalt springen', home: 'Munich Business Society — zur Startseite', langLabel: 'Sprache',
       dialog: { about: 'Über diese Veranstaltung', expect: 'Was dich erwartet', who: 'Für wen ist das?',
         cta: 'Mitglied werden & teilnehmen →', close: 'Dialog schließen' },
