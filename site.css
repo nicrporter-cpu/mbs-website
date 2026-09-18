@@ -416,8 +416,13 @@ select { caret-color: var(--mbs-gold-text); }
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 1px solid var(--mbs-border);
+  transition: color var(--mbs-dur) var(--mbs-ease), border-color var(--mbs-dur) var(--mbs-ease);
 }
-.mbs-drawer-link.is-active { color: var(--mbs-gold-text); }
+.mbs-drawer-link:hover,
+.mbs-drawer-link.is-active {
+  color: var(--mbs-gold-text);
+  border-bottom-color: var(--mbs-gold);
+}
 .mbs-drawer-cta {
   margin: var(--mbs-sp-4) 0 0;
   justify-content: center;
