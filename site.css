@@ -333,6 +333,7 @@ select { caret-color: var(--mbs-gold-text); }
 .mbs-nav-links {
   display: flex;
   align-items: center;
+  align-self: stretch;
   height: 100%;
 }
 .mbs-navlink {
@@ -676,6 +677,7 @@ input[type="radio"] {
 .mbs-nav-right {
   display: flex;
   align-items: center;
+  align-self: stretch;
   gap: var(--mbs-sp-3);
 }
 

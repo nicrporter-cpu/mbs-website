@@ -55,7 +55,7 @@ window.MBS_CONTENT = {
         cta: 'Join MBS & attend →', close: 'Close dialog' },
       inPrep: 'in preparation',
       social: [
-        { label: 'LinkedIn', icon: 'linkedin', href: null },
+        { label: 'LinkedIn', icon: 'linkedin', href: 'https://www.linkedin.com/company/munichbusinesssociety' },
         { label: 'Instagram', icon: 'instagram', href: 'https://www.instagram.com/munichbusinesssociety/' },
         { label: 'Email us', icon: 'mail', href: 'mailto:munichbusinesssociety@gmail.com' }
       ],
@@ -395,7 +395,7 @@ window.MBS_CONTENT = {
         cta: 'Mitglied werden & teilnehmen →', close: 'Dialog schließen' },
       inPrep: 'in Vorbereitung',
       social: [
-        { label: 'LinkedIn', icon: 'linkedin', href: null },
+        { label: 'LinkedIn', icon: 'linkedin', href: 'https://www.linkedin.com/company/munichbusinesssociety' },
         { label: 'Instagram', icon: 'instagram', href: 'https://www.instagram.com/munichbusinesssociety/' },
         { label: 'Schreib uns', icon: 'mail', href: 'mailto:munichbusinesssociety@gmail.com' }
       ],
