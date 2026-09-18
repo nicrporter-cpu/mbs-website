@@ -32,9 +32,7 @@ OUT = ROOT / 'mbs-website-standalone.html'
 # takes the active-language content object C, passed in at render time.
 SCREENS = [
     ('/',              'home',       'HomeScreen',       '<HomeScreen C={C} />'),
-    ('/about',         'about',      'AboutScreen',      '<AboutScreen C={C} />'),
-    ('/network',       'network',    'NetworkScreen',    '<NetworkScreen C={C} />'),
-    ('/what-we-do',    'whatwedo',   'WhatWeDoScreen',   '<WhatWeDoScreen C={C} openEvent={openEvent} />'),
+    ('/about',         'about',      'AboutScreen',      '<AboutScreen C={C} openEvent={openEvent} />'),
     ('/membership',    'membership', 'MembershipScreen', '<MembershipScreen C={C} />'),
     ('/for-companies', 'companies',  'CompaniesScreen',  '<CompaniesScreen C={C} />'),
     ('/team',          'team',       'TeamScreen',       '<TeamScreen C={C} />'),

@@ -13,7 +13,7 @@ function HomeScreen({ C }) {
           Hero component renders the gold-italic split. Lead + CTAs localise. */}
       <Hero lead={H.heroLead}
         primary={{ label: C.ui.joinArrow, href: ROUTES.join }}
-        secondary={{ label: H.seeEvents, href: ROUTES.whatwedo }} />
+        secondary={{ label: H.seeEvents, href: ROUTES.about }} />
 
       {/* Proof bar — numbers are board placeholders until true today. */}
       <div className="mbs-sec mbs-sec--navy" data-on-navy="">
@@ -61,7 +61,7 @@ function HomeScreen({ C }) {
           <div data-reveal>
             <SectionHeading label={H.formatsLabel} title={H.formatsTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>{H.formatsText}</p>
-            <Button variant="navy" href={ROUTES.whatwedo}>{H.formatsLink}</Button>
+            <Button variant="navy" href={ROUTES.about}>{H.formatsLink}</Button>
           </div>
           <ul className="mbs-grid-2" data-stagger style={{ listStyle: 'none', margin: 0, padding: 0, alignSelf: 'start' }}>
             {C.formats.map(f => (

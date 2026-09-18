@@ -44,8 +44,6 @@ window.MBS_CONTENT = {
       { id: 'home', label: 'Home' },
       { id: 'about', label: 'About' },
       { id: 'team', label: 'Team' },
-      { id: 'network', label: 'The Network' },
-      { id: 'whatwedo', label: 'What We Do' },
       { id: 'membership', label: 'Membership' },
       { id: 'companies', label: 'For Companies' },
       { id: 'contact', label: 'Contact' }
@@ -63,10 +61,9 @@ window.MBS_CONTENT = {
       ],
       footerCols: [
         { title: 'Society', items: [
-          { label: 'About', to: 'about' }, { label: 'The Network', to: 'network' },
-          { label: 'Team', to: 'team' }, { label: 'What We Do', to: 'whatwedo' } ] },
+          { label: 'About', to: 'about' }, { label: 'Team', to: 'team' } ] },
         { title: 'Get involved', items: [
-          { label: 'Membership', to: 'membership' }, { label: 'Events', to: 'whatwedo' },
+          { label: 'Membership', to: 'membership' }, { label: 'Events', to: 'about' },
           { label: 'Open roles', to: null }, { label: 'Contact', to: 'contact' } ] },
         { title: 'Companies', items: [
           { label: 'For Companies', to: 'companies' }, { label: 'Partner pack', to: null },
@@ -387,8 +384,6 @@ window.MBS_CONTENT = {
       { id: 'home', label: 'Start' },
       { id: 'about', label: 'Über Uns' },
       { id: 'team', label: 'Team' },
-      { id: 'network', label: 'Das Netzwerk' },
-      { id: 'whatwedo', label: 'Was wir tun' },
       { id: 'membership', label: 'Mitgliedschaft' },
       { id: 'companies', label: 'Für Unternehmen' },
       { id: 'contact', label: 'Kontakt' }
@@ -406,10 +401,9 @@ window.MBS_CONTENT = {
       ],
       footerCols: [
         { title: 'Society', items: [
-          { label: 'Über Uns', to: 'about' }, { label: 'Das Netzwerk', to: 'network' },
-          { label: 'Team', to: 'team' }, { label: 'Was wir tun', to: 'whatwedo' } ] },
+          { label: 'Über Uns', to: 'about' }, { label: 'Team', to: 'team' } ] },
         { title: 'Mitmachen', items: [
-          { label: 'Mitgliedschaft', to: 'membership' }, { label: 'Events', to: 'whatwedo' },
+          { label: 'Mitgliedschaft', to: 'membership' }, { label: 'Events', to: 'about' },
           { label: 'Offene Rollen', to: null }, { label: 'Kontakt', to: 'contact' } ] },
         { title: 'Unternehmen', items: [
           { label: 'Für Unternehmen', to: 'companies' }, { label: 'Partner-Paket', to: null },

@@ -20,7 +20,7 @@ function FaqScreen({ C }) {
           <p style={{ fontSize: '15px', color: 'var(--mbs-gray)', marginBottom: '20px' }}>{F.stillText}</p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Button variant="gold" href={ROUTES.join}>{F.joinBtn}</Button>
-            <Button variant="outline" href={ROUTES.whatwedo}>{F.seeBtn}</Button>
+            <Button variant="outline" href={ROUTES.about}>{F.seeBtn}</Button>
           </div>
         </div>
       </Section>

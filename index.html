@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MBS — Munich's Student Business Network</title>
 <link rel="icon" href="assets/mbs-mark.svg">
-<link rel="stylesheet" href="design-system/styles.css?v=cd4b11b744">
-<link rel="stylesheet" href="site.css?v=cd4b11b744">
+<link rel="stylesheet" href="design-system/styles.css?v=77087f327e">
+<link rel="stylesheet" href="site.css?v=77087f327e">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -15,9 +15,9 @@
 <script src="vendor/react.development.js"></script>
 <script src="vendor/react-dom.development.js"></script>
 <script src="vendor/babel.min.js"></script>
-<script src="design-system/_ds_bundle.js?v=cd4b11b744"></script>
-<script src="screens/data.js?v=cd4b11b744"></script>
-<script src="site.js?v=cd4b11b744"></script>
+<script src="design-system/_ds_bundle.js?v=77087f327e"></script>
+<script src="screens/data.js?v=77087f327e"></script>
+<script src="site.js?v=77087f327e"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -975,7 +975,7 @@ function HomeScreen({ C }) {
           Hero component renders the gold-italic split. Lead + CTAs localise. */}
       <Hero lead={H.heroLead}
         primary={{ label: C.ui.joinArrow, href: ROUTES.join }}
-        secondary={{ label: H.seeEvents, href: ROUTES.whatwedo }} />
+        secondary={{ label: H.seeEvents, href: ROUTES.about }} />
 
       {/* Proof bar — numbers are board placeholders until true today. */}
       <div className="mbs-sec mbs-sec--navy" data-on-navy="">
@@ -1023,7 +1023,7 @@ function HomeScreen({ C }) {
           <div data-reveal>
             <SectionHeading label={H.formatsLabel} title={H.formatsTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '28px' }}>{H.formatsText}</p>
-            <Button variant="navy" href={ROUTES.whatwedo}>{H.formatsLink}</Button>
+            <Button variant="navy" href={ROUTES.about}>{H.formatsLink}</Button>
           </div>
           <ul className="mbs-grid-2" data-stagger style={{ listStyle: 'none', margin: 0, padding: 0, alignSelf: 'start' }}>
             {C.formats.map(f => (
