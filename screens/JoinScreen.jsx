@@ -124,6 +124,15 @@ function JoinScreen({ C }) {
                 <Textarea name="interests" placeholder={J.ph.interests} />
               </Field>
 
+              <div className="mbs-form-row">
+                <Field label={J.f.cv} help={J.help.cv}>
+                  <Input type="file" name="cv" accept=".pdf,.doc,.docx" />
+                </Field>
+                <Field label={J.f.enrollment} help={J.help.enrollment}>
+                  <Input type="file" name="enrollment" accept=".pdf,.jpg,.jpeg,.png" />
+                </Field>
+              </div>
+
               <FormNote tone="alt">{J.note}</FormNote>
 
               <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
