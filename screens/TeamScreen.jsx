@@ -37,11 +37,9 @@ function TeamScreen({ C }) {
       </Section>
 
       <Section>
-        <div data-reveal style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
-          <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>{T.rolesH}</h2>
-          <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.8, maxWidth: '480px', margin: '0 auto 8px' }}>{T.rolesText}</p>
-          <p className="mbs-ph" style={{ fontSize: '13px', margin: '0 auto 24px' }}>{T.rolesOpenings}</p>
-          <Button variant="gold" href={ROUTES.join}>{T.rolesBtn}</Button>
+        <div data-reveal style={{ textAlign: 'center', maxWidth: '480px', margin: '0 auto' }}>
+          <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', marginBottom: '20px' }}>{T.faqText}</p>
+          <Button variant="outline" href={ROUTES.faq}>{T.faqBtn}</Button>
         </div>
       </Section>
     </div>

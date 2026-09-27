@@ -45,6 +45,8 @@ It is deliberately not linked from the site itself.
 | `faq.html` | FAQ |
 | `join.html` | Join MBS — the application form, with validation + success state |
 | `contact.html` | Contact — three routes and a working contact form |
+| `impressum.html` | Impressum — board draft, German only, `[...]` fields still to fill in |
+| `datenschutz.html` | Datenschutzerklärung — board draft, German only, `[...]` fields still to fill in |
 | `uebersicht.html` | Contents page (review aid, not part of the site) |
 
 Interactive bits worth clicking: event rows on What We Do open the event dialog;
@@ -142,10 +144,14 @@ cd /Users/np/projects/mbs-website && printf '@import url("../../fonts/fonts.css"
   slots are intentional placeholders; no photos or partner logos exist yet. The
   design system's own README asks that they ship as-is rather than be filled with
   stock imagery.
-- **Legal pages do not exist.** Impressum, Datenschutz and Nutzungsbedingungen show
-  in the footer marked *(in Vorbereitung)* rather than as links to nowhere. The
-  consent checkbox on the application form says the same. Germany requires a real
-  Impressum before this goes public.
+- **Impressum and Datenschutzerklärung are board drafts, not final.** Both pages
+  exist (`impressum.html`, `datenschutz.html`, sourced from `MBS_LEGAL_IMPRESSUM`
+  and `MBS_LEGAL_DATENSCHUTZ` in `screens/data.js`) and are linked from the footer
+  and the Join form's consent checkbox, but every `[...]` field — address, board
+  names, register number, hosting provider, whether Google Analytics/Fonts/Maps
+  are actually used — still needs the board to fill in or strike before this goes
+  public. Statutes (Satzung) still show *(in Vorbereitung)* in the footer; add that
+  page and its `to:` once the statutes are ready to publish.
 - **No social accounts yet.** The LinkedIn and Instagram tiles in the footer and on
   Kontakt are marked *(in Vorbereitung)*. Add the URLs to `SOCIAL` in
   `build/build.py` and `CHANNELS` in `screens/ContactScreen.jsx`, then rebuild.

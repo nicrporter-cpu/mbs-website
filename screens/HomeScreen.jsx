@@ -15,22 +15,6 @@ function HomeScreen({ C }) {
         primary={{ label: C.ui.joinArrow, href: ROUTES.join }}
         secondary={{ label: H.seeEvents, href: ROUTES.about }} />
 
-      {/* Proof bar — numbers are board placeholders until true today. */}
-      <div className="mbs-sec mbs-sec--navy" data-on-navy="">
-        <div className="mbs-sec-inner" style={{ paddingTop: '48px', paddingBottom: '48px' }}>
-          <ul className="mbs-grid-4" data-stagger style={{ listStyle: 'none', margin: 0, padding: 0, textAlign: 'center' }}>
-            {C.proof.map(p => (
-              <li key={p.label}>
-                <div className="mbs-tabular" style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '40px', fontWeight: 700, color: 'var(--mbs-gold-on-navy)', lineHeight: 1 }}>
-                  <span className="mbs-ph mbs-ph--on-navy">{p.value}</span>
-                </div>
-                <div style={{ marginTop: '8px', fontSize: 'var(--mbs-fs-label)', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: 700, color: 'var(--mbs-on-navy-50)' }}>{p.label}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
       {/* Why we exist */}
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>

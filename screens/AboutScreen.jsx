@@ -20,7 +20,7 @@ function AboutScreen({ C, openEvent }) {
           <SectionHeading label={A.storyLabel} title={A.storyTitle} />
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{A.storyP1}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{A.storyP2}</p>
-          <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{A.storyP3a}<span className="mbs-ph">[X]</span>{A.storyP3b}</p>
+          <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{A.storyP3}</p>
         </div>
       </Section>
 
@@ -84,7 +84,7 @@ function AboutScreen({ C, openEvent }) {
             <p style={{ fontSize: '15px', color: 'var(--mbs-gray)', margin: 0 }}>{W.progEmpty}</p>
           </div>
         )}
-        <p className="mbs-ph" style={{ marginTop: '20px', fontSize: '13px' }}>{W.progNote}</p>
+        {W.progNote && <p className="mbs-ph" style={{ marginTop: '20px', fontSize: '13px' }}>{W.progNote}</p>}
       </Section>
 
       <Section tone="alt">
@@ -117,11 +117,12 @@ function AboutScreen({ C, openEvent }) {
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={A.orgLabel} title={A.orgTitle} />
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>
-            {A.orgP1}<span className="mbs-ph">{A.orgPh}</span>{A.orgP2}
+            {A.orgP1}{A.orgP2}
           </p>
           <FormNote tone="alt">{A.orgNote}</FormNote>
-          <div style={{ marginTop: '28px' }}>
+          <div style={{ marginTop: '28px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <Button variant="navy" href={ROUTES.team}>{A.meetTeam}</Button>
+            <Button variant="outline" href={ROUTES.faq}>{A.faqBtn}</Button>
           </div>
         </div>
       </Section>

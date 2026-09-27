@@ -4,7 +4,7 @@ const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
   EventListItem, MemberCard, ProfileCard, FaqItem, Timeline, DataTable, Modal,
   Section } = window.MBSDesignSystem_f206f7;
 
-const JOIN_ORDER = ['firstname', 'lastname', 'email', 'university', 'level', 'motivation', 'consent'];
+const JOIN_ORDER = ['firstname', 'lastname', 'email', 'university', 'level', 'studyprogram', 'language', 'motivation', 'consent'];
 
 function validateJoin(data, J) {
   const errors = {};
@@ -54,7 +54,7 @@ function JoinScreen({ C }) {
                 <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px' }}><Icon name="check" size="34px" /></div>
                 <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '22px', margin: '0 0 8px' }}>{J.successTitle}</h2>
                 <p style={{ fontSize: '14px', lineHeight: 1.8, maxWidth: '420px', margin: '0 auto 24px' }}>
-                  {J.successA}<span className="mbs-ph">[X]</span>{J.successB}<span className="mbs-ph">[event]</span>{J.successC}
+                  {J.successA}<span className="mbs-ph">[event]</span>{J.successC}
                 </p>
               </div>
               <Button variant="outline" onClick={() => { setSent(false); setErrors({}); }}>{J.another}</Button>
@@ -101,8 +101,27 @@ function JoinScreen({ C }) {
                 </Field>
               </div>
 
+              <div className="mbs-form-row">
+                <Field label={J.f.studyprogram} required error={errors.studyprogram}>
+                  <Select name="studyprogram" defaultValue="" onChange={clear('studyprogram')}>
+                    <option value="">{J.ph.studyprogram}</option>
+                    {J.studyPrograms.map(s => <option key={s}>{s}</option>)}
+                  </Select>
+                </Field>
+                <Field label={J.f.language} required error={errors.language}>
+                  <Select name="language" defaultValue="" onChange={clear('language')}>
+                    <option value="">{J.ph.language}</option>
+                    {J.languages.map(l => <option key={l}>{l}</option>)}
+                  </Select>
+                </Field>
+              </div>
+
               <Field label={J.f.motivation} required error={errors.motivation}>
                 <Textarea name="motivation" placeholder={J.ph.motivation} onInput={clear('motivation')} />
+              </Field>
+
+              <Field label={J.f.interests}>
+                <Textarea name="interests" placeholder={J.ph.interests} />
               </Field>
 
               <FormNote tone="alt">{J.note}</FormNote>
@@ -112,7 +131,7 @@ function JoinScreen({ C }) {
                   <Checkbox name="consent" value="yes" onChange={clear('consent')}
                     aria-invalid={errors.consent ? 'true' : undefined}
                     aria-describedby={errors.consent ? 'consent-msg' : undefined}
-                    label={<span>{J.consent}<span className="mbs-ph">{J.consentPh}</span>{J.consentEnd}</span>} />
+                    label={<span>{J.consent}<a href={ROUTES.datenschutz} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>{J.consentLink}</a>{J.consentEnd}</span>} />
                   {errors.consent && (
                     <span id="consent-msg" role="alert" style={{ display: 'block', marginTop: '6px', fontSize: '12px', color: 'var(--mbs-danger)' }}>{errors.consent}</span>
                   )}

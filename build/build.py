@@ -42,6 +42,10 @@ PAGES = [
      '<JoinScreen C={C} />'),
     ('contact.html',      'contact',    'ContactScreen',    'Contact',
      '<ContactScreen C={C} />'),
+    ('impressum.html',    'impressum',  'ImpressumScreen',  'Impressum',
+     '<ImpressumScreen C={C} />'),
+    ('datenschutz.html',  'datenschutz', 'DatenschutzScreen', 'Datenschutzerklärung',
+     '<DatenschutzScreen C={C} />'),
 ]
 
 SHELL = '''
@@ -59,9 +63,12 @@ const ACTIVE = '__ACTIVE__';
 const go = id => { window.location.href = ROUTES[id] || ROUTES.home; };
 
 function Page() {
-  const [lang, setLangState] = React.useState(window.MBS_GET_LANG());
+  const lang = window.MBS_GET_LANG();
   const C = window.MBS_CONTENT[lang];
-  const setLang = l => { window.MBS_SET_LANG(l); setLangState(l); };
+  /* Full reload rather than an in-place re-render: persist the choice, then
+     reload so the whole page — including anything outside React's tree —
+     comes back fresh in the new language. */
+  const setLang = l => { window.MBS_SET_LANG(l); window.location.reload(); };
 
   const [eventId, setEventId] = React.useState(window.MBS_INITIAL_EVENT);
   const ev = C.events.find(e => e.id === eventId);

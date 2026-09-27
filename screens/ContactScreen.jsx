@@ -109,6 +109,13 @@ function ContactScreen({ C }) {
           </div>
         </div>
       </Section>
+
+      <Section>
+        <div data-reveal style={{ textAlign: 'center', maxWidth: '480px', margin: '0 auto' }}>
+          <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', marginBottom: '20px' }}>{K.faqText}</p>
+          <Button variant="outline" href={ROUTES.faq}>{K.faqBtn}</Button>
+        </div>
+      </Section>
     </div>
   );
 }

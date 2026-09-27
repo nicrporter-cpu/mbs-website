@@ -564,6 +564,49 @@ function Button({ children, variant = 'gold', size = 'md', href, block, disabled
   );
 }
 
+/* ── Card ───────────────────────────────────────────────────────────────────
+   Upstream mixed the `border` shorthand (always set) with a `borderColor`
+   longhand added only on hover. React clears a style property that's absent
+   from the next render's style object — but clearing just borderColor after
+   border had set all four sides leaves the shorthand's expansion corrupted in
+   the DOM, so on mouseleave the card falls back to the browser default border
+   color (currentColor — the inherited navy text), which reads as a permanent
+   dark outline stuck on the card long after the pointer has left. Fix: never
+   mix border with borderColor — every render sets the same three longhands
+   (borderWidth/Style/Color), so no key is ever added or removed between the
+   hovered and unhovered style objects. */
+function Card({ children, tone = 'light', hover = true, accent, padding = '28px', style, onClick, ...rest }) {
+  const [over, setOver] = React.useState(false);
+  const dark = tone === 'navy';
+  const lit = hover && over;
+  const base = {
+    position: 'relative',
+    overflow: accent ? 'hidden' : undefined,
+    background: dark ? (lit ? 'var(--mbs-navy-mid)' : 'var(--mbs-navy)') : 'var(--mbs-surface-card)',
+    borderWidth: '1px', borderStyle: 'solid',
+    borderColor: dark ? 'transparent' : (lit ? 'var(--mbs-gold-border)' : 'var(--mbs-border)'),
+    borderRadius: 'var(--mbs-r)',
+    padding,
+    boxShadow: dark ? 'var(--mbs-sh-sm)' : (lit ? 'var(--mbs-sh-md)' : 'var(--mbs-sh-xs)'),
+    color: dark ? 'var(--mbs-on-navy-50)' : undefined,
+    transition: 'all var(--mbs-dur-slow) var(--mbs-ease)',
+    cursor: onClick ? 'pointer' : undefined,
+    transform: (!dark && !accent && lit) ? 'translateY(var(--mbs-lift-card))' : 'none',
+    ...style
+  };
+  return (
+    <div style={base} onClick={onClick}
+      onMouseEnter={() => setOver(true)} onMouseLeave={() => setOver(false)} {...rest}>
+      {accent && <span style={{
+        position: 'absolute', top: 0, left: 0, width: '3px',
+        height: over ? '100%' : 0, background: 'var(--mbs-gold)',
+        borderRadius: '0 0 2px 2px', transition: 'height var(--mbs-dur-slow) var(--mbs-ease)'
+      }} />}
+      {children}
+    </div>
+  );
+}
+
 /* ── Badge ──────────────────────────────────────────────────────────────────
    Navy on brand gold was 4.00:1 and gold on navy 4.00:1; both move to the
    surface gold. Status chips keep their hues via the lifted --mbs-ok / --mbs-warn. */
@@ -885,7 +928,7 @@ function DataTable(props) {
 }
 
 Object.assign(DS, { Icon, Section, SiteHeader, SiteFooter, Hero, PageHeader,
-  Modal, Field, DataTable, StatTile, MemberCard, SectionHeading, Button,
+  Modal, Field, DataTable, StatTile, MemberCard, SectionHeading, Button, Card,
   Badge, PrincipleCard, StepCard, FaqItem, Timeline, EventListItem,
   EventCard, Checkbox });
 

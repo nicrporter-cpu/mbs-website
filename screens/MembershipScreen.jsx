@@ -46,7 +46,7 @@ function MembershipScreen({ C }) {
           <Card padding="32px" hover={false}>
             <div className="mbs-label" style={{ marginBottom: '10px' }}>{M.feeLabel}</div>
             <p style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '32px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>
-              <span className="mbs-ph">{M.feeValue}</span> <span style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', fontWeight: 400, color: 'var(--mbs-gray)' }}>{M.feePer}</span>
+              <span>{M.feeValue}</span> <span style={{ fontFamily: 'var(--mbs-font-sans)', fontSize: '14px', fontWeight: 400, color: 'var(--mbs-gray)' }}>{M.feePer}</span>
             </p>
             <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{M.feeText}</p>
           </Card>
@@ -60,7 +60,7 @@ function MembershipScreen({ C }) {
         </div>
         <div style={{ marginTop: '40px', textAlign: 'center' }}>
           <Button variant="gold" href={ROUTES.join}>{M.joinBtn}</Button>
-          <p className="mbs-ph" style={{ marginTop: '14px', fontSize: '13px' }}>{M.deadline}</p>
+          <p style={{ marginTop: '14px', fontSize: '13px', color: 'var(--mbs-gray)' }}>{M.deadline}</p>
         </div>
       </Section>
 

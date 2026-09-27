@@ -10,7 +10,9 @@ window.MBS_ROUTES = {
   team: 'team.html',
   faq: 'faq.html',
   join: 'join.html',
-  contact: 'contact.html'
+  contact: 'contact.html',
+  impressum: 'impressum.html',
+  datenschutz: 'datenschutz.html'
 };
 
 /* ?event=<id> deep-links straight into an event dialog, e.g. what-we-do.html?event=launch */
