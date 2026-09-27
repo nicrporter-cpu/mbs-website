@@ -155,7 +155,7 @@ function Page() {
 
   React.useEffect(() => {
     document.documentElement.lang = lang;
-    document.title = 'MBS — ' + C.title[current.nav];
+    document.title = 'MBS, ' + C.title[current.nav];
   }, [current, lang]);
 
   const dlg = C.ui.dialog;
@@ -201,7 +201,7 @@ PAGE = '''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MBS — Munich's Student Business Network</title>
+<title>MBS, Munich's Student Business Network</title>
 <meta name="description" content="The cross-university business network for students in Munich. Build your network, grow real skills and get noticed by companies hiring here.">
 <link rel="icon" href="__FAVICON__">
 <style>

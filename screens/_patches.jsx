@@ -115,7 +115,7 @@ function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', lang
 
   return (
     <nav className="mbs-nav" style={style} aria-label={ui.home ? undefined : 'Main navigation'}>
-      <a className="mbs-nav-brand" href={href('home')} aria-label={ui.home || 'Munich Business Society — home'}>
+      <a className="mbs-nav-brand" href={href('home')} aria-label={ui.home || 'Munich Business Society, home'}>
         <img src={logoSrc} alt="" width="204" height="102" />
       </a>
 
@@ -165,9 +165,9 @@ function SocialTile({ item }) {
   };
   if (!item.href) {
     return (
-      <span style={{ ...tile, opacity: .55, cursor: 'default' }} title={item.label + ' — in preparation'}>
+      <span style={{ ...tile, opacity: .55, cursor: 'default' }} title={item.label + ', in preparation'}>
         <Icon name={item.icon} size="18px" />
-        <span className="mbs-sr">{item.label} — in preparation</span>
+        <span className="mbs-sr">{item.label}, in preparation</span>
       </span>
     );
   }
@@ -238,7 +238,7 @@ function FooterCol({ col, inPrep = 'in preparation' }) {
                 <a href={h} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', textDecoration: 'none' }}
                   {...(/^https?:/.test(h) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{it.label}</a>
               ) : (
-                <span title={it.label + ' — ' + inPrep} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-35)', cursor: 'default' }}>
+                <span title={it.label + ', ' + inPrep} style={{ fontSize: '13px', color: 'var(--mbs-on-navy-35)', cursor: 'default' }}>
                   {it.label} <span style={{ fontSize: '10px' }}>({inPrep})</span>
                 </span>
               )}

@@ -57,7 +57,7 @@ function MonthCalendar({ events, weekdays, prevLabel, nextLabel, emptyLabel, loc
           if (!ev) return <span key={d} className="mbs-calendar-cell">{d}</span>;
           return (
             <button key={d} type="button" className="mbs-calendar-cell has-event"
-              onClick={() => onSelect(ev.id)} aria-label={d + ' ' + monthLabel + ' — ' + ev.title}>
+              onClick={() => onSelect(ev.id)} aria-label={d + ' ' + monthLabel + ', ' + ev.title}>
               <span>{d}</span>
               <span className="mbs-calendar-dot" aria-hidden="true" />
             </button>
