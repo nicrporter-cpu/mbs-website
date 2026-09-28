@@ -340,7 +340,7 @@ window.MBS_CONTENT = {
       name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Every campus. One network.',
       metaDescription: "Munich's cross-university case club.",
-      footerDescriptor: 'Munich Business Society, the cross-university business network for students in Munich. Open to every university in the city.'
+      footerDescriptor: 'Munich Business Society, the cross-university case club for every student in Munich. Open to every university in the city.'
     },
     nav: [
       { id: 'home', label: 'Home' },
@@ -382,7 +382,7 @@ window.MBS_CONTENT = {
       },
       copyright: '© 2026 Munich Business Society'
     },
-    title: { home: "Munich's Student Business Network", about: 'About', network: 'The Network',
+    title: { home: "Munich's Student Case Club", about: 'About', network: 'The Network',
       whatwedo: 'What We Do', calendar: 'Events', membership: 'Membership', companies: 'For Companies', team: 'Team',
       faq: 'FAQ', join: 'Join Munich Business Society', contact: 'Contact', impressum: 'Impressum', datenschutz: 'Datenschutzerklärung' },
 
@@ -439,8 +439,8 @@ window.MBS_CONTENT = {
       partnerBtn: 'Partner with us →'
     },
     about: {
-      subtitle: 'One business network for all of Munich, student-run, cross-university, open to every campus in the city.',
-      whoLabel: 'Who we are', whoTitle: 'One business network for all of Munich.',
+      subtitle: 'One case club for all of Munich, student-run, cross-university, open to every campus in the city.',
+      whoLabel: 'Who we are', whoTitle: 'One case club for all of Munich.',
       whoDesc: 'Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away.',
       storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join.',
       storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has over 110,000 students spread across 33 universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
@@ -561,8 +561,8 @@ window.MBS_CONTENT = {
         { icon: 'star', title: 'Annual partnership', text: 'A package across the academic year: multiple formats, visibility on site and in the newsletter, direct access to the membership for openings.' }
       ],
       partnersLabel: 'Our partners', partnersTitle: 'Companies we work with',
-      partnersDesc: 'Partner logos go here, only companies with a signed agreement and written permission to use their mark.',
-      partnerLogo: 'Partner logo',
+      partnersDesc: 'Become our first partner now.',
+      partnersBtn: 'Get in touch →',
       howLabel: 'How it works', howTitle: 'From first call to short report.',
       steps: [
         { n: '1', title: 'A 30-minute call', text: "You tell us who you're trying to reach and why." },
@@ -676,7 +676,7 @@ window.MBS_CONTENT = {
       name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Jeder Campus. Ein Netzwerk.',
       metaDescription: 'Münchens hochschulübergreifender Case Club.',
-      footerDescriptor: 'Munich Business Society, das hochschulübergreifende Business-Netzwerk für Studierende in München. Offen für jede Hochschule der Stadt.'
+      footerDescriptor: 'Munich Business Society, der hochschulübergreifende Case Club für jede:n Studierende:n in München. Offen für jede Hochschule der Stadt.'
     },
     nav: [
       { id: 'home', label: 'Start' },
@@ -718,7 +718,7 @@ window.MBS_CONTENT = {
       },
       copyright: '© 2026 Munich Business Society'
     },
-    title: { home: 'Studentisches Business-Netzwerk in München', about: 'Über Uns', network: 'Das Netzwerk',
+    title: { home: 'Studentischer Case Club in München', about: 'Über Uns', network: 'Das Netzwerk',
       whatwedo: 'Was wir tun', calendar: 'Termine', membership: 'Mitgliedschaft', companies: 'Für Unternehmen', team: 'Team',
       faq: 'FAQ', join: 'Mitglied werden', contact: 'Kontakt', impressum: 'Impressum', datenschutz: 'Datenschutzerklärung' },
 
@@ -775,8 +775,8 @@ window.MBS_CONTENT = {
       partnerBtn: 'Partner werden →'
     },
     about: {
-      subtitle: 'Ein Business-Netzwerk für ganz München, studentisch geführt, hochschulübergreifend, offen für jeden Campus der Stadt.',
-      whoLabel: 'Wer wir sind', whoTitle: 'Ein Business-Netzwerk für ganz München.',
+      subtitle: 'Ein Case Club für ganz München, studentisch geführt, hochschulübergreifend, offen für jeden Campus der Stadt.',
+      whoLabel: 'Wer wir sind', whoTitle: 'Ein Case Club für ganz München.',
       whoDesc: 'Die Munich Business Society ist ein studentisch geführter Case Club, der wirtschaftlich interessierte Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Es gab keinen Case Club, der ganz München statt nur einen Campus abdeckte.',
       storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Verein gebaut, dem wir beitreten wollten.',
       storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat über 110.000 Studierende, verteilt auf 33 Hochschulen, doch jede Hochschule hat ihre eigenen Initiativen, die nur einzelne Themenfelder abdecken, und fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld oder filtern früh aus.',
@@ -801,8 +801,7 @@ window.MBS_CONTENT = {
       weekdays: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
       prevMonth: 'Vorheriger Monat', nextMonth: 'Nächster Monat', noEvents: 'Keine Termine in diesem Monat.',
       label: 'Demnächst', title: 'Was ansteht',
-      empty: 'Noch nichts im Kalender. Der Vorstand wurde am 23. September 2026 gewählt, die ersten Termine werden gerade geplant, schau bald wieder vorbei oder trag dich in die Liste ein, um es zuerst zu erfahren.',
-      note: 'Termin der ersten Case Night wird vom Vorstand bekanntgegeben.'
+      empty: 'Noch nichts im Kalender. Der Vorstand wurde am 23. September 2026 gewählt, die ersten Termine werden gerade geplant, schau bald wieder vorbei oder trag dich in die Liste ein, um es zuerst zu erfahren.'
     },
     network: {
       subtitle: 'Die Munich Business Society hängt nicht an einer Hochschule. Sie hängt an einer Stadt.',
@@ -840,7 +839,7 @@ window.MBS_CONTENT = {
       progLabel: 'Programm', progTitle: 'Demnächst in diesem Semester',
       progEmpty: 'Unser erstes Event kommt bald. Infos folgen in Kürze hier. Trag dich in die Liste ein, dann schreiben wir dir, sobald es feststeht.',
       progNote: '',
-      recapLabel: 'Event-Nachbesprechnungen', recapTitle: 'Schau auf Instagram vorbei',
+      recapLabel: 'Event Einblicke', recapTitle: 'Schau auf Instagram vorbei',
       recapText: 'Wir teilen Highlights und wichtige Erkenntnisse von jedem Event auf unseren Socials. Folge uns, um auf dem Laufenden zu bleiben.'
     },
     membership: {
@@ -896,8 +895,8 @@ window.MBS_CONTENT = {
         { icon: 'star', title: 'Jahrespartnerschaft', text: 'Ein Paket über das akademische Jahr: mehrere Formate, Sichtbarkeit auf der Website und im Newsletter, direkter Zugang zur Mitgliedschaft für Stellen.' }
       ],
       partnersLabel: 'Unsere Partner', partnersTitle: 'Unternehmen, mit denen wir arbeiten',
-      partnersDesc: 'Partnerlogos kommen hier hin, nur Unternehmen mit unterzeichneter Vereinbarung und schriftlicher Erlaubnis zur Nutzung ihrer Marke.',
-      partnerLogo: 'Partnerlogo',
+      partnersDesc: 'Werde jetzt unser erster Partner.',
+      partnersBtn: 'Kontakt aufnehmen →',
       howLabel: 'So läuft es', howTitle: 'Vom ersten Anruf zum kurzen Bericht.',
       steps: [
         { n: '1', title: 'Ein 30-Minuten-Call', text: 'Sie sagen uns, wen Sie erreichen wollen und warum.' },

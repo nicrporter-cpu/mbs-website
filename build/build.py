@@ -29,7 +29,7 @@ DESCRIPTION = "Munich's cross-university case club."
 # switch), JSX element for the screen. Every screen takes the active-language
 # content object C, computed in the shell.
 PAGES = [
-    ('index.html',        'home',       'HomeScreen',       "Munich's Student Business Network",
+    ('index.html',        'home',       'HomeScreen',       "Munich's Student Case Club",
      '<HomeScreen C={C} />'),
     ('about.html',        'about',      'AboutScreen',      'About',
      '<AboutScreen C={C} openEvent={openEvent} />'),

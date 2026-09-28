@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta name="description" content="Munich's cross-university case club.">
-<link rel="stylesheet" href="design-system/styles.css?v=9138d6d940">
-<link rel="stylesheet" href="site.css?v=9138d6d940">
+<link rel="stylesheet" href="design-system/styles.css?v=16e00423e5">
+<link rel="stylesheet" href="site.css?v=16e00423e5">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="vendor/react.development.js"></script>
 <script src="vendor/react-dom.development.js"></script>
 <script src="vendor/babel.min.js"></script>
-<script src="design-system/_ds_bundle.js?v=9138d6d940"></script>
-<script src="screens/data.js?v=9138d6d940"></script>
-<script src="site.js?v=9138d6d940"></script>
+<script src="design-system/_ds_bundle.js?v=16e00423e5"></script>
+<script src="screens/data.js?v=16e00423e5"></script>
+<script src="site.js?v=16e00423e5"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1025,15 +1025,14 @@ function CompaniesScreen({ C }) {
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label={K.partnersLabel} title={K.partnersTitle} desc={K.partnersDesc} />
-        <ul className="mbs-grid-4" data-stagger style={{ listStyle: 'none', margin: '28px 0 0', padding: 0 }}>
-          {[1, 2, 3, 4].map(i => (
-            <li key={i} style={{ height: '96px', borderRadius: 'var(--mbs-r)', border: '1px dashed var(--mbs-border)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--mbs-white)',
-              fontSize: '10px', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase',
-              color: 'var(--mbs-gray-muted-text)' }}>{K.partnerLogo}</li>
-          ))}
-        </ul>
+        <SectionHeading label={K.partnersLabel} title={K.partnersTitle} />
+        <div data-reveal style={{
+          marginTop: '28px', textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)',
+          background: 'var(--mbs-white)', border: '1px dashed var(--mbs-border)'
+        }}>
+          <p style={{ fontSize: '16px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 20px' }}>{K.partnersDesc}</p>
+          <Button variant="gold" href={ROUTES.contact}>{K.partnersBtn}</Button>
+        </div>
       </Section>
 
       <Section>

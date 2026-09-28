@@ -49,15 +49,14 @@ function CompaniesScreen({ C }) {
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label={K.partnersLabel} title={K.partnersTitle} desc={K.partnersDesc} />
-        <ul className="mbs-grid-4" data-stagger style={{ listStyle: 'none', margin: '28px 0 0', padding: 0 }}>
-          {[1, 2, 3, 4].map(i => (
-            <li key={i} style={{ height: '96px', borderRadius: 'var(--mbs-r)', border: '1px dashed var(--mbs-border)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--mbs-white)',
-              fontSize: '10px', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase',
-              color: 'var(--mbs-gray-muted-text)' }}>{K.partnerLogo}</li>
-          ))}
-        </ul>
+        <SectionHeading label={K.partnersLabel} title={K.partnersTitle} />
+        <div data-reveal style={{
+          marginTop: '28px', textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)',
+          background: 'var(--mbs-white)', border: '1px dashed var(--mbs-border)'
+        }}>
+          <p style={{ fontSize: '16px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 20px' }}>{K.partnersDesc}</p>
+          <Button variant="gold" href={ROUTES.contact}>{K.partnersBtn}</Button>
+        </div>
       </Section>
 
       <Section>
