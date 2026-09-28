@@ -33,6 +33,7 @@ OUT = ROOT / 'mbs-website-standalone.html'
 SCREENS = [
     ('/',              'home',       'HomeScreen',       '<HomeScreen C={C} />'),
     ('/about',         'about',      'AboutScreen',      '<AboutScreen C={C} openEvent={openEvent} />'),
+    ('/calendar',      'calendar',   'CalendarScreen',   '<CalendarScreen C={C} openEvent={openEvent} />'),
     ('/membership',    'membership', 'MembershipScreen', '<MembershipScreen C={C} />'),
     ('/for-companies', 'companies',  'CompaniesScreen',  '<CompaniesScreen C={C} />'),
     ('/team',          'team',       'TeamScreen',       '<TeamScreen C={C} />'),

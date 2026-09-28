@@ -6,7 +6,7 @@ const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
 
 function CompaniesScreen({ C }) {
   const K = C.companies;
-  const partnersMail = 'partners@' + C.brand.domain;
+  const partnersMail = 'munichbusinesssociety@gmail.com';
   return (
     <div>
       <PageHeader title={C.title.companies} subtitle={K.subtitle} />

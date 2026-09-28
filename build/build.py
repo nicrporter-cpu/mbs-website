@@ -30,6 +30,8 @@ PAGES = [
      '<HomeScreen C={C} />'),
     ('about.html',        'about',      'AboutScreen',      'About',
      '<AboutScreen C={C} openEvent={openEvent} />'),
+    ('calendar.html',     'calendar',   'CalendarScreen',   'Events',
+     '<CalendarScreen C={C} openEvent={openEvent} />'),
     ('membership.html',   'membership', 'MembershipScreen', 'Membership',
      '<MembershipScreen C={C} />'),
     ('for-companies.html', 'companies', 'CompaniesScreen',  'For Companies',

@@ -5,6 +5,7 @@
 window.MBS_ROUTES = {
   home: 'index.html',
   about: 'about.html',
+  calendar: 'calendar.html',
   membership: 'membership.html',
   companies: 'for-companies.html',
   team: 'team.html',

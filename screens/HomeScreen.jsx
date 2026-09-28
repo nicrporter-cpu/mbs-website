@@ -1,6 +1,6 @@
 const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
   Field, Input, Select, Textarea, Checkbox, FormNote,
-  SiteHeader, SiteFooter, Hero, PageHeader, PrincipleCard, StepCard, EventCard,
+  SiteHeader, SiteFooter, PageHeader, PrincipleCard, StepCard, EventCard,
   EventListItem, MemberCard, ProfileCard, FaqItem, Timeline, DataTable, Modal,
   Section } = window.MBSDesignSystem_f206f7;
 /* C (active-language content) and ROUTES are supplied by the page shell. */
@@ -9,11 +9,23 @@ function HomeScreen({ C }) {
   const H = C.home;
   return (
     <div>
-      {/* Hero — the "Munich Business Society" wordmark, restored per request; the
-          Hero component renders the gold-italic split. Lead + CTAs localise. */}
-      <Hero lead={H.heroLead}
-        primary={{ label: C.ui.joinArrow, href: ROUTES.join }}
-        secondary={{ label: H.seeEvents, href: ROUTES.about }} />
+      {/* Hero banner — Munich skyline photo, full-bleed, with a navy box
+          carrying the "Munich Business Society" wordmark, lead copy and CTAs. */}
+      <section className="mbs-hero-banner" style={{ backgroundImage: 'url(assets/munich-skyline.jpg)' }}>
+        <div className="mbs-hero-banner-box">
+          <h1 style={{
+            fontFamily: 'var(--mbs-font-serif)', fontSize: 'var(--mbs-fs-display)',
+            fontWeight: 'var(--mbs-fw-bold)', lineHeight: 'var(--mbs-lh-display)',
+            letterSpacing: 'var(--mbs-tr-display)', color: 'var(--mbs-white)',
+            margin: '0 0 14px'
+          }}><span className="mbs-hero-l1">Munich</span><br /><em className="mbs-hero-l2" style={{ fontStyle: 'normal', color: 'var(--mbs-gold-on-navy)' }}>Business Society</em></h1>
+          <p className="mbs-hero-lead" style={{ fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-on-navy-70)', lineHeight: 'var(--mbs-lh-body)', margin: '0 0 24px' }}>{H.heroLead}</p>
+          <div className="mbs-hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <Button variant="gold" href={ROUTES.join}>{C.ui.joinArrow}</Button>
+            <Button variant="onNavy" href={ROUTES.calendar}>{H.seeEvents}</Button>
+          </div>
+        </div>
+      </section>
 
       {/* Why we exist */}
       <Section>
@@ -56,18 +68,6 @@ function HomeScreen({ C }) {
             ))}
           </ul>
         </div>
-      </Section>
-
-      {/* Member voice */}
-      <Section tone="navy">
-        <figure data-on-navy="" data-reveal style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
-          <div style={{ color: 'var(--mbs-gold-on-navy)', marginBottom: '20px' }}><Icon name="star" size="26px" /></div>
-          <blockquote style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: 'clamp(22px,3vw,30px)', lineHeight: 1.4, color: 'var(--mbs-white)', margin: '0 0 20px', fontWeight: 500 }}>{H.voiceQuote}</blockquote>
-          <figcaption style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)' }}>
-            <span className="mbs-ph mbs-ph--on-navy">{H.voiceAttr}</span>
-            <span style={{ display: 'block', marginTop: '8px', fontSize: '11px' }}>{H.voiceNote}</span>
-          </figcaption>
-        </figure>
       </Section>
 
       {/* Closing bands */}

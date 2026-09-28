@@ -10,7 +10,6 @@
  *   Icon        the set is extended; the screens used emoji for glyphs it lacked
  *   SiteHeader  nav was <a onClick> with no href — unreachable by keyboard; no mobile nav
  *   SiteFooter  social and legal links were all href="#"
- *   Hero        did not stack; CTAs are now real links
  *   PageHeader  fixed 300px height, subtitle at 3.5:1
  *   Modal       no dialog role, no focus trap, unnamed close button
  *   Field       <label> had no htmlFor and did not wrap its control
@@ -46,6 +45,8 @@ const EXTRA_ICON_PATHS = {
   menu: 'M4 7h16M4 12h16M4 17h16',
   close: 'M6 6l12 12M18 6 6 18',
   chevronDown: 'M6 9.5l6 6 6-6',
+  chevronLeft: 'M15 5.5l-6.5 6.5 6.5 6.5',
+  chevronRight: 'M9 5.5l6.5 6.5-6.5 6.5',
   linkedin: 'M4.5 3.5h15a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1h-15a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1M8 10.5v6M8 7.6v.02M12 16.5v-6M12 13a2.5 2.5 0 0 1 5 0v3.5',
   instagram: 'M7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8M17.2 6.8v.02'
 };
@@ -116,7 +117,7 @@ function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', lang
   return (
     <nav className="mbs-nav" style={style} aria-label={ui.home ? undefined : 'Main navigation'}>
       <a className="mbs-nav-brand" href={href('home')} aria-label={ui.home || 'Munich Business Society, home'}>
-        <img src={logoSrc} alt="" width="204" height="102" />
+        <img src={logoSrc} alt="" width="204" height="92" />
       </a>
 
       <div className="mbs-nav-right">
@@ -286,48 +287,6 @@ function SiteFooter({
         </div>
       </div>
     </footer>
-  );
-}
-
-/* ── Hero ───────────────────────────────────────────────────────────────────
-   Same composition; it stacks below 900px and the CTAs are real links. */
-
-function Hero({ line1 = 'Munich', line2 = 'Business Society', lead, primary, secondary, imageSrc, imageLabel = 'Bild', style }) {
-  const { Button } = DS;
-  return (
-    <section className="mbs-hero" style={style}>
-      <div className="mbs-hero-copy">
-        <h1 style={{
-          fontFamily: 'var(--mbs-font-serif)', fontSize: 'var(--mbs-fs-display)',
-          fontWeight: 'var(--mbs-fw-bold)', lineHeight: 'var(--mbs-lh-display)',
-          letterSpacing: 'var(--mbs-tr-display)', color: 'var(--mbs-navy)',
-          maxWidth: '500px', margin: '0 0 24px'
-        }}><span className="mbs-hero-l1">{line1}</span><br /><em className="mbs-hero-l2" style={{ fontStyle: 'normal', color: 'var(--mbs-gold)' }}>{line2}</em></h1>
-        {lead && <p className="mbs-hero-lead" style={{
-          fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-gray)', maxWidth: '440px',
-          lineHeight: 'var(--mbs-lh-body)', margin: '0 0 40px'
-        }}>{lead}</p>}
-        <div className="mbs-hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          {primary && <Button variant="gold" href={primary.href} onClick={primary.onClick}>{primary.label}</Button>}
-          {secondary && <Button variant="outline" href={secondary.href} onClick={secondary.onClick}>{secondary.label}</Button>}
-        </div>
-      </div>
-      <div className="mbs-hero-media">
-        <div style={{
-          width: '100%', aspectRatio: '4 / 5', borderRadius: 'var(--mbs-r-lg)',
-          background: 'var(--mbs-navy)', overflow: 'hidden', position: 'relative',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          boxShadow: '0 4px 20px rgba(39,63,99,.1)'
-        }}>
-          {imageSrc
-            ? <img src={imageSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
-            : <span style={{
-                fontSize: '12px', fontWeight: 'var(--mbs-fw-semibold)', color: 'var(--mbs-on-navy-35)',
-                letterSpacing: '2px', textTransform: 'uppercase'
-              }}>{imageLabel}</span>}
-        </div>
-      </div>
-    </section>
   );
 }
 
@@ -880,7 +839,7 @@ function MemberCard({ name, role, initials, description, photoSrc, style }) {
       transition: 'all var(--mbs-dur-slow) var(--mbs-ease)', ...style
     }}>
       <div style={{
-        width: '100%', aspectRatio: '1 / 1', background: 'var(--mbs-navy)', display: 'flex',
+        width: '100%', aspectRatio: photoSrc ? '2 / 3' : '1 / 1', background: 'var(--mbs-navy)', display: 'flex',
         flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px',
         borderBottom: '3px solid var(--mbs-gold)', overflow: 'hidden', position: 'relative'
       }}>
@@ -927,7 +886,7 @@ function DataTable(props) {
   );
 }
 
-Object.assign(DS, { Icon, Section, SiteHeader, SiteFooter, Hero, PageHeader,
+Object.assign(DS, { Icon, Section, SiteHeader, SiteFooter, PageHeader,
   Modal, Field, DataTable, StatTile, MemberCard, SectionHeading, Button, Card,
   Badge, PrincipleCard, StepCard, FaqItem, Timeline, EventListItem,
   EventCard, Checkbox });

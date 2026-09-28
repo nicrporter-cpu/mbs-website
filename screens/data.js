@@ -41,19 +41,20 @@ const MBS_UNIVERSITIES = [
 const MBS_LEGAL_IMPRESSUM = `
 ### Munich Business Society e.V.
 
-[Straße und Hausnummer]
-[PLZ] München
+Asternstraße 3
+82152 Krailling
 Deutschland
 
 ### Vertreten durch den Vorstand
 
-[Name Vorstandsvorsitz / 1. Vorsitzende:r]
-[Name weiteres vertretungsberechtigtes Vorstandsmitglied, falls laut Satzung gemeinsam vertretungsberechtigt]
+Nicholas Porter, 1. Vorsitzender
+Martijn Mooren, 2. Vorsitzender
+Lennart Neumeier, Schatzmeister
 
 ### Kontakt
 
-E-Mail: info@munichbusinesssociety.com
-Telefon: [optional, falls gewünscht]
+E-Mail: munichbusinesssociety@gmail.com
+Telefon: +49 151 54209559
 
 ### Registereintrag
 
@@ -132,12 +133,12 @@ Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre p
 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 
 Munich Business Society e.V.
-[Straße und Hausnummer]
-[PLZ] München
+Asternstraße 3
+82152 Krailling
 Deutschland
-E-Mail: info@munichbusinesssociety.com
+E-Mail: munichbusinesssociety@gmail.com
 
-Vertreten durch den Vorstand: [Name(n)]
+Vertreten durch den Vorstand: Nicholas Porter (1. Vorsitzender), Martijn Mooren (2. Vorsitzender), Lennart Neumeier (Schatzmeister)
 
 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.
 
@@ -275,7 +276,7 @@ Munich Business Society schaltet keine Werbung Dritter auf dieser Website und se
 
 ### Newsletterdaten
 
-[Nur einfügen, falls ein Newsletter tatsächlich versendet wird, und an das eingesetzte Tool anpassen, z. B.: „Wenn Sie sich für unseren Newsletter anmelden, verwenden wir das sogenannte Double-Opt-in-Verfahren: Nach Ihrer Anmeldung erhalten Sie eine Bestätigungs-E-Mail, mit der Sie Ihre Anmeldung bestätigen müssen. Für den Versand nutzen wir [Anbieter, z. B. Mailchimp/Brevo], [Anschrift des Anbieters]. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO. Sie können den Newsletter jederzeit über den Abmeldelink in jeder E-Mail oder per Nachricht an info@munichbusinesssociety.com abbestellen."]
+[Nur einfügen, falls ein Newsletter tatsächlich versendet wird, und an das eingesetzte Tool anpassen, z. B.: „Wenn Sie sich für unseren Newsletter anmelden, verwenden wir das sogenannte Double-Opt-in-Verfahren: Nach Ihrer Anmeldung erhalten Sie eine Bestätigungs-E-Mail, mit der Sie Ihre Anmeldung bestätigen müssen. Für den Versand nutzen wir [Anbieter, z. B. Mailchimp/Brevo], [Anschrift des Anbieters]. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO. Sie können den Newsletter jederzeit über den Abmeldelink in jeder E-Mail oder per Nachricht an munichbusinesssociety@gmail.com abbestellen."]
 
 ## Plugins und Tools
 
@@ -334,6 +335,7 @@ window.MBS_CONTENT = {
   en: {
     label: 'EN',
     dir: 'ltr',
+    locale: 'en-GB',
     brand: {
       name: 'Munich Business Society', short: 'MBS', domain: MBS_DOMAIN,
       tagline: 'Every campus. One network.',
@@ -342,6 +344,7 @@ window.MBS_CONTENT = {
     nav: [
       { id: 'home', label: 'Home' },
       { id: 'about', label: 'About' },
+      { id: 'calendar', label: 'Events' },
       { id: 'team', label: 'Team' },
       { id: 'membership', label: 'Membership' },
       { id: 'companies', label: 'For Companies' },
@@ -362,7 +365,7 @@ window.MBS_CONTENT = {
         { title: 'Society', items: [
           { label: 'About', to: 'about' }, { label: 'Team', to: 'team' } ] },
         { title: 'Get involved', items: [
-          { label: 'Membership', to: 'membership' }, { label: 'Events', to: 'about' },
+          { label: 'Membership', to: 'membership' }, { label: 'Events', to: 'calendar' },
           { label: 'Contact', to: 'contact' } ] },
         { title: 'Companies', items: [
           { label: 'For Companies', to: 'companies' } ] },
@@ -379,7 +382,7 @@ window.MBS_CONTENT = {
       copyright: '© 2026 Munich Business Society'
     },
     title: { home: "Munich's Student Business Network", about: 'About', network: 'The Network',
-      whatwedo: 'What We Do', membership: 'Membership', companies: 'For Companies', team: 'Team',
+      whatwedo: 'What We Do', calendar: 'Events', membership: 'Membership', companies: 'For Companies', team: 'Team',
       faq: 'FAQ', join: 'Join MBS', contact: 'Contact', impressum: 'Impressum', datenschutz: 'Datenschutzerklärung' },
 
     legal: { impressum: MBS_LEGAL_IMPRESSUM, datenschutz: MBS_LEGAL_DATENSCHUTZ },
@@ -430,8 +433,6 @@ window.MBS_CONTENT = {
       formatsLabel: 'What we do', formatsTitle: 'Nine formats, every semester.',
       formatsText: "Case Nights every two weeks, plus Case Competitions, Company Cases, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free and open to any student in Munich.",
       formatsLink: 'See the full programme →',
-      voiceQuote: '"I came for the Case Night and left with a working-student job. Neither of them was at my university."',
-      voiceAttr: '[First name], [Programme], [University]', voiceNote: 'Collect two real member quotes before launch.',
       studentH: 'Open now. No application needed.', studentText: "It's free for every student at every Munich university. Come to a Case Night, or get on the list for updates. Takes thirty seconds.",
       companyH: 'Hiring in Munich?', companyText: 'Reach ambitious business students across all 33 Munich universities through one point of contact, instead of negotiating with five separate campus clubs.',
       partnerBtn: 'Partner with us →'
@@ -457,6 +458,15 @@ window.MBS_CONTENT = {
       orgP2: " We're now registering with the Munich register of associations (Vereinsregister), which will give the society a permanent legal footing as an eingetragener Verein (e.V.). Statutes and financial reporting are available to members on request.",
       orgNote: 'MBS operates as a Verein in Gründung (association in formation) until the Vereinsregister entry is complete. The registration number will appear in the Impressum once it lands.',
       meetTeam: 'Meet the team →', faqBtn: 'Read the FAQ →'
+    },
+    calendarPage: {
+      subtitle: 'Every Case Night, Skillnight and company evening, in one place.',
+      calLabel: 'Calendar', calTitle: 'This month',
+      weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      prevMonth: 'Previous month', nextMonth: 'Next month', noEvents: 'No events this month.',
+      label: 'Upcoming', title: "What's on",
+      empty: 'Nothing on the calendar yet. The board was elected on 23 September 2026 and the first events are being scheduled now, check back soon or join the list to hear first.',
+      note: 'First Case Night date to be announced by the board.'
     },
     network: {
       subtitle: "MBS isn't attached to a university. It's attached to a city.",
@@ -559,7 +569,7 @@ window.MBS_CONTENT = {
         { n: '4', title: 'A short report', text: 'Who came, from where, what happened next.' }
       ],
       closeH: "Tell us who you're hiring.",
-      closeText: "Write to partners@" + MBS_DOMAIN + " or book a call. We'll come back with a proposal within a week.",
+      closeText: "Write to munichbusinesssociety@gmail.com or book a call. We'll come back with a proposal within a week.",
       emailBtn: 'Email the partnerships team →'
     },
     team: {
@@ -567,11 +577,10 @@ window.MBS_CONTENT = {
       whoLabel: 'Who runs MBS', whoTitle: 'Students, running this properly.',
       whoDesc: 'MBS is built and run entirely by students alongside their degrees. The board is elected by the membership; every other role is open to members who want it.',
       boardLabel: 'The board', boardTitle: 'Elected at the founding assembly, 23 September 2026',
-      boardNote: 'Photos to follow. The board was elected days ago and headshots are next on the list.',
       board: [
-        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Student affairs, university relations, education and administration.' },
-        { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Marketing, events, membership management and recruiting.' },
-        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'Finance, legal matters, sponsoring and company relations.' }
+        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Student affairs, university relations, education and administration.', photoSrc: 'assets/team-nicholas-porter.png' },
+        { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Marketing, events, membership management and recruiting.', photoSrc: 'assets/team-martijn-mooren.png' },
+        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'Finance, legal matters, sponsoring and company relations.', photoSrc: 'assets/team-lennart-neumeier.png' }
       ],
       teamsLabel: 'Teams', teamsTitle: 'Five teams, one society.',
       teams: [
@@ -638,9 +647,9 @@ window.MBS_CONTENT = {
       label: 'Ask us anything', title: 'Ask us anything.',
       descA: "Whether you're a student weighing up joining, a company thinking about a partnership, or someone with an idea for a format. Write to us. We answer within ", descB: ' working days.',
       routes: [
-        { icon: 'users', label: 'Students & membership', addr: 'hello@' + MBS_DOMAIN },
-        { icon: 'briefcase', label: 'Companies & partnerships', addr: 'partners@' + MBS_DOMAIN },
-        { icon: 'mail', label: 'Press & everything else', addr: 'info@' + MBS_DOMAIN }
+        { icon: 'users', label: 'Students & membership', addr: 'munichbusinesssociety@gmail.com' },
+        { icon: 'briefcase', label: 'Companies & partnerships', addr: 'munichbusinesssociety@gmail.com' },
+        { icon: 'mail', label: 'Press & everything else', addr: 'munichbusinesssociety@gmail.com' }
       ],
       formLabel: 'Send a message', formTitle: 'Straight to the right person.',
       formText: "Tell us who you are and what you're after. The form routes your message to the team that can actually help.",
@@ -649,7 +658,7 @@ window.MBS_CONTENT = {
       f: { name: 'Name', email: 'Email', role: "I'm a…", message: 'Your message' },
       ph: { name: 'Your name', email: 'you@example.com', message: "What's on your mind?" },
       roles: [ { v: 'student', label: 'Student' }, { v: 'company', label: 'Company' }, { v: 'other', label: 'Other' } ],
-      send: 'Send it →', direct: 'Or write to us directly at hello@' + MBS_DOMAIN + '.',
+      send: 'Send it →', direct: 'Or write to us directly at munichbusinesssociety@gmail.com.',
       errName: 'Please add your name.', errEmail: "That email address doesn't look complete. Please check it.", errMsg: 'Please add a message.',
       sentTitle: 'Message sent.', sentA: "We'll come back to you within ", sentB: ' working days.',
       faqText: 'Before you write in, your question might already be answered.', faqBtn: 'Read the FAQ →'
@@ -660,6 +669,7 @@ window.MBS_CONTENT = {
   de: {
     label: 'DE',
     dir: 'ltr',
+    locale: 'de-DE',
     brand: {
       name: 'Munich Business Society', short: 'MBS', domain: MBS_DOMAIN,
       tagline: 'Jeder Campus. Ein Netzwerk.',
@@ -668,6 +678,7 @@ window.MBS_CONTENT = {
     nav: [
       { id: 'home', label: 'Start' },
       { id: 'about', label: 'Über Uns' },
+      { id: 'calendar', label: 'Termine' },
       { id: 'team', label: 'Team' },
       { id: 'membership', label: 'Mitgliedschaft' },
       { id: 'companies', label: 'Für Unternehmen' },
@@ -688,7 +699,7 @@ window.MBS_CONTENT = {
         { title: 'Society', items: [
           { label: 'Über Uns', to: 'about' }, { label: 'Team', to: 'team' } ] },
         { title: 'Mitmachen', items: [
-          { label: 'Mitgliedschaft', to: 'membership' }, { label: 'Events', to: 'about' },
+          { label: 'Mitgliedschaft', to: 'membership' }, { label: 'Events', to: 'calendar' },
           { label: 'Kontakt', to: 'contact' } ] },
         { title: 'Unternehmen', items: [
           { label: 'Für Unternehmen', to: 'companies' } ] },
@@ -705,7 +716,7 @@ window.MBS_CONTENT = {
       copyright: '© 2026 Munich Business Society'
     },
     title: { home: 'Studentisches Business-Netzwerk in München', about: 'Über Uns', network: 'Das Netzwerk',
-      whatwedo: 'Was wir tun', membership: 'Mitgliedschaft', companies: 'Für Unternehmen', team: 'Team',
+      whatwedo: 'Was wir tun', calendar: 'Termine', membership: 'Mitgliedschaft', companies: 'Für Unternehmen', team: 'Team',
       faq: 'FAQ', join: 'Mitglied werden', contact: 'Kontakt', impressum: 'Impressum', datenschutz: 'Datenschutzerklärung' },
 
     legal: { impressum: MBS_LEGAL_IMPRESSUM, datenschutz: MBS_LEGAL_DATENSCHUTZ },
@@ -756,8 +767,6 @@ window.MBS_CONTENT = {
       formatsLabel: 'Was wir tun', formatsTitle: 'Neun Formate, jedes Semester.',
       formatsText: 'Alle zwei Wochen eine Case Night, dazu Case Competitions, Company Cases, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos und offen für jede:n Studierende:n in München.',
       formatsLink: 'Zum ganzen Programm →',
-      voiceQuote: '„Ich kam für die Case Night und ging mit einem Werkstudentenjob. Beides war nicht an meiner Hochschule."',
-      voiceAttr: '[Vorname], [Studiengang], [Hochschule]', voiceNote: 'Vor dem Launch zwei echte Mitgliederstimmen einsammeln.',
       studentH: 'Ab sofort dabei, ganz ohne Bewerbung.', studentText: 'Kostenlos für jede:n Studierende:n an jeder Münchner Hochschule. Komm zur nächsten Case Night oder trag dich für Updates ein. Dauert dreißig Sekunden.',
       companyH: 'Sie stellen in München ein?', companyText: 'Erreichen Sie ambitionierte Business-Studierende über alle 33 Münchner Hochschulen hinweg, über einen Ansprechpartner, statt mit fünf einzelnen Campus-Clubs zu verhandeln.',
       partnerBtn: 'Partner werden →'
@@ -783,6 +792,15 @@ window.MBS_CONTENT = {
       orgP2: ' Wir befinden uns aktuell in der Eintragung ins Münchner Vereinsregister, was dem Verein eine dauerhafte rechtliche Grundlage als eingetragener Verein (e.V.) gibt. Satzung und Finanzberichte sind für Mitglieder auf Anfrage einsehbar.',
       orgNote: 'Die MBS ist bis zum Abschluss der Vereinsregister-Eintragung ein Verein in Gründung. Die Registernummer folgt im Impressum, sobald sie vorliegt.',
       meetTeam: 'Lern das Team kennen →', faqBtn: 'Zur FAQ →'
+    },
+    calendarPage: {
+      subtitle: 'Jede Case Night, Skillnight und jeder Company Evening an einem Ort.',
+      calLabel: 'Kalender', calTitle: 'Dieser Monat',
+      weekdays: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
+      prevMonth: 'Vorheriger Monat', nextMonth: 'Nächster Monat', noEvents: 'Keine Termine in diesem Monat.',
+      label: 'Demnächst', title: 'Was ansteht',
+      empty: 'Noch nichts im Kalender. Der Vorstand wurde am 23. September 2026 gewählt, die ersten Termine werden gerade geplant, schau bald wieder vorbei oder trag dich in die Liste ein, um es zuerst zu erfahren.',
+      note: 'Termin der ersten Case Night wird vom Vorstand bekanntgegeben.'
     },
     network: {
       subtitle: 'Die MBS hängt nicht an einer Hochschule. Sie hängt an einer Stadt.',
@@ -885,7 +903,7 @@ window.MBS_CONTENT = {
         { n: '4', title: 'Ein kurzer Bericht', text: 'Wer kam, von wo, was danach passierte.' }
       ],
       closeH: 'Sagen Sie uns, wen Sie einstellen.',
-      closeText: 'Schreiben Sie an partners@' + MBS_DOMAIN + ' oder buchen Sie einen Termin. Wir kommen innerhalb einer Woche mit einem Vorschlag zurück.',
+      closeText: 'Schreiben Sie an munichbusinesssociety@gmail.com oder buchen Sie einen Termin. Wir kommen innerhalb einer Woche mit einem Vorschlag zurück.',
       emailBtn: 'Partnerschaftsteam schreiben →'
     },
     team: {
@@ -893,11 +911,10 @@ window.MBS_CONTENT = {
       whoLabel: 'Wer die MBS führt', whoTitle: 'Studierende, die das richtig machen.',
       whoDesc: 'Die MBS wird komplett von Studierenden neben dem Studium gebaut und geführt. Der Vorstand wird von der Mitgliedschaft gewählt; jede andere Rolle steht Mitgliedern offen, die sie wollen.',
       boardLabel: 'Der Vorstand', boardTitle: 'Gewählt bei der Gründungsversammlung, 23. September 2026',
-      boardNote: 'Fotos folgen. Der Vorstand wurde vor wenigen Tagen gewählt, Porträts stehen als Nächstes an.',
       board: [
-        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Studierendenangelegenheiten, Hochschulbeziehungen, Bildung und Administration.' },
-        { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Marketing, Events, Mitgliederverwaltung und Recruiting.' },
-        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Finanzen, Rechtliches, Sponsoring und Unternehmensbeziehungen.' }
+        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Studierendenangelegenheiten, Hochschulbeziehungen, Bildung und Administration.', photoSrc: 'assets/team-nicholas-porter.png' },
+        { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Marketing, Events, Mitgliederverwaltung und Recruiting.', photoSrc: 'assets/team-martijn-mooren.png' },
+        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Finanzen, Rechtliches, Sponsoring und Unternehmensbeziehungen.', photoSrc: 'assets/team-lennart-neumeier.png' }
       ],
       teamsLabel: 'Teams', teamsTitle: 'Fünf Teams, ein Verein.',
       teams: [
@@ -964,9 +981,9 @@ window.MBS_CONTENT = {
       label: 'Frag uns alles', title: 'Frag uns alles.',
       descA: 'Ob du Studierende:r bist und über einen Beitritt nachdenkst, ein Unternehmen, das über eine Partnerschaft nachdenkt, oder jemand mit einer Idee für ein Format. Schreib uns. Wir antworten innerhalb von ', descB: ' Werktagen.',
       routes: [
-        { icon: 'users', label: 'Studierende & Mitgliedschaft', addr: 'hello@' + MBS_DOMAIN },
-        { icon: 'briefcase', label: 'Unternehmen & Partnerschaften', addr: 'partners@' + MBS_DOMAIN },
-        { icon: 'mail', label: 'Presse & alles andere', addr: 'info@' + MBS_DOMAIN }
+        { icon: 'users', label: 'Studierende & Mitgliedschaft', addr: 'munichbusinesssociety@gmail.com' },
+        { icon: 'briefcase', label: 'Unternehmen & Partnerschaften', addr: 'munichbusinesssociety@gmail.com' },
+        { icon: 'mail', label: 'Presse & alles andere', addr: 'munichbusinesssociety@gmail.com' }
       ],
       formLabel: 'Nachricht senden', formTitle: 'Direkt an die richtige Person.',
       formText: 'Sag uns, wer du bist und was du suchst. Das Formular leitet deine Nachricht an das Team, das wirklich helfen kann.',
@@ -975,7 +992,7 @@ window.MBS_CONTENT = {
       f: { name: 'Name', email: 'E-Mail', role: 'Ich bin…', message: 'Deine Nachricht' },
       ph: { name: 'Dein Name', email: 'du@beispiel.de', message: 'Was beschäftigt dich?' },
       roles: [ { v: 'student', label: 'Studierende:r' }, { v: 'company', label: 'Unternehmen' }, { v: 'other', label: 'Sonstiges' } ],
-      send: 'Absenden →', direct: 'Oder schreib uns direkt an hello@' + MBS_DOMAIN + '.',
+      send: 'Absenden →', direct: 'Oder schreib uns direkt an munichbusinesssociety@gmail.com.',
       errName: 'Bitte gib deinen Namen an.', errEmail: 'Diese E-Mail-Adresse sieht nicht vollständig aus. Bitte prüf sie.', errMsg: 'Bitte gib eine Nachricht ein.',
       sentTitle: 'Nachricht gesendet.', sentA: 'Wir melden uns innerhalb von ', sentB: ' Werktagen.',
       faqText: 'Bevor du schreibst, vielleicht ist deine Frage schon beantwortet.', faqBtn: 'Zur FAQ →'

@@ -19,7 +19,6 @@ function TeamScreen({ C }) {
           <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
             {T.board.map(p => <MemberCard key={p.name} {...p} />)}
           </div>
-          <FormNote tone="alt" style={{ marginTop: '28px' }}>{T.boardNote}</FormNote>
         </div>
       </Section>
 
