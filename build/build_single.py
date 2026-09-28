@@ -157,6 +157,8 @@ function Page() {
   React.useEffect(() => {
     document.documentElement.lang = lang;
     document.title = 'Munich Business Society, ' + C.title[current.nav];
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', C.brand.metaDescription);
   }, [current, lang]);
 
   const dlg = C.ui.dialog;
@@ -203,8 +205,9 @@ PAGE = '''<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Munich Business Society, Munich's Student Business Network</title>
-<meta name="description" content="The cross-university business network for students in Munich. Build your network, grow real skills and get noticed by companies hiring here.">
-<link rel="icon" href="__FAVICON__">
+<meta name="description" content="Munich's cross-university case club.">
+<link rel="icon" type="image/png" href="__FAVICON__">
+<link rel="apple-touch-icon" href="__APPLE_ICON__">
 <style>
 html,body{margin:0}
 body{background:var(--mbs-white)}
@@ -229,7 +232,8 @@ __BABEL__
 
 def build():
     logo = data_uri('assets/mbs-logo-horizontal.png', 'image/png')
-    favicon = data_uri('assets/mbs-mark.svg', 'image/svg+xml')
+    favicon = data_uri('assets/favicon.png', 'image/png')
+    apple_icon = data_uri('assets/apple-touch-icon.png', 'image/png')
 
     js_blocks = []
     for rel in JS_ORDER:
@@ -266,6 +270,7 @@ def build():
     html = (PAGE
             .replace('__CSS__', css_bundle())
             .replace('__FAVICON__', favicon)
+            .replace('__APPLE_ICON__', apple_icon)
             .replace('__JS__', '\n'.join(js_blocks))
             .replace('__BABEL__', '\n\n'.join(babel)))
 

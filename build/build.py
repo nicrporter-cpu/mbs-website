@@ -22,6 +22,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SCREENS = ROOT / 'screens'
 PATCHES = SCREENS / '_patches.jsx'
 
+# Initial <meta description> (English; JS updates it on lang switch, same as the title).
+DESCRIPTION = "Munich's cross-university case club."
+
 # file, nav id, screen component, initial <title> (English; JS updates on lang
 # switch), JSX element for the screen. Every screen takes the active-language
 # content object C, computed in the shell.
@@ -81,6 +84,8 @@ function Page() {
   React.useEffect(() => {
     document.documentElement.lang = lang;
     document.title = 'Munich Business Society, ' + C.title[ACTIVE];
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', C.brand.metaDescription);
   }, [lang]);
 
   React.useEffect(() => {
@@ -137,7 +142,9 @@ PAGE = '''<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Munich Business Society, __TITLE__</title>
-<link rel="icon" href="assets/mbs-mark.svg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="__DESCRIPTION__">
 <link rel="stylesheet" href="design-system/styles.css?v=__STAMP__">
 <link rel="stylesheet" href="site.css?v=__STAMP__">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
@@ -194,6 +201,7 @@ def build():
         shell = SHELL.replace('__ACTIVE__', active).replace('__SCREEN__', element)
         html = (PAGE.replace('__STAMP__', version)
                     .replace('__TITLE__', title)
+                    .replace('__DESCRIPTION__', DESCRIPTION)
                     .replace('__SCREEN_FILE__', component + '.jsx')
                     .replace('__PATCHES__', patches)
                     .replace('__SOURCE__', source)

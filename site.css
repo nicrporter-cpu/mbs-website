@@ -443,14 +443,20 @@ select { caret-color: var(--mbs-gold-text); }
   display: flex;
   align-items: flex-end;
   min-height: 420px;
-  padding: var(--mbs-sp-7) var(--mbs-gutter);
   background-size: cover;
   background-position: center;
+}
+.mbs-hero-banner-inner {
+  /* Same column as .mbs-sec-inner, so the box's left edge lines up with the
+     text below it, however wide the full-bleed photo behind it runs. */
+  width: 100%;
+  max-width: calc(var(--mbs-content-max) + 2 * var(--mbs-gutter));
+  margin: 0 auto;
+  padding: var(--mbs-sp-7) var(--mbs-gutter);
 }
 .mbs-hero-banner-box {
   position: relative;
   max-width: 560px;
-  margin: 0 auto var(--mbs-sp-5) 0;
   padding: var(--mbs-sp-6);
   border-radius: var(--mbs-r-lg);
   background: var(--mbs-navy);
@@ -460,12 +466,13 @@ select { caret-color: var(--mbs-gold-text); }
 @media (max-width: 900px) {
   .mbs-hero-banner {
     min-height: 280px;
+  }
+  .mbs-hero-banner-inner {
     padding: var(--mbs-sp-5) var(--mbs-gutter-sm);
   }
   .mbs-hero-banner-box {
     max-width: none;
     width: 100%;
-    margin: 0;
     padding: var(--mbs-sp-5) var(--mbs-gutter-sm);
   }
 }

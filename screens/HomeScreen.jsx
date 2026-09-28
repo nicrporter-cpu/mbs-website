@@ -12,17 +12,19 @@ function HomeScreen({ C }) {
       {/* Hero banner — Munich skyline photo, full-bleed, with a navy box
           carrying the "Munich Business Society" wordmark, lead copy and CTAs. */}
       <section className="mbs-hero-banner" style={{ backgroundImage: 'url(assets/munich-skyline.jpg)' }}>
-        <div className="mbs-hero-banner-box">
-          <h1 style={{
-            fontFamily: 'var(--mbs-font-serif)', fontSize: 'var(--mbs-fs-display)',
-            fontWeight: 'var(--mbs-fw-bold)', lineHeight: 'var(--mbs-lh-display)',
-            letterSpacing: 'var(--mbs-tr-display)', color: 'var(--mbs-white)',
-            margin: '0 0 14px'
-          }}><span className="mbs-hero-l1">Munich</span><br /><em className="mbs-hero-l2" style={{ fontStyle: 'normal', color: 'var(--mbs-gold-on-navy)' }}>Business Society</em></h1>
-          <p className="mbs-hero-lead" style={{ fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-on-navy-70)', lineHeight: 'var(--mbs-lh-body)', margin: '0 0 24px' }}>{H.heroLead}</p>
-          <div className="mbs-hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-            <Button variant="gold" href={ROUTES.join}>{C.ui.joinArrow}</Button>
-            <Button variant="onNavy" href={ROUTES.calendar}>{H.seeEvents}</Button>
+        <div className="mbs-hero-banner-inner">
+          <div className="mbs-hero-banner-box">
+            <h1 style={{
+              fontFamily: 'var(--mbs-font-serif)', fontSize: 'var(--mbs-fs-display)',
+              fontWeight: 'var(--mbs-fw-bold)', lineHeight: 'var(--mbs-lh-display)',
+              letterSpacing: 'var(--mbs-tr-display)', color: 'var(--mbs-white)',
+              margin: '0 0 14px'
+            }}><span className="mbs-hero-l1">Munich</span><br /><em className="mbs-hero-l2" style={{ fontStyle: 'normal', color: 'var(--mbs-gold-on-navy)' }}>Business Society</em></h1>
+            <p className="mbs-hero-lead" style={{ fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-on-navy-70)', lineHeight: 'var(--mbs-lh-body)', margin: '0 0 24px' }}>{H.heroLead}</p>
+            <div className="mbs-hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <Button variant="gold" href={ROUTES.join}>{C.ui.joinArrow}</Button>
+              <Button variant="onNavy" href={ROUTES.calendar}>{H.seeEvents}</Button>
+            </div>
           </div>
         </div>
       </section>

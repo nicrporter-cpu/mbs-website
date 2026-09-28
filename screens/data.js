@@ -339,6 +339,7 @@ window.MBS_CONTENT = {
     brand: {
       name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Every campus. One network.',
+      metaDescription: "Munich's cross-university case club.",
       footerDescriptor: 'Munich Business Society, the cross-university business network for students in Munich. Open to every university in the city.'
     },
     nav: [
@@ -351,7 +352,7 @@ window.MBS_CONTENT = {
       { id: 'contact', label: 'Contact' }
     ],
     ui: {
-      join: 'Join', joinArrow: "Join free →", menuOpen: 'Open menu', menuClose: 'Close menu',
+      join: 'Apply', joinArrow: "Join free →", menuOpen: 'Open menu', menuClose: 'Close menu',
       skip: 'Skip to content', home: 'Munich Business Society, home', langLabel: 'Language',
       dialog: { about: 'About this event', expect: 'What to expect', who: "Who's it for?",
         cta: 'Join Munich Business Society & attend →', close: 'Close dialog' },
@@ -426,8 +427,8 @@ window.MBS_CONTENT = {
     home: {
       heroLead: "Munich Business Society is Munich's first cross-university case-solving and business platform, 100% free, with no application and no membership fee, open to every student in the city.",
       seeEvents: "See what's coming up",
-      whyLabel: 'Why we exist', whyTitle: 'Munich has 110,000+ business-minded students split across 33 universities.',
-      whyP1: 'LMU, TUM, the universities of applied sciences, the private schools. Each one has strong people and its own bubble. Recruiters see one Munich talent pool; students only ever meet their own seminar group. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.',
+      whyLabel: 'Why we exist', whyTitle: 'Munich has 110,000+ students split across 33 universities, and almost none of them talk to each other.',
+      whyP1: 'Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, giving visibility into that university\'s own talent, not across one shared, central club. Recruiters see one Munich talent pool; students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.',
       whyP2: "Munich Business Society exists to close that gap: one open, free, cross-university platform with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you get the same access, on the same terms, at no cost.",
       pillarsLabel: 'What you get', pillarsTitle: 'What you actually get out of it.',
       formatsLabel: 'What we do', formatsTitle: 'Nine formats, every semester.',
@@ -442,7 +443,7 @@ window.MBS_CONTENT = {
       whoLabel: 'Who we are', whoTitle: 'One business network for all of Munich.',
       whoDesc: 'Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away.',
       storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join.',
-      storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has over 110,000 business-minded students spread across 33 universities: one of Europe's densest concentrations of business talent, and one of its most fragmented student scenes. Every university has a career fair. Almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
+      storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has over 110,000 students spread across 33 universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
       storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Open on identical terms to anyone in Munich studying business, economics, management, or studying something else entirely and heading into business anyway. No fees, no application, no selection hurdles.',
       storyP3: 'We held our founding assembly on 23 September 2026, adopted our statutes and elected the board. The next milestone is our first Case Night, planned for early 2027. Until then, we\'re building the partner and campus network to get there.',
       diffLabel: 'What makes us different', diffTitle: 'Cross-university by design, not by exception.',
@@ -579,9 +580,9 @@ window.MBS_CONTENT = {
       whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees. The board is elected by the membership; every other role is open to members who want it.',
       boardTitle: 'The Board',
       board: [
-        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Student affairs, university relations, education and administration.', photoSrc: 'assets/team-nicholas-porter.png' },
-        { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Marketing, events, membership management and recruiting.', photoSrc: 'assets/team-martijn-mooren.png' },
-        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'Finance, legal matters, sponsoring and company relations.', photoSrc: 'assets/team-lennart-neumeier.png' }
+        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Student affairs, university relations, education and administration.', photoSrc: 'assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
+        { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Marketing, events, membership management and recruiting.', photoSrc: 'assets/team-martijn-mooren.jpg' },
+        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'Finance, legal matters, sponsoring and company relations.', photoSrc: 'assets/team-lennart-neumeier.jpg' }
       ],
       teamsLabel: 'Teams', teamsTitle: 'Five teams, one society.',
       teams: [
@@ -674,6 +675,7 @@ window.MBS_CONTENT = {
     brand: {
       name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Jeder Campus. Ein Netzwerk.',
+      metaDescription: 'Münchens hochschulübergreifender Case Club.',
       footerDescriptor: 'Munich Business Society, das hochschulübergreifende Business-Netzwerk für Studierende in München. Offen für jede Hochschule der Stadt.'
     },
     nav: [
@@ -686,7 +688,7 @@ window.MBS_CONTENT = {
       { id: 'contact', label: 'Kontakt' }
     ],
     ui: {
-      join: 'Mitmachen', joinArrow: 'Kostenlos mitmachen →', menuOpen: 'Menü öffnen', menuClose: 'Menü schließen',
+      join: 'Bewerben', joinArrow: 'Kostenlos mitmachen →', menuOpen: 'Menü öffnen', menuClose: 'Menü schließen',
       skip: 'Zum Inhalt springen', home: 'Munich Business Society, zur Startseite', langLabel: 'Sprache',
       dialog: { about: 'Über diese Veranstaltung', expect: 'Was dich erwartet', who: 'Für wen ist das?',
         cta: 'Mitglied werden & teilnehmen →', close: 'Dialog schließen' },
@@ -761,8 +763,8 @@ window.MBS_CONTENT = {
     home: {
       heroLead: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, 100 % kostenlos, ohne Bewerbung und ohne Mitgliedsbeitrag, offen für jede:n Studierende:n der Stadt.',
       seeEvents: 'Zu den Terminen',
-      whyLabel: 'Warum es uns gibt', whyTitle: 'München hat über 110.000 wirtschaftlich denkende Studierende, verteilt auf 33 Hochschulen.',
-      whyP1: 'LMU, TUM, die Hochschulen für angewandte Wissenschaften, die privaten Schulen. Jede hat starke Leute und ihre eigene Blase. Recruiter sehen einen Münchner Talentpool; Studierende treffen immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
+      whyLabel: 'Warum es uns gibt', whyTitle: 'München hat über 110.000 Studierende, verteilt auf 33 Hochschulen, und fast keine spricht mit der anderen.',
+      whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie geben Sichtbarkeit auf die Talente der eigenen Uni, aber nicht hochschulübergreifend in einem zentralen Club. Recruiter sehen einen Münchner Talentpool; Studierende treffen immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
       whyP2: 'Die Munich Business Society schließt genau diese Lücke: eine offene, kostenlose, hochschulübergreifende Plattform mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bekommst denselben Zugang, zu denselben Bedingungen, ohne Kosten.',
       pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du wirklich davon hast.',
       formatsLabel: 'Was wir tun', formatsTitle: 'Neun Formate, jedes Semester.',
@@ -775,11 +777,10 @@ window.MBS_CONTENT = {
     about: {
       subtitle: 'Ein Business-Netzwerk für ganz München, studentisch geführt, hochschulübergreifend, offen für jeden Campus der Stadt.',
       whoLabel: 'Wer wir sind', whoTitle: 'Ein Business-Netzwerk für ganz München.',
-      whoDesc: 'Die Munich Business Society ist ein studentisch geführter Verein, der wirtschaftlich denkende Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Die spannendsten Menschen dieser Stadt waren immer einen Campus entfernt.',
+      whoDesc: 'Die Munich Business Society ist ein studentisch geführter Case Club, der wirtschaftlich interessierte Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Es gab keinen Case Club, der ganz München statt nur einen Campus abdeckte.',
       storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Verein gebaut, dem wir beitreten wollten.',
-      storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat über 110.000 wirtschaftlich denkende Studierende, verteilt auf 33 Hochschulen: eine der dichtesten Konzentrationen an Business-Talent in Europa und eine der zersplittertsten Studierendenszenen. Jede Hochschule hat eine Karrieremesse. Fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
-      storyP2: 'Also bauten wir das, dem wir beitreten wollten: eine kostenlose, hochschulübergreifende Plattform ohne Heim-Campus. Offen zu identischen Bedingungen für alle in München, die Wirtschaft, Ökonomie, Management studieren, oder etwas völlig anderes und trotzdem in die Wirtschaft gehen. Kein Beitrag, keine Bewerbung, keine Selektionshürden.',
-      storyP3: 'Am 23. September 2026 haben wir unsere Gründungsversammlung abgehalten, die Satzung verabschiedet und den Vorstand gewählt. Der nächste Meilenstein ist unsere erste Case Night, geplant für Anfang 2027. Bis dahin bauen wir das Partner- und Campus-Netzwerk auf.',
+      storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat über 110.000 Studierende, verteilt auf 33 Hochschulen, doch jede Hochschule hat ihre eigenen Initiativen, die nur einzelne Themenfelder abdecken, und fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld oder filtern früh aus.',
+      storyP2: 'Also bauten wir das, dem wir beitreten wollten: eine kostenlose, hochschulübergreifende Plattform ohne Heim-Campus. Offen zu identischen Bedingungen für alle in München, die Wirtschaft, Ökonomie, Management studieren, oder etwas völlig anderes und trotzdem in die Wirtschaft gehen.',
       diffLabel: 'Was uns unterscheidet', diffTitle: 'Hochschulübergreifend by design, nicht als Ausnahme.',
       different: [
         { icon: 'globe', title: 'Hochschulübergreifend by design, nicht als Ausnahme', text: 'Die meisten studentischen Business-Clubs sind der Ableger einer Hochschule. Wir sind eine Plattform über allen.' },
@@ -914,9 +915,9 @@ window.MBS_CONTENT = {
       whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt. Der Vorstand wird von der Mitgliedschaft gewählt; jede andere Rolle steht Mitgliedern offen, die sie wollen.',
       boardTitle: 'Der Vorstand',
       board: [
-        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Studierendenangelegenheiten, Hochschulbeziehungen, Bildung und Administration.', photoSrc: 'assets/team-nicholas-porter.png' },
-        { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Marketing, Events, Mitgliederverwaltung und Recruiting.', photoSrc: 'assets/team-martijn-mooren.png' },
-        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Finanzen, Rechtliches, Sponsoring und Unternehmensbeziehungen.', photoSrc: 'assets/team-lennart-neumeier.png' }
+        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Studierendenangelegenheiten, Hochschulbeziehungen, Bildung und Administration.', photoSrc: 'assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
+        { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Marketing, Events, Mitgliederverwaltung und Recruiting.', photoSrc: 'assets/team-martijn-mooren.jpg' },
+        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Finanzen, Rechtliches, Sponsoring und Unternehmensbeziehungen.', photoSrc: 'assets/team-lennart-neumeier.jpg' }
       ],
       teamsLabel: 'Teams', teamsTitle: 'Fünf Teams, ein Verein.',
       teams: [

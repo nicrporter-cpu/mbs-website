@@ -20,7 +20,7 @@ function AboutScreen({ C, openEvent }) {
           <SectionHeading label={A.storyLabel} title={A.storyTitle} />
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{A.storyP1}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{A.storyP2}</p>
-          <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{A.storyP3}</p>
+          {A.storyP3 && <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{A.storyP3}</p>}
         </div>
       </Section>
 

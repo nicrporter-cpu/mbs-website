@@ -828,46 +828,56 @@ function StatTile({ value, label, tone = 'navy', style }) {
    label were 1.6–1.8:1 and are lifted enough to read while staying obviously
    unfilled. The name is an h3 so the section's h2 is not skipped. */
 
-function MemberCard({ name, role, initials, description, photoSrc, style }) {
+function MemberCard({ name, role, initials, description, photoSrc, photoStyle, style }) {
   const [over, setOver] = React.useState(false);
+  /* The hover lift used to live on the same element as the rounded
+     overflow:hidden clip. Safari won't reliably round-clip an element that
+     also carries a transform, which let a hairline sliver of whatever sits
+     behind the photo show past the curve on one side. Moving the transform
+     to this outer, unclipped wrapper and keeping the clip on an inner
+     element that never transforms avoids the bug outright. */
   return (
     <div onMouseEnter={() => setOver(true)} onMouseLeave={() => setOver(false)} style={{
-      textAlign: 'center', borderRadius: 'var(--mbs-r)', background: 'var(--mbs-white)', overflow: 'hidden',
-      border: '1px solid ' + (over ? 'var(--mbs-gold-border)' : 'var(--mbs-border)'),
-      boxShadow: over ? 'var(--mbs-sh-lg)' : 'var(--mbs-sh-xs)',
       transform: over ? 'translateY(var(--mbs-lift-card))' : 'none',
-      transition: 'all var(--mbs-dur-slow) var(--mbs-ease)', ...style
+      transition: 'transform var(--mbs-dur-slow) var(--mbs-ease)', ...style
     }}>
       <div style={{
-        width: '100%', aspectRatio: photoSrc ? '2 / 3' : '1 / 1', background: 'var(--mbs-navy)', display: 'flex',
-        flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px',
-        borderBottom: '3px solid var(--mbs-gold)', overflow: 'hidden', position: 'relative'
+        textAlign: 'center', borderRadius: 'var(--mbs-r)', background: 'var(--mbs-white)', overflow: 'hidden',
+        border: '1px solid ' + (over ? 'var(--mbs-gold-border)' : 'var(--mbs-border)'),
+        boxShadow: over ? 'var(--mbs-sh-lg)' : 'var(--mbs-sh-xs)',
+        transition: 'all var(--mbs-dur-slow) var(--mbs-ease)'
       }}>
-        {photoSrc ? (
-          <img src={photoSrc} alt={name} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-        ) : (
-          <React.Fragment>
-            <span aria-hidden="true" style={{
-              fontFamily: 'var(--mbs-font-serif)', fontSize: '40px', fontWeight: 'var(--mbs-fw-bold)',
-              color: 'var(--mbs-gold-on-navy)', letterSpacing: '2px', opacity: .5
-            }}>{initials}</span>
-            <span style={{
-              fontSize: '10px', fontWeight: 'var(--mbs-fw-semibold)', color: 'var(--mbs-on-navy-35)',
-              letterSpacing: '2px', textTransform: 'uppercase'
-            }}>Foto</span>
-          </React.Fragment>
-        )}
-      </div>
-      <div style={{ padding: '24px 20px 28px' }}>
-        <h3 style={{
-          fontFamily: 'var(--mbs-font-sans)', fontSize: 'var(--mbs-fs-h4)',
-          fontWeight: 'var(--mbs-fw-semibold)', color: 'var(--mbs-navy)', margin: '0 0 4px'
-        }}>{name}</h3>
         <div style={{
-          fontSize: 'var(--mbs-fs-badge)', color: 'var(--mbs-gold-text)', fontWeight: 'var(--mbs-fw-bold)',
-          letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '10px'
-        }}>{role}</div>
-        <p style={{ fontSize: 'var(--mbs-fs-ui)', color: 'var(--mbs-gray)', lineHeight: 'var(--mbs-lh-tight)', margin: 0 }}>{description}</p>
+          width: '100%', aspectRatio: photoSrc ? '4 / 5' : '1 / 1', background: photoSrc ? 'var(--mbs-white)' : 'var(--mbs-navy)', display: 'flex',
+          flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px',
+          borderBottom: '3px solid var(--mbs-gold)', overflow: 'hidden', position: 'relative'
+        }}>
+          {photoSrc ? (
+            <img src={photoSrc} alt={name} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', ...photoStyle }} />
+          ) : (
+            <React.Fragment>
+              <span aria-hidden="true" style={{
+                fontFamily: 'var(--mbs-font-serif)', fontSize: '40px', fontWeight: 'var(--mbs-fw-bold)',
+                color: 'var(--mbs-gold-on-navy)', letterSpacing: '2px', opacity: .5
+              }}>{initials}</span>
+              <span style={{
+                fontSize: '10px', fontWeight: 'var(--mbs-fw-semibold)', color: 'var(--mbs-on-navy-35)',
+                letterSpacing: '2px', textTransform: 'uppercase'
+              }}>Foto</span>
+            </React.Fragment>
+          )}
+        </div>
+        <div style={{ padding: '24px 20px 28px' }}>
+          <h3 style={{
+            fontFamily: 'var(--mbs-font-sans)', fontSize: 'var(--mbs-fs-h4)',
+            fontWeight: 'var(--mbs-fw-semibold)', color: 'var(--mbs-navy)', margin: '0 0 4px'
+          }}>{name}</h3>
+          <div style={{
+            fontSize: 'var(--mbs-fs-badge)', color: 'var(--mbs-gold-text)', fontWeight: 'var(--mbs-fw-bold)',
+            letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '10px'
+          }}>{role}</div>
+          <p style={{ fontSize: 'var(--mbs-fs-ui)', color: 'var(--mbs-gray)', lineHeight: 'var(--mbs-lh-tight)', margin: 0 }}>{description}</p>
+        </div>
       </div>
     </div>
   );
