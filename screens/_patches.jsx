@@ -99,7 +99,7 @@ function LangSwitch({ lang, setLang, ui }) {
   );
 }
 
-function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', lang = 'en', setLang, ui = {}, style }) {
+function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join Munich Business Society', lang = 'en', setLang, ui = {}, style }) {
   const [open, setOpen] = React.useState(false);
   const toggleRef = React.useRef(null);
   const href = id => (R && R[id]) || '#';
@@ -446,20 +446,20 @@ function Field({ label, children, help, error, required, htmlFor, style }) {
 function SectionHeading({ label, title, desc, divider = true, tone = 'light', align = 'left', style }) {
   const light = tone === 'light';
   const center = align === 'center';
+  /* The gold eyebrow used to sit above a longer descriptive title; the eyebrow
+     text now carries the heading itself, at the title's size and in the
+     title's navy/white, so a section has one heading line, not two. Where no
+     label was given (a screen kept only `title`), title still renders on its
+     own the way it always has. */
+  const heading = label || title;
   return (
     <div style={{ textAlign: align, ...style }}>
-      {label && <div style={{
-        fontSize: 'var(--mbs-fs-label)', fontWeight: 'var(--mbs-fw-bold)',
-        letterSpacing: 'var(--mbs-tr-label)', textTransform: 'uppercase',
-        color: light ? 'var(--mbs-gold-text)' : 'var(--mbs-gold-on-navy)',
-        marginBottom: '10px'
-      }}>{label}</div>}
-      {title && <h2 style={{
+      {heading && <h2 style={{
         fontFamily: 'var(--mbs-font-serif)', fontSize: 'var(--mbs-fs-h2)',
         fontWeight: 'var(--mbs-fw-bold)', lineHeight: 'var(--mbs-lh-title)',
         letterSpacing: 'var(--mbs-tr-title)', margin: 0,
         color: light ? 'var(--mbs-navy)' : 'var(--mbs-white)'
-      }}>{title}</h2>}
+      }}>{heading}</h2>}
       {divider && <div style={{
         width: 'var(--mbs-divider-w)', height: '2px', background: 'var(--mbs-gold)',
         borderRadius: '2px', margin: center ? '18px auto 28px' : '18px 0 28px'

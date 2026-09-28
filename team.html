@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MBS, Team</title>
+<title>Munich Business Society, Team</title>
 <link rel="icon" href="assets/mbs-mark.svg">
-<link rel="stylesheet" href="design-system/styles.css?v=5398305dea">
-<link rel="stylesheet" href="site.css?v=5398305dea">
+<link rel="stylesheet" href="design-system/styles.css?v=af78ff8046">
+<link rel="stylesheet" href="site.css?v=af78ff8046">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -15,9 +15,9 @@
 <script src="vendor/react.development.js"></script>
 <script src="vendor/react-dom.development.js"></script>
 <script src="vendor/babel.min.js"></script>
-<script src="design-system/_ds_bundle.js?v=5398305dea"></script>
-<script src="screens/data.js?v=5398305dea"></script>
-<script src="site.js?v=5398305dea"></script>
+<script src="design-system/_ds_bundle.js?v=af78ff8046"></script>
+<script src="screens/data.js?v=af78ff8046"></script>
+<script src="site.js?v=af78ff8046"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -120,7 +120,7 @@ function LangSwitch({ lang, setLang, ui }) {
   );
 }
 
-function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join MBS', lang = 'en', setLang, ui = {}, style }) {
+function SiteHeader({ links = [], active, logoSrc, applyLabel = 'Join Munich Business Society', lang = 'en', setLang, ui = {}, style }) {
   const [open, setOpen] = React.useState(false);
   const toggleRef = React.useRef(null);
   const href = id => (R && R[id]) || '#';
@@ -467,20 +467,20 @@ function Field({ label, children, help, error, required, htmlFor, style }) {
 function SectionHeading({ label, title, desc, divider = true, tone = 'light', align = 'left', style }) {
   const light = tone === 'light';
   const center = align === 'center';
+  /* The gold eyebrow used to sit above a longer descriptive title; the eyebrow
+     text now carries the heading itself, at the title's size and in the
+     title's navy/white, so a section has one heading line, not two. Where no
+     label was given (a screen kept only `title`), title still renders on its
+     own the way it always has. */
+  const heading = label || title;
   return (
     <div style={{ textAlign: align, ...style }}>
-      {label && <div style={{
-        fontSize: 'var(--mbs-fs-label)', fontWeight: 'var(--mbs-fw-bold)',
-        letterSpacing: 'var(--mbs-tr-label)', textTransform: 'uppercase',
-        color: light ? 'var(--mbs-gold-text)' : 'var(--mbs-gold-on-navy)',
-        marginBottom: '10px'
-      }}>{label}</div>}
-      {title && <h2 style={{
+      {heading && <h2 style={{
         fontFamily: 'var(--mbs-font-serif)', fontSize: 'var(--mbs-fs-h2)',
         fontWeight: 'var(--mbs-fw-bold)', lineHeight: 'var(--mbs-lh-title)',
         letterSpacing: 'var(--mbs-tr-title)', margin: 0,
         color: light ? 'var(--mbs-navy)' : 'var(--mbs-white)'
-      }}>{title}</h2>}
+      }}>{heading}</h2>}
       {divider && <div style={{
         width: 'var(--mbs-divider-w)', height: '2px', background: 'var(--mbs-gold)',
         borderRadius: '2px', margin: center ? '18px auto 28px' : '18px 0 28px'
@@ -976,10 +976,10 @@ function TeamScreen({ C }) {
 
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
-          <SectionHeading label={T.whoLabel} title={T.whoTitle} desc={T.whoDesc} />
+          <SectionHeading title={T.whoTitle} desc={T.whoDesc} />
         </div>
         <div style={{ marginTop: '48px' }}>
-          <SectionHeading label={T.boardLabel} title={T.boardTitle} style={{ marginBottom: '32px' }} />
+          <SectionHeading title={T.boardTitle} style={{ marginBottom: '32px' }} />
           <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
             {T.board.map(p => <MemberCard key={p.name} {...p} />)}
           </div>
@@ -1038,7 +1038,7 @@ function Page() {
 
   React.useEffect(() => {
     document.documentElement.lang = lang;
-    document.title = 'MBS, ' + C.title[ACTIVE];
+    document.title = 'Munich Business Society, ' + C.title[ACTIVE];
   }, [lang]);
 
   React.useEffect(() => {

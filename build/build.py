@@ -40,7 +40,7 @@ PAGES = [
      '<TeamScreen C={C} />'),
     ('faq.html',          'faq',        'FaqScreen',        'FAQ',
      '<FaqScreen C={C} />'),
-    ('join.html',         'join',       'JoinScreen',       'Join MBS',
+    ('join.html',         'join',       'JoinScreen',       'Join Munich Business Society',
      '<JoinScreen C={C} />'),
     ('contact.html',      'contact',    'ContactScreen',    'Contact',
      '<ContactScreen C={C} />'),
@@ -80,7 +80,7 @@ function Page() {
 
   React.useEffect(() => {
     document.documentElement.lang = lang;
-    document.title = 'MBS, ' + C.title[ACTIVE];
+    document.title = 'Munich Business Society, ' + C.title[ACTIVE];
   }, [lang]);
 
   React.useEffect(() => {
@@ -136,7 +136,7 @@ PAGE = '''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MBS, __TITLE__</title>
+<title>Munich Business Society, __TITLE__</title>
 <link rel="icon" href="assets/mbs-mark.svg">
 <link rel="stylesheet" href="design-system/styles.css?v=__STAMP__">
 <link rel="stylesheet" href="site.css?v=__STAMP__">

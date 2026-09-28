@@ -1,4 +1,4 @@
-/* MBS content, bilingual (English EN-GB + German, du-form).
+/* Munich Business Society content, bilingual (English EN-GB + German, du-form).
  *
  * MBS_CONTENT.en and MBS_CONTENT.de hold every string for all ten pages, plus
  * nav labels, UI chrome (buttons, footer, newsletter, dialog, form labels and
@@ -120,7 +120,7 @@ Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger
 
 ### Analyse-Tools und Tools von Drittanbietern
 
-[Zu bestätigen: Setzt MBS beim Website-Besuch ein Analyse- oder Cookie-Consent-Tool ein? Falls ja, hier kurz benennen und auf den Teil 5 unten verweisen. Falls nein, was für den aktuellen Stand der Planung gilt, diesen Absatz ersatzlos streichen.]
+[Zu bestätigen: Setzt Munich Business Society beim Website-Besuch ein Analyse- oder Cookie-Consent-Tool ein? Falls ja, hier kurz benennen und auf den Teil 5 unten verweisen. Falls nein, was für den aktuellen Stand der Planung gilt, diesen Absatz ersatzlos streichen.]
 
 ## Allgemeine Hinweise und Pflichtinformationen
 
@@ -182,11 +182,11 @@ Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten z
 
 ### Cookie-Einwilligung mit Usercentrics
 
-[Nur einfügen, falls MBS sich für Usercentrics als Cookie-Consent-Tool entscheidet. Aktuell nicht vorgesehen, vor Go-live streichen oder durch das tatsächlich gewählte Tool ersetzen.]
+[Nur einfügen, falls Munich Business Society sich für Usercentrics als Cookie-Consent-Tool entscheidet. Aktuell nicht vorgesehen, vor Go-live streichen oder durch das tatsächlich gewählte Tool ersetzen.]
 
 ### Cookie-Einwilligung mit Consent Manager Provider
 
-[Nur einfügen, falls MBS ein anderes Consent-Management-Tool einsetzt (z. B. Cookiebot, Borlabs Cookie, CookieYes). Aktuell nicht vorgesehen, vor Go-live streichen oder durch das tatsächlich gewählte Tool ersetzen.]
+[Nur einfügen, falls Munich Business Society ein anderes Consent-Management-Tool einsetzt (z. B. Cookiebot, Borlabs Cookie, CookieYes). Aktuell nicht vorgesehen, vor Go-live streichen oder durch das tatsächlich gewählte Tool ersetzen.]
 
 ### Server-Log-Dateien
 
@@ -214,11 +214,11 @@ Wenn Sie Mitglied bei Munich Business Society e.V. werden, verarbeiten wir die i
 
 ## Soziale Medien
 
-[Grundsatz für alle vier Plattformen: Solange die Website nur auf die MBS-Profile verlinkt, ohne Plugins/Widgets/Embeds einzubetten, werden beim Aufruf unserer Seite keine Daten an die jeweilige Plattform übertragen. Erst ein Klick auf den Link führt zur Plattform und deren eigener Datenschutzerklärung. Erst wenn ein echtes Plugin eingebettet wird (z. B. ein Like-Button, ein eingebetteter Feed), greift die ausführlichere, unten skizzierte Beschreibung.]
+[Grundsatz für alle vier Plattformen: Solange die Website nur auf die Munich Business Society-Profile verlinkt, ohne Plugins/Widgets/Embeds einzubetten, werden beim Aufruf unserer Seite keine Daten an die jeweilige Plattform übertragen. Erst ein Klick auf den Link führt zur Plattform und deren eigener Datenschutzerklärung. Erst wenn ein echtes Plugin eingebettet wird (z. B. ein Like-Button, ein eingebetteter Feed), greift die ausführlichere, unten skizzierte Beschreibung.]
 
 ### Facebook Plugins (Like & Share-Button)
 
-[MBS nutzt laut aktuellem Stand kein Facebook-Profil und keine Facebook-Plugins (\`MBS_Website_Copy_EN.md\` nennt nur LinkedIn und Instagram), Abschnitt vor Go-live streichen, sofern sich das nicht ändert. Falls doch eingeführt: Anbieter, übertragene Daten (IP-Adresse u. a.), Rechtsgrundlage (Art. 6 Abs. 1 lit. a DSGVO, Einwilligung über Consent-Tool) und Link zur Datenschutzerklärung von Meta ergänzen.]
+[Munich Business Society nutzt laut aktuellem Stand kein Facebook-Profil und keine Facebook-Plugins (\`MBS_Website_Copy_EN.md\` nennt nur LinkedIn und Instagram), Abschnitt vor Go-live streichen, sofern sich das nicht ändert. Falls doch eingeführt: Anbieter, übertragene Daten (IP-Adresse u. a.), Rechtsgrundlage (Art. 6 Abs. 1 lit. a DSGVO, Einwilligung über Consent-Tool) und Link zur Datenschutzerklärung von Meta ergänzen.]
 
 ### Instagram Plugin
 
@@ -236,7 +236,7 @@ Auf unserer Website verlinken wir auf unser LinkedIn-Profil. Dabei handelt es si
 
 ### Google Analytics
 
-[Zu bestätigen: Setzt MBS Google Analytics ein? Für einen kleinen Verein ist ein datensparsameres, oft ohne Cookie-Banner auskommendes Tool wie Matomo (selbst gehostet) oder Plausible/Fathom häufig die einfachere Wahl. Das ist eine Empfehlung, keine Vorgabe. Falls Google Analytics tatsächlich zum Einsatz kommt, hier ergänzen:]
+[Zu bestätigen: Setzt Munich Business Society Google Analytics ein? Für einen kleinen Verein ist ein datensparsameres, oft ohne Cookie-Banner auskommendes Tool wie Matomo (selbst gehostet) oder Plausible/Fathom häufig die einfachere Wahl. Das ist eine Empfehlung, keine Vorgabe. Falls Google Analytics tatsächlich zum Einsatz kommt, hier ergänzen:]
 
 ### IP-Anonymisierung
 
@@ -266,7 +266,7 @@ Auf unserer Website verlinken wir auf unser LinkedIn-Profil. Dabei handelt es si
 
 ### etracker
 
-[MBS setzt aktuell kein etracker oder vergleichbares Tracking-Tool eines anderen Drittanbieters ein, Abschnitt streichen, sofern sich das nicht ändert. Falls doch: Anbieter, verarbeitete Daten, Rechtsgrundlage und Speicherdauer ergänzen.]
+[Munich Business Society setzt aktuell kein etracker oder vergleichbares Tracking-Tool eines anderen Drittanbieters ein, Abschnitt streichen, sofern sich das nicht ändert. Falls doch: Anbieter, verarbeitete Daten, Rechtsgrundlage und Speicherdauer ergänzen.]
 
 ### Google AdSense
 
@@ -308,7 +308,7 @@ Munich Business Society schaltet keine Werbung Dritter auf dieser Website und se
 
 ### Umgang mit Bewerbungsdaten für ehrenamtliche Rollen
 
-[Hinweis zur Einordnung: Der Referenz-Aufbau spricht von „Bewerberdaten" im arbeitsrechtlichen Sinn (§ 26 BDSG, bezahlte Anstellung). MBS-Rollen, Vorstand, Team, Campus Representative (vgl. \`MBS_Website_Copy_EN.md\`, „Take a role" / „Represent your university"), sind ehrenamtlich, kein Beschäftigungsverhältnis. § 26 BDSG passt daher nicht direkt; die Verarbeitung stützt sich stattdessen auf Art. 6 Abs. 1 lit. b DSGVO (vorvertragliches Verhältnis zur Begründung der ehrenamtlichen Tätigkeit) bzw. lit. f (berechtigtes Interesse an einer geordneten Rollenbesetzung). Inhaltlich unten trotzdem nach demselben Muster wie beim Referenz-Aufbau gegliedert, da die Fragen (Umfang, Aufbewahrung, Pool) dieselben sind.]
+[Hinweis zur Einordnung: Der Referenz-Aufbau spricht von „Bewerberdaten" im arbeitsrechtlichen Sinn (§ 26 BDSG, bezahlte Anstellung). Munich Business Society-Rollen, Vorstand, Team, Campus Representative (vgl. \`MBS_Website_Copy_EN.md\`, „Take a role" / „Represent your university"), sind ehrenamtlich, kein Beschäftigungsverhältnis. § 26 BDSG passt daher nicht direkt; die Verarbeitung stützt sich stattdessen auf Art. 6 Abs. 1 lit. b DSGVO (vorvertragliches Verhältnis zur Begründung der ehrenamtlichen Tätigkeit) bzw. lit. f (berechtigtes Interesse an einer geordneten Rollenbesetzung). Inhaltlich unten trotzdem nach demselben Muster wie beim Referenz-Aufbau gegliedert, da die Fragen (Umfang, Aufbewahrung, Pool) dieselben sind.]
 
 ### Umfang und Zweck der Datenerhebung
 
@@ -316,15 +316,15 @@ Wenn Sie sich bei uns um eine ehrenamtliche Rolle bewerben (z. B. Vorstand, Team
 
 ### Aufbewahrungsdauer der Daten
 
-[Zu entscheiden: MBS sollte eine Löschfrist für nicht erfolgreiche Bewerbungen um ehrenamtliche Rollen festlegen, z. B. „Bei Nichtberücksichtigung löschen wir Ihre Bewerbungsunterlagen spätestens [X] Monate nach Abschluss des Auswahlverfahrens."]
+[Zu entscheiden: Munich Business Society sollte eine Löschfrist für nicht erfolgreiche Bewerbungen um ehrenamtliche Rollen festlegen, z. B. „Bei Nichtberücksichtigung löschen wir Ihre Bewerbungsunterlagen spätestens [X] Monate nach Abschluss des Auswahlverfahrens."]
 
 ### Aufnahme in den Kandidat:innen-Pool
 
-[Nur einfügen, falls MBS Bewerbungen für künftige Rollen aktiv vorhält, z. B.: „Mit Ihrer ausdrücklichen Einwilligung nehmen wir Ihre Unterlagen für [X] Monate in unseren Pool für künftige ehrenamtliche Rollen auf. Diese Einwilligung können Sie jederzeit widerrufen."]
+[Nur einfügen, falls Munich Business Society Bewerbungen für künftige Rollen aktiv vorhält, z. B.: „Mit Ihrer ausdrücklichen Einwilligung nehmen wir Ihre Unterlagen für [X] Monate in unseren Pool für künftige ehrenamtliche Rollen auf. Diese Einwilligung können Sie jederzeit widerrufen."]
 
 ## Disclaimer
 
-[Einordnung: munichbfc.de führt hier vermutlich einen Anlage-/Finanzberatungs-Disclaimer, weil der Verein sich als "Business & Finance Club" positioniert und entsprechende Inhalte veröffentlicht. Für MBS als cross-universitäres Networking- und Event-Format (Speaker Nights, Case Workshops, Company Visits, vgl. \`MBS_Website_Copy_EN.md\`) ist ein wortgleicher Anlage-Disclaimer nicht einschlägig, ein allgemeiner Inhalts-Disclaimer aber sinnvoll, sobald Gastredner:innen aus Finance/Consulting auftreten. Vorschlag, vom Vorstand freizugeben:]
+[Einordnung: munichbfc.de führt hier vermutlich einen Anlage-/Finanzberatungs-Disclaimer, weil der Verein sich als "Business & Finance Club" positioniert und entsprechende Inhalte veröffentlicht. Für Munich Business Society als cross-universitäres Networking- und Event-Format (Speaker Nights, Case Workshops, Company Visits, vgl. \`MBS_Website_Copy_EN.md\`) ist ein wortgleicher Anlage-Disclaimer nicht einschlägig, ein allgemeiner Inhalts-Disclaimer aber sinnvoll, sobald Gastredner:innen aus Finance/Consulting auftreten. Vorschlag, vom Vorstand freizugeben:]
 
 Die auf dieser Website sowie im Rahmen von Veranstaltungen von Munich Business Society e.V. bereitgestellten Inhalte, einschließlich der Beiträge externer Gastredner:innen bei Guest-Speaker-Formaten, Case Nights und Firmenbesuchen, dienen ausschließlich der Information und dem Erfahrungsaustausch. Sie stellen keine rechtliche, steuerliche, finanzielle oder sonstige professionelle Beratung dar und begründen keinen Anspruch auf bestimmte Ergebnisse, insbesondere nicht auf eine Anstellung, ein Praktikum oder einen sonstigen wirtschaftlichen Erfolg. Meinungsäußerungen von Gastredner:innen und Partnerunternehmen geben deren eigene Auffassung wieder und nicht notwendigerweise die des Vereins.
 `;
@@ -337,7 +337,7 @@ window.MBS_CONTENT = {
     dir: 'ltr',
     locale: 'en-GB',
     brand: {
-      name: 'Munich Business Society', short: 'MBS', domain: MBS_DOMAIN,
+      name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Every campus. One network.',
       footerDescriptor: 'Munich Business Society, the cross-university business network for students in Munich. Open to every university in the city.'
     },
@@ -354,7 +354,7 @@ window.MBS_CONTENT = {
       join: 'Join', joinArrow: "Join free →", menuOpen: 'Open menu', menuClose: 'Close menu',
       skip: 'Skip to content', home: 'Munich Business Society, home', langLabel: 'Language',
       dialog: { about: 'About this event', expect: 'What to expect', who: "Who's it for?",
-        cta: 'Join MBS & attend →', close: 'Close dialog' },
+        cta: 'Join Munich Business Society & attend →', close: 'Close dialog' },
       inPrep: 'in preparation',
       social: [
         { label: 'LinkedIn', icon: 'linkedin', href: 'https://www.linkedin.com/company/munichbusinesssociety' },
@@ -383,7 +383,7 @@ window.MBS_CONTENT = {
     },
     title: { home: "Munich's Student Business Network", about: 'About', network: 'The Network',
       whatwedo: 'What We Do', calendar: 'Events', membership: 'Membership', companies: 'For Companies', team: 'Team',
-      faq: 'FAQ', join: 'Join MBS', contact: 'Contact', impressum: 'Impressum', datenschutz: 'Datenschutzerklärung' },
+      faq: 'FAQ', join: 'Join Munich Business Society', contact: 'Contact', impressum: 'Impressum', datenschutz: 'Datenschutzerklärung' },
 
     legal: { impressum: MBS_LEGAL_IMPRESSUM, datenschutz: MBS_LEGAL_DATENSCHUTZ },
 
@@ -442,7 +442,7 @@ window.MBS_CONTENT = {
       whoLabel: 'Who we are', whoTitle: 'One business network for all of Munich.',
       whoDesc: 'Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away.',
       storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join.',
-      storyP1: "MBS started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has over 110,000 business-minded students spread across 33 universities: one of Europe's densest concentrations of business talent, and one of its most fragmented student scenes. Every university has a career fair. Almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
+      storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has over 110,000 business-minded students spread across 33 universities: one of Europe's densest concentrations of business talent, and one of its most fragmented student scenes. Every university has a career fair. Almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
       storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Open on identical terms to anyone in Munich studying business, economics, management, or studying something else entirely and heading into business anyway. No fees, no application, no selection hurdles.',
       storyP3: 'We held our founding assembly on 23 September 2026, adopted our statutes and elected the board. The next milestone is our first Case Night, planned for early 2027. Until then, we\'re building the partner and campus network to get there.',
       diffLabel: 'What makes us different', diffTitle: 'Cross-university by design, not by exception.',
@@ -454,9 +454,9 @@ window.MBS_CONTENT = {
       ],
       valuesLabel: 'Our values', valuesTitle: 'What we stand for',
       orgLabel: "How we're organised", orgTitle: 'Run by students, built to last.',
-      orgP1: 'MBS is run entirely by students. We held our founding assembly on 23 September 2026, where members adopted the statutes and elected the board.',
+      orgP1: 'Munich Business Society is run entirely by students. We held our founding assembly on 23 September 2026, where members adopted the statutes and elected the board.',
       orgP2: " We're now registering with the Munich register of associations (Vereinsregister), which will give the society a permanent legal footing as an eingetragener Verein (e.V.). Statutes and financial reporting are available to members on request.",
-      orgNote: 'MBS operates as a Verein in Gründung (association in formation) until the Vereinsregister entry is complete. The registration number will appear in the Impressum once it lands.',
+      orgNote: 'Munich Business Society operates as a Verein in Gründung (association in formation) until the Vereinsregister entry is complete. The registration number will appear in the Impressum once it lands.',
       meetTeam: 'Meet the team →', faqBtn: 'Read the FAQ →'
     },
     calendarPage: {
@@ -469,9 +469,9 @@ window.MBS_CONTENT = {
       note: 'First Case Night date to be announced by the board.'
     },
     network: {
-      subtitle: "MBS isn't attached to a university. It's attached to a city.",
+      subtitle: "Munich Business Society isn't attached to a university. It's attached to a city.",
       introLabel: 'Every campus. One room.', introTitle: 'A network is worth the doors it opens.',
-      introDesc: "MBS isn't attached to a university. It's attached to a city. That single decision changes what membership is worth, because the value of a network is the number of doors it opens that you couldn't have opened yourself.",
+      introDesc: "Munich Business Society isn't attached to a university. It's attached to a city. That single decision changes what membership is worth, because the value of a network is the number of doors it opens that you couldn't have opened yourself.",
       whoLabel: "Who's in the network", whoTitle: 'Four groups, one room.',
       who: [
         { icon: 'users', title: 'Students, from any Munich university', text: 'Public universities, universities of applied sciences, private schools. Bachelor, master, exchange semester. Business degrees and everyone else heading into business.' },
@@ -489,7 +489,7 @@ window.MBS_CONTENT = {
         { n: '3', title: 'Contribute', text: 'Take a role, run a format, join a project team. This is where the network stops being a mailing list.' },
         { n: '4', title: 'Stay', text: "Graduating doesn't end your membership. It moves you to the other side of it." }
       ],
-      repH: 'Be the first MBS voice at your university.',
+      repH: 'Be the first Munich Business Society voice at your university.',
       repText: "Every university in Munich should have someone in the network who makes it visible there. Campus representatives run local outreach, bring people to events and sit in on the programme planning. It's a real role with a real title, and we're actively looking for people to fill it.",
       repBtn: 'Represent your university →'
     },
@@ -543,9 +543,10 @@ window.MBS_CONTENT = {
     },
     companies: {
       subtitle: 'Reach every Munich university through one conversation.',
-      whyLabel: 'Why partner with MBS', whyTitle: 'Reach every Munich university through one conversation.',
+      whyLabel: 'Why partner with the Munich Business Society', whyTitle: 'Reach every Munich university through one conversation.',
       whyDesc: 'Most student partnerships buy you access to one campus. Munich Business Society is cross-university by construction, one partnership, one point of contact, and a room that draws from students across all 33 Munich universities.',
       packBtn: 'Get the partner pack →', callBtn: 'Book a call',
+      whyGridLabel: 'The value',
       why: [
         { icon: 'target', title: 'Direct access to top talent', text: 'Meet engaged, capable students before the regular application season opens, a case competition shows you how people think, present and work in a team, in real time.' },
         { icon: 'users', title: 'An efficient alternative to career fairs', text: "Talk to students who actually fit what you're hiring for, instead of a stand at a job fair or a lecture-hall mailing list." },
@@ -574,9 +575,9 @@ window.MBS_CONTENT = {
     },
     team: {
       subtitle: 'Built and run entirely by students, alongside their degrees.',
-      whoLabel: 'Who runs MBS', whoTitle: 'Students, running this properly.',
-      whoDesc: 'MBS is built and run entirely by students alongside their degrees. The board is elected by the membership; every other role is open to members who want it.',
-      boardLabel: 'The board', boardTitle: 'Elected at the founding assembly, 23 September 2026',
+      whoTitle: 'Who runs the Munich Business Society',
+      whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees. The board is elected by the membership; every other role is open to members who want it.',
+      boardTitle: 'The Board',
       board: [
         { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Student affairs, university relations, education and administration.', photoSrc: 'assets/team-nicholas-porter.png' },
         { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Marketing, events, membership management and recruiting.', photoSrc: 'assets/team-martijn-mooren.png' },
@@ -597,7 +598,7 @@ window.MBS_CONTENT = {
       subtitle: 'The questions students ask before joining.',
       label: 'FAQ', title: 'Before you show up',
       items: [
-        { q: 'Which university is MBS part of?', a: "None, deliberately. Munich Business Society is a cross-university society. Students from every university in Munich join on identical terms. We're not a faculty initiative and no single school owns us." },
+        { q: 'Which university is Munich Business Society part of?', a: "None, deliberately. Munich Business Society is a cross-university society. Students from every university in Munich join on identical terms. We're not a faculty initiative and no single school owns us." },
         { q: "I don't study business. Can I still join?", a: "Yes. Plenty of our members study engineering, law, computer science or something else entirely and are heading into business anyway. What matters is that you're serious about it." },
         { q: 'Is everything in German or English?', a: 'Both. Events run in whichever language suits the room and the speaker; written communication is in English so nobody is left out.' },
         { q: 'How much time does it take?', a: 'As much as you give it. The minimum is showing up to a few events a semester. Members who take a role typically spend two to four hours a week on it.' },
@@ -621,7 +622,7 @@ window.MBS_CONTENT = {
       errConsent: 'Please agree to your data being processed so we can get back to you.',
       errOne: 'One field still needs your attention.', errMany: 'fields still need your attention.',
       f: { firstname: 'First name', lastname: 'Last name', email: 'Email address', university: 'University', level: 'Degree level',
-        studyprogram: 'Degree programme', language: 'Preferred language', motivation: 'What are you hoping to get out of MBS?',
+        studyprogram: 'Degree programme', language: 'Preferred language', motivation: 'What are you hoping to get out of Munich Business Society?',
         interests: "Subject areas you'd like to see in the club", cv: 'CV / résumé', enrollment: 'Certificate of enrollment' },
       ph: { firstname: 'Your first name', lastname: 'Your last name', email: 'you@example.com',
         university: 'Choose your university', level: 'Choose your level',
@@ -671,7 +672,7 @@ window.MBS_CONTENT = {
     dir: 'ltr',
     locale: 'de-DE',
     brand: {
-      name: 'Munich Business Society', short: 'MBS', domain: MBS_DOMAIN,
+      name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Jeder Campus. Ein Netzwerk.',
       footerDescriptor: 'Munich Business Society, das hochschulübergreifende Business-Netzwerk für Studierende in München. Offen für jede Hochschule der Stadt.'
     },
@@ -776,7 +777,7 @@ window.MBS_CONTENT = {
       whoLabel: 'Wer wir sind', whoTitle: 'Ein Business-Netzwerk für ganz München.',
       whoDesc: 'Die Munich Business Society ist ein studentisch geführter Verein, der wirtschaftlich denkende Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Die spannendsten Menschen dieser Stadt waren immer einen Campus entfernt.',
       storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Verein gebaut, dem wir beitreten wollten.',
-      storyP1: 'Die MBS begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat über 110.000 wirtschaftlich denkende Studierende, verteilt auf 33 Hochschulen: eine der dichtesten Konzentrationen an Business-Talent in Europa und eine der zersplittertsten Studierendenszenen. Jede Hochschule hat eine Karrieremesse. Fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
+      storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat über 110.000 wirtschaftlich denkende Studierende, verteilt auf 33 Hochschulen: eine der dichtesten Konzentrationen an Business-Talent in Europa und eine der zersplittertsten Studierendenszenen. Jede Hochschule hat eine Karrieremesse. Fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
       storyP2: 'Also bauten wir das, dem wir beitreten wollten: eine kostenlose, hochschulübergreifende Plattform ohne Heim-Campus. Offen zu identischen Bedingungen für alle in München, die Wirtschaft, Ökonomie, Management studieren, oder etwas völlig anderes und trotzdem in die Wirtschaft gehen. Kein Beitrag, keine Bewerbung, keine Selektionshürden.',
       storyP3: 'Am 23. September 2026 haben wir unsere Gründungsversammlung abgehalten, die Satzung verabschiedet und den Vorstand gewählt. Der nächste Meilenstein ist unsere erste Case Night, geplant für Anfang 2027. Bis dahin bauen wir das Partner- und Campus-Netzwerk auf.',
       diffLabel: 'Was uns unterscheidet', diffTitle: 'Hochschulübergreifend by design, nicht als Ausnahme.',
@@ -788,9 +789,9 @@ window.MBS_CONTENT = {
       ],
       valuesLabel: 'Unsere Werte', valuesTitle: 'Wofür wir stehen',
       orgLabel: 'Wie wir organisiert sind', orgTitle: 'Von Studierenden geführt, auf Dauer gebaut.',
-      orgP1: 'Die MBS wird komplett von Studierenden geführt. Am 23. September 2026 haben wir unsere Gründungsversammlung abgehalten, bei der die Mitglieder die Satzung verabschiedet und den Vorstand gewählt haben.',
+      orgP1: 'Die Munich Business Society wird komplett von Studierenden geführt. Am 23. September 2026 haben wir unsere Gründungsversammlung abgehalten, bei der die Mitglieder die Satzung verabschiedet und den Vorstand gewählt haben.',
       orgP2: ' Wir befinden uns aktuell in der Eintragung ins Münchner Vereinsregister, was dem Verein eine dauerhafte rechtliche Grundlage als eingetragener Verein (e.V.) gibt. Satzung und Finanzberichte sind für Mitglieder auf Anfrage einsehbar.',
-      orgNote: 'Die MBS ist bis zum Abschluss der Vereinsregister-Eintragung ein Verein in Gründung. Die Registernummer folgt im Impressum, sobald sie vorliegt.',
+      orgNote: 'Die Munich Business Society ist bis zum Abschluss der Vereinsregister-Eintragung ein Verein in Gründung. Die Registernummer folgt im Impressum, sobald sie vorliegt.',
       meetTeam: 'Lern das Team kennen →', faqBtn: 'Zur FAQ →'
     },
     calendarPage: {
@@ -803,9 +804,9 @@ window.MBS_CONTENT = {
       note: 'Termin der ersten Case Night wird vom Vorstand bekanntgegeben.'
     },
     network: {
-      subtitle: 'Die MBS hängt nicht an einer Hochschule. Sie hängt an einer Stadt.',
+      subtitle: 'Die Munich Business Society hängt nicht an einer Hochschule. Sie hängt an einer Stadt.',
       introLabel: 'Jeder Campus. Ein Raum.', introTitle: 'Ein Netzwerk ist die Türen wert, die es öffnet.',
-      introDesc: 'Die MBS hängt nicht an einer Hochschule. Sie hängt an einer Stadt. Diese eine Entscheidung verändert, was Mitgliedschaft wert ist, denn der Wert eines Netzwerks ist die Zahl der Türen, die es dir öffnet, die du allein nie geöffnet hättest.',
+      introDesc: 'Die Munich Business Society hängt nicht an einer Hochschule. Sie hängt an einer Stadt. Diese eine Entscheidung verändert, was Mitgliedschaft wert ist, denn der Wert eines Netzwerks ist die Zahl der Türen, die es dir öffnet, die du allein nie geöffnet hättest.',
       whoLabel: 'Wer im Netzwerk ist', whoTitle: 'Vier Gruppen, ein Raum.',
       who: [
         { icon: 'users', title: 'Studierende, von jeder Münchner Hochschule', text: 'Universitäten, Hochschulen für angewandte Wissenschaften, private Schulen. Bachelor, Master, Auslandssemester. Business-Studiengänge und alle anderen, die in die Wirtschaft gehen.' },
@@ -823,7 +824,7 @@ window.MBS_CONTENT = {
         { n: '3', title: 'Bring dich ein', text: 'Übernimm eine Rolle, leite ein Format, steig in ein Projektteam ein. Hier hört das Netzwerk auf, ein Verteiler zu sein.' },
         { n: '4', title: 'Bleib', text: 'Der Abschluss beendet deine Mitgliedschaft nicht. Er bringt dich auf die andere Seite davon.' }
       ],
-      repH: 'Sei die erste MBS-Stimme an deiner Hochschule.',
+      repH: 'Sei die erste Munich Business Society-Stimme an deiner Hochschule.',
       repText: 'Jede Münchner Hochschule sollte jemanden im Netzwerk haben, der sie dort sichtbar macht. Campus-Vertreter:innen machen lokale Öffentlichkeitsarbeit, bringen Leute zu Events und sitzen bei der Programmplanung mit. Eine echte Rolle mit echtem Titel, und wir suchen aktiv Leute dafür.',
       repBtn: 'Vertritt deine Hochschule →'
     },
@@ -877,9 +878,10 @@ window.MBS_CONTENT = {
     },
     companies: {
       subtitle: 'Erreichen Sie jede Münchner Hochschule in einem Gespräch.',
-      whyLabel: 'Warum Partnerschaft mit MBS', whyTitle: 'Erreichen Sie jede Münchner Hochschule in einem Gespräch.',
+      whyLabel: 'Warum Partnerschaft mit der Munich Business Society', whyTitle: 'Erreichen Sie jede Münchner Hochschule in einem Gespräch.',
       whyDesc: 'Die meisten Studierenden-Partnerschaften kaufen Ihnen Zugang zu einem Campus. Die Munich Business Society ist hochschulübergreifend gebaut, eine Partnerschaft, ein Ansprechpartner und ein Raum, der Studierende aus allen 33 Münchner Hochschulen zusammenbringt.',
       packBtn: 'Partner-Paket anfordern →', callBtn: 'Termin buchen',
+      whyGridLabel: 'Der Mehrwert',
       why: [
         { icon: 'target', title: 'Direkter Zugang zu Top-Talenten', text: 'Lernen Sie engagierte, leistungsstarke Studierende kennen, noch bevor die reguläre Bewerbungssaison beginnt. Eine Case Competition zeigt Ihnen in Echtzeit, wie jemand denkt, präsentiert und im Team arbeitet.' },
         { icon: 'users', title: 'Effiziente Alternative zur Karrieremesse', text: 'Sprechen Sie gezielt Studierende an, die zu Ihrem Bedarf passen, statt einen Stand auf der Jobmesse oder einen Hörsaal-Verteiler zu bespielen.' },
@@ -908,9 +910,9 @@ window.MBS_CONTENT = {
     },
     team: {
       subtitle: 'Komplett von Studierenden gebaut und geführt, neben dem Studium.',
-      whoLabel: 'Wer die MBS führt', whoTitle: 'Studierende, die das richtig machen.',
-      whoDesc: 'Die MBS wird komplett von Studierenden neben dem Studium gebaut und geführt. Der Vorstand wird von der Mitgliedschaft gewählt; jede andere Rolle steht Mitgliedern offen, die sie wollen.',
-      boardLabel: 'Der Vorstand', boardTitle: 'Gewählt bei der Gründungsversammlung, 23. September 2026',
+      whoTitle: 'Wer die Munich Business Society führt',
+      whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt. Der Vorstand wird von der Mitgliedschaft gewählt; jede andere Rolle steht Mitgliedern offen, die sie wollen.',
+      boardTitle: 'Der Vorstand',
       board: [
         { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Studierendenangelegenheiten, Hochschulbeziehungen, Bildung und Administration.', photoSrc: 'assets/team-nicholas-porter.png' },
         { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Marketing, Events, Mitgliederverwaltung und Recruiting.', photoSrc: 'assets/team-martijn-mooren.png' },
@@ -931,7 +933,7 @@ window.MBS_CONTENT = {
       subtitle: 'Die Fragen, die Studierende vor dem Mitmachen stellen.',
       label: 'FAQ', title: 'Bevor du auftauchst',
       items: [
-        { q: 'Zu welcher Hochschule gehört die MBS?', a: 'Zu keiner, bewusst. Die Munich Business Society ist ein hochschulübergreifender Verein. Studierende jeder Münchner Hochschule treten zu identischen Bedingungen bei. Wir sind keine Fakultätsinitiative, und keine einzelne Schule besitzt uns.' },
+        { q: 'Zu welcher Hochschule gehört die Munich Business Society?', a: 'Zu keiner, bewusst. Die Munich Business Society ist ein hochschulübergreifender Verein. Studierende jeder Münchner Hochschule treten zu identischen Bedingungen bei. Wir sind keine Fakultätsinitiative, und keine einzelne Schule besitzt uns.' },
         { q: 'Ich studiere nicht Wirtschaft. Kann ich trotzdem beitreten?', a: 'Ja. Viele unserer Mitglieder studieren Ingenieurwesen, Jura, Informatik oder etwas ganz anderes und gehen trotzdem in die Wirtschaft. Wichtig ist, dass du es ernst meinst.' },
         { q: 'Ist alles auf Deutsch oder Englisch?', a: 'Beides. Events laufen in der Sprache, die zum Raum und zur:zum Speaker:in passt; schriftliche Kommunikation ist auf Englisch, damit niemand außen vor bleibt.' },
         { q: 'Wie viel Zeit kostet es?', a: 'So viel, wie du gibst. Das Minimum ist, zu ein paar Events im Semester zu kommen. Mitglieder mit einer Rolle wenden meist zwei bis vier Stunden pro Woche auf.' },
@@ -955,7 +957,7 @@ window.MBS_CONTENT = {
       errConsent: 'Bitte stimme der Verarbeitung deiner Daten zu, damit wir uns melden können.',
       errOne: 'Ein Feld braucht noch deine Aufmerksamkeit.', errMany: 'Felder brauchen noch deine Aufmerksamkeit.',
       f: { firstname: 'Vorname', lastname: 'Nachname', email: 'E-Mail-Adresse', university: 'Hochschule', level: 'Studienniveau',
-        studyprogram: 'Studiengang', language: 'Bevorzugte Sprache', motivation: 'Was erhoffst du dir von der MBS?',
+        studyprogram: 'Studiengang', language: 'Bevorzugte Sprache', motivation: 'Was erhoffst du dir von der Munich Business Society?',
         interests: 'Fachliche Interessen, die du gerne im Club sehen würdest', cv: 'Lebenslauf', enrollment: 'Immatrikulationsbescheinigung' },
       ph: { firstname: 'Dein Vorname', lastname: 'Dein Nachname', email: 'du@beispiel.de',
         university: 'Hochschule wählen', level: 'Niveau wählen',

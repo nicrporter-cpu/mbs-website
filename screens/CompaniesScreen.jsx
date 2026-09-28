@@ -22,7 +22,7 @@ function CompaniesScreen({ C }) {
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label={K.whyLabel} title={K.why[0].title} style={{ marginBottom: '40px' }} />
+        <SectionHeading label={K.whyGridLabel} title={K.why[0].title} style={{ marginBottom: '40px' }} />
         <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {K.why.map(w => (
             <Card key={w.title} padding="28px">

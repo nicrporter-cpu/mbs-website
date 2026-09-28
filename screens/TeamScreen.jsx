@@ -12,10 +12,10 @@ function TeamScreen({ C }) {
 
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
-          <SectionHeading label={T.whoLabel} title={T.whoTitle} desc={T.whoDesc} />
+          <SectionHeading title={T.whoTitle} desc={T.whoDesc} />
         </div>
         <div style={{ marginTop: '48px' }}>
-          <SectionHeading label={T.boardLabel} title={T.boardTitle} style={{ marginBottom: '32px' }} />
+          <SectionHeading title={T.boardTitle} style={{ marginBottom: '32px' }} />
           <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
             {T.board.map(p => <MemberCard key={p.name} {...p} />)}
           </div>
