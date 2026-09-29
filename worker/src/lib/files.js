@@ -33,7 +33,8 @@ export async function storeJoinFiles(env, formData, submissionId, adminFileToken
 
     result[field] = {
       key,
-      url: `${baseUrl}/files/${encodeURIComponent(key)}?token=${encodeURIComponent(adminFileToken)}`
+      url: `${baseUrl}/files/${encodeURIComponent(key)}?token=${encodeURIComponent(adminFileToken)}`,
+      name: file.name || 'file'
     };
   }
 

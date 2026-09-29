@@ -29,8 +29,8 @@ export function joinNotification(formData, files) {
     row('Preferred language', esc(formData.get('language'))),
     row('Motivation', esc(formData.get('motivation')).replace(/\n/g, '<br>')),
     row('Interests', esc(formData.get('interests')).replace(/\n/g, '<br>')),
-    row('CV', files.cv ? `<a href="${files.cv.url}">Download</a>` : '&ndash;'),
-    row('Enrollment certificate', files.enrollment ? `<a href="${files.enrollment.url}">Download</a>` : '&ndash;')
+    row('CV', files.cv ? `<a href="${files.cv.url}">${esc(files.cv.name)}</a>` : '&ndash;'),
+    row('Enrollment certificate', files.enrollment ? `<a href="${files.enrollment.url}">${esc(files.enrollment.name)}</a>` : '&ndash;')
   ].join('');
   return wrap('New membership application', rows);
 }
