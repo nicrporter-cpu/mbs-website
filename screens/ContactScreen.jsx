@@ -22,13 +22,14 @@ function ContactForm({ C }) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const err = {};
-    if (!String(data.get('name') || '').trim()) err.name = K.errName;
+    if (!String(data.get('firstname') || '').trim()) err.firstname = K.errFirstname;
+    if (!String(data.get('lastname') || '').trim()) err.lastname = K.errLastname;
     const email = String(data.get('email') || '').trim();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) err.email = K.errEmail;
     if (!String(data.get('message') || '').trim()) err.message = K.errMsg;
     setErrors(err);
     if (Object.keys(err).length) {
-      const first = ['name', 'email', 'role', 'message'].find(k => err[k]);
+      const first = ['firstname', 'lastname', 'email', 'role', 'message'].find(k => err[k]);
       const el = formRef.current && formRef.current.elements[first];
       if (el && el.focus) el.focus();
       return;
@@ -77,9 +78,14 @@ function ContactForm({ C }) {
         <input id="mbs_hp_contact" type="text" name="mbs_hp_field" tabIndex={-1} autoComplete="off" />
       </div>
 
-      <Field label={K.f.name} required error={errors.name}>
-        <Input name="name" autoComplete="name" placeholder={K.ph.name} onInput={clear('name')} />
-      </Field>
+      <div className="mbs-form-row">
+        <Field label={K.f.firstname} required error={errors.firstname}>
+          <Input name="firstname" autoComplete="given-name" placeholder={K.ph.firstname} onInput={clear('firstname')} />
+        </Field>
+        <Field label={K.f.lastname} required error={errors.lastname}>
+          <Input name="lastname" autoComplete="family-name" placeholder={K.ph.lastname} onInput={clear('lastname')} />
+        </Field>
+      </div>
       <Field label={K.f.email} required error={errors.email}>
         <Input type="email" name="email" autoComplete="email" inputMode="email" placeholder={K.ph.email} onInput={clear('email')} />
       </Field>

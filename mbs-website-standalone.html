@@ -38439,11 +38439,11 @@ window.MBS_CONTENT = {
       formText: "Tell us who you are and what you're after. The form routes your message to the team that can actually help.",
       findLabel: 'Find us', findText: 'We meet across Munich rather than on one campus. Venues are listed with each event.',
       follow: 'Follow: ', followPh: 'LinkedIn · Instagram [handles]',
-      f: { name: 'Name', email: 'Email', role: "I'm a…", message: 'Your message' },
-      ph: { name: 'Your name', email: 'you@example.com', message: "What's on your mind?" },
+      f: { firstname: 'First name', lastname: 'Last name', email: 'Email', role: "I'm a…", message: 'Your message' },
+      ph: { firstname: 'Your first name', lastname: 'Your last name', email: 'you@example.com', message: "What's on your mind?" },
       roles: [ { v: 'student', label: 'Student' }, { v: 'company', label: 'Company' }, { v: 'other', label: 'Other' } ],
       send: 'Send it →', direct: 'Or write to us directly at munichbusinesssociety@gmail.com.',
-      errName: 'Please add your name.', errEmail: "That email address doesn't look complete. Please check it.", errMsg: 'Please add a message.',
+      errFirstname: 'Please add your first name.', errLastname: 'Please add your last name.', errEmail: "That email address doesn't look complete. Please check it.", errMsg: 'Please add a message.',
       sending: 'Sending…',
       sendError: "Something went wrong sending this. Please email us directly at munichbusinesssociety@gmail.com instead.",
       sentTitle: 'Message sent.', sentA: "We'll come back to you within ", sentB: ' working days.',
@@ -38778,11 +38778,11 @@ window.MBS_CONTENT = {
       formText: 'Sag uns, wer du bist und was du suchst. Das Formular leitet deine Nachricht an das Team, das wirklich helfen kann.',
       findLabel: 'Wo du uns findest', findText: 'Wir treffen uns in ganz München statt auf einem Campus. Locations stehen bei jedem Event.',
       follow: 'Folgen: ', followPh: 'LinkedIn · Instagram [Handles]',
-      f: { name: 'Name', email: 'E-Mail', role: 'Ich bin…', message: 'Deine Nachricht' },
-      ph: { name: 'Dein Name', email: 'du@beispiel.de', message: 'Was beschäftigt dich?' },
+      f: { firstname: 'Vorname', lastname: 'Nachname', email: 'E-Mail', role: 'Ich bin…', message: 'Deine Nachricht' },
+      ph: { firstname: 'Dein Vorname', lastname: 'Dein Nachname', email: 'du@beispiel.de', message: 'Was beschäftigt dich?' },
       roles: [ { v: 'student', label: 'Studierende:r' }, { v: 'company', label: 'Unternehmen' }, { v: 'other', label: 'Sonstiges' } ],
       send: 'Absenden →', direct: 'Oder schreib uns direkt an munichbusinesssociety@gmail.com.',
-      errName: 'Bitte gib deinen Namen an.', errEmail: 'Diese E-Mail-Adresse sieht nicht vollständig aus. Bitte prüf sie.', errMsg: 'Bitte gib eine Nachricht ein.',
+      errFirstname: 'Bitte gib deinen Vornamen an.', errLastname: 'Bitte gib deinen Nachnamen an.', errEmail: 'Diese E-Mail-Adresse sieht nicht vollständig aus. Bitte prüf sie.', errMsg: 'Bitte gib eine Nachricht ein.',
       sending: 'Wird gesendet…',
       sendError: 'Beim Senden ist etwas schiefgelaufen. Schreib uns stattdessen direkt an munichbusinesssociety@gmail.com.',
       sentTitle: 'Nachricht gesendet.', sentA: 'Wir melden uns innerhalb von ', sentB: ' Werktagen.',
@@ -40644,13 +40644,14 @@ function ContactForm({ C }) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const err = {};
-    if (!String(data.get('name') || '').trim()) err.name = K.errName;
+    if (!String(data.get('firstname') || '').trim()) err.firstname = K.errFirstname;
+    if (!String(data.get('lastname') || '').trim()) err.lastname = K.errLastname;
     const email = String(data.get('email') || '').trim();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) err.email = K.errEmail;
     if (!String(data.get('message') || '').trim()) err.message = K.errMsg;
     setErrors(err);
     if (Object.keys(err).length) {
-      const first = ['name', 'email', 'role', 'message'].find(k => err[k]);
+      const first = ['firstname', 'lastname', 'email', 'role', 'message'].find(k => err[k]);
       const el = formRef.current && formRef.current.elements[first];
       if (el && el.focus) el.focus();
       return;
@@ -40699,9 +40700,14 @@ function ContactForm({ C }) {
         <input id="mbs_hp_contact" type="text" name="mbs_hp_field" tabIndex={-1} autoComplete="off" />
       </div>
 
-      <Field label={K.f.name} required error={errors.name}>
-        <Input name="name" autoComplete="name" placeholder={K.ph.name} onInput={clear('name')} />
-      </Field>
+      <div className="mbs-form-row">
+        <Field label={K.f.firstname} required error={errors.firstname}>
+          <Input name="firstname" autoComplete="given-name" placeholder={K.ph.firstname} onInput={clear('firstname')} />
+        </Field>
+        <Field label={K.f.lastname} required error={errors.lastname}>
+          <Input name="lastname" autoComplete="family-name" placeholder={K.ph.lastname} onInput={clear('lastname')} />
+        </Field>
+      </div>
       <Field label={K.f.email} required error={errors.email}>
         <Input type="email" name="email" autoComplete="email" inputMode="email" placeholder={K.ph.email} onInput={clear('email')} />
       </Field>

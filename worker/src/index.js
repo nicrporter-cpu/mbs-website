@@ -139,7 +139,8 @@ function buildSheetRow(formType, formData, submittedAt, files) {
   if (formType === 'contact') {
     return [
       submittedAt,
-      formData.get('name') || '',
+      formData.get('firstname') || '',
+      formData.get('lastname') || '',
       formData.get('email') || '',
       formData.get('role') || '',
       formData.get('message') || ''

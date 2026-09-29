@@ -10,7 +10,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 const REQUIRED_FIELDS = {
   join: ['firstname', 'lastname', 'email', 'university', 'level', 'studyprogram', 'language', 'motivation'],
-  contact: ['name', 'email', 'message'],
+  contact: ['firstname', 'lastname', 'email', 'message'],
   newsletter: ['news_email']
 };
 

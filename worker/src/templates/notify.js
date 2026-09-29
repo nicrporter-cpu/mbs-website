@@ -37,7 +37,7 @@ export function joinNotification(formData, files) {
 
 export function contactNotification(formData) {
   const rows = [
-    row('Name', esc(formData.get('name'))),
+    row('Name', `${esc(formData.get('firstname'))} ${esc(formData.get('lastname'))}`),
     row('Email', esc(formData.get('email'))),
     row('I’m a…', esc(formData.get('role'))),
     row('Message', esc(formData.get('message')).replace(/\n/g, '<br>'))
