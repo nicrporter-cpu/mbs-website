@@ -9,8 +9,17 @@ import { confirmationFor } from './templates/confirm.js';
 
 const EMAIL_FIELD = { join: 'email', contact: 'email', newsletter: 'news_email' };
 
-function nowIso() {
-  return new Date().toISOString();
+// Munich local time (CET/CEST), not UTC — readable at a glance in the Sheet
+// and auto-recognized by Google Sheets as a date/time value.
+function nowMunichTime() {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Berlin',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    hour12: false
+  }).formatToParts(new Date());
+  const get = type => parts.find(p => p.type === type).value;
+  return `${get('year')}-${get('month')}-${get('day')} ${get('hour')}:${get('minute')}:${get('second')}`;
 }
 
 async function handleSubmit(request, env) {
@@ -37,7 +46,7 @@ async function handleSubmit(request, env) {
   }
 
   const submissionId = crypto.randomUUID();
-  const submittedAt = nowIso();
+  const submittedAt = nowMunichTime();
   const lang = String(formData.get('mbs_lang') || 'en') === 'de' ? 'de' : 'en';
 
   let files = { cv: null, enrollment: null };
