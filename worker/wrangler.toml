@@ -16,10 +16,10 @@ NOTIFY_TO_EMAIL = "munichbusinesssociety@gmail.com"
 ALLOWED_ORIGINS = "https://munich-business-society.com,http://localhost:8765"
 # Fill in once the target Google Sheet exists (see README step 3) — the long
 # ID from the Sheet's URL, e.g. https://docs.google.com/spreadsheets/d/THIS_PART/edit
-SPREADSHEET_ID = ""
+SPREADSHEET_ID = "1yQRg-ybbmaSl88SWm201mrUihs242h6ZVSMDoBcqhB4"
 # The "From" address used for outgoing mail. Must be on a domain verified in
 # Resend (see README step 2) before this will actually send anything.
-FROM_EMAIL = "Munich Business Society <no-reply@munich-business-society.com>"
+FROM_EMAIL = "Munich Business Society <no-reply@mail.munich-business-society.com>"
 
 # Private file storage for Join-form uploads (CV, enrollment certificate).
 # Create the bucket first: `wrangler r2 bucket create mbs-form-uploads`
