@@ -182,25 +182,38 @@ function SocialTile({ item }) {
   );
 }
 
-/* Newsletter — no backend; it validates the address and shows the deck's
-   confirmation locally, the same honest-mockup pattern as the forms. */
+/* Newsletter — posts to window.MBS_API_ENDPOINT (formType: 'newsletter'),
+   see screens/data.js and worker/README.md. Still only a signup *capture*:
+   an address lands in the Sheet/notification email, but actually composing
+   and sending a monthly newsletter to that list is a separate, not-yet-built
+   step (a mailing-list tool decision, out of scope here). */
 function Newsletter({ nl = {} }) {
   const [done, setDone] = React.useState(false);
   const [error, setError] = React.useState(null);
+  const [submitting, setSubmitting] = React.useState(false);
   const doneRef = React.useRef(null);
+  const renderedAtRef = React.useRef(Date.now());
   const id = useUid();
+  const hpId = useUid();
 
   React.useEffect(() => { if (done && doneRef.current) doneRef.current.focus(); }, [done]);
 
   const onSubmit = e => {
     e.preventDefault();
-    const email = String(new FormData(e.currentTarget).get('news_email') || '').trim();
+    const data = new FormData(e.currentTarget);
+    const email = String(data.get('news_email') || '').trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
       setError(nl.err || 'Please enter a valid email address.');
       return;
     }
     setError(null);
-    setDone(true);
+    setSubmitting(true);
+    data.set('mbs_rendered_at', String(renderedAtRef.current));
+    window.MBS_SUBMIT_FORM(data, 'newsletter').then(result => {
+      setSubmitting(false);
+      if (result.ok) setDone(true);
+      else setError(nl.sendError || 'Something went wrong. Please try again.');
+    });
   };
 
   return (
@@ -217,7 +230,12 @@ function Newsletter({ nl = {} }) {
           <input id={id} name="news_email" type="email" inputMode="email" placeholder={nl.placeholder}
             aria-invalid={error ? 'true' : undefined} aria-describedby={error ? id + '-err' : undefined}
             className="mbs-news-input" />
-          <button type="submit" className="mbs-nav-cta mbs-news-btn">{nl.btn}</button>
+          {/* Honeypot — see worker/src/lib/spam.js. */}
+          <div aria-hidden="true" style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>
+            <label htmlFor={hpId}>Leave this field empty</label>
+            <input id={hpId} type="text" name="mbs_hp_field" tabIndex={-1} autoComplete="off" />
+          </div>
+          <button type="submit" className="mbs-nav-cta mbs-news-btn" disabled={submitting}>{submitting ? (nl.sending || nl.btn) : nl.btn}</button>
           {error && <span id={id + '-err'} role="alert" className="mbs-news-err">{error}</span>}
         </form>
       )}

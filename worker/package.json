@@ -1,0 +1,14 @@
+{
+  "name": "mbs-forms-worker",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Cloudflare Worker backend for the Munich Business Society website's Join, Contact and Newsletter forms.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3"
+  }
+}

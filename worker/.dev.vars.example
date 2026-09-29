@@ -1,0 +1,7 @@
+# Copy this file to .dev.vars (gitignored) and fill in real/sandbox values
+# before running `wrangler dev`. These are only used for local testing —
+# production secrets are set separately with `wrangler secret put`, see README.
+
+RESEND_API_KEY=re_your_test_key
+GOOGLE_SERVICE_ACCOUNT_B64=eyJ0eXBlIjoic2VydmljZV9hY2NvdW50Ii4uLg==
+ADMIN_FILE_TOKEN=a-long-random-string-openssl-rand-hex-32

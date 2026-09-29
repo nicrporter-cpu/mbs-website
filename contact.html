@@ -6,9 +6,9 @@
 <title>Munich Business Society, Contact</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<meta name="description" content="Munich's cross-university case club.">
-<link rel="stylesheet" href="design-system/styles.css?v=16e00423e5">
-<link rel="stylesheet" href="site.css?v=16e00423e5">
+<meta name="description" content="Munich's first cross-university case club.">
+<link rel="stylesheet" href="design-system/styles.css?v=ba9ac538ed">
+<link rel="stylesheet" href="site.css?v=ba9ac538ed">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="vendor/react.development.js"></script>
 <script src="vendor/react-dom.development.js"></script>
 <script src="vendor/babel.min.js"></script>
-<script src="design-system/_ds_bundle.js?v=16e00423e5"></script>
-<script src="screens/data.js?v=16e00423e5"></script>
-<script src="site.js?v=16e00423e5"></script>
+<script src="design-system/_ds_bundle.js?v=ba9ac538ed"></script>
+<script src="screens/data.js?v=ba9ac538ed"></script>
+<script src="site.js?v=ba9ac538ed"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -205,25 +205,38 @@ function SocialTile({ item }) {
   );
 }
 
-/* Newsletter — no backend; it validates the address and shows the deck's
-   confirmation locally, the same honest-mockup pattern as the forms. */
+/* Newsletter — posts to window.MBS_API_ENDPOINT (formType: 'newsletter'),
+   see screens/data.js and worker/README.md. Still only a signup *capture*:
+   an address lands in the Sheet/notification email, but actually composing
+   and sending a monthly newsletter to that list is a separate, not-yet-built
+   step (a mailing-list tool decision, out of scope here). */
 function Newsletter({ nl = {} }) {
   const [done, setDone] = React.useState(false);
   const [error, setError] = React.useState(null);
+  const [submitting, setSubmitting] = React.useState(false);
   const doneRef = React.useRef(null);
+  const renderedAtRef = React.useRef(Date.now());
   const id = useUid();
+  const hpId = useUid();
 
   React.useEffect(() => { if (done && doneRef.current) doneRef.current.focus(); }, [done]);
 
   const onSubmit = e => {
     e.preventDefault();
-    const email = String(new FormData(e.currentTarget).get('news_email') || '').trim();
+    const data = new FormData(e.currentTarget);
+    const email = String(data.get('news_email') || '').trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
       setError(nl.err || 'Please enter a valid email address.');
       return;
     }
     setError(null);
-    setDone(true);
+    setSubmitting(true);
+    data.set('mbs_rendered_at', String(renderedAtRef.current));
+    window.MBS_SUBMIT_FORM(data, 'newsletter').then(result => {
+      setSubmitting(false);
+      if (result.ok) setDone(true);
+      else setError(nl.sendError || 'Something went wrong. Please try again.');
+    });
   };
 
   return (
@@ -240,7 +253,12 @@ function Newsletter({ nl = {} }) {
           <input id={id} name="news_email" type="email" inputMode="email" placeholder={nl.placeholder}
             aria-invalid={error ? 'true' : undefined} aria-describedby={error ? id + '-err' : undefined}
             className="mbs-news-input" />
-          <button type="submit" className="mbs-nav-cta mbs-news-btn">{nl.btn}</button>
+          {/* Honeypot — see worker/src/lib/spam.js. */}
+          <div aria-hidden="true" style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>
+            <label htmlFor={hpId}>Leave this field empty</label>
+            <input id={hpId} type="text" name="mbs_hp_field" tabIndex={-1} autoComplete="off" />
+          </div>
+          <button type="submit" className="mbs-nav-cta mbs-news-btn" disabled={submitting}>{submitting ? (nl.sending || nl.btn) : nl.btn}</button>
           {error && <span id={id + '-err'} role="alert" className="mbs-news-err">{error}</span>}
         </form>
       )}
@@ -984,8 +1002,11 @@ function ContactForm({ C }) {
   const K = C.contact;
   const [sent, setSent] = React.useState(false);
   const [errors, setErrors] = React.useState({});
+  const [submitting, setSubmitting] = React.useState(false);
+  const [sendError, setSendError] = React.useState(false);
   const formRef = React.useRef(null);
   const statusRef = React.useRef(null);
+  const renderedAtRef = React.useRef(Date.now());
 
   React.useEffect(() => { if (sent && statusRef.current) statusRef.current.focus(); }, [sent]);
 
@@ -1006,7 +1027,14 @@ function ContactForm({ C }) {
       if (el && el.focus) el.focus();
       return;
     }
-    setSent(true);
+    setSendError(false);
+    setSubmitting(true);
+    data.set('mbs_rendered_at', String(renderedAtRef.current));
+    window.MBS_SUBMIT_FORM(data, 'contact').then(result => {
+      setSubmitting(false);
+      if (result.ok) setSent(true);
+      else setSendError(true);
+    });
   };
 
   if (sent) {
@@ -1025,6 +1053,24 @@ function ContactForm({ C }) {
 
   return (
     <form ref={formRef} onSubmit={onSubmit} noValidate>
+      {sendError && (
+        <div role="alert" style={{
+          display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '20px',
+          padding: '14px 18px', borderRadius: 'var(--mbs-r-sm)',
+          background: 'var(--mbs-danger-bg)', color: 'var(--mbs-danger)',
+          fontSize: 'var(--mbs-fs-body-sm)', lineHeight: 1.6
+        }}>
+          <Icon name="close" size="17px" style={{ marginTop: '2px' }} />
+          <span>{K.sendError}</span>
+        </div>
+      )}
+
+      {/* Honeypot — see worker/src/lib/spam.js. */}
+      <div aria-hidden="true" style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>
+        <label htmlFor="mbs_hp_contact">Leave this field empty</label>
+        <input id="mbs_hp_contact" type="text" name="mbs_hp_field" tabIndex={-1} autoComplete="off" />
+      </div>
+
       <Field label={K.f.name} required error={errors.name}>
         <Input name="name" autoComplete="name" placeholder={K.ph.name} onInput={clear('name')} />
       </Field>
@@ -1039,7 +1085,7 @@ function ContactForm({ C }) {
       <Field label={K.f.message} required error={errors.message}>
         <Textarea name="message" placeholder={K.ph.message} onInput={clear('message')} />
       </Field>
-      <Button variant="navy" block type="submit">{K.send}</Button>
+      <Button variant="navy" block type="submit" disabled={submitting}>{submitting ? K.sending : K.send}</Button>
       <p style={{ marginTop: '14px', fontSize: '12px', color: 'var(--mbs-gray)', textAlign: 'center' }}>{K.direct}</p>
     </form>
   );

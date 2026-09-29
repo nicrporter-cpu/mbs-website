@@ -8,8 +8,11 @@ function ContactForm({ C }) {
   const K = C.contact;
   const [sent, setSent] = React.useState(false);
   const [errors, setErrors] = React.useState({});
+  const [submitting, setSubmitting] = React.useState(false);
+  const [sendError, setSendError] = React.useState(false);
   const formRef = React.useRef(null);
   const statusRef = React.useRef(null);
+  const renderedAtRef = React.useRef(Date.now());
 
   React.useEffect(() => { if (sent && statusRef.current) statusRef.current.focus(); }, [sent]);
 
@@ -30,7 +33,14 @@ function ContactForm({ C }) {
       if (el && el.focus) el.focus();
       return;
     }
-    setSent(true);
+    setSendError(false);
+    setSubmitting(true);
+    data.set('mbs_rendered_at', String(renderedAtRef.current));
+    window.MBS_SUBMIT_FORM(data, 'contact').then(result => {
+      setSubmitting(false);
+      if (result.ok) setSent(true);
+      else setSendError(true);
+    });
   };
 
   if (sent) {
@@ -49,6 +59,24 @@ function ContactForm({ C }) {
 
   return (
     <form ref={formRef} onSubmit={onSubmit} noValidate>
+      {sendError && (
+        <div role="alert" style={{
+          display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '20px',
+          padding: '14px 18px', borderRadius: 'var(--mbs-r-sm)',
+          background: 'var(--mbs-danger-bg)', color: 'var(--mbs-danger)',
+          fontSize: 'var(--mbs-fs-body-sm)', lineHeight: 1.6
+        }}>
+          <Icon name="close" size="17px" style={{ marginTop: '2px' }} />
+          <span>{K.sendError}</span>
+        </div>
+      )}
+
+      {/* Honeypot — see worker/src/lib/spam.js. */}
+      <div aria-hidden="true" style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>
+        <label htmlFor="mbs_hp_contact">Leave this field empty</label>
+        <input id="mbs_hp_contact" type="text" name="mbs_hp_field" tabIndex={-1} autoComplete="off" />
+      </div>
+
       <Field label={K.f.name} required error={errors.name}>
         <Input name="name" autoComplete="name" placeholder={K.ph.name} onInput={clear('name')} />
       </Field>
@@ -63,7 +91,7 @@ function ContactForm({ C }) {
       <Field label={K.f.message} required error={errors.message}>
         <Textarea name="message" placeholder={K.ph.message} onInput={clear('message')} />
       </Field>
-      <Button variant="navy" block type="submit">{K.send}</Button>
+      <Button variant="navy" block type="submit" disabled={submitting}>{submitting ? K.sending : K.send}</Button>
       <p style={{ marginTop: '14px', fontSize: '12px', color: 'var(--mbs-gray)', textAlign: 'center' }}>{K.direct}</p>
     </form>
   );

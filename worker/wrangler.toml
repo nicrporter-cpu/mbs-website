@@ -1,0 +1,28 @@
+# Cloudflare Worker config for the MBS website's form backend.
+# See ../screens/data.js's window.MBS_API_ENDPOINT for where the frontend
+# points at this Worker, and worker/README.md for setup/deploy steps.
+
+name = "mbs-forms"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Non-secret configuration. Secrets (API keys, credentials) are set with
+# `wrangler secret put <NAME>` and never appear here or in git — see README.
+[vars]
+NOTIFY_TO_EMAIL = "munichbusinesssociety@gmail.com"
+# Comma-separated list of origins allowed to call this Worker. No trailing
+# slashes. Add other localhost ports here too if you ever run the dev server
+# on a different port than .claude/launch.json's default.
+ALLOWED_ORIGINS = "https://munich-business-society.com,http://localhost:8765"
+# Fill in once the target Google Sheet exists (see README step 3) — the long
+# ID from the Sheet's URL, e.g. https://docs.google.com/spreadsheets/d/THIS_PART/edit
+SPREADSHEET_ID = ""
+# The "From" address used for outgoing mail. Must be on a domain verified in
+# Resend (see README step 2) before this will actually send anything.
+FROM_EMAIL = "Munich Business Society <no-reply@munich-business-society.com>"
+
+# Private file storage for Join-form uploads (CV, enrollment certificate).
+# Create the bucket first: `wrangler r2 bucket create mbs-form-uploads`
+[[r2_buckets]]
+binding = "UPLOADS"
+bucket_name = "mbs-form-uploads"

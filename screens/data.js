@@ -339,7 +339,7 @@ window.MBS_CONTENT = {
     brand: {
       name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Every campus. One network.',
-      metaDescription: "Munich's cross-university case club.",
+      metaDescription: "Munich's first cross-university case club.",
       footerDescriptor: 'Munich Business Society, the cross-university case club for every student in Munich. Open to every university in the city.'
     },
     nav: [
@@ -376,13 +376,14 @@ window.MBS_CONTENT = {
       newsletter: {
         h: 'One email a month. Everything happening in Munich.',
         body: "Events, openings, partner formats and the odd opportunity we've been asked to pass on. No spam, unsubscribe in one click.",
-        placeholder: 'Your email', srEmail: 'Your email', btn: 'Keep me posted',
+        placeholder: 'Your email', srEmail: 'Your email', btn: 'Keep me posted', sending: 'Sending…',
         done: "You're on the list. First email lands at the start of next month.",
-        err: 'Please enter a valid email address.'
+        err: 'Please enter a valid email address.',
+        sendError: 'Something went wrong. Please email us directly at munichbusinesssociety@gmail.com instead.'
       },
       copyright: '© 2026 Munich Business Society'
     },
-    title: { home: "Munich's Student Case Club", about: 'About', network: 'The Network',
+    title: { home: "Munich's first cross-university case club", about: 'About', network: 'The Network',
       whatwedo: 'What We Do', calendar: 'Events', membership: 'Membership', companies: 'For Companies', team: 'Team',
       faq: 'FAQ', join: 'Join Munich Business Society', contact: 'Contact', impressum: 'Impressum', datenschutz: 'Datenschutzerklärung' },
 
@@ -425,7 +426,7 @@ window.MBS_CONTENT = {
     universities: MBS_UNIVERSITIES.concat(['Other university in Munich']),
 
     home: {
-      heroLead: "Munich Business Society is Munich's first cross-university case-solving and business platform, 100% free, with no application and no membership fee, open to every student in the city.",
+      heroLead: "Munich Business Society is Munich's first cross-university case-solving and business platform, 100% free, with no membership fee, open to every student in the city.",
       seeEvents: "See what's coming up",
       whyLabel: 'Why we exist', whyTitle: 'Munich has 110,000+ students split across 33 universities, and almost none of them talk to each other.',
       whyP1: 'Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, giving visibility into that university\'s own talent, not across one shared, central club. Recruiters see one Munich talent pool; students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.',
@@ -622,6 +623,8 @@ window.MBS_CONTENT = {
       errEmail: "That email address doesn't look complete. Please check it.",
       errConsent: 'Please agree to your data being processed so we can get back to you.',
       errOne: 'One field still needs your attention.', errMany: 'fields still need your attention.',
+      submitting: 'Sending…',
+      sendError: "Something went wrong sending this. Please email us directly at munichbusinesssociety@gmail.com instead.",
       f: { firstname: 'First name', lastname: 'Last name', email: 'Email address', university: 'University', level: 'Degree level',
         studyprogram: 'Degree programme', language: 'Preferred language', motivation: 'What are you hoping to get out of Munich Business Society?',
         interests: "Subject areas you'd like to see in the club", cv: 'CV / résumé', enrollment: 'Certificate of enrollment' },
@@ -662,6 +665,8 @@ window.MBS_CONTENT = {
       roles: [ { v: 'student', label: 'Student' }, { v: 'company', label: 'Company' }, { v: 'other', label: 'Other' } ],
       send: 'Send it →', direct: 'Or write to us directly at munichbusinesssociety@gmail.com.',
       errName: 'Please add your name.', errEmail: "That email address doesn't look complete. Please check it.", errMsg: 'Please add a message.',
+      sending: 'Sending…',
+      sendError: "Something went wrong sending this. Please email us directly at munichbusinesssociety@gmail.com instead.",
       sentTitle: 'Message sent.', sentA: "We'll come back to you within ", sentB: ' working days.',
       faqText: 'Before you write in, your question might already be answered.', faqBtn: 'Read the FAQ →'
     }
@@ -675,7 +680,7 @@ window.MBS_CONTENT = {
     brand: {
       name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Jeder Campus. Ein Netzwerk.',
-      metaDescription: 'Münchens hochschulübergreifender Case Club.',
+      metaDescription: 'Münchens erster hochschulübergreifender Case Club.',
       footerDescriptor: 'Munich Business Society, der hochschulübergreifende Case Club für jede:n Studierende:n in München. Offen für jede Hochschule der Stadt.'
     },
     nav: [
@@ -712,13 +717,14 @@ window.MBS_CONTENT = {
       newsletter: {
         h: 'Eine E-Mail im Monat. Alles, was in München passiert.',
         body: 'Events, offene Stellen, Partner-Formate und die eine oder andere Gelegenheit, die man uns weiterzugeben gebeten hat. Kein Spam, Abmeldung mit einem Klick.',
-        placeholder: 'Deine E-Mail', srEmail: 'Deine E-Mail', btn: 'Halt mich auf dem Laufenden',
+        placeholder: 'Deine E-Mail', srEmail: 'Deine E-Mail', btn: 'Halt mich auf dem Laufenden', sending: 'Wird gesendet…',
         done: 'Du bist auf der Liste. Die erste E-Mail kommt Anfang nächsten Monats.',
-        err: 'Bitte gib eine gültige E-Mail-Adresse ein.'
+        err: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+        sendError: 'Etwas ist schiefgelaufen. Schreib uns stattdessen direkt an munichbusinesssociety@gmail.com.'
       },
       copyright: '© 2026 Munich Business Society'
     },
-    title: { home: 'Studentischer Case Club in München', about: 'Über Uns', network: 'Das Netzwerk',
+    title: { home: 'Münchens erster hochschulübergreifender Case Club', about: 'Über Uns', network: 'Das Netzwerk',
       whatwedo: 'Was wir tun', calendar: 'Termine', membership: 'Mitgliedschaft', companies: 'Für Unternehmen', team: 'Team',
       faq: 'FAQ', join: 'Mitglied werden', contact: 'Kontakt', impressum: 'Impressum', datenschutz: 'Datenschutzerklärung' },
 
@@ -761,7 +767,7 @@ window.MBS_CONTENT = {
     universities: MBS_UNIVERSITIES.concat(['Andere Hochschule in München']),
 
     home: {
-      heroLead: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, 100 % kostenlos, ohne Bewerbung und ohne Mitgliedsbeitrag, offen für jede:n Studierende:n der Stadt.',
+      heroLead: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, 100 % kostenlos, ohne Mitgliedsbeitrag, offen für jede:n Studierende:n der Stadt.',
       seeEvents: 'Zu den Terminen',
       whyLabel: 'Warum es uns gibt', whyTitle: 'München hat über 110.000 Studierende, verteilt auf 33 Hochschulen, und fast keine spricht mit der anderen.',
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie geben Sichtbarkeit auf die Talente der eigenen Uni, aber nicht hochschulübergreifend in einem zentralen Club. Recruiter sehen einen Münchner Talentpool; Studierende treffen immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
@@ -956,6 +962,8 @@ window.MBS_CONTENT = {
       errEmail: 'Diese E-Mail-Adresse sieht nicht vollständig aus. Bitte prüf sie.',
       errConsent: 'Bitte stimme der Verarbeitung deiner Daten zu, damit wir uns melden können.',
       errOne: 'Ein Feld braucht noch deine Aufmerksamkeit.', errMany: 'Felder brauchen noch deine Aufmerksamkeit.',
+      submitting: 'Wird gesendet…',
+      sendError: 'Beim Senden ist etwas schiefgelaufen. Schreib uns stattdessen direkt an munichbusinesssociety@gmail.com.',
       f: { firstname: 'Vorname', lastname: 'Nachname', email: 'E-Mail-Adresse', university: 'Hochschule', level: 'Studienniveau',
         studyprogram: 'Studiengang', language: 'Bevorzugte Sprache', motivation: 'Was erhoffst du dir von der Munich Business Society?',
         interests: 'Fachliche Interessen, die du gerne im Club sehen würdest', cv: 'Lebenslauf', enrollment: 'Immatrikulationsbescheinigung' },
@@ -996,6 +1004,8 @@ window.MBS_CONTENT = {
       roles: [ { v: 'student', label: 'Studierende:r' }, { v: 'company', label: 'Unternehmen' }, { v: 'other', label: 'Sonstiges' } ],
       send: 'Absenden →', direct: 'Oder schreib uns direkt an munichbusinesssociety@gmail.com.',
       errName: 'Bitte gib deinen Namen an.', errEmail: 'Diese E-Mail-Adresse sieht nicht vollständig aus. Bitte prüf sie.', errMsg: 'Bitte gib eine Nachricht ein.',
+      sending: 'Wird gesendet…',
+      sendError: 'Beim Senden ist etwas schiefgelaufen. Schreib uns stattdessen direkt an munichbusinesssociety@gmail.com.',
       sentTitle: 'Nachricht gesendet.', sentA: 'Wir melden uns innerhalb von ', sentB: ' Werktagen.',
       faqText: 'Bevor du schreibst, vielleicht ist deine Frage schon beantwortet.', faqBtn: 'Zur FAQ →'
     }
@@ -1014,6 +1024,52 @@ window.MBS_GET_LANG = function () {
 };
 window.MBS_SET_LANG = function (lang) {
   try { window.localStorage.setItem('mbs-lang', lang); } catch (e) { /* ignore */ }
+};
+
+/* Form backend (Join, Contact, Newsletter — see worker/README.md). Points at
+   a local Worker when the site itself is being served from localhost (see
+   worker/README.md's "Local development"), and at the deployed Worker
+   otherwise. Replace YOUR-SUBDOMAIN with the real one after the first
+   `wrangler deploy` (worker/README.md's "Deploy" step tells you the exact
+   URL it prints). */
+window.MBS_API_ENDPOINT = (function () {
+  var host = window.location.hostname;
+  var isLocal = host === 'localhost' || host === '127.0.0.1';
+  return isLocal
+    ? 'http://localhost:8787/submit'
+    : 'https://mbs-forms.YOUR-SUBDOMAIN.workers.dev/submit';
+})();
+
+/* Shared submit helper for all three forms. Appends the bookkeeping fields
+   the Worker expects (form type, current language, and whatever honeypot/
+   timestamp fields that form's own JSX already put in `formData`), posts as
+   multipart/form-data (do NOT set a Content-Type header — the browser sets
+   the multipart boundary itself), and resolves to a plain {ok, error?,
+   errors?} shape every form's onSubmit can branch on the same way. Never
+   rejects: a network failure or timeout resolves to {ok:false} rather than
+   throwing, so callers only need a .then(). */
+window.MBS_SUBMIT_FORM = function (formData, formType) {
+  formData.set('formType', formType);
+  formData.set('mbs_lang', window.MBS_GET_LANG());
+
+  var hasAbort = typeof AbortController !== 'undefined';
+  var controller = hasAbort ? new AbortController() : null;
+  var timeoutId = controller ? setTimeout(function () { controller.abort(); }, 15000) : null;
+
+  return fetch(window.MBS_API_ENDPOINT, {
+    method: 'POST',
+    body: formData,
+    signal: controller ? controller.signal : undefined
+  }).then(function (res) {
+    if (timeoutId) clearTimeout(timeoutId);
+    return res.json().catch(function () { return {}; }).then(function (data) {
+      if (res.ok && data && data.ok) return { ok: true };
+      return { ok: false, error: (data && data.error) || 'server_error', errors: data && data.errors };
+    });
+  }).catch(function (err) {
+    if (timeoutId) clearTimeout(timeoutId);
+    return { ok: false, error: (err && err.name === 'AbortError') ? 'timeout' : 'network_error' };
+  });
 };
 
 /* Arm motion before React renders (so the hero's entrance never flashes). Adds

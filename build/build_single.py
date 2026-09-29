@@ -204,8 +204,8 @@ PAGE = '''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Munich Business Society, Munich's Student Case Club</title>
-<meta name="description" content="Munich's cross-university case club.">
+<title>Munich Business Society, Munich's first cross-university case club</title>
+<meta name="description" content="Munich's first cross-university case club.">
 <link rel="icon" type="image/png" href="__FAVICON__">
 <link rel="apple-touch-icon" href="__APPLE_ICON__">
 <style>

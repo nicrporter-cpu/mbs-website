@@ -3,8 +3,9 @@
 Ten pages wired into a browsable website, **bilingual (English EN-GB + German)**,
 with the cross-university positioning from the copy deck (v1.0). Every nav item,
 logo, and in-page button loads a real page; the event dialog opens, closes on Esc,
-and can be deep-linked. Nothing is fetched from the internet — React, Babel and both
-webfonts are vendored locally.
+and can be deep-linked. The site itself fetches nothing from the internet — React,
+Babel and both webfonts are vendored locally. The one exception: the Join, Contact
+and Newsletter forms post to a small external backend — see `worker/README.md`.
 
 **Language switch.** The header carries a DE/EN tab. Both languages ship inside every
 page (`screens/data.js` holds `MBS_CONTENT.en` and `MBS_CONTENT.de`), so the switch
@@ -155,8 +156,13 @@ cd /Users/np/projects/mbs-website && printf '@import url("../../fonts/fonts.css"
 - **No social accounts yet.** The LinkedIn and Instagram tiles in the footer and on
   Kontakt are marked *(in Vorbereitung)*. Add the URLs to `SOCIAL` in
   `build/build.py` and `CHANNELS` in `screens/ContactScreen.jsx`, then rebuild.
-- The application form validates and shows its success state, but sends nothing
-  anywhere — it still needs a backend or form service.
+- **The Join, Contact and Newsletter forms need a one-time deploy to actually
+  work.** The frontend code, and the Cloudflare Worker backend it posts to, are
+  both done — see `worker/README.md` for the (mostly account-setup, not code)
+  steps left: a free Cloudflare account, a Resend domain verification, and a
+  Google Sheet shared with a service account. Until that's done, a real
+  submission will show the "something went wrong, email us directly" fallback
+  rather than a false success.
 - **First load is ~4.7 MB**, almost all of it Babel (3.1 MB) plus React's development
   builds (1.2 MB), because JSX is compiled in the browser to keep double-click
   working. Pre-compiling the JSX in `build.py` would remove Babel entirely and keep

@@ -21,8 +21,11 @@ function JoinScreen({ C }) {
   const J = C.join;
   const [sent, setSent] = React.useState(false);
   const [errors, setErrors] = React.useState({});
+  const [submitting, setSubmitting] = React.useState(false);
+  const [sendError, setSendError] = React.useState(false);
   const formRef = React.useRef(null);
   const successRef = React.useRef(null);
+  const renderedAtRef = React.useRef(Date.now());
 
   React.useEffect(() => { if (sent && successRef.current) successRef.current.focus(); }, [sent]);
 
@@ -37,7 +40,14 @@ function JoinScreen({ C }) {
       if (el && el.focus) el.focus();
       return;
     }
-    setSent(true);
+    setSendError(false);
+    setSubmitting(true);
+    data.set('mbs_rendered_at', String(renderedAtRef.current));
+    window.MBS_SUBMIT_FORM(data, 'join').then(result => {
+      setSubmitting(false);
+      if (result.ok) setSent(true);
+      else setSendError(true);
+    });
   };
 
   const clear = name => () => setErrors(prev => (prev[name] ? { ...prev, [name]: undefined } : prev));
@@ -61,7 +71,7 @@ function JoinScreen({ C }) {
             </Card>
           ) : (
             <form ref={formRef} onSubmit={onSubmit} noValidate>
-              {errorCount > 0 && (
+              {(errorCount > 0 || sendError) && (
                 <div role="alert" style={{
                   display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '24px',
                   padding: '14px 18px', borderRadius: 'var(--mbs-r-sm)',
@@ -69,9 +79,17 @@ function JoinScreen({ C }) {
                   fontSize: 'var(--mbs-fs-body-sm)', lineHeight: 1.6
                 }}>
                   <Icon name="close" size="17px" style={{ marginTop: '2px' }} />
-                  <span>{errorCount === 1 ? J.errOne : `${errorCount} ${J.errMany}`}</span>
+                  <span>{sendError ? J.sendError : (errorCount === 1 ? J.errOne : `${errorCount} ${J.errMany}`)}</span>
                 </div>
               )}
+
+              {/* Honeypot — real bots fill every input they can find; real visitors
+                  never see this one. Left non-empty, the Worker silently discards
+                  the submission. See worker/src/lib/spam.js. */}
+              <div aria-hidden="true" style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>
+                <label htmlFor="mbs_hp_join">Leave this field empty</label>
+                <input id="mbs_hp_join" type="text" name="mbs_hp_field" tabIndex={-1} autoComplete="off" />
+              </div>
 
               <div className="mbs-form-row">
                 <Field label={J.f.firstname} required error={errors.firstname}>
@@ -145,7 +163,7 @@ function JoinScreen({ C }) {
                     <span id="consent-msg" role="alert" style={{ display: 'block', marginTop: '6px', fontSize: '12px', color: 'var(--mbs-danger)' }}>{errors.consent}</span>
                   )}
                 </div>
-                <Button variant="navy" block type="submit">{J.submit}</Button>
+                <Button variant="navy" block type="submit" disabled={submitting}>{submitting ? J.submitting : J.submit}</Button>
               </div>
             </form>
           )}

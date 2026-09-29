@@ -23,13 +23,13 @@ SCREENS = ROOT / 'screens'
 PATCHES = SCREENS / '_patches.jsx'
 
 # Initial <meta description> (English; JS updates it on lang switch, same as the title).
-DESCRIPTION = "Munich's cross-university case club."
+DESCRIPTION = "Munich's first cross-university case club."
 
 # file, nav id, screen component, initial <title> (English; JS updates on lang
 # switch), JSX element for the screen. Every screen takes the active-language
 # content object C, computed in the shell.
 PAGES = [
-    ('index.html',        'home',       'HomeScreen',       "Munich's Student Case Club",
+    ('index.html',        'home',       'HomeScreen',       "Munich's first cross-university case club",
      '<HomeScreen C={C} />'),
     ('about.html',        'about',      'AboutScreen',      'About',
      '<AboutScreen C={C} openEvent={openEvent} />'),
