@@ -72,6 +72,22 @@ def data_uri(rel, mime):
     return 'data:%s;base64,%s' % (mime, base64.b64encode((ROOT / rel).read_bytes()).decode())
 
 
+IMAGE_MIMES = {'.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml'}
+
+
+def inline_root_assets(text):
+    """screens/data.js references images as root-relative "/assets/<file>" —
+    correct for the live, multi-page site, where every page can reach the
+    site root, but meaningless once inlined into a single portable file with
+    no server underneath it. Swap each one for the same base64 data URI the
+    logo/favicon already use, so the standalone bundle stays self-contained."""
+    def repl(m):
+        rel = 'assets/' + m.group(1)
+        mime = IMAGE_MIMES.get(pathlib.Path(rel).suffix.lower(), 'application/octet-stream')
+        return data_uri(rel, mime)
+    return re.sub(r'/assets/([\w.-]+)', repl, text)
+
+
 def guard(name, text):
     if '</script' in text.lower():
         sys.exit('%s contains a literal </script and cannot be inlined.' % name)
@@ -237,7 +253,10 @@ def build():
 
     js_blocks = []
     for rel in JS_ORDER:
-        js_blocks.append('<script>\n%s\n</script>' % guard(rel, read(rel)))
+        text = read(rel)
+        if rel == 'screens/data.js':
+            text = inline_root_assets(text)
+        js_blocks.append('<script>\n%s\n</script>' % guard(rel, text))
 
     # Routing table and the logo travel as plain globals, the way site.js
     # supplied them in the multi-page build.

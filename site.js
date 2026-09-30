@@ -1,19 +1,22 @@
 /* MBS local site — routing glue shared by every page.
    Loaded as plain JS before the Babel-compiled page script. */
 
-/* Nav id (from screens/data.js) -> the file that renders that screen. */
+/* Nav id (from screens/data.js) -> the clean, extension-less URL that serves
+   that screen (build.py writes each one to <name>/index.html on disk so the
+   .html never shows up in the address bar). Root-relative so a link works
+   the same from any page, not just from files that live at the site root. */
 window.MBS_ROUTES = {
-  home: 'index.html',
-  about: 'about.html',
-  calendar: 'calendar.html',
-  membership: 'membership.html',
-  companies: 'for-companies.html',
-  team: 'team.html',
-  faq: 'faq.html',
-  join: 'join.html',
-  contact: 'contact.html',
-  impressum: 'impressum.html',
-  datenschutz: 'datenschutz.html'
+  home: '/',
+  about: '/about/',
+  calendar: '/calendar/',
+  membership: '/membership/',
+  companies: '/for-companies/',
+  team: '/team/',
+  faq: '/faq/',
+  join: '/join/',
+  contact: '/contact/',
+  impressum: '/impressum/',
+  datenschutz: '/datenschutz/'
 };
 
 /* ?event=<id> deep-links straight into an event dialog, e.g. what-we-do.html?event=launch */

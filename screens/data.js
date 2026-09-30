@@ -566,9 +566,9 @@ window.MBS_CONTENT = {
       whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees. The board is elected by the membership; every other role is open to members who want it.',
       boardTitle: 'The Board',
       board: [
-        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Student affairs, university relations, education and administration.', photoSrc: 'assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
-        { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Marketing, events, membership management and recruiting.', photoSrc: 'assets/team-martijn-mooren.jpg' },
-        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'Finance, legal matters, sponsoring and company relations.', photoSrc: 'assets/team-lennart-neumeier.jpg' }
+        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Student affairs, university relations, education and administration.', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
+        { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Marketing, events, membership management and recruiting.', photoSrc: '/assets/team-martijn-mooren.jpg' },
+        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'Finance, legal matters, sponsoring and company relations.', photoSrc: '/assets/team-lennart-neumeier.jpg' }
       ],
       teamsLabel: 'Teams', teamsTitle: 'Five teams, one society.',
       teams: [
@@ -891,9 +891,9 @@ window.MBS_CONTENT = {
       whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt. Der Vorstand wird von der Mitgliedschaft gewählt; jede andere Rolle steht Mitgliedern offen, die sie wollen.',
       boardTitle: 'Der Vorstand',
       board: [
-        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Studierendenangelegenheiten, Hochschulbeziehungen, Bildung und Administration.', photoSrc: 'assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
-        { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Marketing, Events, Mitgliederverwaltung und Recruiting.', photoSrc: 'assets/team-martijn-mooren.jpg' },
-        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Finanzen, Rechtliches, Sponsoring und Unternehmensbeziehungen.', photoSrc: 'assets/team-lennart-neumeier.jpg' }
+        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Studierendenangelegenheiten, Hochschulbeziehungen, Bildung und Administration.', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
+        { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Marketing, Events, Mitgliederverwaltung und Recruiting.', photoSrc: '/assets/team-martijn-mooren.jpg' },
+        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Finanzen, Rechtliches, Sponsoring und Unternehmensbeziehungen.', photoSrc: '/assets/team-lennart-neumeier.jpg' }
       ],
       teamsLabel: 'Teams', teamsTitle: 'Fünf Teams, ein Verein.',
       teams: [
