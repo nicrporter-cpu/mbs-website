@@ -53,17 +53,6 @@ function MembershipScreen({ C }) {
         </div>
       </Section>
 
-      <Section tone="alt">
-        <SectionHeading align="center" label={M.howLabel} title={M.howTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3" data-stagger>
-          {M.steps.map(s => <StepCard key={s.n} number={s.n} title={s.title}>{s.text}</StepCard>)}
-        </div>
-        <div style={{ marginTop: '40px', textAlign: 'center' }}>
-          <Button variant="gold" href={ROUTES.join}>{M.joinBtn}</Button>
-          <p style={{ marginTop: '14px', fontSize: '13px', color: 'var(--mbs-gray)' }}>{M.deadline}</p>
-        </div>
-      </Section>
-
       <Section>
         <div data-reveal style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto' }}>
           <SectionHeading align="center" label={M.faqLabel} title={M.faqTitle} desc={M.faqDesc} />

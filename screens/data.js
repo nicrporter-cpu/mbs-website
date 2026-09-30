@@ -445,7 +445,7 @@ window.MBS_CONTENT = {
       whoDesc: 'Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away.',
       storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join.',
       storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has over 110,000 students spread across 33 universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
-      storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Open on identical terms to anyone in Munich studying business, economics, management, or studying something else entirely and heading into business anyway. No fees, no selection hurdles.',
+      storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Open on identical terms to anyone in Munich studying business, economics, management, or studying something else entirely and heading into business anyway.',
       storyP3: 'We held our founding assembly on 23 September 2026, adopted our statutes and elected the board. The next milestone is our first Case Night, planned for early 2027. Until then, we\'re building the partner and campus network to get there.',
       diffLabel: 'What makes us different', diffTitle: 'Cross-university by design, not by exception.',
       different: [
@@ -467,8 +467,7 @@ window.MBS_CONTENT = {
       weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       prevMonth: 'Previous month', nextMonth: 'Next month', noEvents: 'No events this month.',
       label: 'Upcoming', title: "What's on",
-      empty: 'Nothing on the calendar yet. The board was elected on 23 September 2026 and the first events are being scheduled now, check back soon or join the list to hear first.',
-      note: 'First Case Night date to be announced by the board.'
+      empty: 'Nothing on the calendar yet. The board was elected on 23 September 2026 and the first events are being scheduled now, check back soon or join the list to hear first.'
     },
     network: {
       subtitle: "Munich Business Society isn't attached to a university. It's attached to a city.",
@@ -512,7 +511,7 @@ window.MBS_CONTENT = {
     membership: {
       subtitle: 'Open to every university in Munich, any subject, any degree level.',
       whoLabel: 'Who can join', whoTitle: 'Open to every university in Munich.',
-      whoDesc: 'If you study in Munich, you can join - free, with no selection process. We don’t filter by university, by grade average, or by whether your programme has “business” in the title. Talent, curiosity and showing up are the only requirements.',
+      whoDesc: 'If you study in Munich, you can join - free. We review every application and let you know our decision. We don’t filter by university, by grade average, or by whether your programme has “business” in the title. Talent, curiosity and showing up are the only requirements.',
       canJoin: [
         'Enrolled at any university or university of applied sciences in the Munich area.',
         'Any degree level, bachelor, master, MBA, exchange semester, doctorate.',
@@ -521,7 +520,7 @@ window.MBS_CONTENT = {
       ],
       getLabel: 'What you get', getTitle: 'Everything membership opens up.',
       get: [
-        { icon: 'star', title: 'Access to the full programme', text: 'Every Case Night, Case Competition, Company Case, Skillnight and company visit, open to you from day one, no waiting list.' },
+        { icon: 'star', title: 'Access to the full programme', text: 'Every Case Night, Case Competition, Company Case, Skillnight and company visit, open to you from day one.' },
         { icon: 'users', title: 'A network across every Munich university', text: 'Plus alumni already working in consulting, finance, tech and industry.' },
         { icon: 'building', title: 'Direct contact with partner companies', text: "Including openings shared with members before they're advertised." },
         { icon: 'briefcase', title: 'A role, if you want one', text: 'Become a Case Coach or Campus Lead, run a format, own a partnership. Genuine responsibility, on your CV, with a reference behind it.' },
@@ -532,13 +531,6 @@ window.MBS_CONTENT = {
       expectText: "Show up to a few things a semester. Contribute something at some point, an idea, an evening, a contact, a project. Treat the people in this network the way you'd want to be treated by them in five years, when one of them is hiring.",
       feeLabel: 'The cost', feeValue: '0 €', feePer: 'always, for students',
       feeText: "Membership has never cost anything and never will. We're funded by sponsors, partners and in-kind support, not by charging the students we're here for.",
-      howLabel: 'How to join', howTitle: 'One step. No interview, no waiting list.',
-      steps: [
-        { n: '1', title: 'Show up', text: 'Come to a Case Night or any open event, no sign-up required.' },
-        { n: '2', title: "Tell us you're in (optional)", text: 'Leave your email if you want the programme in your inbox. Takes thirty seconds.' },
-        { n: '3', title: 'Get involved', text: "Want a role, Case Coach, Campus Lead, a team seat? Say so, and we'll find you one." }
-      ],
-      joinBtn: 'Get on the list →', deadline: 'No deadlines, no intake rounds, show up whenever you\'re ready.',
       faqLabel: 'Still deciding?', faqTitle: 'The questions students ask before joining.',
       faqDesc: 'Cost, eligibility, time commitment, joining mid-degree, answered in full on the FAQ.',
       faqBtn: 'Read the FAQ →'
@@ -564,15 +556,8 @@ window.MBS_CONTENT = {
       partnersLabel: 'Our partners', partnersTitle: 'Companies we work with',
       partnersDesc: 'Become our first partner now.',
       partnersBtn: 'Get in touch →',
-      howLabel: 'How it works', howTitle: 'From first call to short report.',
-      steps: [
-        { n: '1', title: 'A 30-minute call', text: "You tell us who you're trying to reach and why." },
-        { n: '2', title: 'A proposal', text: 'Format, date, expected audience, cost. One page.' },
-        { n: '3', title: 'We run it', text: 'Promotion, venue, sign-ups, follow-up, our side.' },
-        { n: '4', title: 'A short report', text: 'Who came, from where, what happened next.' }
-      ],
-      closeH: "Tell us who you're hiring.",
-      closeText: "Write to munichbusinesssociety@gmail.com or book a call. We'll come back with a proposal within a week.",
+      closeH: 'Get in touch.',
+      closeText: "Any of the reasons above, or you've met one of our business talents and want to hire them directly. Write to munichbusinesssociety@gmail.com or book a call, we'll get back within a week.",
       emailBtn: 'Email the partnerships team →'
     },
     team: {
@@ -604,8 +589,8 @@ window.MBS_CONTENT = {
         { q: "I don't study business. Can I still join?", a: "Yes. Plenty of our members study engineering, law, computer science or something else entirely and are heading into business anyway. What matters is that you're serious about it." },
         { q: 'Is everything in German or English?', a: 'Both. Events run in whichever language suits the room and the speaker; written communication is in English so nobody is left out.' },
         { q: 'How much time does it take?', a: 'As much as you give it. The minimum is showing up to a few events a semester. Members who take a role typically spend two to four hours a week on it.' },
-        { q: 'What does it cost?', a: "Nothing. Membership is 100% free, no fee, no selection process. We're funded by sponsors and partners, not by charging students." },
-        { q: "I'm here for one exchange semester. Is it worth joining?", a: "Yes, and we'd encourage it. There's no fee or intake cycle to work around, and the network doesn't expire when you leave the city." },
+        { q: 'What does it cost?', a: "Nothing. Membership is 100% free. We review every application and let you know our decision. We're funded by sponsors and partners, not by charging students." },
+        { q: "I'm here for one exchange semester. Is it worth joining?", a: "Yes, and we'd encourage it. There's no fee to work around, and the network doesn't expire when you leave the city." },
         { q: 'Do I need to be in my first year?', a: 'No. We have first-semester bachelor students and master students finishing their theses. The mix is the point.' },
         { q: 'Can I come to something before I join?', a: "There's nothing to join before. Just show up. Case Nights and most other formats are open to any student in Munich." },
         { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of showing up or taking on a role.' },
@@ -615,7 +600,7 @@ window.MBS_CONTENT = {
       joinBtn: 'Get on the list →', seeBtn: "See what's coming up"
     },
     join: {
-      subtitle: "Free, nothing to review. This just gets you on the list.",
+      subtitle: "Free. We review every application and you'll receive our decision within a few days.",
       required: { firstname: 'Please add your first name.', lastname: 'Please add your last name.',
         email: 'Please add your email address.', university: 'Please choose your university.',
         level: 'Please choose your degree level.', studyprogram: 'Please choose your degree programme.',
@@ -640,17 +625,17 @@ window.MBS_CONTENT = {
         'Industrial Engineering & Management', 'Economics (VWL)', 'Business Law', 'Finance & Accounting',
         'Business Psychology', 'Management', 'Marketing', 'Other degree programme'],
       languages: ['German', 'English', 'Either / no preference'],
-      note: "There's no review and no interview. This just puts you on our list so we can send you the programme. Say so in the message above if you'd like a role, such as Case Coach or Campus Lead, and we'll get back to you about that separately.",
+      note: "We review every application and you'll receive our decision within a few days. Say so in the message above if you'd like a role, such as Case Coach or Campus Lead, and we'll get back to you about that separately.",
       consent: "I've read the ", consentLink: 'privacy policy', consentEnd: ' and agree to my data being processed.',
       submit: 'Sign me up →',
-      successTitle: "You're on the list.",
-      successA: "No interview, no waiting. You're in. Keep an eye on your inbox, or come straight to the next open event: ", successC: '.',
+      successTitle: "Your application is in.",
+      successA: "We review every application and you'll receive our decision within a few days. In the meantime, come straight to the next open event: ", successC: '.',
       another: 'Sign up another address'
     },
     contact: {
       subtitle: 'Ask us anything, student, company, or just curious.',
       label: 'Ask us anything', title: 'Ask us anything.',
-      descA: "Whether you're a student weighing up joining, a company thinking about a partnership, or someone with an idea for a format. Write to us. We answer within ", descB: ' working days.',
+      descA: "Whether you're a student weighing up joining, a company thinking about a partnership, or someone with an idea for a format. Write to us. We'll get back to you as soon as possible.",
       routes: [
         { icon: 'users', label: 'Students & membership', addr: 'munichbusinesssociety@gmail.com' },
         { icon: 'briefcase', label: 'Companies & partnerships', addr: 'munichbusinesssociety@gmail.com' },
@@ -667,7 +652,7 @@ window.MBS_CONTENT = {
       errFirstname: 'Please add your first name.', errLastname: 'Please add your last name.', errEmail: "That email address doesn't look complete. Please check it.", errMsg: 'Please add a message.',
       sending: 'Sending…',
       sendError: "Something went wrong sending this. Please email us directly at munichbusinesssociety@gmail.com instead.",
-      sentTitle: 'Message sent.', sentA: "We'll come back to you within ", sentB: ' working days.',
+      sentTitle: 'Message sent.', sentA: "We'll come back to you as soon as possible.",
       faqText: 'Before you write in, your question might already be answered.', faqBtn: 'Read the FAQ →'
     }
   },
@@ -851,7 +836,7 @@ window.MBS_CONTENT = {
     membership: {
       subtitle: 'Offen für jede Münchner Hochschule, jedes Fach, jedes Studienniveau.',
       whoLabel: 'Wer beitreten kann', whoTitle: 'Offen für jede Hochschule in München.',
-      whoDesc: 'Wenn du in München studierst, kannst du mitmachen, kostenlos und ohne Auswahlverfahren. Wir filtern nicht nach Hochschule, nach Notenschnitt oder danach, ob „Business" im Titel deines Studiengangs steht. Talent, Neugier und Auftauchen sind die einzige Voraussetzung.',
+      whoDesc: 'Wenn du in München studierst, kannst du mitmachen, kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir filtern nicht nach Hochschule, nach Notenschnitt oder danach, ob „Business" im Titel deines Studiengangs steht. Talent, Neugier und Auftauchen sind die einzige Voraussetzung.',
       canJoin: [
         'Eingeschrieben an einer Universität oder Hochschule im Raum München.',
         'Jedes Studienniveau, Bachelor, Master, MBA, Auslandssemester, Promotion.',
@@ -860,7 +845,7 @@ window.MBS_CONTENT = {
       ],
       getLabel: 'Was du bekommst', getTitle: 'Alles, was Mitgliedschaft öffnet.',
       get: [
-        { icon: 'star', title: 'Zugang zum ganzen Programm', text: 'Jede Case Night, Case Competition, jeden Company Case, Skillnight und Unternehmensbesuch, ab Tag eins, ohne Warteliste.' },
+        { icon: 'star', title: 'Zugang zum ganzen Programm', text: 'Jede Case Night, Case Competition, jeden Company Case, Skillnight und Unternehmensbesuch, ab Tag eins.' },
         { icon: 'users', title: 'Ein Netzwerk über jede Münchner Hochschule', text: 'Plus Alumni, die schon in Consulting, Finance, Tech und Industrie arbeiten.' },
         { icon: 'building', title: 'Direkter Kontakt zu Partnerunternehmen', text: 'Inklusive Stellen, die Mitglieder vor der Ausschreibung sehen.' },
         { icon: 'briefcase', title: 'Eine Rolle, wenn du willst', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, im Lebenslauf, mit einer Referenz dahinter.' },
@@ -871,13 +856,6 @@ window.MBS_CONTENT = {
       expectText: 'Komm zu ein paar Sachen im Semester. Bring irgendwann etwas ein, eine Idee, einen Abend, einen Kontakt, ein Projekt. Behandle die Menschen in diesem Netzwerk so, wie du in fünf Jahren von ihnen behandelt werden willst, wenn eine:r von ihnen einstellt.',
       feeLabel: 'Die Kosten', feeValue: '0 €', feePer: 'immer, für Studierende',
       feeText: 'Die Mitgliedschaft hat noch nie etwas gekostet und wird es nie tun. Wir finanzieren uns über Sponsoren, Partner und Sachleistungen, nicht über die Studierenden, für die es uns gibt.',
-      howLabel: 'Wie du beitrittst', howTitle: 'Ein Schritt. Kein Interview, keine Warteliste.',
-      steps: [
-        { n: '1', title: 'Tauch auf', text: 'Komm zu einer Case Night oder einem anderen offenen Event, keine Anmeldung nötig.' },
-        { n: '2', title: 'Sag uns, dass du dabei bist (optional)', text: 'Trag dich mit deiner E-Mail ein, wenn du das Programm im Postfach willst. Dauert dreißig Sekunden.' },
-        { n: '3', title: 'Bring dich ein', text: 'Willst du eine Rolle, Case Coach, Campus Lead, ein Teamplatz? Sag Bescheid, wir finden etwas für dich.' }
-      ],
-      joinBtn: 'Auf die Liste →', deadline: 'Keine Fristen, keine Aufnahmerunden. Komm, wann du bereit bist.',
       faqLabel: 'Noch unentschlossen?', faqTitle: 'Die Fragen, die Studierende vor dem Mitmachen stellen.',
       faqDesc: 'Kosten, Voraussetzungen, Zeitaufwand, Einstieg mitten im Studium, vollständig beantwortet in der FAQ.',
       faqBtn: 'Zur FAQ →'
@@ -903,15 +881,8 @@ window.MBS_CONTENT = {
       partnersLabel: 'Unsere Partner', partnersTitle: 'Unternehmen, mit denen wir arbeiten',
       partnersDesc: 'Werde jetzt unser erster Partner.',
       partnersBtn: 'Kontakt aufnehmen →',
-      howLabel: 'So läuft es', howTitle: 'Vom ersten Anruf zum kurzen Bericht.',
-      steps: [
-        { n: '1', title: 'Ein 30-Minuten-Call', text: 'Sie sagen uns, wen Sie erreichen wollen und warum.' },
-        { n: '2', title: 'Ein Vorschlag', text: 'Format, Datum, erwartetes Publikum, Kosten. Eine Seite.' },
-        { n: '3', title: 'Wir setzen es um', text: 'Werbung, Location, Anmeldungen, Nachbereitung, unsere Seite.' },
-        { n: '4', title: 'Ein kurzer Bericht', text: 'Wer kam, von wo, was danach passierte.' }
-      ],
-      closeH: 'Sagen Sie uns, wen Sie einstellen.',
-      closeText: 'Schreiben Sie an munichbusinesssociety@gmail.com oder buchen Sie einen Termin. Wir kommen innerhalb einer Woche mit einem Vorschlag zurück.',
+      closeH: 'Melden Sie sich.',
+      closeText: 'Einer der oben genannten Gründe, oder Sie haben eines unserer Wirtschaftstalente kennengelernt und möchten es direkt einstellen. Schreiben Sie an munichbusinesssociety@gmail.com oder buchen Sie einen Termin, wir melden uns innerhalb einer Woche.',
       emailBtn: 'Partnerschaftsteam schreiben →'
     },
     team: {
@@ -943,8 +914,8 @@ window.MBS_CONTENT = {
         { q: 'Ich studiere nicht Wirtschaft. Kann ich trotzdem beitreten?', a: 'Ja. Viele unserer Mitglieder studieren Ingenieurwesen, Jura, Informatik oder etwas ganz anderes und gehen trotzdem in die Wirtschaft. Wichtig ist, dass du es ernst meinst.' },
         { q: 'Ist alles auf Deutsch oder Englisch?', a: 'Beides. Events laufen in der Sprache, die zum Raum und zur:zum Speaker:in passt; schriftliche Kommunikation ist auf Englisch, damit niemand außen vor bleibt.' },
         { q: 'Wie viel Zeit kostet es?', a: 'So viel, wie du gibst. Das Minimum ist, zu ein paar Events im Semester zu kommen. Mitglieder mit einer Rolle wenden meist zwei bis vier Stunden pro Woche auf.' },
-        { q: 'Was kostet es?', a: 'Nichts. Die Mitgliedschaft ist zu 100 % kostenlos, kein Beitrag, kein Auswahlverfahren. Wir finanzieren uns über Sponsoren und Partner, nicht über die Studierenden.' },
-        { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, und wir würden dich ermutigen. Es gibt keinen Beitrag und keine Aufnahmerunde, auf die du warten musst, und das Netzwerk endet nicht, wenn du die Stadt verlässt.' },
+        { q: 'Was kostet es?', a: 'Nichts. Die Mitgliedschaft ist zu 100 % kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir finanzieren uns über Sponsoren und Partner, nicht über die Studierenden.' },
+        { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, und wir würden dich ermutigen. Es gibt keinen Beitrag, auf den du warten musst, und das Netzwerk endet nicht, wenn du die Stadt verlässt.' },
         { q: 'Muss ich im ersten Semester sein?', a: 'Nein. Wir haben Bachelor-Studierende im ersten Semester und Master-Studierende, die ihre Thesis abschließen. Genau diese Mischung ist der Punkt.' },
         { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Es gibt kein „Vorher". Komm einfach vorbei. Case Nights und die meisten anderen Formate sind offen für alle Studierenden in München.' },
         { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, aufzutauchen oder eine Rolle zu übernehmen.' },
@@ -954,7 +925,7 @@ window.MBS_CONTENT = {
       joinBtn: 'Auf die Liste →', seeBtn: 'Zu den Terminen'
     },
     join: {
-      subtitle: 'Kostenlos, ohne Prüfung. Das trägt dich einfach in unsere Liste ein.',
+      subtitle: 'Kostenlos. Wir prüfen jede Bewerbung und du erhältst unsere Entscheidung innerhalb weniger Tage.',
       required: { firstname: 'Bitte gib deinen Vornamen an.', lastname: 'Bitte gib deinen Nachnamen an.',
         email: 'Bitte gib deine E-Mail-Adresse an.', university: 'Bitte wähle deine Hochschule.',
         level: 'Bitte wähle dein Studienniveau.', studyprogram: 'Bitte wähle deinen Studiengang.',
@@ -979,17 +950,17 @@ window.MBS_CONTENT = {
         'Wirtschaftsingenieurwesen', 'Volkswirtschaftslehre (VWL)', 'Wirtschaftsrecht', 'Finance & Accounting',
         'Wirtschaftspsychologie', 'Management', 'Marketing', 'Anderer Studiengang'],
       languages: ['Deutsch', 'Englisch', 'Beide / keine Präferenz'],
-      note: 'Es gibt keine Prüfung und kein Interview. Das trägt dich nur in unsere Liste ein, damit wir dir das Programm schicken können. Schreib oben dazu, wenn du eine Rolle wie Case Coach oder Campus Lead willst. Wir melden uns dazu separat.',
+      note: 'Wir prüfen jede Bewerbung und du erhältst unsere Entscheidung innerhalb weniger Tage. Schreib oben dazu, wenn du eine Rolle wie Case Coach oder Campus Lead willst. Wir melden uns dazu separat.',
       consent: 'Ich habe die ', consentLink: 'Datenschutzerklärung', consentEnd: ' gelesen und stimme der Verarbeitung meiner Daten zu.',
       submit: 'Eintragen →',
-      successTitle: 'Du bist auf der Liste.',
-      successA: 'Kein Interview, kein Warten. Du bist dabei. Behalt dein Postfach im Auge oder komm direkt zum nächsten offenen Event: ', successC: '.',
+      successTitle: 'Deine Bewerbung ist eingegangen.',
+      successA: 'Wir prüfen sie und du erhältst unsere Entscheidung innerhalb weniger Tage. Komm in der Zwischenzeit gern direkt zum nächsten offenen Event: ', successC: '.',
       another: 'Weitere Adresse eintragen'
     },
     contact: {
       subtitle: 'Frag uns alles, Studierende:r, Unternehmen oder einfach neugierig.',
       label: 'Frag uns alles', title: 'Frag uns alles.',
-      descA: 'Ob du Studierende:r bist und über einen Beitritt nachdenkst, ein Unternehmen, das über eine Partnerschaft nachdenkt, oder jemand mit einer Idee für ein Format. Schreib uns. Wir antworten innerhalb von ', descB: ' Werktagen.',
+      descA: 'Ob du Studierende:r bist und über einen Beitritt nachdenkst, ein Unternehmen, das über eine Partnerschaft nachdenkt, oder jemand mit einer Idee für ein Format. Schreib uns. Wir melden uns so schnell wie möglich.',
       routes: [
         { icon: 'users', label: 'Studierende & Mitgliedschaft', addr: 'munichbusinesssociety@gmail.com' },
         { icon: 'briefcase', label: 'Unternehmen & Partnerschaften', addr: 'munichbusinesssociety@gmail.com' },
@@ -1006,7 +977,7 @@ window.MBS_CONTENT = {
       errFirstname: 'Bitte gib deinen Vornamen an.', errLastname: 'Bitte gib deinen Nachnamen an.', errEmail: 'Diese E-Mail-Adresse sieht nicht vollständig aus. Bitte prüf sie.', errMsg: 'Bitte gib eine Nachricht ein.',
       sending: 'Wird gesendet…',
       sendError: 'Beim Senden ist etwas schiefgelaufen. Schreib uns stattdessen direkt an munichbusinesssociety@gmail.com.',
-      sentTitle: 'Nachricht gesendet.', sentA: 'Wir melden uns innerhalb von ', sentB: ' Werktagen.',
+      sentTitle: 'Nachricht gesendet.', sentA: 'Wir melden uns so schnell wie möglich.',
       faqText: 'Bevor du schreibst, vielleicht ist deine Frage schon beantwortet.', faqBtn: 'Zur FAQ →'
     }
   }

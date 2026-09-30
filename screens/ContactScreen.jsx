@@ -51,7 +51,7 @@ function ContactForm({ C }) {
           <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px' }}><Icon name="check" size="34px" /></div>
           <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '20px', margin: '0 0 8px' }}>{K.sentTitle}</h3>
           <p style={{ fontSize: '14px', lineHeight: 1.8, maxWidth: '360px', margin: '0 auto' }}>
-            {K.sentA}<span className="mbs-ph">[X]</span>{K.sentB}
+            {K.sentA}
           </p>
         </div>
       </Card>
@@ -111,8 +111,7 @@ function ContactScreen({ C }) {
 
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
-          <SectionHeading align="center" label={K.label} title={K.title}
-            desc={<span>{K.descA}<span className="mbs-ph">[X]</span>{K.descB}</span>} />
+          <SectionHeading align="center" label={K.label} title={K.title} desc={K.descA} />
         </div>
         <div className="mbs-grid-3" data-stagger style={{ marginTop: '32px' }}>
           {K.routes.map(r => (

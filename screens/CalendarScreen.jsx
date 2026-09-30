@@ -96,7 +96,6 @@ function CalendarScreen({ C, openEvent }) {
             <p style={{ fontSize: '15px', color: 'var(--mbs-gray)', margin: 0 }}>{E.empty}</p>
           </div>
         )}
-        {E.note && <p className="mbs-ph" style={{ marginTop: '20px', fontSize: '13px' }}>{E.note}</p>}
       </Section>
     </div>
   );
