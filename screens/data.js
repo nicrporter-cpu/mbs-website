@@ -352,7 +352,7 @@ window.MBS_CONTENT = {
       { id: 'contact', label: 'Contact' }
     ],
     ui: {
-      join: 'Apply', joinArrow: "Join free →", menuOpen: 'Open menu', menuClose: 'Close menu',
+      join: 'Apply', aboutArrow: "About us →", menuOpen: 'Open menu', menuClose: 'Close menu',
       skip: 'Skip to content', home: 'Munich Business Society, home', langLabel: 'Language',
       dialog: { about: 'About this event', expect: 'What to expect', who: "Who's it for?",
         cta: 'Join Munich Business Society & attend →', close: 'Close dialog' },
@@ -678,7 +678,7 @@ window.MBS_CONTENT = {
       { id: 'contact', label: 'Kontakt' }
     ],
     ui: {
-      join: 'Bewerben', joinArrow: 'Kostenlos mitmachen →', menuOpen: 'Menü öffnen', menuClose: 'Menü schließen',
+      join: 'Bewerben', aboutArrow: 'Über uns →', menuOpen: 'Menü öffnen', menuClose: 'Menü schließen',
       skip: 'Zum Inhalt springen', home: 'Munich Business Society, zur Startseite', langLabel: 'Sprache',
       dialog: { about: 'Über diese Veranstaltung', expect: 'Was dich erwartet', who: 'Für wen ist das?',
         cta: 'Mitglied werden & teilnehmen →', close: 'Dialog schließen' },

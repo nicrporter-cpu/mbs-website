@@ -22,7 +22,7 @@ function HomeScreen({ C }) {
             }}><span className="mbs-hero-l1">Munich</span><br /><em className="mbs-hero-l2" style={{ fontStyle: 'normal', color: 'var(--mbs-gold-on-navy)' }}>Business Society</em></h1>
             <p className="mbs-hero-lead" style={{ fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-on-navy-70)', lineHeight: 'var(--mbs-lh-body)', margin: '0 0 24px' }}>{H.heroLead}</p>
             <div className="mbs-hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Button variant="gold" href={ROUTES.join}>{C.ui.joinArrow}</Button>
+              <Button variant="gold" href={ROUTES.about}>{C.ui.aboutArrow}</Button>
               <Button variant="onNavy" href={ROUTES.calendar}>{H.seeEvents}</Button>
             </div>
           </div>
@@ -78,7 +78,7 @@ function HomeScreen({ C }) {
           <div style={{ padding: '40px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
             <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>{H.studentH}</h2>
             <p style={{ fontSize: '14px', lineHeight: 1.8, margin: '0 0 24px' }}>{H.studentText}</p>
-            <Button variant="gold" href={ROUTES.join}>{C.ui.joinArrow}</Button>
+            <Button variant="gold" href={ROUTES.about}>{C.ui.aboutArrow}</Button>
           </div>
           <div data-on-navy="" style={{ padding: '40px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }}>
             <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-white)', margin: '0 0 12px' }}>{H.companyH}</h2>
