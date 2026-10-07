@@ -15,7 +15,6 @@ function TeamScreen({ C }) {
           <SectionHeading title={T.whoTitle} desc={T.whoDesc} />
         </div>
         <div style={{ marginTop: '48px' }}>
-          <SectionHeading title={T.boardTitle} style={{ marginBottom: '32px' }} />
           <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
             {T.board.map(p => <MemberCard key={p.name} {...p} />)}
           </div>

@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=ab119083a1">
-<link rel="stylesheet" href="/site.css?v=ab119083a1">
+<link rel="stylesheet" href="/design-system/styles.css?v=f9f9ec857c">
+<link rel="stylesheet" href="/site.css?v=f9f9ec857c">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=ab119083a1"></script>
-<script src="/screens/data.js?v=ab119083a1"></script>
-<script src="/site.js?v=ab119083a1"></script>
+<script src="/design-system/_ds_bundle.js?v=f9f9ec857c"></script>
+<script src="/screens/data.js?v=f9f9ec857c"></script>
+<script src="/site.js?v=f9f9ec857c"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1009,7 +1009,6 @@ function TeamScreen({ C }) {
           <SectionHeading title={T.whoTitle} desc={T.whoDesc} />
         </div>
         <div style={{ marginTop: '48px' }}>
-          <SectionHeading title={T.boardTitle} style={{ marginBottom: '32px' }} />
           <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
             {T.board.map(p => <MemberCard key={p.name} {...p} />)}
           </div>

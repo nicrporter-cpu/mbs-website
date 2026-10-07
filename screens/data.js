@@ -428,7 +428,7 @@ window.MBS_CONTENT = {
     universities: MBS_UNIVERSITIES.concat(['Other university in Munich']),
 
     home: {
-      heroLead: "Munich Business Society is Munich's first cross-university case-solving and business platform, 100% free, with no membership fee, open to every student in the city.",
+      heroLead: "Munich Business Society is Munich's first cross-university case-solving and business platform, 100% free, with no membership fee, open to every student in the city. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
       seeEvents: "See what's coming up",
       whyLabel: 'Why we exist', whyTitle: 'Munich has 110,000+ students split across 33 universities, and almost none of them talk to each other.',
       whyP1: 'Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, giving visibility into that university\'s own talent, not across one shared, central club. Recruiters see one Munich talent pool; students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.',
@@ -444,7 +444,7 @@ window.MBS_CONTENT = {
     about: {
       subtitle: 'One case club for all of Munich, student-run, cross-university, open to every campus in the city.',
       whoLabel: 'Who we are', whoTitle: 'One case club for all of Munich.',
-      whoDesc: 'Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away.',
+      whoDesc: "Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
       storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join.',
       storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has over 110,000 students spread across 33 universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
       storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Open on identical terms to anyone in Munich studying business, economics, management, or studying something else entirely and heading into business anyway.',
@@ -563,8 +563,8 @@ window.MBS_CONTENT = {
     },
     team: {
       subtitle: 'Built and run entirely by students, alongside their degrees.',
-      whoTitle: 'Who runs the Munich Business Society',
-      whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees. The board is elected by the membership; every other role is open to members who want it.',
+      whoTitle: 'Founding team and Board',
+      whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees.',
       boardTitle: 'The Board',
       board: [
         { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Student affairs, university relations, education and administration.', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
@@ -753,7 +753,7 @@ window.MBS_CONTENT = {
     universities: MBS_UNIVERSITIES.concat(['Andere Hochschule in München']),
 
     home: {
-      heroLead: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, 100 % kostenlos, ohne Mitgliedsbeitrag, offen für jede:n Studierende:n der Stadt.',
+      heroLead: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, 100 % kostenlos, ohne Mitgliedsbeitrag, offen für jede:n Studierende:n der Stadt. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
       seeEvents: 'Zu den Terminen',
       whyLabel: 'Warum es uns gibt', whyTitle: 'München hat über 110.000 Studierende, verteilt auf 33 Hochschulen, und fast keine spricht mit der anderen.',
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie geben Sichtbarkeit auf die Talente der eigenen Uni, aber nicht hochschulübergreifend in einem zentralen Club. Recruiter sehen einen Münchner Talentpool; Studierende treffen immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
@@ -769,7 +769,7 @@ window.MBS_CONTENT = {
     about: {
       subtitle: 'Ein Case Club für ganz München, studentisch geführt, hochschulübergreifend, offen für jeden Campus der Stadt.',
       whoLabel: 'Wer wir sind', whoTitle: 'Ein Case Club für ganz München.',
-      whoDesc: 'Die Munich Business Society ist ein studentisch geführter Case Club, der wirtschaftlich interessierte Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Es gab keinen Case Club, der ganz München statt nur einen Campus abdeckte.',
+      whoDesc: 'Die Munich Business Society ist ein studentisch geführter Case Club, der wirtschaftlich interessierte Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Es gab keinen Case Club, der alle Münchner Studierenden erreichte statt nur die einer einzelnen Hochschule. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
       storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Verein gebaut, dem wir beitreten wollten.',
       storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat über 110.000 Studierende, verteilt auf 33 Hochschulen, doch jede Hochschule hat ihre eigenen Initiativen, die nur einzelne Themenfelder abdecken, und fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld oder filtern früh aus.',
       storyP2: 'Also bauten wir das, dem wir beitreten wollten: eine kostenlose, hochschulübergreifende Plattform ohne Heim-Campus. Offen zu identischen Bedingungen für alle in München, die Wirtschaft, Ökonomie, Management studieren, oder etwas völlig anderes und trotzdem in die Wirtschaft gehen.',
@@ -887,8 +887,8 @@ window.MBS_CONTENT = {
     },
     team: {
       subtitle: 'Komplett von Studierenden gebaut und geführt, neben dem Studium.',
-      whoTitle: 'Wer die Munich Business Society führt',
-      whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt. Der Vorstand wird von der Mitgliedschaft gewählt; jede andere Rolle steht Mitgliedern offen, die sie wollen.',
+      whoTitle: 'Das Gründerteam und Vorstand',
+      whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt.',
       boardTitle: 'Der Vorstand',
       board: [
         { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Studierendenangelegenheiten, Hochschulbeziehungen, Bildung und Administration.', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
