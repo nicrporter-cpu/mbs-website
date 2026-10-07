@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=6094bd300b">
-<link rel="stylesheet" href="/site.css?v=6094bd300b">
+<link rel="stylesheet" href="/design-system/styles.css?v=ab119083a1">
+<link rel="stylesheet" href="/site.css?v=ab119083a1">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=6094bd300b"></script>
-<script src="/screens/data.js?v=6094bd300b"></script>
-<script src="/site.js?v=6094bd300b"></script>
+<script src="/design-system/_ds_bundle.js?v=ab119083a1"></script>
+<script src="/screens/data.js?v=ab119083a1"></script>
+<script src="/site.js?v=ab119083a1"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1000,7 +1000,6 @@ const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
 
 function CompaniesScreen({ C }) {
   const K = C.companies;
-  const partnersMail = 'munichbusinesssociety@gmail.com';
   return (
     <div>
       <PageHeader title={C.title.companies} subtitle={K.subtitle} />
@@ -1008,10 +1007,7 @@ function CompaniesScreen({ C }) {
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.whyLabel} title={K.whyTitle} desc={K.whyDesc} />
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '28px' }}>
-            <Button variant="gold" href={'mailto:' + partnersMail + '?subject=Partner%20pack'}>{K.packBtn}</Button>
-            <Button variant="outline" href={ROUTES.contact}>{K.callBtn}</Button>
-          </div>
+          <FormNote style={{ marginTop: '24px' }}>{K.legalNote}</FormNote>
         </div>
       </Section>
 
@@ -1058,8 +1054,7 @@ function CompaniesScreen({ C }) {
           <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', color: 'var(--mbs-white)', margin: '0 0 10px' }}>{K.closeH}</h2>
           <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, maxWidth: '460px', margin: '0 auto 24px' }}>{K.closeText}</p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Button variant="gold" href={'mailto:' + partnersMail}>{K.emailBtn}</Button>
-            <Button variant="onNavy" href={ROUTES.contact}>{K.callBtn}</Button>
+            <Button variant="gold" href={ROUTES.contact}>{K.emailBtn}</Button>
           </div>
         </div>
       </Section>

@@ -6,7 +6,6 @@ const { Button, Badge, Card, SectionHeading, StatTile, Avatar, Icon,
 
 function CompaniesScreen({ C }) {
   const K = C.companies;
-  const partnersMail = 'munichbusinesssociety@gmail.com';
   return (
     <div>
       <PageHeader title={C.title.companies} subtitle={K.subtitle} />
@@ -14,10 +13,7 @@ function CompaniesScreen({ C }) {
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.whyLabel} title={K.whyTitle} desc={K.whyDesc} />
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '28px' }}>
-            <Button variant="gold" href={'mailto:' + partnersMail + '?subject=Partner%20pack'}>{K.packBtn}</Button>
-            <Button variant="outline" href={ROUTES.contact}>{K.callBtn}</Button>
-          </div>
+          <FormNote style={{ marginTop: '24px' }}>{K.legalNote}</FormNote>
         </div>
       </Section>
 
@@ -64,8 +60,7 @@ function CompaniesScreen({ C }) {
           <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', color: 'var(--mbs-white)', margin: '0 0 10px' }}>{K.closeH}</h2>
           <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, maxWidth: '460px', margin: '0 auto 24px' }}>{K.closeText}</p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Button variant="gold" href={'mailto:' + partnersMail}>{K.emailBtn}</Button>
-            <Button variant="onNavy" href={ROUTES.contact}>{K.callBtn}</Button>
+            <Button variant="gold" href={ROUTES.contact}>{K.emailBtn}</Button>
           </div>
         </div>
       </Section>

@@ -377,7 +377,7 @@ window.MBS_CONTENT = {
       ],
       newsletter: {
         h: 'One email a month. Everything happening in Munich.',
-        body: "Events, openings, partner formats and the odd opportunity we've been asked to pass on. No spam, unsubscribe in one click.",
+        body: "Events, openings, partner formats, reminders and info on application phases, and the odd opportunity we've been asked to pass on. No spam, unsubscribe in one click.",
         placeholder: 'Your email', srEmail: 'Your email', btn: 'Keep me posted', sending: 'Sending…',
         done: "You're on the list. First email lands at the start of next month.",
         err: 'Please enter a valid email address.',
@@ -537,18 +537,19 @@ window.MBS_CONTENT = {
     },
     companies: {
       subtitle: 'Reach every Munich university through one conversation.',
-      whyLabel: 'Why partner with the Munich Business Society', whyTitle: 'Reach every Munich university through one conversation.',
-      whyDesc: 'Most student partnerships buy you access to one campus. Munich Business Society is cross-university by construction, one partnership, one point of contact, and a room that draws from students across all 33 Munich universities.',
+      whyLabel: 'Why work with the Munich Business Society', whyTitle: 'Reach every Munich university through one conversation.',
+      whyDesc: "Munich Business Society is built and run entirely by students, volunteering their time, free for every student at every Munich university. Your support, as a sponsor, partner or through in-kind contributions, makes that possible, and puts you in front of the city's most driven young talent.",
+      legalNote: "Note: We're currently still completing our legal incorporation, so we can't enter into formal partnerships just yet.",
       packBtn: 'Get the partner pack →', callBtn: 'Book a call',
       whyGridLabel: 'The value',
       why: [
         { icon: 'target', title: 'Direct access to top talent', text: 'Meet engaged, capable students before the regular application season opens, a case competition shows you how people think, present and work in a team, in real time.' },
         { icon: 'users', title: 'An efficient alternative to career fairs', text: "Talk to students who actually fit what you're hiring for, instead of a stand at a job fair or a lecture-hall mailing list." },
-        { icon: 'globe', title: 'Employer branding that means something', text: 'Workshops, real cases and company presentations put your brand in front of a self-selected, business-minded audience, as a serious employer, not a logo on a tote bag.' }
+        { icon: 'globe', title: 'Employer branding that means something', text: 'Workshops, real cases and company presentations put your brand in front of a self-selected audience of business talent, as a serious employer.' }
       ],
       waysLabel: 'Ways to work together', waysTitle: 'Four ways in.',
       ways: [
-        { icon: 'mic', title: 'Event partner', text: 'You host or co-host a Guest Speaker session, Skillnight or company evening. Your people, our room, our students from across the city.' },
+        { icon: 'mic', title: 'Event partner', text: "You host or co-host a Guest Speaker session, Skillnight or company evening. Your people, our room, our students from across the city. We're also happy to invite individuals from your company to our own events." },
         { icon: 'trophy', title: 'Case Competition or Company Case', text: 'A real business question, teams of students, a presentation to your leadership. You see how people think before you interview them.' },
         { icon: 'briefcase', title: 'Partner project', text: 'A defined piece of work with a small member team and a documented deliverable.' },
         { icon: 'star', title: 'Annual partnership', text: 'A package across the academic year: multiple formats, visibility on site and in the newsletter, direct access to the membership for openings.' }
@@ -557,8 +558,8 @@ window.MBS_CONTENT = {
       partnersDesc: 'Become our first partner now.',
       partnersBtn: 'Get in touch →',
       closeH: 'Get in touch.',
-      closeText: "Any of the reasons above, or you've met one of our business talents and want to hire them directly. Write to munichbusinesssociety@gmail.com or book a call, we'll get back within a week.",
-      emailBtn: 'Email the partnerships team →'
+      closeText: "Any of the reasons above, or you've met one of our business talents and want to hire them directly. Get in touch and we'll get back within a week.",
+      emailBtn: 'Contact the partnerships team →'
     },
     team: {
       subtitle: 'Built and run entirely by students, alongside their degrees.',
@@ -647,7 +648,7 @@ window.MBS_CONTENT = {
       follow: 'Follow: ', followPh: 'LinkedIn · Instagram [handles]',
       f: { firstname: 'First name', lastname: 'Last name', email: 'Email', role: "I'm a…", message: 'Your message' },
       ph: { firstname: 'Your first name', lastname: 'Your last name', email: 'you@example.com', message: "What's on your mind?" },
-      roles: [ { v: 'student', label: 'Student' }, { v: 'company', label: 'Company' }, { v: 'other', label: 'Other' } ],
+      roles: [ { v: 'student', label: 'Student' }, { v: 'company', label: 'Company' }, { v: 'founder', label: 'Entrepreneur' }, { v: 'other', label: 'Other' } ],
       send: 'Send it →', direct: 'Or write to us directly at munichbusinesssociety@gmail.com.',
       errFirstname: 'Please add your first name.', errLastname: 'Please add your last name.', errEmail: "That email address doesn't look complete. Please check it.", errMsg: 'Please add a message.',
       sending: 'Sending…',
@@ -701,7 +702,7 @@ window.MBS_CONTENT = {
       ],
       newsletter: {
         h: 'Eine E-Mail im Monat. Alles, was in München passiert.',
-        body: 'Events, offene Stellen, Partner-Formate und die eine oder andere Gelegenheit, die man uns weiterzugeben gebeten hat. Kein Spam, Abmeldung mit einem Klick.',
+        body: 'Events, offene Stellen, Partner-Formate, Erinnerungen und Infos zu den Bewerbungsphasen und die eine oder andere Gelegenheit, die man uns weiterzugeben gebeten hat. Kein Spam, Abmeldung mit einem Klick.',
         placeholder: 'Deine E-Mail', srEmail: 'Deine E-Mail', btn: 'Halt mich auf dem Laufenden', sending: 'Wird gesendet…',
         done: 'Du bist auf der Liste. Die erste E-Mail kommt Anfang nächsten Monats.',
         err: 'Bitte gib eine gültige E-Mail-Adresse ein.',
@@ -860,18 +861,19 @@ window.MBS_CONTENT = {
     },
     companies: {
       subtitle: 'Erreichen Sie jede Münchner Hochschule in einem Gespräch.',
-      whyLabel: 'Warum Partnerschaft mit der Munich Business Society', whyTitle: 'Erreichen Sie jede Münchner Hochschule in einem Gespräch.',
-      whyDesc: 'Die meisten Studierenden-Partnerschaften kaufen Ihnen Zugang zu einem Campus. Die Munich Business Society ist hochschulübergreifend gebaut, eine Partnerschaft, ein Ansprechpartner und ein Raum, der Studierende aus allen 33 Münchner Hochschulen zusammenbringt.',
+      whyLabel: 'Warum eine Zusammenarbeit mit der Munich Business Society', whyTitle: 'Erreichen Sie jede Münchner Hochschule in einem Gespräch.',
+      whyDesc: 'Die Munich Business Society wird komplett von Studierenden ehrenamtlich aufgebaut, kostenlos für jede:n Studierende:n an jeder Münchner Hochschule. Ihre Unterstützung, als Sponsor, Partner oder mit Sachleistungen, macht das erst möglich und bringt Sie gleichzeitig mit den engagiertesten Nachwuchstalenten der Stadt zusammen.',
+      legalNote: 'Hinweis: Wir befinden uns aktuell noch in der rechtlichen Gründung und können deshalb vorerst noch keine Partnerschaften eingehen.',
       packBtn: 'Partner-Paket anfordern →', callBtn: 'Termin buchen',
       whyGridLabel: 'Der Mehrwert',
       why: [
         { icon: 'target', title: 'Direkter Zugang zu Top-Talenten', text: 'Lernen Sie engagierte, leistungsstarke Studierende kennen, noch bevor die reguläre Bewerbungssaison beginnt. Eine Case Competition zeigt Ihnen in Echtzeit, wie jemand denkt, präsentiert und im Team arbeitet.' },
         { icon: 'users', title: 'Effiziente Alternative zur Karrieremesse', text: 'Sprechen Sie gezielt Studierende an, die zu Ihrem Bedarf passen, statt einen Stand auf der Jobmesse oder einen Hörsaal-Verteiler zu bespielen.' },
-        { icon: 'globe', title: 'Employer Branding mit Substanz', text: 'Workshops, echte Cases und Unternehmenspräsentationen bringen Ihre Marke vor eine selbstselektierte, wirtschaftlich interessierte Zielgruppe, als ernstzunehmender Arbeitgeber, nicht als Logo auf einem Jutebeutel.' }
+        { icon: 'globe', title: 'Employer Branding mit Substanz', text: 'Workshops, echte Cases und Unternehmenspräsentationen bringen Ihre Marke vor eine selbstselektierte, wirtschaftlich talentierte Zielgruppe, als ernstzunehmender Arbeitgeber.' }
       ],
       waysLabel: 'Wege der Zusammenarbeit', waysTitle: 'Vier Wege hinein.',
       ways: [
-        { icon: 'mic', title: 'Event-Partner', text: 'Sie veranstalten oder co-hosten einen Guest-Speaker-Abend, ein Skillnight oder einen Unternehmensabend. Ihre Leute, unser Raum, unsere Studierenden aus der ganzen Stadt.' },
+        { icon: 'mic', title: 'Event-Partner', text: 'Sie veranstalten oder co-hosten einen Guest-Speaker-Abend, ein Skillnight oder einen Unternehmensabend. Ihre Leute, unser Raum, unsere Studierenden aus der ganzen Stadt. Wir laden auch gerne Einzelpersonen aus Ihrem Unternehmen zu unseren eigenen Events ein.' },
         { icon: 'trophy', title: 'Case Competition oder Company Case', text: 'Eine echte Fragestellung, Teams aus Studierenden, eine Präsentation vor Ihrer Führung. Sie sehen, wie Menschen denken, bevor Sie sie interviewen.' },
         { icon: 'briefcase', title: 'Partnerprojekt', text: 'Ein definiertes Stück Arbeit mit einem kleinen Mitgliederteam und einem dokumentierten Ergebnis.' },
         { icon: 'star', title: 'Jahrespartnerschaft', text: 'Ein Paket über das akademische Jahr: mehrere Formate, Sichtbarkeit auf der Website und im Newsletter, direkter Zugang zur Mitgliedschaft für Stellen.' }
@@ -880,8 +882,8 @@ window.MBS_CONTENT = {
       partnersDesc: 'Werde jetzt unser erster Partner.',
       partnersBtn: 'Kontakt aufnehmen →',
       closeH: 'Melden Sie sich.',
-      closeText: 'Einer der oben genannten Gründe, oder Sie haben eines unserer Wirtschaftstalente kennengelernt und möchten es direkt einstellen. Schreiben Sie an munichbusinesssociety@gmail.com oder buchen Sie einen Termin, wir melden uns innerhalb einer Woche.',
-      emailBtn: 'Partnerschaftsteam schreiben →'
+      closeText: 'Einer der oben genannten Gründe, oder Sie haben eines unserer Wirtschaftstalente kennengelernt und möchten es direkt einstellen. Melden Sie sich bei uns, wir antworten innerhalb einer Woche.',
+      emailBtn: 'Partnerschaftsteam kontaktieren →'
     },
     team: {
       subtitle: 'Komplett von Studierenden gebaut und geführt, neben dem Studium.',
@@ -970,7 +972,7 @@ window.MBS_CONTENT = {
       follow: 'Folgen: ', followPh: 'LinkedIn · Instagram [Handles]',
       f: { firstname: 'Vorname', lastname: 'Nachname', email: 'E-Mail', role: 'Ich bin…', message: 'Deine Nachricht' },
       ph: { firstname: 'Dein Vorname', lastname: 'Dein Nachname', email: 'du@beispiel.de', message: 'Was beschäftigt dich?' },
-      roles: [ { v: 'student', label: 'Studierende:r' }, { v: 'company', label: 'Unternehmen' }, { v: 'other', label: 'Sonstiges' } ],
+      roles: [ { v: 'student', label: 'Studierende:r' }, { v: 'company', label: 'Unternehmen' }, { v: 'founder', label: 'Unternehmer:in' }, { v: 'other', label: 'Sonstiges' } ],
       send: 'Absenden →', direct: 'Oder schreib uns direkt an munichbusinesssociety@gmail.com.',
       errFirstname: 'Bitte gib deinen Vornamen an.', errLastname: 'Bitte gib deinen Nachnamen an.', errEmail: 'Diese E-Mail-Adresse sieht nicht vollständig aus. Bitte prüf sie.', errMsg: 'Bitte gib eine Nachricht ein.',
       sending: 'Wird gesendet…',
