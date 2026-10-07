@@ -117,10 +117,9 @@ function AboutScreen({ C, openEvent }) {
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={A.orgLabel} title={A.orgTitle} />
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>
-            {A.orgP1}{A.orgP2}
+            {A.orgText}
           </p>
-          <FormNote tone="alt">{A.orgNote}</FormNote>
-          <div style={{ marginTop: '28px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+          <div style={{ marginTop: '8px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <Button variant="navy" href={ROUTES.team}>{A.meetTeam}</Button>
             <Button variant="outline" href={ROUTES.faq}>{A.faqBtn}</Button>
           </div>

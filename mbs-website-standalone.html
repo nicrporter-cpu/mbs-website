@@ -38237,9 +38237,7 @@ window.MBS_CONTENT = {
       ],
       valuesLabel: 'Our values', valuesTitle: 'What we stand for',
       orgLabel: "How we're organised", orgTitle: 'Run by students, built to last.',
-      orgP1: 'Munich Business Society is run entirely by students. We held our founding assembly on 23 September 2026, where members adopted the statutes and elected the board.',
-      orgP2: " We're now registering with the Munich register of associations (Vereinsregister), which will give the society a permanent legal footing as an eingetragener Verein (e.V.). Statutes and financial reporting are available to members on request.",
-      orgNote: 'Munich Business Society operates as a Verein in Gründung (association in formation) until the Vereinsregister entry is complete. The registration number will appear in the Impressum once it lands.',
+      orgText: "Munich Business Society runs on five teams. Programme plans and runs the semester's formats. Partnerships owns company relationships and the partner pipeline. Community handles membership and onboarding. Brand & Communications runs the website and channels. Operations keeps finances, legal and tools running. Every team is led by students, alongside their degrees.",
       meetTeam: 'Meet the team →', faqBtn: 'Read the FAQ →'
     },
     calendarPage: {
@@ -38562,9 +38560,7 @@ window.MBS_CONTENT = {
       ],
       valuesLabel: 'Unsere Werte', valuesTitle: 'Wofür wir stehen',
       orgLabel: 'Wie wir organisiert sind', orgTitle: 'Von Studierenden geführt, auf Dauer gebaut.',
-      orgP1: 'Die Munich Business Society wird komplett von Studierenden geführt. Am 23. September 2026 haben wir unsere Gründungsversammlung abgehalten, bei der die Mitglieder die Satzung verabschiedet und den Vorstand gewählt haben.',
-      orgP2: ' Wir befinden uns aktuell in der Eintragung ins Münchner Vereinsregister, was dem Verein eine dauerhafte rechtliche Grundlage als eingetragener Verein (e.V.) gibt. Satzung und Finanzberichte sind für Mitglieder auf Anfrage einsehbar.',
-      orgNote: 'Die Munich Business Society ist bis zum Abschluss der Vereinsregister-Eintragung ein Verein in Gründung. Die Registernummer folgt im Impressum, sobald sie vorliegt.',
+      orgText: 'Die Munich Business Society läuft über fünf Teams. Programm plant und veranstaltet die Formate des Semesters. Partnerschaften verantwortet die Unternehmensbeziehungen und die Partner-Pipeline. Community kümmert sich um Mitgliedschaft und Onboarding. Brand & Kommunikation betreut Website und Kanäle. Operations hält Finanzen, Recht und Tools am Laufen. Jedes Team wird von Studierenden geführt, neben ihrem Studium.',
       meetTeam: 'Lern das Team kennen →', faqBtn: 'Zur FAQ →'
     },
     calendarPage: {
@@ -40041,10 +40037,9 @@ function AboutScreen({ C, openEvent }) {
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={A.orgLabel} title={A.orgTitle} />
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>
-            {A.orgP1}{A.orgP2}
+            {A.orgText}
           </p>
-          <FormNote tone="alt">{A.orgNote}</FormNote>
-          <div style={{ marginTop: '28px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+          <div style={{ marginTop: '8px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <Button variant="navy" href={ROUTES.team}>{A.meetTeam}</Button>
             <Button variant="outline" href={ROUTES.faq}>{A.faqBtn}</Button>
           </div>
