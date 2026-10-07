@@ -527,6 +527,14 @@ window.MBS_CONTENT = {
         { icon: 'trophy', title: 'Partner projects', text: 'Real client work with a real deliverable.' },
         { icon: 'globe', title: 'Alumni status for life', text: 'Once you graduate, you stay in the network.' }
       ],
+      processLabel: 'How you join', processTitle: 'From your first Case Night to full member.',
+      process: [
+        { title: 'Case Nights, Skillnights or online', text: 'Open to everyone, just show up, or simply register online.' },
+        { title: 'Screening', text: 'We review every application; a score of 7/12 or more moves on.', note: 'Not this round? Come back to any open Case Night or Skillnight.' },
+        { title: 'Interview', text: '20 minutes, after you’ve attended at least one event.', note: 'Not this round? Come back to any open Case Night or Skillnight.' },
+        { title: 'Admission decision', text: "We're currently admitting up to 50 new members before next semester." },
+        { title: 'Full member right away', text: 'No fee, and a vote at the next general meeting.' }
+      ],
       expectLabel: 'What we expect', expectTitle: 'Show up. Contribute. Behave well.',
       expectText: "Show up to a few things a semester. Contribute something at some point, an idea, an evening, a contact, a project. Treat the people in this network the way you'd want to be treated by them in five years, when one of them is hiring.",
       feeLabel: 'The cost', feeValue: '0 €', feePer: 'always, for students',
@@ -850,6 +858,14 @@ window.MBS_CONTENT = {
         { icon: 'briefcase', title: 'Eine Rolle, wenn du willst', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, im Lebenslauf, mit einer Referenz dahinter.' },
         { icon: 'trophy', title: 'Partnerprojekte', text: 'Echte Kundenarbeit mit einem echten Ergebnis.' },
         { icon: 'globe', title: 'Alumni-Status auf Lebenszeit', text: 'Nach dem Abschluss bleibst du im Netzwerk.' }
+      ],
+      processLabel: 'So wirst du Mitglied', processTitle: 'Von der ersten Case Night bis zum Vollmitglied.',
+      process: [
+        { title: 'Case Nights, Skillnights oder online', text: 'Offen für alle, einfach vorbeikommen oder dich online anmelden.' },
+        { title: 'Sichtung', text: 'Wir prüfen jede Bewerbung; ab 7/12 Punkten geht es weiter.', note: 'Diesmal nicht dabei? Komm gerne zu jeder offenen Case Night oder Skillnight.' },
+        { title: 'Interview', text: '20 Minuten, nachdem du mindestens ein Event besucht hast.', note: 'Diesmal nicht dabei? Komm gerne zu jeder offenen Case Night oder Skillnight.' },
+        { title: 'Aufnahmeentscheidung', text: 'Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum nächsten Semester auf.' },
+        { title: 'Vollmitglied ab sofort', text: 'Kostenlos, mit Stimmrecht ab der nächsten Mitgliederversammlung.' }
       ],
       expectLabel: 'Was wir erwarten', expectTitle: 'Tauch auf. Bring dich ein. Verhalte dich gut.',
       expectText: 'Komm zu ein paar Sachen im Semester. Bring irgendwann etwas ein, eine Idee, einen Abend, einen Kontakt, ein Projekt. Behandle die Menschen in diesem Netzwerk so, wie du in fünf Jahren von ihnen behandelt werden willst, wenn eine:r von ihnen einstellt.',

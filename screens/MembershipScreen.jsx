@@ -37,6 +37,22 @@ function MembershipScreen({ C }) {
         </div>
       </Section>
 
+      <Section tone="alt">
+        <SectionHeading label={M.processLabel} title={M.processTitle} style={{ marginBottom: '48px' }} />
+        <div className="mbs-process" data-reveal>
+          {M.process.map((step, i) => (
+            <div key={step.title} className={'mbs-process-row mbs-process-row--' + (i % 2 === 0 ? 'left' : 'right')}>
+              <div className="mbs-process-dot" />
+              <div className="mbs-process-card">
+                <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '16px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 6px' }}>{step.title}</h3>
+                <p style={{ fontSize: '13.5px', color: 'var(--mbs-gray)', lineHeight: 1.6, margin: 0 }}>{step.text}</p>
+                {step.note && <p style={{ fontSize: '12.5px', color: 'var(--mbs-gold-text)', lineHeight: 1.6, margin: '8px 0 0' }}>{step.note}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       <Section>
         <div className="mbs-split mbs-split--top">
           <div data-reveal>

@@ -496,6 +496,71 @@ select { caret-color: var(--mbs-gold-text); }
   }
 }
 
+/* ── Process timeline ───────────────────────────────────────────────────────
+   A vertical spine down the centre with steps alternating left/right off it,
+   used for the membership application process. Collapses to a single column
+   with a left-hand spine below the tablet breakpoint. */
+.mbs-process {
+  position: relative;
+}
+.mbs-process::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: var(--mbs-border);
+  transform: translateX(-50%);
+}
+.mbs-process-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  align-items: start;
+}
+.mbs-process-row + .mbs-process-row {
+  margin-top: var(--mbs-sp-6);
+}
+.mbs-process-dot {
+  grid-column: 2;
+  justify-self: center;
+  margin-top: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--mbs-gold);
+  box-shadow: 0 0 0 4px var(--mbs-white);
+}
+.mbs-process-card {
+  background: var(--mbs-white);
+  border: 1px solid var(--mbs-border);
+  border-radius: var(--mbs-r);
+  box-shadow: var(--mbs-sh-xs);
+  padding: var(--mbs-sp-4) var(--mbs-sp-5);
+}
+.mbs-process-row--left .mbs-process-card {
+  grid-column: 1;
+  justify-self: end;
+  text-align: right;
+}
+.mbs-process-row--right .mbs-process-card {
+  grid-column: 3;
+  justify-self: start;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  .mbs-process::before { left: 19px; }
+  .mbs-process-row { grid-template-columns: 40px 1fr; }
+  .mbs-process-dot { grid-column: 1; margin-top: 18px; }
+  .mbs-process-row--left .mbs-process-card,
+  .mbs-process-row--right .mbs-process-card {
+    grid-column: 2;
+    justify-self: start;
+    text-align: left;
+  }
+}
+
 /* ── Footer ─────────────────────────────────────────────────────────────── */
 .mbs-footer-inner {
   max-width: calc(var(--mbs-content-max) + 2 * var(--mbs-gutter));
