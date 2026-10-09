@@ -421,7 +421,7 @@ window.MBS_CONTENT = {
         text: 'A regular, open get-together between Case Nights. No programme, just people who keep showing up.' },
       { icon: 'globe', title: 'Excursions & Company Visits', pillar: 'Exposure', access: 'Open to all students. Free, limited spots per visit.',
         text: 'A visit to a partner company\'s office, you see how the place actually runs, not just its recruiting deck.' },
-      { icon: 'trending', title: 'Alumni & Speaker Get-Together', pillar: 'Network', access: 'Open to all students. Free.',
+      { icon: 'trending', title: 'Alumni & Speaker Nights', pillar: 'Network', access: 'Open to all students. Free.',
         text: "Fireside conversations with practitioners and alumni who'll tell you what the job is actually like." }
     ],
     events: [],
@@ -572,7 +572,7 @@ window.MBS_CONTENT = {
     team: {
       subtitle: 'Built and run entirely by students, alongside their degrees.',
       whoTitle: 'Founding team and Board',
-      whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees.',
+      whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees. Every team is open to members who want to help shape it.',
       boardTitle: 'The Board',
       board: [
         { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Student affairs, university relations, education and administration.', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
@@ -754,7 +754,7 @@ window.MBS_CONTENT = {
         text: 'Ein offener, regelmäßiger Treffpunkt zwischen den Case Nights. Kein Programm, nur Leute, die immer wieder auftauchen.' },
       { icon: 'globe', title: 'Exkursionen & Firmenbesuche', pillar: 'Sichtbarkeit', access: 'Offen für alle Studierenden. Kostenlos, begrenzte Plätze je Besuch.',
         text: 'Ein Besuch im Büro eines Partnerunternehmens. Du siehst, wie der Laden wirklich läuft, nicht nur das Recruiting-Deck.' },
-      { icon: 'trending', title: 'Alumni & Speaker Get-Together', pillar: 'Netzwerk', access: 'Offen für alle Studierenden. Kostenlos.',
+      { icon: 'trending', title: 'Alumni & Speaker Nights', pillar: 'Netzwerk', access: 'Offen für alle Studierenden. Kostenlos.',
         text: 'Kaminabende mit Gästen aus der Praxis und Alumni, die dir ehrlich erzählen, wie der Job wirklich ist.' }
     ],
     events: [],
@@ -904,7 +904,7 @@ window.MBS_CONTENT = {
     team: {
       subtitle: 'Komplett von Studierenden gebaut und geführt, neben dem Studium.',
       whoTitle: 'Das Gründerteam und Vorstand',
-      whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt.',
+      whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt. Jedes Team steht Mitgliedern offen, die mitgestalten wollen.',
       boardTitle: 'Der Vorstand',
       board: [
         { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Studierendenangelegenheiten, Hochschulbeziehungen, Bildung und Administration.', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
