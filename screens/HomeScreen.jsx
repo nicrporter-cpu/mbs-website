@@ -45,8 +45,8 @@ function HomeScreen({ C }) {
           {C.pillars.map(p => (
             <Card key={p.title} padding="32px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '16px', lineHeight: 1 }}><Icon name={p.icon} size="28px" /></div>
-              <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '20px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 4px' }}>{p.title}</h3>
-              <p style={{ fontSize: '13.5px', fontWeight: 600, color: 'var(--mbs-gold-text)', margin: '0 0 12px' }}>{p.tag}</p>
+              <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '20px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{p.title}</h3>
+              <p style={{ fontSize: '13.5px', fontWeight: 600, lineHeight: 1.5, color: 'var(--mbs-gold-text)', margin: '0 0 18px', minHeight: '3em' }}>{p.tag}</p>
               <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{p.text}</p>
             </Card>
           ))}

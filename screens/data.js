@@ -405,8 +405,8 @@ window.MBS_CONTENT = {
       { icon: 'scale', title: 'Ownership', text: "You own what you sign up for - a Case Night, a project, a role. Nobody chases you to follow through, and nobody else will do it for you." }
     ],
     formats: [
-      { icon: 'target', title: 'Case Night', pillar: 'Growth', access: 'Open to all students. Free, every two weeks.',
-        text: 'A team case, ninety to a hundred-twenty minutes, pitch and feedback at the end. Runs every two weeks, the core of what we do.' },
+      { icon: 'target', title: 'Case Night', pillar: 'Growth', access: 'Open to all students. Free.',
+        text: 'A team case, ninety to a hundred-twenty minutes, pitch and feedback at the end. The core of what we do.' },
       { icon: 'trophy', title: 'Case Competition', pillar: 'Growth', access: 'Open to all students. Free, once or twice a semester.',
         text: 'A multi-stage competition that builds to a final in front of a jury. Once or twice a semester, for anyone who wants the case format with the stakes turned up.' },
       { icon: 'building', title: 'Company Case', pillar: 'Exposure', access: 'Open to all students. Free.',
@@ -435,7 +435,7 @@ window.MBS_CONTENT = {
       whyP2: "Munich Business Society exists to close that gap: one open, free, cross-university platform with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you get the same access, on the same terms, at no cost.",
       pillarsLabel: 'What you get', pillarsTitle: 'What you actually get out of it.',
       formatsLabel: 'What we do', formatsTitle: 'Nine formats, every semester.',
-      formatsText: "Case Nights every two weeks, plus Case Competitions, Company Cases, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free and open to any student in Munich.",
+      formatsText: "Case Nights, plus Case Competitions, Company Cases, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free and open to any student in Munich.",
       formatsLink: 'See the full programme →',
       studentH: 'Open now. Just show up.', studentText: "It's free for every student at every Munich university. Come to a Case Night, or get on the list for updates. Takes thirty seconds.",
       companyH: 'Hiring in Munich?', companyText: 'Reach ambitious business students across all 33 Munich universities through one point of contact, instead of negotiating with five separate campus clubs.',
@@ -448,7 +448,7 @@ window.MBS_CONTENT = {
       storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join.',
       storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has over 110,000 students spread across 33 universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
       storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Open on identical terms to anyone in Munich studying business, economics, management, or studying something else entirely and heading into business anyway.',
-      storyP3: 'We held our founding assembly on 23 September 2026, adopted our statutes and elected the board. The next milestone is our first Case Night, planned for early 2027. Until then, we\'re building the partner and campus network to get there.',
+      storyP3: "Our next milestone is our first Case Night, planned for this year. Until then, we're building the partner and campus network to get there.",
       diffLabel: 'What makes us different', diffTitle: 'Cross-university by design, not by exception.',
       different: [
         { icon: 'globe', title: 'Cross-university by design, not by exception', text: "Most student business clubs are an extension of one university. We're a platform that sits above all of them." },
@@ -467,7 +467,7 @@ window.MBS_CONTENT = {
       weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       prevMonth: 'Previous month', nextMonth: 'Next month', noEvents: 'No events this month.',
       label: 'Upcoming', title: "What's on",
-      empty: 'Nothing on the calendar yet. The board was elected on 23 September 2026 and the first events are being scheduled now, check back soon or join the list to hear first.'
+      empty: 'Nothing on the calendar yet. The first events are being scheduled now, check back soon or join the list to hear first.'
     },
     network: {
       subtitle: "Munich Business Society isn't attached to a university. It's attached to a city.",
@@ -530,7 +530,7 @@ window.MBS_CONTENT = {
       processLabel: 'How you join', processTitle: 'From your first Case Night to full member.',
       process: [
         { title: 'Case Nights, Skillnights or online', text: 'Open to everyone, just show up, or simply register online.' },
-        { title: 'Screening', text: 'We review every application; a score of 7/12 or more moves on.', note: 'Not this round? Come back to any open Case Night or Skillnight.' },
+        { title: 'Screening', text: 'We review every application and the strongest move on.', note: 'Not this round? Come back to any open Case Night or Skillnight.' },
         { title: 'Interview', text: '20 minutes, after you’ve attended at least one event.', note: 'Not this round? Come back to any open Case Night or Skillnight.' },
         { title: 'Admission decision', text: "We're currently admitting up to 50 new members before next semester." },
         { title: 'Full member right away', text: 'No fee, and a vote at the next general meeting.' }
@@ -738,8 +738,8 @@ window.MBS_CONTENT = {
       { icon: 'scale', title: 'Ownership', text: 'Du übernimmst, was du dir vornimmst - eine Case Night, ein Projekt, eine Rolle. Niemand rennt dir hinterher, und niemand macht es für dich.' }
     ],
     formats: [
-      { icon: 'target', title: 'Case Night', pillar: 'Wachstum', access: 'Offen für alle Studierenden. Kostenlos, alle zwei Wochen.',
-        text: 'Team-Case, 90–120 Minuten mit Pitch & Feedback, alle zwei Wochen. Das Herzstück von dem, was wir tun.' },
+      { icon: 'target', title: 'Case Night', pillar: 'Wachstum', access: 'Offen für alle Studierenden. Kostenlos.',
+        text: 'Team-Case, 90–120 Minuten mit Pitch & Feedback. Das Herzstück von dem, was wir tun.' },
       { icon: 'trophy', title: 'Case Competition', pillar: 'Wachstum', access: 'Offen für alle Studierenden. Kostenlos, ein- bis zweimal pro Semester.',
         text: 'Mehrstufiger Wettbewerb mit Finale und Jury, ein- bis zweimal pro Semester, für alle, die den Case mit echtem Einsatz wollen.' },
       { icon: 'building', title: 'Company Case', pillar: 'Sichtbarkeit', access: 'Offen für alle Studierenden. Kostenlos.',
@@ -768,7 +768,7 @@ window.MBS_CONTENT = {
       whyP2: 'Die Munich Business Society schließt genau diese Lücke: eine offene, kostenlose, hochschulübergreifende Plattform mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bekommst denselben Zugang, zu denselben Bedingungen, ohne Kosten.',
       pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du wirklich davon hast.',
       formatsLabel: 'Was wir tun', formatsTitle: 'Neun Formate, jedes Semester.',
-      formatsText: 'Alle zwei Wochen eine Case Night, dazu Case Competitions, Company Cases, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos und offen für jede:n Studierende:n in München.',
+      formatsText: 'Case Nights, dazu Case Competitions, Company Cases, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos und offen für jede:n Studierende:n in München.',
       formatsLink: 'Zum ganzen Programm →',
       studentH: 'Ab sofort dabei. Einfach auftauchen.', studentText: 'Kostenlos für jede:n Studierende:n an jeder Münchner Hochschule. Komm zur nächsten Case Night oder trag dich für Updates ein. Dauert dreißig Sekunden.',
       companyH: 'Sie stellen in München ein?', companyText: 'Erreichen Sie ambitionierte Business-Studierende über alle 33 Münchner Hochschulen hinweg, über einen Ansprechpartner, statt mit fünf einzelnen Campus-Clubs zu verhandeln.',
@@ -799,7 +799,7 @@ window.MBS_CONTENT = {
       weekdays: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
       prevMonth: 'Vorheriger Monat', nextMonth: 'Nächster Monat', noEvents: 'Keine Termine in diesem Monat.',
       label: 'Demnächst', title: 'Was ansteht',
-      empty: 'Noch nichts im Kalender. Der Vorstand wurde am 23. September 2026 gewählt, die ersten Termine werden gerade geplant, schau bald wieder vorbei oder trag dich in die Liste ein, um es zuerst zu erfahren.'
+      empty: 'Noch nichts im Kalender. Die ersten Termine werden gerade geplant, schau bald wieder vorbei oder trag dich in die Liste ein, um es zuerst zu erfahren.'
     },
     network: {
       subtitle: 'Die Munich Business Society hängt nicht an einer Hochschule. Sie hängt an einer Stadt.',
@@ -862,7 +862,7 @@ window.MBS_CONTENT = {
       processLabel: 'So wirst du Mitglied', processTitle: 'Von der ersten Case Night bis zum Vollmitglied.',
       process: [
         { title: 'Case Nights, Skillnights oder online', text: 'Offen für alle, einfach vorbeikommen oder dich online anmelden.' },
-        { title: 'Sichtung', text: 'Wir prüfen jede Bewerbung; ab 7/12 Punkten geht es weiter.', note: 'Diesmal nicht dabei? Komm gerne zu jeder offenen Case Night oder Skillnight.' },
+        { title: 'Sichtung', text: 'Wir prüfen jede Bewerbung, die stärksten kommen weiter.', note: 'Diesmal nicht dabei? Komm gerne zu jeder offenen Case Night oder Skillnight.' },
         { title: 'Interview', text: '20 Minuten, nachdem du mindestens ein Event besucht hast.', note: 'Diesmal nicht dabei? Komm gerne zu jeder offenen Case Night oder Skillnight.' },
         { title: 'Aufnahmeentscheidung', text: 'Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum nächsten Semester auf.' },
         { title: 'Vollmitglied ab sofort', text: 'Kostenlos, mit Stimmrecht ab der nächsten Mitgliederversammlung.' }

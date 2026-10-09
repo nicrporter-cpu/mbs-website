@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=3492f2104e">
-<link rel="stylesheet" href="/site.css?v=3492f2104e">
+<link rel="stylesheet" href="/design-system/styles.css?v=0cb30a49eb">
+<link rel="stylesheet" href="/site.css?v=0cb30a49eb">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=3492f2104e"></script>
-<script src="/screens/data.js?v=3492f2104e"></script>
-<script src="/site.js?v=3492f2104e"></script>
+<script src="/design-system/_ds_bundle.js?v=0cb30a49eb"></script>
+<script src="/screens/data.js?v=0cb30a49eb"></script>
+<script src="/site.js?v=0cb30a49eb"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1039,8 +1039,8 @@ function HomeScreen({ C }) {
           {C.pillars.map(p => (
             <Card key={p.title} padding="32px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '16px', lineHeight: 1 }}><Icon name={p.icon} size="28px" /></div>
-              <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '20px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 4px' }}>{p.title}</h3>
-              <p style={{ fontSize: '13.5px', fontWeight: 600, color: 'var(--mbs-gold-text)', margin: '0 0 12px' }}>{p.tag}</p>
+              <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '20px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{p.title}</h3>
+              <p style={{ fontSize: '13.5px', fontWeight: 600, lineHeight: 1.5, color: 'var(--mbs-gold-text)', margin: '0 0 18px', minHeight: '3em' }}>{p.tag}</p>
               <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{p.text}</p>
             </Card>
           ))}
