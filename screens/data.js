@@ -377,7 +377,7 @@ window.MBS_CONTENT = {
       ],
       newsletter: {
         h: 'One email a month. Everything happening in Munich.',
-        body: "Events, openings, partner formats, reminders and info on application phases, and the odd opportunity we've been asked to pass on. No spam, unsubscribe in one click.",
+        body: "Events, updates from the team, partner formats, reminders and info on application phases, and the odd opportunity we've been asked to pass on. Unsubscribe in one click.",
         placeholder: 'Your email', srEmail: 'Your email', btn: 'Keep me posted', sending: 'Sending…',
         done: "You're on the list. First email lands at the start of next month.",
         err: 'Please enter a valid email address.',
@@ -419,10 +419,10 @@ window.MBS_CONTENT = {
         text: 'An evening built for meeting people across universities, no pitch, no agenda beyond good conversation.' },
       { icon: 'star', title: 'Community Stammtisch', pillar: 'Community', access: 'Open to all students. Free, no agenda.',
         text: 'A regular, open get-together between Case Nights. No programme, just people who keep showing up.' },
-      { icon: 'trending', title: 'Alumni & Speaker Get-Together', pillar: 'Network', access: 'Open to all students. Free.',
-        text: "Fireside conversations with practitioners and alumni who'll tell you what the job is actually like." },
       { icon: 'globe', title: 'Excursions & Company Visits', pillar: 'Exposure', access: 'Open to all students. Free, limited spots per visit.',
-        text: 'A visit to a partner company\'s office, you see how the place actually runs, not just its recruiting deck.' }
+        text: 'A visit to a partner company\'s office, you see how the place actually runs, not just its recruiting deck.' },
+      { icon: 'trending', title: 'Alumni & Speaker Get-Together', pillar: 'Network', access: 'Open to all students. Free.',
+        text: "Fireside conversations with practitioners and alumni who'll tell you what the job is actually like." }
     ],
     events: [],
     universities: MBS_UNIVERSITIES.concat(['Other university in Munich']),
@@ -430,7 +430,7 @@ window.MBS_CONTENT = {
     home: {
       heroLead: "Munich Business Society is Munich's first cross-university case-solving and business platform, 100% free, with no membership fee, open to every student in the city. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
       seeEvents: "See what's coming up",
-      whyLabel: 'Why we exist', whyTitle: 'Munich has 110,000+ students split across 33 universities, and almost none of them talk to each other.',
+      whyLabel: 'Why we exist', whyTitle: 'Munich has students split across many universities, and almost none of them talk to each other.',
       whyP1: 'Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, giving visibility into that university\'s own talent, not across one shared, central club. Recruiters see one Munich talent pool; students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.',
       whyP2: "Munich Business Society exists to close that gap: one open, free, cross-university platform with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you get the same access, on the same terms, at no cost.",
       pillarsLabel: 'What you get', pillarsTitle: 'What you actually get out of it.',
@@ -438,15 +438,15 @@ window.MBS_CONTENT = {
       formatsText: "Case Nights, plus Case Competitions, Company Cases, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free and open to any student in Munich.",
       formatsLink: 'See the full programme →',
       studentH: 'Open now. Just show up.', studentText: "It's free for every student at every Munich university. Come to a Case Night, or get on the list for updates. Takes thirty seconds.",
-      companyH: 'Hiring in Munich?', companyText: 'Reach ambitious business students across all 33 Munich universities through one point of contact, instead of negotiating with five separate campus clubs.',
-      partnerBtn: 'Partner with us →'
+      companyH: 'Hiring in Munich?', companyText: "We're building a cross-university network connecting companies with business students from across Munich. Reach out to find out more.",
+      partnerBtn: 'Learn more →'
     },
     about: {
       subtitle: 'One case club for all of Munich, student-run, cross-university, open to every campus in the city.',
       whoLabel: 'Who we are', whoTitle: 'One case club for all of Munich.',
       whoDesc: "Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
       storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join.',
-      storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has over 110,000 students spread across 33 universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
+      storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has students spread across many universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
       storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Open on identical terms to anyone in Munich studying business, economics, management, or studying something else entirely and heading into business anyway.',
       storyP3: "Our next milestone is our first Case Night, planned for this year. Until then, we're building the partner and campus network to get there.",
       diffLabel: 'What makes us different', diffTitle: 'Cross-university by design, not by exception.',
@@ -648,12 +648,12 @@ window.MBS_CONTENT = {
       routes: [
         { icon: 'users', label: 'Students & membership', addr: 'munichbusinesssociety@gmail.com' },
         { icon: 'briefcase', label: 'Companies & partnerships', addr: 'munichbusinesssociety@gmail.com' },
-        { icon: 'mail', label: 'Press & everything else', addr: 'munichbusinesssociety@gmail.com' }
+        { icon: 'mail', label: 'Inquiries & everything else', addr: 'munichbusinesssociety@gmail.com' }
       ],
       formLabel: 'Send a message', formTitle: 'Straight to the right person.',
       formText: "Tell us who you are and what you're after. The form routes your message to the team that can actually help.",
       findLabel: 'Find us', findText: 'We meet across Munich rather than on one campus. Venues are listed with each event.',
-      follow: 'Follow: ', followPh: 'LinkedIn · Instagram [handles]',
+      follow: 'Follow: ',
       f: { firstname: 'First name', lastname: 'Last name', email: 'Email', role: "I'm a…", message: 'Your message' },
       ph: { firstname: 'Your first name', lastname: 'Your last name', email: 'you@example.com', message: "What's on your mind?" },
       roles: [ { v: 'student', label: 'Student' }, { v: 'company', label: 'Company' }, { v: 'founder', label: 'Entrepreneur' }, { v: 'other', label: 'Other' } ],
@@ -710,7 +710,7 @@ window.MBS_CONTENT = {
       ],
       newsletter: {
         h: 'Eine E-Mail im Monat. Alles, was in München passiert.',
-        body: 'Events, offene Stellen, Partner-Formate, Erinnerungen und Infos zu den Bewerbungsphasen und die eine oder andere Gelegenheit, die man uns weiterzugeben gebeten hat. Kein Spam, Abmeldung mit einem Klick.',
+        body: 'Events, Neuigkeiten aus dem Verein, Partner-Formate, Erinnerungen und Infos zu den Bewerbungsphasen und die eine oder andere Gelegenheit, die man uns weiterzugeben gebeten hat. Abmeldung mit einem Klick.',
         placeholder: 'Deine E-Mail', srEmail: 'Deine E-Mail', btn: 'Halt mich auf dem Laufenden', sending: 'Wird gesendet…',
         done: 'Du bist auf der Liste. Die erste E-Mail kommt Anfang nächsten Monats.',
         err: 'Bitte gib eine gültige E-Mail-Adresse ein.',
@@ -752,10 +752,10 @@ window.MBS_CONTENT = {
         text: 'Ein Abend, der fürs Kennenlernen über Hochschulen hinweg gemacht ist, kein Pitch, keine Agenda außer gutem Gespräch.' },
       { icon: 'star', title: 'Community-Stammtisch', pillar: 'Gemeinschaft', access: 'Offen für alle Studierenden. Kostenlos, ohne Programm.',
         text: 'Ein offener, regelmäßiger Treffpunkt zwischen den Case Nights. Kein Programm, nur Leute, die immer wieder auftauchen.' },
-      { icon: 'trending', title: 'Alumni & Speaker Get-Together', pillar: 'Netzwerk', access: 'Offen für alle Studierenden. Kostenlos.',
-        text: 'Kaminabende mit Gästen aus der Praxis und Alumni, die dir ehrlich erzählen, wie der Job wirklich ist.' },
       { icon: 'globe', title: 'Exkursionen & Firmenbesuche', pillar: 'Sichtbarkeit', access: 'Offen für alle Studierenden. Kostenlos, begrenzte Plätze je Besuch.',
-        text: 'Ein Besuch im Büro eines Partnerunternehmens. Du siehst, wie der Laden wirklich läuft, nicht nur das Recruiting-Deck.' }
+        text: 'Ein Besuch im Büro eines Partnerunternehmens. Du siehst, wie der Laden wirklich läuft, nicht nur das Recruiting-Deck.' },
+      { icon: 'trending', title: 'Alumni & Speaker Get-Together', pillar: 'Netzwerk', access: 'Offen für alle Studierenden. Kostenlos.',
+        text: 'Kaminabende mit Gästen aus der Praxis und Alumni, die dir ehrlich erzählen, wie der Job wirklich ist.' }
     ],
     events: [],
     universities: MBS_UNIVERSITIES.concat(['Andere Hochschule in München']),
@@ -763,7 +763,7 @@ window.MBS_CONTENT = {
     home: {
       heroLead: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, 100 % kostenlos, ohne Mitgliedsbeitrag, offen für jede:n Studierende:n der Stadt. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
       seeEvents: 'Zu den Terminen',
-      whyLabel: 'Warum es uns gibt', whyTitle: 'München hat über 110.000 Studierende, verteilt auf 33 Hochschulen, und fast keine spricht mit der anderen.',
+      whyLabel: 'Warum es uns gibt', whyTitle: 'München hat Studierende, verteilt auf viele Hochschulen, und fast keine spricht mit der anderen.',
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie geben Sichtbarkeit auf die Talente der eigenen Uni, aber nicht hochschulübergreifend in einem zentralen Club. Recruiter sehen einen Münchner Talentpool; Studierende treffen immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
       whyP2: 'Die Munich Business Society schließt genau diese Lücke: eine offene, kostenlose, hochschulübergreifende Plattform mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bekommst denselben Zugang, zu denselben Bedingungen, ohne Kosten.',
       pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du wirklich davon hast.',
@@ -771,15 +771,15 @@ window.MBS_CONTENT = {
       formatsText: 'Case Nights, dazu Case Competitions, Company Cases, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos und offen für jede:n Studierende:n in München.',
       formatsLink: 'Zum ganzen Programm →',
       studentH: 'Ab sofort dabei. Einfach auftauchen.', studentText: 'Kostenlos für jede:n Studierende:n an jeder Münchner Hochschule. Komm zur nächsten Case Night oder trag dich für Updates ein. Dauert dreißig Sekunden.',
-      companyH: 'Sie stellen in München ein?', companyText: 'Erreichen Sie ambitionierte Business-Studierende über alle 33 Münchner Hochschulen hinweg, über einen Ansprechpartner, statt mit fünf einzelnen Campus-Clubs zu verhandeln.',
-      partnerBtn: 'Partner werden →'
+      companyH: 'Sie stellen in München ein?', companyText: 'Wir bauen ein hochschulübergreifendes Netzwerk auf, das Unternehmen mit Business-Studierenden aus ganz München verbindet. Sprechen Sie uns an, um mehr zu erfahren.',
+      partnerBtn: 'Mehr erfahren →'
     },
     about: {
       subtitle: 'Ein Case Club für ganz München, studentisch geführt, hochschulübergreifend, offen für jeden Campus der Stadt.',
       whoLabel: 'Wer wir sind', whoTitle: 'Ein Case Club für ganz München.',
       whoDesc: 'Die Munich Business Society ist ein studentisch geführter Case Club, der wirtschaftlich interessierte Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Es gab keinen Case Club, der alle Münchner Studierenden erreichte statt nur die einer einzelnen Hochschule. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
       storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Verein gebaut, dem wir beitreten wollten.',
-      storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat über 110.000 Studierende, verteilt auf 33 Hochschulen, doch jede Hochschule hat ihre eigenen Initiativen, die nur einzelne Themenfelder abdecken, und fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld oder filtern früh aus.',
+      storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat Studierende, verteilt auf viele Hochschulen, doch jede Hochschule hat ihre eigenen Initiativen, die nur einzelne Themenfelder abdecken, und fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld oder filtern früh aus.',
       storyP2: 'Also bauten wir das, dem wir beitreten wollten: eine kostenlose, hochschulübergreifende Plattform ohne Heim-Campus. Offen zu identischen Bedingungen für alle in München, die Wirtschaft, Ökonomie, Management studieren, oder etwas völlig anderes und trotzdem in die Wirtschaft gehen.',
       diffLabel: 'Was uns unterscheidet', diffTitle: 'Hochschulübergreifend by design, nicht als Ausnahme.',
       different: [
@@ -980,12 +980,12 @@ window.MBS_CONTENT = {
       routes: [
         { icon: 'users', label: 'Studierende & Mitgliedschaft', addr: 'munichbusinesssociety@gmail.com' },
         { icon: 'briefcase', label: 'Unternehmen & Partnerschaften', addr: 'munichbusinesssociety@gmail.com' },
-        { icon: 'mail', label: 'Presse & alles andere', addr: 'munichbusinesssociety@gmail.com' }
+        { icon: 'mail', label: 'Anfragen & alles andere', addr: 'munichbusinesssociety@gmail.com' }
       ],
       formLabel: 'Nachricht senden', formTitle: 'Direkt an die richtige Person.',
       formText: 'Sag uns, wer du bist und was du suchst. Das Formular leitet deine Nachricht an das Team, das wirklich helfen kann.',
       findLabel: 'Wo du uns findest', findText: 'Wir treffen uns in ganz München statt auf einem Campus. Locations stehen bei jedem Event.',
-      follow: 'Folgen: ', followPh: 'LinkedIn · Instagram [Handles]',
+      follow: 'Folgen: ',
       f: { firstname: 'Vorname', lastname: 'Nachname', email: 'E-Mail', role: 'Ich bin…', message: 'Deine Nachricht' },
       ph: { firstname: 'Dein Vorname', lastname: 'Dein Nachname', email: 'du@beispiel.de', message: 'Was beschäftigt dich?' },
       roles: [ { v: 'student', label: 'Studierende:r' }, { v: 'company', label: 'Unternehmen' }, { v: 'founder', label: 'Unternehmer:in' }, { v: 'other', label: 'Sonstiges' } ],

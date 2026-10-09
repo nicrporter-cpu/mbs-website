@@ -111,7 +111,7 @@ function ContactScreen({ C }) {
 
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
-          <SectionHeading align="center" label={K.label} title={K.title} desc={K.descA} />
+          <SectionHeading label={K.label} title={K.title} desc={K.descA} />
         </div>
         <div className="mbs-grid-3" data-stagger style={{ marginTop: '32px' }}>
           {K.routes.map(r => (
@@ -133,7 +133,13 @@ function ContactScreen({ C }) {
               <div className="mbs-label" style={{ marginBottom: '12px' }}>{K.findLabel}</div>
               <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.8, margin: '0 0 8px' }}>{K.findText}</p>
               <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', margin: 0 }}>
-                {K.follow}<span className="mbs-ph">{K.followPh}</span>
+                {K.follow}
+                {C.ui.social.filter(s => s.label === 'LinkedIn' || s.label === 'Instagram').map((s, i, arr) => (
+                  <React.Fragment key={s.label}>
+                    <a href={s.href} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--mbs-gold-text)', fontWeight: 600 }}>{s.label}</a>
+                    {i < arr.length - 1 && ' · '}
+                  </React.Fragment>
+                ))}
               </p>
             </div>
           </div>
