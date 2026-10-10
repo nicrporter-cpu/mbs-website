@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=105cad823d">
-<link rel="stylesheet" href="/site.css?v=105cad823d">
+<link rel="stylesheet" href="/design-system/styles.css?v=1375d83bb9">
+<link rel="stylesheet" href="/site.css?v=1375d83bb9">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=105cad823d"></script>
-<script src="/screens/data.js?v=105cad823d"></script>
-<script src="/site.js?v=105cad823d"></script>
+<script src="/design-system/_ds_bundle.js?v=1375d83bb9"></script>
+<script src="/screens/data.js?v=1375d83bb9"></script>
+<script src="/site.js?v=1375d83bb9"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1050,6 +1050,17 @@ function CompaniesScreen({ C }) {
       </Section>
 
       <Section>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+          <SectionHeading label={K.faqLabel} title={K.faqTitle} style={{ marginBottom: '32px' }} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }} data-stagger>
+            {K.faqItems.map((item, i) => (
+              <FaqItem key={item.q} question={item.q} defaultOpen={i === 0}>{item.a}</FaqItem>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="alt">
         <div data-reveal style={{ textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }} data-on-navy="">
           <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', color: 'var(--mbs-white)', margin: '0 0 10px' }}>{K.closeH}</h2>
           <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, maxWidth: '460px', margin: '0 auto 24px' }}>{K.closeText}</p>

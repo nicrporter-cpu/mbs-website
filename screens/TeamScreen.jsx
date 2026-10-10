@@ -33,13 +33,6 @@ function TeamScreen({ C }) {
           ))}
         </div>
       </Section>
-
-      <Section>
-        <div data-reveal style={{ textAlign: 'center', maxWidth: '480px', margin: '0 auto' }}>
-          <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', marginBottom: '20px' }}>{T.faqText}</p>
-          <Button variant="outline" href={ROUTES.faq}>{T.faqBtn}</Button>
-        </div>
-      </Section>
     </div>
   );
 }

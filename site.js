@@ -12,7 +12,6 @@ window.MBS_ROUTES = {
   membership: '/membership/',
   companies: '/for-companies/',
   team: '/team/',
-  faq: '/faq/',
   join: '/join/',
   contact: '/contact/',
   impressum: '/impressum/',

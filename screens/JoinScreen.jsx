@@ -169,6 +169,17 @@ function JoinScreen({ C }) {
           )}
         </div>
       </Section>
+
+      <Section tone="alt">
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+          <SectionHeading label={J.faqLabel} title={J.faqTitle} style={{ marginBottom: '32px' }} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }} data-stagger>
+            {J.faqItems.map((item, i) => (
+              <FaqItem key={item.q} question={item.q} defaultOpen={i === 0}>{item.a}</FaqItem>
+            ))}
+          </div>
+        </div>
+      </Section>
     </div>
   );
 }

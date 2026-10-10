@@ -69,10 +69,14 @@ function MembershipScreen({ C }) {
         </div>
       </Section>
 
-      <Section>
-        <div data-reveal style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto' }}>
-          <SectionHeading align="center" label={M.faqLabel} title={M.faqTitle} desc={M.faqDesc} />
-          <div style={{ marginTop: '24px' }}><Button variant="outline" href={ROUTES.faq}>{M.faqBtn}</Button></div>
+      <Section tone="alt">
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+          <SectionHeading label={M.faqLabel} title={M.faqTitle} style={{ marginBottom: '32px' }} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }} data-stagger>
+            {M.faqItems.map((item, i) => (
+              <FaqItem key={item.q} question={item.q} defaultOpen={i === 0}>{item.a}</FaqItem>
+            ))}
+          </div>
         </div>
       </Section>
     </div>

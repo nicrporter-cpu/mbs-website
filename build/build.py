@@ -45,8 +45,6 @@ PAGES = [
      '<CompaniesScreen C={C} />'),
     ('team/index.html',         'team',       'TeamScreen',       'Team',
      '<TeamScreen C={C} />'),
-    ('faq/index.html',          'faq',        'FaqScreen',        'FAQ',
-     '<FaqScreen C={C} />'),
     ('join/index.html',         'join',       'JoinScreen',       'Join Munich Business Society',
      '<JoinScreen C={C} />'),
     ('contact/index.html',      'contact',    'ContactScreen',    'Contact',

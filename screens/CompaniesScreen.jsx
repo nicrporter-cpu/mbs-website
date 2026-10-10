@@ -56,6 +56,17 @@ function CompaniesScreen({ C }) {
       </Section>
 
       <Section>
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+          <SectionHeading label={K.faqLabel} title={K.faqTitle} style={{ marginBottom: '32px' }} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }} data-stagger>
+            {K.faqItems.map((item, i) => (
+              <FaqItem key={item.q} question={item.q} defaultOpen={i === 0}>{item.a}</FaqItem>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="alt">
         <div data-reveal style={{ textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }} data-on-navy="">
           <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', color: 'var(--mbs-white)', margin: '0 0 10px' }}>{K.closeH}</h2>
           <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.8, maxWidth: '460px', margin: '0 auto 24px' }}>{K.closeText}</p>

@@ -121,7 +121,6 @@ function AboutScreen({ C, openEvent }) {
           </p>
           <div style={{ marginTop: '8px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <Button variant="navy" href={ROUTES.team}>{A.meetTeam}</Button>
-            <Button variant="outline" href={ROUTES.faq}>{A.faqBtn}</Button>
           </div>
         </div>
       </Section>
