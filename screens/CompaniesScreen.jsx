@@ -59,8 +59,8 @@ function CompaniesScreen({ C }) {
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.faqLabel} title={K.faqTitle} style={{ marginBottom: '32px' }} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }} data-stagger>
-            {K.faqItems.map((item, i) => (
-              <FaqItem key={item.q} question={item.q} defaultOpen={i === 0}>{item.a}</FaqItem>
+            {K.faqItems.map(item => (
+              <FaqItem key={item.q} question={item.q}>{item.a}</FaqItem>
             ))}
           </div>
         </div>
