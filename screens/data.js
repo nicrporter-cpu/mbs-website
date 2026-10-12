@@ -561,17 +561,17 @@ window.MBS_CONTENT = {
       ],
       waysLabel: 'Ways to work together', waysTitle: 'Four ways in.',
       ways: [
-        { icon: 'mic', title: 'Event partner', text: "You host or co-host a Guest Speaker session, Skillnight or company evening. Your people, our room, our students from across the city. We're also happy to invite individuals from your company to our own events." },
-        { icon: 'trophy', title: 'Case Competition or Company Case', text: 'A real business question, teams of students, a presentation to your leadership. You see how people think before you interview them.' },
-        { icon: 'briefcase', title: 'Partner project', text: 'A defined piece of work with a small member team and a documented deliverable.' },
-        { icon: 'star', title: 'Annual partnership', text: 'A package across the academic year: multiple formats, visibility on site and in the newsletter, direct access to the membership for openings.' }
+        { icon: 'mic', title: 'Speaker Events', text: "Your expertise, our audience. You host or co-host a Guest Speaker session, Skillnight or company evening, reaching engaged students from across Munich, not just one university." },
+        { icon: 'trophy', title: 'Case Events', text: 'Teams of students solve a real question from your company and present the results to your leadership. You see how someone thinks, structures and presents, long before the interview.' },
+        { icon: 'briefcase', title: 'Partner Projects', text: 'A defined piece of work with a small member team and a documented deliverable.' },
+        { icon: 'star', title: 'Insight Events', text: 'You give our students exclusive insight into your day-to-day work, for example through a company visit or workshop, combined with ongoing visibility on site and in the newsletter and direct access to the membership for openings.' }
       ],
       partnersLabel: 'Our partners', partnersTitle: 'Companies we work with',
       partnersDesc: 'Become our first partner now.',
       partnersBtn: 'Get in touch →',
       faqLabel: 'Questions companies ask', faqTitle: 'Before you reach out.',
       faqItems: [
-        { q: 'How do companies get involved?', a: "As an event partner, a Case Competition or Company Case host, through a partner project, or an annual partnership. Reach out and we'll find the format that fits." },
+        { q: 'How do companies get involved?', a: "As an event partner, a Case Competition or Company Case host, through a partner project, or an insight partnership. Reach out and we'll find the format that fits." },
         { q: 'Do we need to commit to a full partnership right away?', a: "No. Most companies start with one format, a Guest Speaker evening or a Company Case, and decide from there. There's no minimum commitment." }
       ],
       closeH: 'Get in touch.',
@@ -906,17 +906,17 @@ window.MBS_CONTENT = {
       ],
       waysLabel: 'Wege der Zusammenarbeit', waysTitle: 'Vier Wege hinein.',
       ways: [
-        { icon: 'mic', title: 'Event-Partner', text: 'Sie veranstalten oder co-hosten einen Guest-Speaker-Abend, ein Skillnight oder einen Unternehmensabend. Ihre Leute, unser Raum, unsere Studierenden aus der ganzen Stadt. Wir laden auch gerne Einzelpersonen aus Ihrem Unternehmen zu unseren eigenen Events ein.' },
-        { icon: 'trophy', title: 'Case Competition oder Company Case', text: 'Eine echte Fragestellung, Teams aus Studierenden, eine Präsentation vor Ihrer Führung. Sie sehen, wie Menschen denken, bevor Sie sie interviewen.' },
-        { icon: 'briefcase', title: 'Partnerprojekt', text: 'Ein definiertes Stück Arbeit mit einem kleinen Mitgliederteam und einem dokumentierten Ergebnis.' },
-        { icon: 'star', title: 'Jahrespartnerschaft', text: 'Ein Paket über das akademische Jahr: mehrere Formate, Sichtbarkeit auf der Website und im Newsletter, direkter Zugang zur Mitgliedschaft für Stellen.' }
+        { icon: 'mic', title: 'Speaker Events', text: 'Ihre Expertise, unser Publikum. Sie veranstalten oder co-hosten einen Guest-Speaker-Abend, ein Skillnight oder einen Unternehmensabend, und erreichen damit engagierte Studierende aus ganz München, nicht nur von einer einzelnen Hochschule.' },
+        { icon: 'trophy', title: 'Case Events', text: 'Studierende lösen in Teams eine echte Fragestellung aus Ihrem Unternehmen und präsentieren das Ergebnis vor Ihrer Führung. Sie erleben, wie jemand denkt, strukturiert und präsentiert, lange bevor das Bewerbungsgespräch beginnt.' },
+        { icon: 'briefcase', title: 'Partnerprojekte', text: 'Ein definiertes Stück Arbeit mit einem kleinen Mitgliederteam und einem dokumentierten Ergebnis.' },
+        { icon: 'star', title: 'Insight Events', text: 'Sie geben unseren Studierenden exklusive Einblicke in Ihre tägliche Arbeit, etwa durch einen Unternehmensbesuch oder Workshop, kombiniert mit fester Sichtbarkeit auf Website und im Newsletter sowie direktem Zugang zu unserer Mitgliedschaft für offene Stellen.' }
       ],
       partnersLabel: 'Unsere Partner', partnersTitle: 'Unternehmen, mit denen wir arbeiten',
       partnersDesc: 'Werde jetzt unser erster Partner.',
       partnersBtn: 'Kontakt aufnehmen →',
       faqLabel: 'Fragen von Unternehmen', faqTitle: 'Bevor Sie uns schreiben.',
       faqItems: [
-        { q: 'Wie werden Unternehmen Teil davon?', a: 'Als Event-Partner, als Gastgeber einer Case Competition oder eines Company Case, über ein Partnerprojekt oder eine Jahrespartnerschaft. Sprechen Sie uns an, wir finden das passende Format.' },
+        { q: 'Wie werden Unternehmen Teil davon?', a: 'Als Event-Partner, als Gastgeber einer Case Competition oder eines Company Case, über ein Partnerprojekt oder eine Insight-Partnerschaft. Sprechen Sie uns an, wir finden das passende Format.' },
         { q: 'Müssen wir uns direkt für eine volle Partnerschaft entscheiden?', a: 'Nein. Die meisten Unternehmen starten mit einem Format, einem Guest-Speaker-Abend oder einem Company Case, und entscheiden von dort aus weiter. Es gibt keine Mindestverpflichtung.' }
       ],
       closeH: 'Melden Sie sich.',
