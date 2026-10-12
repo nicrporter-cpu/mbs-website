@@ -349,7 +349,7 @@ window.MBS_CONTENT = {
       { id: 'about', label: 'About' },
       { id: 'calendar', label: 'Events' },
       { id: 'team', label: 'Team' },
-      { id: 'membership', label: 'Membership' },
+      { id: 'membership', label: 'For Students' },
       { id: 'companies', label: 'For Companies' },
       { id: 'contact', label: 'Contact' }
     ],
@@ -438,7 +438,7 @@ window.MBS_CONTENT = {
       formatsText: "Case Nights, plus Case Competitions, Company Cases, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free and open to any student in Munich.",
       formatsLink: 'See the full programme →',
       studentH: 'Open now. Just show up.', studentText: "It's free for every student at every Munich university. Come to a Case Night, or get on the list for updates. Takes thirty seconds.",
-      companyH: 'Hiring in Munich?', companyText: "We're building a cross-university network connecting companies with business students from across Munich. Reach out to find out more.",
+      companyH: "Looking for direct access to Munich's talent?", companyText: "We're building a cross-university network connecting companies with business talent from across Munich. Reach out to find out more.",
       partnerBtn: 'Learn more →'
     },
     about: {
@@ -524,21 +524,21 @@ window.MBS_CONTENT = {
         { icon: 'users', title: 'A network across every Munich university', text: 'Plus alumni already working in consulting, finance, tech and industry.' },
         { icon: 'building', title: 'Direct contact with partner companies', text: "Including openings shared with members before they're advertised." },
         { icon: 'briefcase', title: 'A role, if you want one', text: 'Become a Case Coach or Campus Lead, run a format, own a partnership. Genuine responsibility, on your CV, with a reference behind it.' },
-        { icon: 'trophy', title: 'Partner projects', text: 'Real client work with a real deliverable.' },
-        { icon: 'globe', title: 'Alumni status for life', text: 'Once you graduate, you stay in the network.' }
+        { icon: 'trophy', title: 'Hands-on experience', text: 'Real cases in every Case Night, soon also in Case Competitions.' },
+        { icon: 'globe', title: 'Inspiring community', text: 'People who challenge you, support you, and stay connected for years.' }
       ],
       processLabel: 'How you join', processTitle: 'From your first Case Night to full member.',
       process: [
         { title: 'Case Nights, Skillnights or online', text: 'Open to everyone, just show up, or simply register online.' },
-        { title: 'Screening', text: 'We review every application and the strongest move on.', note: 'Not this round? Come back to any open Case Night or Skillnight.' },
-        { title: 'Interview', text: '20 minutes, after you’ve attended at least one event.', note: 'Not this round? Come back to any open Case Night or Skillnight.' },
+        { title: 'Screening', text: 'We review every application and the best fit move on.', note: 'Not this round? Come back to any open Case Night or Skillnight.' },
+        { title: 'Interview', text: '20 minutes.', note: 'Not this round? Come back to any open Case Night or Skillnight.' },
         { title: 'Admission decision', text: "We're currently admitting up to 50 new members before next semester." },
         { title: 'Full member right away', text: 'No fee, and a vote at the next general meeting.' }
       ],
       expectLabel: 'What we expect', expectTitle: 'Show up. Contribute. Behave well.',
       expectText: "Show up to a few things a semester. Contribute something at some point, an idea, an evening, a contact, a project. Treat the people in this network the way you'd want to be treated by them in five years, when one of them is hiring.",
       feeLabel: 'The cost', feeValue: '0 €', feePer: 'always, for students',
-      feeText: "Membership has never cost anything and never will. We're funded by sponsors, partners and in-kind support, not by charging the students we're here for.",
+      feeText: "Membership is free and always will be. We're funded by sponsors, partners and in-kind support, not by charging the students we're here for.",
       faqLabel: 'Still deciding?', faqTitle: 'Questions students ask before joining.',
       faqItems: [
         { q: 'What does it cost?', a: "Nothing. Membership is 100% free. We review every application and let you know our decision. We're funded by sponsors and partners, not by charging students." },
@@ -695,7 +695,7 @@ window.MBS_CONTENT = {
       { id: 'about', label: 'Über Uns' },
       { id: 'calendar', label: 'Termine' },
       { id: 'team', label: 'Team' },
-      { id: 'membership', label: 'Mitgliedschaft' },
+      { id: 'membership', label: 'Für Studenten' },
       { id: 'companies', label: 'Für Unternehmen' },
       { id: 'contact', label: 'Kontakt' }
     ],
@@ -784,7 +784,7 @@ window.MBS_CONTENT = {
       formatsText: 'Case Nights, dazu Case Competitions, Company Cases, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos und offen für jede:n Studierende:n in München.',
       formatsLink: 'Zum ganzen Programm →',
       studentH: 'Ab sofort dabei. Einfach auftauchen.', studentText: 'Kostenlos für jede:n Studierende:n an jeder Münchner Hochschule. Komm zur nächsten Case Night oder trag dich für Updates ein. Dauert dreißig Sekunden.',
-      companyH: 'Sie stellen in München ein?', companyText: 'Wir bauen ein hochschulübergreifendes Netzwerk auf, das Unternehmen mit Business-Studierenden aus ganz München verbindet. Sprechen Sie uns an, um mehr zu erfahren.',
+      companyH: 'Sie suchen den direkten Draht zu Münchens Talenten?', companyText: 'Wir bauen ein hochschulübergreifendes Netzwerk auf, das Unternehmen mit Wirtschaftstalenten aus ganz München verbindet. Sprechen Sie uns an, um mehr zu erfahren.',
       partnerBtn: 'Mehr erfahren →'
     },
     about: {
@@ -869,21 +869,21 @@ window.MBS_CONTENT = {
         { icon: 'users', title: 'Ein Netzwerk über jede Münchner Hochschule', text: 'Plus Alumni, die schon in Consulting, Finance, Tech und Industrie arbeiten.' },
         { icon: 'building', title: 'Direkter Kontakt zu Partnerunternehmen', text: 'Inklusive Stellen, die Mitglieder vor der Ausschreibung sehen.' },
         { icon: 'briefcase', title: 'Eine Rolle, wenn du willst', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, im Lebenslauf, mit einer Referenz dahinter.' },
-        { icon: 'trophy', title: 'Partnerprojekte', text: 'Echte Kundenarbeit mit einem echten Ergebnis.' },
-        { icon: 'globe', title: 'Alumni-Status auf Lebenszeit', text: 'Nach dem Abschluss bleibst du im Netzwerk.' }
+        { icon: 'trophy', title: 'Praxiserfahrung', text: 'Echte Cases in jeder Case Night, bald auch in Case Competitions.' },
+        { icon: 'globe', title: 'Inspirierende Community', text: 'Menschen, die dich fordern, unterstützen und langfristig verbinden.' }
       ],
       processLabel: 'So wirst du Mitglied', processTitle: 'Von der ersten Case Night bis zum Vollmitglied.',
       process: [
         { title: 'Case Nights, Skillnights oder online', text: 'Offen für alle, einfach vorbeikommen oder dich online anmelden.' },
-        { title: 'Sichtung', text: 'Wir prüfen jede Bewerbung, die stärksten kommen weiter.', note: 'Diesmal nicht dabei? Komm gerne zu jeder offenen Case Night oder Skillnight.' },
-        { title: 'Interview', text: '20 Minuten, nachdem du mindestens ein Event besucht hast.', note: 'Diesmal nicht dabei? Komm gerne zu jeder offenen Case Night oder Skillnight.' },
+        { title: 'Sichtung', text: 'Wir prüfen jede Bewerbung, die passendsten kommen weiter.', note: 'Diesmal nicht dabei? Komm gerne zu jeder offenen Case Night oder Skillnight.' },
+        { title: 'Interview', text: '20 Minuten.', note: 'Diesmal nicht dabei? Komm gerne zu jeder offenen Case Night oder Skillnight.' },
         { title: 'Aufnahmeentscheidung', text: 'Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum nächsten Semester auf.' },
         { title: 'Vollmitglied ab sofort', text: 'Kostenlos, mit Stimmrecht ab der nächsten Mitgliederversammlung.' }
       ],
       expectLabel: 'Was wir erwarten', expectTitle: 'Tauch auf. Bring dich ein. Verhalte dich gut.',
       expectText: 'Komm zu ein paar Sachen im Semester. Bring irgendwann etwas ein, eine Idee, einen Abend, einen Kontakt, ein Projekt. Behandle die Menschen in diesem Netzwerk so, wie du in fünf Jahren von ihnen behandelt werden willst, wenn eine:r von ihnen einstellt.',
       feeLabel: 'Die Kosten', feeValue: '0 €', feePer: 'immer, für Studierende',
-      feeText: 'Die Mitgliedschaft hat noch nie etwas gekostet und wird es nie tun. Wir finanzieren uns über Sponsoren, Partner und Sachleistungen, nicht über die Studierenden, für die es uns gibt.',
+      feeText: 'Die Mitgliedschaft ist kostenlos und wird es immer bleiben. Wir finanzieren uns über Sponsoren, Partner und Sachleistungen, nicht über die Studierenden, für die es uns gibt.',
       faqLabel: 'Noch unentschlossen?', faqTitle: 'Die Fragen, die Studierende vor dem Mitmachen stellen.',
       faqItems: [
         { q: 'Was kostet es?', a: 'Nichts. Die Mitgliedschaft ist zu 100 % kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir finanzieren uns über Sponsoren und Partner, nicht über die Studierenden.' },
