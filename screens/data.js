@@ -572,7 +572,7 @@ window.MBS_CONTENT = {
       faqLabel: 'Questions companies ask', faqTitle: 'Before you reach out.',
       faqItems: [
         { q: 'How do companies get involved?', a: "As an event partner, a Case Competition or Company Case host, through a partner project, or an insight partnership. Reach out and we'll find the format that fits." },
-        { q: 'Do we need to commit to a full partnership right away?', a: "No. Most companies start with one format, a Guest Speaker evening or a Company Case, and decide from there. There's no minimum commitment." }
+        { q: 'What does a partnership cost?', a: "You decide what you want to offer our students, from know-how and your time to financial backing. Together, we'll figure out what works best for you." }
       ],
       closeH: 'Get in touch.',
       closeText: "Any of the reasons above, or you've met one of our business talents and want to hire them directly. Get in touch and we'll get back within a week.",
@@ -917,7 +917,7 @@ window.MBS_CONTENT = {
       faqLabel: 'Fragen von Unternehmen', faqTitle: 'Bevor Sie uns schreiben.',
       faqItems: [
         { q: 'Wie werden Unternehmen Teil davon?', a: 'Als Event-Partner, als Gastgeber einer Case Competition oder eines Company Case, über ein Partnerprojekt oder eine Insight-Partnerschaft. Sprechen Sie uns an, wir finden das passende Format.' },
-        { q: 'Müssen wir uns direkt für eine volle Partnerschaft entscheiden?', a: 'Nein. Die meisten Unternehmen starten mit einem Format, einem Guest-Speaker-Abend oder einem Company Case, und entscheiden von dort aus weiter. Es gibt keine Mindestverpflichtung.' }
+        { q: 'Was kostet eine Zusammenarbeit?', a: 'Sie entscheiden selbst, was Sie unseren Studierenden anbieten wollen, von Know-how und Ihrer Zeit bis zu finanzieller Unterstützung. Gemeinsam finden wir heraus, was für Sie am besten funktioniert.' }
       ],
       closeH: 'Melden Sie sich.',
       closeText: 'Einer der oben genannten Gründe, oder Sie haben eines unserer Wirtschaftstalente kennengelernt und möchten es direkt einstellen. Melden Sie sich bei uns, wir antworten innerhalb einer Woche.',
