@@ -126,6 +126,18 @@
 .mbs-grid-4 { grid-template-columns: repeat(4, 1fr); }
 .mbs-grid--lg { gap: var(--mbs-grid-gap-lg); }
 
+/* Same three-column rhythm as .mbs-grid-3, but flex-wrap so a trailing
+   partial row centers instead of hugging the left edge. */
+.mbs-grid-3-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--mbs-grid-gap-lg);
+}
+.mbs-grid-3-center > * {
+  flex: 0 1 calc((100% - 2 * var(--mbs-grid-gap-lg)) / 3);
+}
+
 /* The 2×2 figure block beside the "Wer wir sind" prose. */
 .mbs-stats {
   display: grid;
@@ -161,6 +173,7 @@
 @media (max-width: 1000px) {
   .mbs-grid-3 { grid-template-columns: repeat(2, 1fr); }
   .mbs-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .mbs-grid-3-center > * { flex-basis: calc((100% - var(--mbs-grid-gap-lg)) / 2); }
 }
 
 @media (max-width: 900px) {
@@ -182,6 +195,7 @@
   }
   .mbs-grid-2,
   .mbs-grid-3 { grid-template-columns: 1fr; }
+  .mbs-grid-3-center > * { flex-basis: 100%; }
   .mbs-form-row { grid-template-columns: 1fr; }
   .mbs-sec-head {
     align-items: flex-start;
