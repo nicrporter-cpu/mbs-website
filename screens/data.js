@@ -584,14 +584,14 @@ window.MBS_CONTENT = {
       whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees. Every team is open to members who want to help shape it.',
       boardTitle: 'The Board',
       board: [
-        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Programme & Education, External Relations', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
+        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Programme & Education, External Relations', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 90%', transform: 'scale(1.08)' } },
         { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Members & Growth, Brand & Communications', photoSrc: '/assets/team-martijn-mooren.jpg' },
-        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'External Relations, Operations', photoSrc: '/assets/team-lennart-neumeier.jpg' }
+        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'External Relations, Operations', photoSrc: '/assets/team-lennart-neumeier.jpg', photoStyle: { transform: 'scale(1.2)' } }
       ],
       teamsLabel: 'Teams', teamsTitle: 'Five teams, one society.',
       teams: [
         { icon: 'star', title: 'Programme & Education', text: "Plans the semester's calendar of Case Nights, Case Competitions, Skillnights and socials, develops the business questions and learning content behind each one, and makes sure every format runs on the night." },
-        { icon: 'briefcase', title: 'External Relations', text: 'Owns every company relationship from first contact to signed partnership, keeps those partnerships running smoothly day to day, and makes sure each collaboration actually delivers for both sides.' },
+        { icon: 'briefcase', title: 'External Relations', text: 'Owns every company and university relationship from first contact to a successful collaboration, keeps those partnerships running smoothly day to day, and makes sure each collaboration actually delivers for both sides.' },
         { icon: 'users', title: 'Members & Growth', text: 'Runs membership from first application to full onboarding, and grows our reach through campus representatives at every university.' },
         { icon: 'globe', title: 'Brand & Communications', text: 'Owns the website, social channels, newsletter and visual design, and makes sure the way we look and sound stays consistent everywhere someone encounters us.' },
         { icon: 'building', title: 'Operations', text: 'Keeps finances, legal paperwork and the tools we all rely on running smoothly, handling everything unglamorous in the background so the other teams can focus on their own work.' }
@@ -929,14 +929,14 @@ window.MBS_CONTENT = {
       whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt. Jedes Team steht Mitgliedern offen, die mitgestalten wollen.',
       boardTitle: 'Der Vorstand',
       board: [
-        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Programm & Education, Externe Beziehungen', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 45%' } },
+        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Programm & Education, Externe Beziehungen', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 90%', transform: 'scale(1.08)' } },
         { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Mitglieder & Wachstum, Brand & Kommunikation', photoSrc: '/assets/team-martijn-mooren.jpg' },
-        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Externe Beziehungen, Operations', photoSrc: '/assets/team-lennart-neumeier.jpg' }
+        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Externe Beziehungen, Operations', photoSrc: '/assets/team-lennart-neumeier.jpg', photoStyle: { transform: 'scale(1.2)' } }
       ],
       teamsLabel: 'Teams', teamsTitle: 'Fünf Teams, ein Verein.',
       teams: [
         { icon: 'star', title: 'Programm & Education', text: 'Plant das Semesterprogramm aus Case Nights, Case Competitions, Skillnights und Socials, entwickelt die Fragestellungen und Lerninhalte dahinter und sorgt dafür, dass jedes Format am Abend auch wirklich funktioniert.' },
-        { icon: 'briefcase', title: 'Externe Beziehungen', text: 'Verantwortet jede Unternehmensbeziehung vom ersten Kontakt bis zur unterschriebenen Partnerschaft, kümmert sich um die laufende Partnerpflege und sorgt dafür, dass jede Zusammenarbeit für beide Seiten etwas bringt.' },
+        { icon: 'briefcase', title: 'Externe Beziehungen', text: 'Verantwortet Unternehmens- und Hochschulbeziehungen vom ersten Kontakt bis zur erfolgreichen Zusammenarbeit, kümmert sich um die laufende Partnerpflege und sorgt dafür, dass jede Zusammenarbeit für beide Seiten etwas bringt.' },
         { icon: 'users', title: 'Mitglieder & Wachstum', text: 'Begleitet Mitglieder von der Bewerbung bis zum vollständigen Onboarding und sorgt über Campus-Vertretungen an jeder Hochschule für Wachstum.' },
         { icon: 'globe', title: 'Brand & Kommunikation', text: 'Verantwortet Website, Social-Kanäle, Newsletter und das visuelle Design und sorgt dafür, dass wir überall, wo man auf uns trifft, gleich aussehen und klingen.' },
         { icon: 'building', title: 'Operations', text: 'Hält Finanzen, rechtliche Angelegenheiten und die Tools am Laufen, auf die sich alle verlassen, und übernimmt im Hintergrund alles Unglamouröse, damit sich die anderen Teams auf ihre eigene Arbeit konzentrieren können.' }
