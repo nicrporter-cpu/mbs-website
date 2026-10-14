@@ -590,11 +590,11 @@ window.MBS_CONTENT = {
       ],
       teamsLabel: 'Teams', teamsTitle: 'Five teams, one society.',
       teams: [
-        { icon: 'star', title: 'Programme & Education', text: "Plans the semester's calendar of Case Nights, Case Competitions, Skillnights and socials, develops the business questions and learning content behind each one, and makes sure every format runs on the night.", lead: 'Nicholas Porter' },
-        { icon: 'briefcase', title: 'External Relations', text: 'Owns every company relationship from first contact to signed partnership, keeps those partnerships running smoothly day to day, and makes sure each collaboration actually delivers for both sides.', lead: 'Nicholas Porter & Lennart Neumeier' },
-        { icon: 'users', title: 'Members & Growth', text: 'Runs membership from first application to full onboarding, and grows our reach through campus representatives at every university.', lead: 'Martijn Mooren' },
-        { icon: 'globe', title: 'Brand & Communications', text: 'Owns the website, social channels, newsletter and visual design, and makes sure the way we look and sound stays consistent everywhere someone encounters us.', lead: 'Martijn Mooren' },
-        { icon: 'building', title: 'Operations', text: 'Keeps finances, legal paperwork and the tools we all rely on running smoothly, handling everything unglamorous in the background so the other teams can focus on their own work.', lead: 'Lennart Neumeier' }
+        { icon: 'star', title: 'Programme & Education', text: "Plans the semester's calendar of Case Nights, Case Competitions, Skillnights and socials, develops the business questions and learning content behind each one, and makes sure every format runs on the night." },
+        { icon: 'briefcase', title: 'External Relations', text: 'Owns every company relationship from first contact to signed partnership, keeps those partnerships running smoothly day to day, and makes sure each collaboration actually delivers for both sides.' },
+        { icon: 'users', title: 'Members & Growth', text: 'Runs membership from first application to full onboarding, and grows our reach through campus representatives at every university.' },
+        { icon: 'globe', title: 'Brand & Communications', text: 'Owns the website, social channels, newsletter and visual design, and makes sure the way we look and sound stays consistent everywhere someone encounters us.' },
+        { icon: 'building', title: 'Operations', text: 'Keeps finances, legal paperwork and the tools we all rely on running smoothly, handling everything unglamorous in the background so the other teams can focus on their own work.' }
       ]
     },
     faq: {
@@ -935,11 +935,11 @@ window.MBS_CONTENT = {
       ],
       teamsLabel: 'Teams', teamsTitle: 'Fünf Teams, ein Verein.',
       teams: [
-        { icon: 'star', title: 'Programm & Education', text: 'Plant das Semesterprogramm aus Case Nights, Case Competitions, Skillnights und Socials, entwickelt die Fragestellungen und Lerninhalte dahinter und sorgt dafür, dass jedes Format am Abend auch wirklich funktioniert.', lead: 'Nicholas Porter' },
-        { icon: 'briefcase', title: 'Externe Beziehungen', text: 'Verantwortet jede Unternehmensbeziehung vom ersten Kontakt bis zur unterschriebenen Partnerschaft, kümmert sich um die laufende Partnerpflege und sorgt dafür, dass jede Zusammenarbeit für beide Seiten etwas bringt.', lead: 'Nicholas Porter & Lennart Neumeier' },
-        { icon: 'users', title: 'Mitglieder & Wachstum', text: 'Begleitet Mitglieder von der Bewerbung bis zum vollständigen Onboarding und sorgt über Campus-Vertretungen an jeder Hochschule für Wachstum.', lead: 'Martijn Mooren' },
-        { icon: 'globe', title: 'Brand & Kommunikation', text: 'Verantwortet Website, Social-Kanäle, Newsletter und das visuelle Design und sorgt dafür, dass wir überall, wo man auf uns trifft, gleich aussehen und klingen.', lead: 'Martijn Mooren' },
-        { icon: 'building', title: 'Operations', text: 'Hält Finanzen, rechtliche Angelegenheiten und die Tools am Laufen, auf die sich alle verlassen, und übernimmt im Hintergrund alles Unglamouröse, damit sich die anderen Teams auf ihre eigene Arbeit konzentrieren können.', lead: 'Lennart Neumeier' }
+        { icon: 'star', title: 'Programm & Education', text: 'Plant das Semesterprogramm aus Case Nights, Case Competitions, Skillnights und Socials, entwickelt die Fragestellungen und Lerninhalte dahinter und sorgt dafür, dass jedes Format am Abend auch wirklich funktioniert.' },
+        { icon: 'briefcase', title: 'Externe Beziehungen', text: 'Verantwortet jede Unternehmensbeziehung vom ersten Kontakt bis zur unterschriebenen Partnerschaft, kümmert sich um die laufende Partnerpflege und sorgt dafür, dass jede Zusammenarbeit für beide Seiten etwas bringt.' },
+        { icon: 'users', title: 'Mitglieder & Wachstum', text: 'Begleitet Mitglieder von der Bewerbung bis zum vollständigen Onboarding und sorgt über Campus-Vertretungen an jeder Hochschule für Wachstum.' },
+        { icon: 'globe', title: 'Brand & Kommunikation', text: 'Verantwortet Website, Social-Kanäle, Newsletter und das visuelle Design und sorgt dafür, dass wir überall, wo man auf uns trifft, gleich aussehen und klingen.' },
+        { icon: 'building', title: 'Operations', text: 'Hält Finanzen, rechtliche Angelegenheiten und die Tools am Laufen, auf die sich alle verlassen, und übernimmt im Hintergrund alles Unglamouröse, damit sich die anderen Teams auf ihre eigene Arbeit konzentrieren können.' }
       ]
     },
     faq: {

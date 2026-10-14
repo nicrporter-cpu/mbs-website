@@ -28,8 +28,7 @@ function TeamScreen({ C }) {
             <Card key={t.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={t.icon} size="24px" /></div>
               <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '17px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{t.title}</h3>
-              <p style={{ fontSize: '13.5px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: '0 0 12px' }}>{t.text}</p>
-              {t.lead && <p style={{ fontSize: '12px', fontWeight: 600, color: 'var(--mbs-gold-text)', margin: 0 }}>{t.lead}</p>}
+              <p style={{ fontSize: '13.5px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{t.text}</p>
             </Card>
           ))}
         </div>
