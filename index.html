@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=f1e98682ef">
-<link rel="stylesheet" href="/site.css?v=f1e98682ef">
+<link rel="stylesheet" href="/design-system/styles.css?v=ece9e5b544">
+<link rel="stylesheet" href="/site.css?v=ece9e5b544">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=f1e98682ef"></script>
-<script src="/screens/data.js?v=f1e98682ef"></script>
-<script src="/site.js?v=f1e98682ef"></script>
+<script src="/design-system/_ds_bundle.js?v=ece9e5b544"></script>
+<script src="/screens/data.js?v=ece9e5b544"></script>
+<script src="/site.js?v=ece9e5b544"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1027,6 +1027,7 @@ function HomeScreen({ C }) {
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={H.whyLabel} title={H.whyTitle} />
+          <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{H.whyIntro}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{H.whyP1}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{H.whyP2}</p>
         </div>

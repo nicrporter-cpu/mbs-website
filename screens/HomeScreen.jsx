@@ -33,6 +33,7 @@ function HomeScreen({ C }) {
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={H.whyLabel} title={H.whyTitle} />
+          <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{H.whyIntro}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{H.whyP1}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{H.whyP2}</p>
         </div>

@@ -428,7 +428,8 @@ window.MBS_CONTENT = {
     universities: MBS_UNIVERSITIES.concat(['Other university in Munich']),
 
     home: {
-      heroLead: "Munich Business Society is Munich's first cross-university case-solving and business platform, free, with no membership fee, for students from every university in the city. Come to an open format, or apply for membership to join the member formats too. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
+      heroLead: "Munich's first cross-university case club. Free for students at every university in the city.",
+      whyIntro: "Munich Business Society is Munich's first cross-university case-solving and business platform, free, with no membership fee, for students from every university in the city. Come to an open format, or apply for membership to join the member formats too. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
       seeEvents: "See what's coming up",
       whyLabel: 'Why we exist', whyTitle: 'Munich has students split across many universities, and almost none of them talk to each other.',
       whyP1: 'Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, giving visibility into that university\'s own talent, not across one shared, central club. Recruiters see one Munich talent pool; students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.',
@@ -778,7 +779,8 @@ window.MBS_CONTENT = {
     universities: MBS_UNIVERSITIES.concat(['Andere Hochschule in München']),
 
     home: {
-      heroLead: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, kostenlos, ohne Mitgliedsbeitrag, für Studierende jeder Hochschule der Stadt. Komm zu einem offenen Format, oder bewirb dich für die Mitgliedschaft und sei auch bei den Mitglieder-Formaten dabei. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
+      heroLead: 'Münchens erster hochschulübergreifender Case Club. Kostenlos für Studierende jeder Hochschule der Stadt.',
+      whyIntro: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, kostenlos, ohne Mitgliedsbeitrag, für Studierende jeder Hochschule der Stadt. Komm zu einem offenen Format, oder bewirb dich für die Mitgliedschaft und sei auch bei den Mitglieder-Formaten dabei. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
       seeEvents: 'Zu den Terminen',
       whyLabel: 'Warum es uns gibt', whyTitle: 'München hat Studierende, verteilt auf viele Hochschulen, und fast keine spricht mit der anderen.',
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie geben Sichtbarkeit auf die Talente der eigenen Uni, aber nicht hochschulübergreifend in einem zentralen Club. Recruiter sehen einen Münchner Talentpool; Studierende treffen immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
