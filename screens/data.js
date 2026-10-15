@@ -584,7 +584,7 @@ window.MBS_CONTENT = {
       whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees. Every team is open to members who want to help shape it.',
       boardTitle: 'The Board',
       board: [
-        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Programme & Education, External Relations', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.08)' } },
+        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Programme & Education, External Relations', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.12) translateX(-5.2%)' } },
         { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Members & Growth, Brand & Communications', photoSrc: '/assets/team-martijn-mooren.jpg' },
         { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'External Relations, Operations', photoSrc: '/assets/team-lennart-neumeier.jpg', photoStyle: { transform: 'scale(1.2) translateX(3.5%)' } }
       ],
@@ -929,7 +929,7 @@ window.MBS_CONTENT = {
       whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt. Jedes Team steht Mitgliedern offen, die mitgestalten wollen.',
       boardTitle: 'Der Vorstand',
       board: [
-        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Programm & Education, Externe Beziehungen', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.08)' } },
+        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Programm & Education, Externe Beziehungen', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.12) translateX(-5.2%)' } },
         { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Mitglieder & Wachstum, Brand & Kommunikation', photoSrc: '/assets/team-martijn-mooren.jpg' },
         { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Externe Beziehungen, Operations', photoSrc: '/assets/team-lennart-neumeier.jpg', photoStyle: { transform: 'scale(1.2) translateX(3.5%)' } }
       ],
