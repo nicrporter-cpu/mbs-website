@@ -460,7 +460,7 @@ window.MBS_CONTENT = {
       ],
       valuesLabel: 'Our values', valuesTitle: 'What we stand for',
       orgLabel: "How we're organised", orgTitle: 'Run by students, built to last.',
-      orgText: "Munich Business Society runs on five teams. Programme & Education plans the semester's formats, socials and the business questions behind them. External Relations owns company relationships and the partner pipeline. Members & Growth handles membership, onboarding and campus representatives. Brand & Communications runs the website and channels. Operations keeps finances, legal and tools running. Every team is led by students, alongside their degrees.",
+      orgText: "Munich Business Society runs on six teams. Programme & Education plans the semester's formats, socials and the business questions behind them. External Affairs owns company relationships and the partner pipeline. Members & Growth handles membership, onboarding and campus representatives. Brand & Communication runs the website and channels. Finance & Legal looks after the money and the legal side. Operations & Infrastructure keeps the tools and infrastructure running. Every team is led by students, alongside their degrees.",
       meetTeam: 'Meet the team →'
     },
     calendarPage: {
@@ -587,17 +587,18 @@ window.MBS_CONTENT = {
       whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees. Every team is open to members who want to help shape it.',
       boardTitle: 'The Board',
       board: [
-        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Programme & Education, External Relations', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.12) translateX(-5.2%)' } },
-        { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Members & Growth, Brand & Communications', photoSrc: '/assets/team-martijn-mooren.jpg' },
-        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'External Relations, Operations', photoSrc: '/assets/team-lennart-neumeier.jpg', photoStyle: { transform: 'scale(1.2) translateX(3.5%)' } }
+        { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Programme & Education, External Affairs', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.12) translateX(-5.2%)' } },
+        { name: 'Martijn Mooren', role: 'Deputy Chairman', initials: 'MM', description: 'Members & Growth, Brand & Communication', photoSrc: '/assets/team-martijn-mooren.jpg' },
+        { name: 'Lennart Neumeier', role: 'Treasurer', initials: 'LN', description: 'External Affairs, Finance & Legal, Operations & Infrastructure', photoSrc: '/assets/team-lennart-neumeier.jpg', photoStyle: { transform: 'scale(1.2) translateX(3.5%)' } }
       ],
-      teamsLabel: 'Teams', teamsTitle: 'Five teams, one society.',
+      teamsLabel: 'Teams', teamsTitle: 'Six teams, one society.',
       teams: [
         { icon: 'star', title: 'Programme & Education', text: "Plans the semester's calendar of Case Nights, Case Competitions, Skillnights and socials, develops the business questions and learning content behind each one, and makes sure every format runs on the night." },
-        { icon: 'briefcase', title: 'External Relations', text: 'Owns every company and university relationship from first contact to a successful collaboration, keeps those partnerships running smoothly day to day, and makes sure each collaboration actually delivers for both sides.' },
+        { icon: 'briefcase', title: 'External Affairs', text: 'Owns every company and university relationship from first contact to a successful collaboration, keeps those partnerships running smoothly day to day, and makes sure each collaboration actually delivers for both sides.' },
         { icon: 'users', title: 'Members & Growth', text: 'Runs membership from first application to full onboarding, and grows our reach through campus representatives at every university.' },
-        { icon: 'globe', title: 'Brand & Communications', text: 'Owns the website, social channels, newsletter and visual design, and makes sure the way we look and sound stays consistent everywhere someone encounters us.' },
-        { icon: 'building', title: 'Operations', text: 'Keeps finances, legal paperwork and the tools we all rely on running smoothly, handling everything unglamorous in the background so the other teams can focus on their own work.' }
+        { icon: 'globe', title: 'Brand & Communication', text: 'Owns the website, social channels, newsletter and visual design, and makes sure the way we look and sound stays consistent everywhere someone encounters us.' },
+        { icon: 'scale', title: 'Finance & Legal', text: "Looks after the society's finances, budgets and sponsorship money, and handles the legal side, from the association register to contracts and data protection." },
+        { icon: 'building', title: 'Operations & Infrastructure', text: 'Keeps the tools and infrastructure we all rely on running smoothly and handles everything unglamorous in the background, so the other teams can focus on their own work.' }
       ]
     },
     faq: {
@@ -804,7 +805,7 @@ window.MBS_CONTENT = {
       ],
       valuesLabel: 'Unsere Werte', valuesTitle: 'Wofür wir stehen',
       orgLabel: 'Wie wir organisiert sind', orgTitle: 'Von Studierenden geführt, auf Dauer gebaut.',
-      orgText: 'Die Munich Business Society läuft über fünf Teams. Programm & Education plant die Formate des Semesters, die Socials und die Fragestellungen dahinter. Externe Beziehungen verantwortet die Unternehmensbeziehungen und die Partner-Pipeline. Mitglieder & Wachstum kümmert sich um Mitgliedschaft, Onboarding und Campus-Vertretungen. Brand & Kommunikation betreut Website und Kanäle. Operations hält Finanzen, Recht und Tools am Laufen. Jedes Team wird von Studierenden geführt, neben ihrem Studium.',
+      orgText: 'Die Munich Business Society läuft über sechs Teams. Programm & Education plant die Formate des Semesters, die Socials und die Fragestellungen dahinter. External Affairs verantwortet die Unternehmensbeziehungen und die Partner-Pipeline. Members & Growth kümmert sich um Mitgliedschaft, Onboarding und Campus-Vertretungen. Brand & Communication betreut Website und Kanäle. Finance & Legal kümmert sich um Finanzen und Rechtliches. Operations & Infrastruktur hält Tools und Infrastruktur am Laufen. Jedes Team wird von Studierenden geführt, neben ihrem Studium.',
       meetTeam: 'Lern das Team kennen →'
     },
     calendarPage: {
@@ -931,17 +932,18 @@ window.MBS_CONTENT = {
       whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt. Jedes Team steht Mitgliedern offen, die mitgestalten wollen.',
       boardTitle: 'Der Vorstand',
       board: [
-        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Programm & Education, Externe Beziehungen', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.12) translateX(-5.2%)' } },
-        { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Mitglieder & Wachstum, Brand & Kommunikation', photoSrc: '/assets/team-martijn-mooren.jpg' },
-        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'Externe Beziehungen, Operations', photoSrc: '/assets/team-lennart-neumeier.jpg', photoStyle: { transform: 'scale(1.2) translateX(3.5%)' } }
+        { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Programm & Education, External Affairs', photoSrc: '/assets/team-nicholas-porter.png', photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.12) translateX(-5.2%)' } },
+        { name: 'Martijn Mooren', role: '2. Vorsitzender', initials: 'MM', description: 'Members & Growth, Brand & Communication', photoSrc: '/assets/team-martijn-mooren.jpg' },
+        { name: 'Lennart Neumeier', role: 'Schatzmeister', initials: 'LN', description: 'External Affairs, Finance & Legal, Operations & Infrastruktur', photoSrc: '/assets/team-lennart-neumeier.jpg', photoStyle: { transform: 'scale(1.2) translateX(3.5%)' } }
       ],
-      teamsLabel: 'Teams', teamsTitle: 'Fünf Teams, ein Verein.',
+      teamsLabel: 'Teams', teamsTitle: 'Sechs Teams, ein Verein.',
       teams: [
         { icon: 'star', title: 'Programm & Education', text: 'Plant das Semesterprogramm aus Case Nights, Case Competitions, Skillnights und Socials, entwickelt die Fragestellungen und Lerninhalte dahinter und sorgt dafür, dass jedes Format am Abend auch wirklich funktioniert.' },
-        { icon: 'briefcase', title: 'Externe Beziehungen', text: 'Verantwortet Unternehmens- und Hochschulbeziehungen vom ersten Kontakt bis zur erfolgreichen Zusammenarbeit, kümmert sich um die laufende Partnerpflege und sorgt dafür, dass jede Zusammenarbeit für beide Seiten etwas bringt.' },
-        { icon: 'users', title: 'Mitglieder & Wachstum', text: 'Begleitet Mitglieder von der Bewerbung bis zum vollständigen Onboarding und sorgt über Campus-Vertretungen an jeder Hochschule für Wachstum.' },
-        { icon: 'globe', title: 'Brand & Kommunikation', text: 'Verantwortet Website, Social-Kanäle, Newsletter und das visuelle Design und sorgt dafür, dass wir überall, wo man auf uns trifft, gleich aussehen und klingen.' },
-        { icon: 'building', title: 'Operations', text: 'Hält Finanzen, rechtliche Angelegenheiten und die Tools am Laufen, auf die sich alle verlassen, und übernimmt im Hintergrund alles Unglamouröse, damit sich die anderen Teams auf ihre eigene Arbeit konzentrieren können.' }
+        { icon: 'briefcase', title: 'External Affairs', text: 'Verantwortet Unternehmens- und Hochschulbeziehungen vom ersten Kontakt bis zur erfolgreichen Zusammenarbeit, kümmert sich um die laufende Partnerpflege und sorgt dafür, dass jede Zusammenarbeit für beide Seiten etwas bringt.' },
+        { icon: 'users', title: 'Members & Growth', text: 'Begleitet Mitglieder von der Bewerbung bis zum vollständigen Onboarding und sorgt über Campus-Vertretungen an jeder Hochschule für Wachstum.' },
+        { icon: 'globe', title: 'Brand & Communication', text: 'Verantwortet Website, Social-Kanäle, Newsletter und das visuelle Design und sorgt dafür, dass wir überall, wo man auf uns trifft, gleich aussehen und klingen.' },
+        { icon: 'scale', title: 'Finance & Legal', text: 'Kümmert sich um Finanzen, Budgets und Sponsoringgelder des Vereins und um alles Rechtliche, vom Vereinsregister über Verträge bis zum Datenschutz.' },
+        { icon: 'building', title: 'Operations & Infrastruktur', text: 'Hält die Tools und die Infrastruktur am Laufen, auf die sich alle verlassen, und übernimmt im Hintergrund alles Unglamouröse, damit sich die anderen Teams auf ihre eigene Arbeit konzentrieren können.' }
       ]
     },
     faq: {
