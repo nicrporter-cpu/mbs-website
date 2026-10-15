@@ -43,14 +43,11 @@ function AboutScreen({ C, openEvent }) {
         </div>
         <div className="mbs-grid-2" data-stagger>
           {C.formats.map(f => (
-            <Card key={f.title} padding="28px">
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '14px' }}>
-                <span style={{ color: 'var(--mbs-gold-text)', lineHeight: 1 }}><Icon name={f.icon} size="24px" /></span>
-                <Badge variant="tag">{f.pillar}</Badge>
-              </div>
+            <Card key={f.title} padding="28px" style={{ display: 'flex', flexDirection: 'column' }}>
+              <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={f.icon} size="24px" /></div>
               <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{f.title}</h3>
               <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: '0 0 14px' }}>{f.text}</p>
-              <p style={{ fontSize: '12px', color: 'var(--mbs-gold-text)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.5px', margin: 0 }}>{MBS_PH(f.access)}</p>
+              <p style={{ fontSize: '12px', color: 'var(--mbs-gold-text)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.5px', margin: 'auto 0 0' }}>{MBS_PH(f.access)}</p>
             </Card>
           ))}
         </div>
