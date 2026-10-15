@@ -13,7 +13,6 @@ function CompaniesScreen({ C }) {
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.whyLabel} title={K.whyTitle} desc={K.whyDesc} />
-          <FormNote style={{ marginTop: '24px' }}>{K.legalNote}</FormNote>
         </div>
       </Section>
 
@@ -45,12 +44,11 @@ function CompaniesScreen({ C }) {
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label={K.partnersLabel} title={K.partnersTitle} />
-        <div data-reveal style={{
-          marginTop: '28px', textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)',
-          background: 'var(--mbs-white)', border: '1px dashed var(--mbs-border)'
-        }}>
-          <p style={{ fontSize: '16px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 20px' }}>{K.partnersDesc}</p>
+        <div className="mbs-founding" data-reveal>
+          <div>
+            <SectionHeading title={K.partnersTitle} desc={K.partnersDesc} />
+            <p style={{ fontSize: '14px', color: 'var(--mbs-navy)', lineHeight: 1.7, margin: '16px 0 0' }}>{MBS_PH(K.partnersPerks)}</p>
+          </div>
           <Button variant="gold" href={ROUTES.contact}>{K.partnersBtn}</Button>
         </div>
       </Section>

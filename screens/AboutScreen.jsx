@@ -50,7 +50,7 @@ function AboutScreen({ C, openEvent }) {
               </div>
               <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{f.title}</h3>
               <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: '0 0 14px' }}>{f.text}</p>
-              <p style={{ fontSize: '12px', color: 'var(--mbs-gold-text)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.5px', margin: 0 }}>{f.access}</p>
+              <p style={{ fontSize: '12px', color: 'var(--mbs-gold-text)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.5px', margin: 0 }}>{MBS_PH(f.access)}</p>
             </Card>
           ))}
         </div>

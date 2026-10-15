@@ -32,3 +32,16 @@ window.MBS_SET_EVENT_PARAM = function (id) {
     window.history.replaceState(null, '', url);
   } catch (e) { /* file:// — leave the URL alone */ }
 };
+
+/* Render a content string with its board placeholders marked up. Any `[...]`
+   run in screens/data.js copy becomes a .mbs-ph span (dashed gold underline,
+   "not final"), so a fill-in can live inside an ordinary sentence instead of
+   needing its own JSX. Strings without brackets come back unchanged. */
+window.MBS_PH = function (text) {
+  if (typeof text !== 'string' || text.indexOf('[') === -1) return text;
+  return text.split(/(\[[^\]]+\])/).map(function (part, i) {
+    return /^\[[^\]]+\]$/.test(part)
+      ? React.createElement('span', { key: i, className: 'mbs-ph' }, part)
+      : part;
+  });
+};

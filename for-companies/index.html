@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=1a454ccbfc">
-<link rel="stylesheet" href="/site.css?v=1a454ccbfc">
+<link rel="stylesheet" href="/design-system/styles.css?v=f1e98682ef">
+<link rel="stylesheet" href="/site.css?v=f1e98682ef">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=1a454ccbfc"></script>
-<script src="/screens/data.js?v=1a454ccbfc"></script>
-<script src="/site.js?v=1a454ccbfc"></script>
+<script src="/design-system/_ds_bundle.js?v=f1e98682ef"></script>
+<script src="/screens/data.js?v=f1e98682ef"></script>
+<script src="/site.js?v=f1e98682ef"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1007,7 +1007,6 @@ function CompaniesScreen({ C }) {
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.whyLabel} title={K.whyTitle} desc={K.whyDesc} />
-          <FormNote style={{ marginTop: '24px' }}>{K.legalNote}</FormNote>
         </div>
       </Section>
 
@@ -1039,12 +1038,11 @@ function CompaniesScreen({ C }) {
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label={K.partnersLabel} title={K.partnersTitle} />
-        <div data-reveal style={{
-          marginTop: '28px', textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)',
-          background: 'var(--mbs-white)', border: '1px dashed var(--mbs-border)'
-        }}>
-          <p style={{ fontSize: '16px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 20px' }}>{K.partnersDesc}</p>
+        <div className="mbs-founding" data-reveal>
+          <div>
+            <SectionHeading title={K.partnersTitle} desc={K.partnersDesc} />
+            <p style={{ fontSize: '14px', color: 'var(--mbs-navy)', lineHeight: 1.7, margin: '16px 0 0' }}>{MBS_PH(K.partnersPerks)}</p>
+          </div>
           <Button variant="gold" href={ROUTES.contact}>{K.partnersBtn}</Button>
         </div>
       </Section>

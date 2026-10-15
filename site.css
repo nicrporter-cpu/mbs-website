@@ -957,3 +957,96 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
   from { opacity: 0; transform: scale(.965); }
   to   { opacity: 1; transform: none; }
 }
+
+/* ── Membership: open formats vs member formats ─────────────────────────────
+   A two-column comparison, not a pair of feature cards: the same three rows
+   on both sides so the difference reads across. The member side is navy,
+   the open side stays on the page's own surface. */
+.mbs-tiers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--mbs-grid-gap);
+}
+.mbs-tier {
+  padding: 32px;
+  border-radius: var(--mbs-r-lg);
+  background: var(--mbs-white);
+  border: 1px solid var(--mbs-border);
+}
+.mbs-tier--member {
+  background: var(--mbs-navy);
+  border-color: var(--mbs-navy);
+}
+.mbs-tier-name {
+  font-family: var(--mbs-font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--mbs-navy);
+  margin: 0 0 20px;
+}
+.mbs-tier--member .mbs-tier-name { color: var(--mbs-gold-on-navy); }
+.mbs-tier-rows { margin: 0; }
+.mbs-tier-rows > div {
+  padding: 14px 0;
+  border-top: 1px solid var(--mbs-border);
+}
+.mbs-tier--member .mbs-tier-rows > div { border-top-color: var(--mbs-on-navy-border); }
+.mbs-tier-rows dt {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--mbs-gold-text);
+  margin: 0 0 4px;
+}
+.mbs-tier--member .mbs-tier-rows dt { color: var(--mbs-gold-on-navy); }
+.mbs-tier-rows dd {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--mbs-navy);
+  margin: 0;
+}
+.mbs-tier--member .mbs-tier-rows dd { color: var(--mbs-white); }
+.mbs-tier--member .mbs-ph { color: var(--mbs-on-navy-70); border-bottom-color: var(--mbs-gold-on-navy); }
+/* A board fill-in here can be a whole phrase; let it wrap inside the panel. */
+.mbs-tier .mbs-ph { white-space: normal; }
+@media (max-width: 760px) {
+  .mbs-tiers { grid-template-columns: 1fr; }
+  .mbs-tier { padding: 24px; }
+}
+
+/* ── For Companies: founding-partner offer ──────────────────────────────── */
+.mbs-founding {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 32px 48px;
+  padding: 40px;
+  border-radius: var(--mbs-r-lg);
+  background: var(--mbs-gold-dim);
+  border: 1px solid var(--mbs-gold-border);
+}
+@media (max-width: 760px) {
+  .mbs-founding { grid-template-columns: 1fr; padding: 28px 24px; }
+}
+
+/* ── Contact: the one inbox ─────────────────────────────────────────────── */
+.mbs-inbox {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  max-width: var(--mbs-prose-max);
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: var(--mbs-r);
+  background: var(--mbs-off);
+  border: 1px solid var(--mbs-border);
+  text-decoration: none;
+  transition: border-color var(--mbs-dur, .2s) ease;
+}
+.mbs-inbox:hover { border-color: var(--mbs-gold-border); }
+.mbs-inbox-addr {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--mbs-gold-text);
+  overflow-wrap: break-word;
+}

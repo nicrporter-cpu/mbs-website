@@ -25,6 +25,24 @@ function MembershipScreen({ C }) {
       </Section>
 
       <Section tone="alt">
+        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)', marginBottom: '32px' }}>
+          <SectionHeading title={M.tiersTitle} desc={M.tiersDesc} />
+        </div>
+        <div className="mbs-tiers" data-reveal>
+          {M.tiers.map((t, i) => (
+            <section key={t.name} className={'mbs-tier' + (i === 1 ? ' mbs-tier--member' : '')} aria-labelledby={'mbs-tier-' + i}>
+              <h3 id={'mbs-tier-' + i} className="mbs-tier-name">{t.name}</h3>
+              <dl className="mbs-tier-rows">
+                <div><dt>{M.tierRows.who}</dt><dd>{t.who}</dd></div>
+                <div><dt>{M.tierRows.how}</dt><dd>{t.how}</dd></div>
+                <div><dt>{M.tierRows.which}</dt><dd>{MBS_PH(t.which)}</dd></div>
+              </dl>
+            </section>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
         <SectionHeading label={M.getLabel} title={M.getTitle} style={{ marginBottom: '40px' }} />
         <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {M.get.map(g => (
@@ -76,6 +94,17 @@ function MembershipScreen({ C }) {
             {M.faqItems.map(item => (
               <FaqItem key={item.q} question={item.q}>{item.a}</FaqItem>
             ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div data-reveal data-on-navy="" style={{ textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }}>
+          <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', color: 'var(--mbs-white)', margin: '0 0 10px' }}>{M.ctaH}</h2>
+          <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-70)', lineHeight: 1.8, maxWidth: '460px', margin: '0 auto 24px' }}>{M.ctaText}</p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Button variant="gold" href={ROUTES.join}>{C.ui.apply}</Button>
+            <Button variant="onNavy" href={ROUTES.calendar}>{C.home.seeEvents}</Button>
           </div>
         </div>
       </Section>
