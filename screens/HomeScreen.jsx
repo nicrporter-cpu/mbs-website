@@ -81,7 +81,7 @@ function HomeScreen({ C }) {
             <p style={{ fontSize: '14px', lineHeight: 1.8, margin: '0 0 24px' }}>{H.studentText}</p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Button variant="gold" href={ROUTES.join}>{C.ui.apply}</Button>
-              <Button variant="outline" href={ROUTES.calendar}>{H.seeEvents}</Button>
+              <Button variant="outline" href={ROUTES.contact}>{H.contactBtn}</Button>
             </div>
           </div>
           <div data-on-navy="" style={{ padding: '40px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }}>

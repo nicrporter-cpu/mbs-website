@@ -405,23 +405,23 @@ window.MBS_CONTENT = {
       { icon: 'scale', title: 'Ownership', text: "You own what you sign up for - a Case Night, a project, a role. Nobody chases you to follow through, and nobody else will do it for you." }
     ],
     formats: [
-      { icon: 'target', title: 'Case Night', access: 'Free. Open to all students.',
+      { icon: 'target', title: 'Case Night',
         text: 'A team case, ninety to a hundred-twenty minutes, pitch and feedback at the end. The core of what we do.' },
-      { icon: 'trophy', title: 'Case Competition', access: 'Free. Members only.',
+      { icon: 'trophy', title: 'Case Competition',
         text: 'A multi-stage competition that builds to a final in front of a jury. Once or twice a semester, for anyone who wants the case format with the stakes turned up.' },
-      { icon: 'building', title: 'Events & Workshops with Partners', access: 'Free. Members only.',
+      { icon: 'building', title: 'Events & Workshops with Partners',
         text: 'A partner company brings a real case or runs a workshop from its own business, and shows you how the work is actually done there.' },
-      { icon: 'mic', title: 'Guest Speaker', access: 'Free. Open to all students.',
+      { icon: 'mic', title: 'Guest Speaker',
         text: 'A talk from someone worth listening to, on a business topic or a specific skill, with real time for questions after.' },
-      { icon: 'bolt', title: 'Skillnight', access: 'Free. Open to all students.',
+      { icon: 'bolt', title: 'Skillnight',
         text: 'Two hours on one skill employers assume you already have: Excel, valuation, storytelling, the stuff nobody teaches in a lecture hall.' },
-      { icon: 'users', title: 'Networking Nights', access: 'Free. Open to all students.',
+      { icon: 'users', title: 'Networking Nights',
         text: 'An evening built for meeting people across universities, no pitch, no agenda beyond good conversation.' },
-      { icon: 'star', title: 'Community Stammtisch', access: 'Free, no agenda. Members only.',
-        text: 'A regular, open get-together between Case Nights. No programme, just people who keep showing up.' },
-      { icon: 'globe', title: 'Excursions & Company Visits', access: 'Free, limited spots per visit. Members only.',
+      { icon: 'star', title: 'Community Stammtisch',
+        text: 'A regular, relaxed get-together between Case Nights. No programme, just people who keep showing up.' },
+      { icon: 'globe', title: 'Excursions & Company Visits',
         text: 'A visit to a partner company\'s office, you see how the place actually runs, not just its recruiting deck.' },
-      { icon: 'trending', title: 'Alumni Events', access: 'Free. Members only.',
+      { icon: 'trending', title: 'Alumni Events',
         text: "Evenings with alumni who'll tell you what the job is actually like." }
     ],
     events: [],
@@ -429,16 +429,17 @@ window.MBS_CONTENT = {
 
     home: {
       heroLead: "Munich's first cross-university case club. Free for students at every university in the city.",
-      whyIntro: "Munich Business Society is Munich's first cross-university case-solving and business platform, free, with no membership fee, for students from every university in the city. Come to an open format, or apply for membership to join the member formats too. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
+      whyIntro: "Munich Business Society is Munich's first cross-university case-solving and business platform, free, with no membership fee, for students from every university in the city. Apply for membership, or, if you'd like to come to an event first, get in touch with us. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
       seeEvents: "See what's coming up",
       whyLabel: 'Why we exist', whyTitle: 'Munich has students split across many universities, and almost none of them talk to each other.',
       whyP1: 'Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, giving visibility into that university\'s own talent, not across one shared, central club. Recruiters see one Munich talent pool; students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.',
       whyP2: "Munich Business Society exists to close that gap: one open, free, cross-university platform with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you get the same access, on the same terms, at no cost.",
       pillarsLabel: 'What you get', pillarsTitle: 'What you actually get out of it.',
       formatsLabel: 'What we do', formatsTitle: 'Nine formats, every semester.',
-      formatsText: "Case Nights, plus Case Competitions, Events & Workshops with Partners, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free. Some formats are open to any student in Munich; others are for members.",
+      formatsText: "Case Nights, plus Case Competitions, Events & Workshops with Partners, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free. Not a member yet but want to come along? Get in touch with us.",
       formatsLink: 'See the full programme →',
-      studentH: 'Two ways in. Both free.', studentText: "Come to an open format, no application needed. Or apply for membership: we review every application, and members get the member formats on top. Open to students at every Munich university.",
+      studentH: 'Two ways in. Both free.', studentText: "Apply for membership: we review every application, and it's free for students at every Munich university. Not a member yet but want to come to an event? Get in touch with us.",
+      contactBtn: 'Get in touch →',
       companyH: "Looking for direct access to Munich's talent?", companyText: "We're building a cross-university network connecting companies with business talent from across Munich. Reach out to find out more.",
       partnerBtn: 'Learn more →'
     },
@@ -498,7 +499,7 @@ window.MBS_CONTENT = {
     whatwedo: {
       subtitle: 'Nine formats. One semester. All of Munich.',
       formatsLabel: 'The formats', formatsTitle: 'Widen your network, grow a skill, or get noticed.',
-      formatsDesc: 'Each one widens your network, grows a skill or gets you noticed, and all of them are free. Some are open to any student in Munich; others are reserved for members.',
+      formatsDesc: 'Each one widens your network, grows a skill or gets you noticed, and all of them are free. Not a member yet but want to come to one? Get in touch with us.',
       projLabel: 'Partner projects', projTitle: 'Sometimes a company gives us a real problem.',
       projText: "Companies can get involved with us as a case workshop, a partner project, a speaker host or a Skillnight host. A case workshop brings a real business question straight to our students. A partner project is a small member team working on a defined question and presenting to the client at the end. Paid or credited depending on the partner.",
       projLink: 'Companies, set up a project →',
@@ -513,13 +514,6 @@ window.MBS_CONTENT = {
       subtitle: 'Open to every university in Munich, any subject, any degree level.',
       whoLabel: 'Who can join', whoTitle: 'Open to every university in Munich.',
       whoDesc: 'If you study in Munich, you can apply, and membership is free. We review every application and let you know our decision. We don’t filter by university, by grade average, or by whether your programme has “business” in the title. We look for talent, curiosity and commitment.',
-      tiersTitle: 'Some formats are open to everyone. Some are for members.',
-      tiersDesc: 'Membership is free either way. What it changes is which formats you can come to.',
-      tierRows: { who: 'Who can come', how: 'How you get in', which: 'Formats' },
-      tiers: [
-        { name: 'Open formats', who: 'Any student in Munich.', how: 'No application. Just let us know by email or DM, or through an existing member.', which: 'Case Nights, Skillnights, Guest Speakers and Networking Nights.' },
-        { name: 'Member formats', who: 'Members only.', how: 'Apply, then Screening and a 20-minute interview. Up to 50 new members before next semester.', which: 'Case Competitions, Events & Workshops with Partners, Excursions & Company Visits, the Community Stammtisch and Alumni Events.' }
-      ],
       canJoin: [
         'Enrolled at any university or university of applied sciences in the Munich area.',
         'Any degree level, bachelor, master, MBA, exchange semester, doctorate.',
@@ -528,7 +522,7 @@ window.MBS_CONTENT = {
       ],
       getLabel: 'What you get', getTitle: 'Everything membership opens up.',
       get: [
-        { icon: 'star', title: 'Access to the member formats', text: 'Every member format, on top of every open one, from day one.' },
+        { icon: 'star', title: 'Access to every format', text: 'Every Case Night, Skillnight, partner event and the rest of the programme, from day one.' },
         { icon: 'users', title: 'A network across every Munich university', text: 'Plus alumni already working in consulting, finance, tech and industry.' },
         { icon: 'building', title: 'Direct contact with partner companies', text: "Including openings shared with members before they're advertised." },
         { icon: 'briefcase', title: 'A role, if you want one', text: 'Become a Case Coach or Campus Lead, run a format, own a partnership. Genuine responsibility, on your CV, with a reference behind it.' },
@@ -537,10 +531,10 @@ window.MBS_CONTENT = {
       ],
       processLabel: 'How you join', processTitle: 'From application to full member.',
       process: [
-        { title: 'Meet us first, if you like', text: 'Open formats need no application: just let us know by email or DM, or through an existing member. Or apply online straight away.' },
+        { title: 'Meet us first, if you like', text: 'Not a member yet but want to come to an event first? Get in touch with us. Or apply online straight away.' },
         { title: 'Screening', text: 'We review every application and the best fit move on.' },
         { title: 'Interview', text: '20 minutes.' },
-        { title: 'Admission decision', text: "We're currently admitting up to 50 new members before next semester.", note: 'Not this round? The open formats are still yours.' },
+        { title: 'Admission decision', text: "We're currently admitting up to 50 new members before next semester." },
         { title: 'Full member right away', text: 'No fee, and a vote at the next general meeting.' }
       ],
       expectLabel: 'What we expect', expectTitle: 'Show up. Contribute. Behave well.',
@@ -617,11 +611,11 @@ window.MBS_CONTENT = {
         { q: 'What does it cost?', a: "Nothing. Membership is 100% free. We review every application and let you know our decision. We're funded by sponsors and partners, not by charging students." },
         { q: "I'm here for one exchange semester. Is it worth joining?", a: "Yes, and we'd encourage it. There's no fee to work around, and the network doesn't expire when you leave the city." },
         { q: 'Do I need to be in my first year?', a: 'No. We have first-semester bachelor students and master students finishing their theses. The mix is the point.' },
-        { q: 'Can I come to something before I join?', a: "Yes. Open formats need no application: just let us know by email or DM, or through an existing member, and come along to see whether it's for you." },
+        { q: 'Can I come to something before I join?', a: "Yes. Get in touch with us before the event and we'll let you know how to come along." },
         { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of showing up or taking on a role.' },
         { q: 'How do companies get involved?', a: 'Through the For Companies page. We work with employers on events, case challenges and projects, and share their openings with members.' }
       ],
-      stillText: 'Still weighing it up? Come to an open event before you decide.',
+      stillText: 'Still weighing it up? Get in touch and come to an event before you decide.',
       joinBtn: 'Get on the list →', seeBtn: "See what's coming up"
     },
     join: {
@@ -654,11 +648,11 @@ window.MBS_CONTENT = {
       consent: "I've read the ", consentLink: 'privacy policy', consentEnd: ' and agree to my data being processed.',
       submit: 'Send application →',
       successTitle: "Your application is in.",
-      successA: "We review every application and you'll receive our decision within a few days. In the meantime, come straight to the next open event: ", successC: '.',
+      successA: "We review every application and you'll receive our decision within a few days. Want to come to an event in the meantime? Just get in touch with us.",
       another: 'Sign up another address',
       faqLabel: 'Before you apply', faqTitle: 'Questions people ask before applying.',
       faqItems: [
-        { q: 'Can I come to something before I join?', a: "Yes. Open formats need no application: just let us know by email or DM, or through an existing member, and come along to see whether it's for you." },
+        { q: 'Can I come to something before I join?', a: "Yes. Get in touch with us before the event and we'll let you know how to come along." },
         { q: 'Do I need to be in my first year?', a: 'No. We have first-semester bachelor students and master students finishing their theses. The mix is the point.' },
         { q: 'Is everything in German or English?', a: 'Both. Events run in whichever language suits the room and the speaker; written communication is in English so nobody is left out.' },
         { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of showing up or taking on a role.' }
@@ -756,23 +750,23 @@ window.MBS_CONTENT = {
       { icon: 'scale', title: 'Ownership', text: 'Du übernimmst, was du dir vornimmst - eine Case Night, ein Projekt, eine Rolle. Niemand rennt dir hinterher, und niemand macht es für dich.' }
     ],
     formats: [
-      { icon: 'target', title: 'Case Night', access: 'Kostenlos. Offen für alle Studierenden.',
+      { icon: 'target', title: 'Case Night',
         text: 'Team-Case, 90–120 Minuten mit Pitch & Feedback. Das Herzstück von dem, was wir tun.' },
-      { icon: 'trophy', title: 'Case Competition', access: 'Kostenlos. Nur für Mitglieder.',
+      { icon: 'trophy', title: 'Case Competition',
         text: 'Mehrstufiger Wettbewerb mit Finale und Jury, ein- bis zweimal pro Semester, für alle, die den Case mit echtem Einsatz wollen.' },
-      { icon: 'building', title: 'Events & Workshops mit Partnern', access: 'Kostenlos. Nur für Mitglieder.',
+      { icon: 'building', title: 'Events & Workshops mit Partnern',
         text: 'Ein Partnerunternehmen bringt einen echten Case mit oder leitet einen Workshop aus dem eigenen Geschäft und zeigt dir, wie dort wirklich gearbeitet wird.' },
-      { icon: 'mic', title: 'Guest-Speaker', access: 'Kostenlos. Offen für alle Studierenden.',
+      { icon: 'mic', title: 'Guest-Speaker',
         text: 'Ein Impulsvortrag zu einem Wirtschaftsthema oder einer konkreten Skill, mit Zeit für echte Fragen danach.' },
-      { icon: 'bolt', title: 'Skillnight', access: 'Kostenlos. Offen für alle Studierenden.',
+      { icon: 'bolt', title: 'Skillnight',
         text: 'Zwei Stunden zu einer Fähigkeit, die Arbeitgeber voraussetzen: Excel, Valuation, Storytelling, Dinge, die dir kein Seminar beibringt.' },
-      { icon: 'users', title: 'Networking-Abende', access: 'Kostenlos. Offen für alle Studierenden.',
+      { icon: 'users', title: 'Networking-Abende',
         text: 'Ein Abend, der fürs Kennenlernen über Hochschulen hinweg gemacht ist, kein Pitch, keine Agenda außer gutem Gespräch.' },
-      { icon: 'star', title: 'Community-Stammtisch', access: 'Kostenlos, ohne Programm. Nur für Mitglieder.',
-        text: 'Ein offener, regelmäßiger Treffpunkt zwischen den Case Nights. Kein Programm, nur Leute, die immer wieder auftauchen.' },
-      { icon: 'globe', title: 'Exkursionen & Firmenbesuche', access: 'Kostenlos, begrenzte Plätze je Besuch. Nur für Mitglieder.',
+      { icon: 'star', title: 'Community-Stammtisch',
+        text: 'Ein lockerer, regelmäßiger Treffpunkt zwischen den Case Nights. Kein Programm, nur Leute, die immer wieder auftauchen.' },
+      { icon: 'globe', title: 'Exkursionen & Firmenbesuche',
         text: 'Ein Besuch im Büro eines Partnerunternehmens. Du siehst, wie der Laden wirklich läuft, nicht nur das Recruiting-Deck.' },
-      { icon: 'trending', title: 'Alumni-Events', access: 'Kostenlos. Nur für Mitglieder.',
+      { icon: 'trending', title: 'Alumni-Events',
         text: 'Abende mit Alumni, die dir ehrlich erzählen, wie der Job wirklich ist.' }
     ],
     events: [],
@@ -780,16 +774,17 @@ window.MBS_CONTENT = {
 
     home: {
       heroLead: 'Münchens erster hochschulübergreifender Case Club. Kostenlos für Studierende jeder Hochschule der Stadt.',
-      whyIntro: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, kostenlos, ohne Mitgliedsbeitrag, für Studierende jeder Hochschule der Stadt. Komm zu einem offenen Format, oder bewirb dich für die Mitgliedschaft und sei auch bei den Mitglieder-Formaten dabei. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
+      whyIntro: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, kostenlos, ohne Mitgliedsbeitrag, für Studierende jeder Hochschule der Stadt. Bewirb dich für die Mitgliedschaft, oder melde dich bei uns, wenn du vorher zu einem Event kommen möchtest. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
       seeEvents: 'Zu den Terminen',
       whyLabel: 'Warum es uns gibt', whyTitle: 'München hat Studierende, verteilt auf viele Hochschulen, und fast keine spricht mit der anderen.',
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie geben Sichtbarkeit auf die Talente der eigenen Uni, aber nicht hochschulübergreifend in einem zentralen Club. Recruiter sehen einen Münchner Talentpool; Studierende treffen immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
       whyP2: 'Die Munich Business Society schließt genau diese Lücke: eine offene, kostenlose, hochschulübergreifende Plattform mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bekommst denselben Zugang, zu denselben Bedingungen, ohne Kosten.',
       pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du wirklich davon hast.',
       formatsLabel: 'Was wir tun', formatsTitle: 'Neun Formate, jedes Semester.',
-      formatsText: 'Case Nights, dazu Case Competitions, Events & Workshops mit Partnern, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos. Manche Formate sind offen für alle Studierenden in München, andere für Mitglieder.',
+      formatsText: 'Case Nights, dazu Case Competitions, Events & Workshops mit Partnern, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos. Noch kein Mitglied, willst aber dabei sein? Melde dich bei uns.',
       formatsLink: 'Zum ganzen Programm →',
-      studentH: 'Zwei Wege rein. Beide kostenlos.', studentText: 'Komm zu einem offenen Format, ganz ohne Bewerbung. Oder bewirb dich für die Mitgliedschaft: Wir prüfen jede Bewerbung, und Mitglieder sind zusätzlich bei den Mitglieder-Formaten dabei. Offen für Studierende jeder Münchner Hochschule.',
+      studentH: 'Zwei Wege rein. Beide kostenlos.', studentText: 'Bewirb dich für die Mitgliedschaft: Wir prüfen jede Bewerbung, und sie ist kostenlos für Studierende jeder Münchner Hochschule. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
+      contactBtn: 'Kontakt aufnehmen →',
       companyH: 'Sie suchen den direkten Draht zu Münchens Talenten?', companyText: 'Wir bauen ein hochschulübergreifendes Netzwerk auf, das Unternehmen mit Wirtschaftstalenten aus ganz München verbindet. Sprechen Sie uns an, um mehr zu erfahren.',
       partnerBtn: 'Mehr erfahren →'
     },
@@ -848,7 +843,7 @@ window.MBS_CONTENT = {
     whatwedo: {
       subtitle: 'Neun Formate. Ein Semester. Ganz München.',
       formatsLabel: 'Die Formate', formatsTitle: 'Netzwerk erweitern, Fähigkeit aufbauen oder auffallen.',
-      formatsDesc: 'Jedes erweitert dein Netzwerk, baut eine Fähigkeit auf oder macht dich sichtbar, und alle sind kostenlos. Manche sind offen für alle Studierenden in München, andere Mitgliedern vorbehalten.',
+      formatsDesc: 'Jedes erweitert dein Netzwerk, baut eine Fähigkeit auf oder macht dich sichtbar, und alle sind kostenlos. Noch kein Mitglied, willst aber zu einem kommen? Melde dich bei uns.',
       projLabel: 'Partnerprojekte', projTitle: 'Manchmal gibt uns ein Unternehmen ein echtes Problem.',
       projText: 'Unternehmen können sich bei uns einbringen: mit einem Case Workshop, einem Partnerprojekt, als Speaker-Host oder als Skillnight-Host. Ein Case Workshop bringt eine echte Geschäftsfrage direkt zu unseren Studierenden. Ein Partnerprojekt ist ein kleines Team aus Mitgliedern, das an einer definierten Fragestellung arbeitet und am Ende beim Kunden präsentiert. Bezahlt oder mit Credits, je nach Partner.',
       projLink: 'Unternehmen, Projekt aufsetzen →',
@@ -863,13 +858,6 @@ window.MBS_CONTENT = {
       subtitle: 'Offen für jede Münchner Hochschule, jedes Fach, jedes Studienniveau.',
       whoLabel: 'Wer beitreten kann', whoTitle: 'Offen für jede Hochschule in München.',
       whoDesc: 'Wenn du in München studierst, kannst du dich bewerben, und die Mitgliedschaft ist kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir filtern nicht nach Hochschule, nach Notenschnitt oder danach, ob „Business" im Titel deines Studiengangs steht. Wir suchen Talent, Neugier und Engagement.',
-      tiersTitle: 'Manche Formate sind offen für alle. Manche für Mitglieder.',
-      tiersDesc: 'Die Mitgliedschaft ist so oder so kostenlos. Sie entscheidet, zu welchen Formaten du kommen kannst.',
-      tierRows: { who: 'Wer kommen kann', how: 'Wie du reinkommst', which: 'Formate' },
-      tiers: [
-        { name: 'Offene Formate', who: 'Alle Studierenden in München.', how: 'Ohne Bewerbung. Melde dich einfach per E-Mail oder DM bei uns an, oder über ein bestehendes Mitglied.', which: 'Case Nights, Skillnights, Guest-Speaker und Networking-Abende.' },
-        { name: 'Mitglieder-Formate', who: 'Nur für Mitglieder.', how: 'Bewerbung, dann Sichtung und ein 20-minütiges Interview. Bis zu 50 neue Mitglieder bis zum nächsten Semester.', which: 'Case Competitions, Events & Workshops mit Partnern, Exkursionen & Firmenbesuche, Community-Stammtisch und Alumni-Events.' }
-      ],
       canJoin: [
         'Eingeschrieben an einer Universität oder Hochschule im Raum München.',
         'Jedes Studienniveau, Bachelor, Master, MBA, Auslandssemester, Promotion.',
@@ -878,7 +866,7 @@ window.MBS_CONTENT = {
       ],
       getLabel: 'Was du bekommst', getTitle: 'Alles, was Mitgliedschaft öffnet.',
       get: [
-        { icon: 'star', title: 'Zugang zu den Mitglieder-Formaten', text: 'Jedes Mitglieder-Format, zusätzlich zu allen offenen, ab Tag eins.' },
+        { icon: 'star', title: 'Zugang zu jedem Format', text: 'Jede Case Night, Skillnight, jedes Partner-Event und der Rest des Programms, ab Tag eins.' },
         { icon: 'users', title: 'Ein Netzwerk über jede Münchner Hochschule', text: 'Plus Alumni, die schon in Consulting, Finance, Tech und Industrie arbeiten.' },
         { icon: 'building', title: 'Direkter Kontakt zu Partnerunternehmen', text: 'Inklusive Stellen, die Mitglieder vor der Ausschreibung sehen.' },
         { icon: 'briefcase', title: 'Eine Rolle, wenn du willst', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, im Lebenslauf, mit einer Referenz dahinter.' },
@@ -887,10 +875,10 @@ window.MBS_CONTENT = {
       ],
       processLabel: 'So wirst du Mitglied', processTitle: 'Von der Bewerbung bis zum Vollmitglied.',
       process: [
-        { title: 'Erst kennenlernen, wenn du magst', text: 'Offene Formate brauchen keine Bewerbung: Melde dich einfach per E-Mail oder DM bei uns an, oder über ein bestehendes Mitglied. Oder bewirb dich direkt online.' },
+        { title: 'Erst kennenlernen, wenn du magst', text: 'Noch kein Mitglied, willst aber vorher zu einem Event kommen? Melde dich bei uns. Oder bewirb dich direkt online.' },
         { title: 'Sichtung', text: 'Wir prüfen jede Bewerbung, die passendsten kommen weiter.' },
         { title: 'Interview', text: '20 Minuten.' },
-        { title: 'Aufnahmeentscheidung', text: 'Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum nächsten Semester auf.', note: 'Diesmal nicht dabei? Die offenen Formate bleiben dir.' },
+        { title: 'Aufnahmeentscheidung', text: 'Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum nächsten Semester auf.' },
         { title: 'Vollmitglied ab sofort', text: 'Kostenlos, mit Stimmrecht ab der nächsten Mitgliederversammlung.' }
       ],
       expectLabel: 'Was wir erwarten', expectTitle: 'Tauch auf. Bring dich ein. Verhalte dich gut.',
@@ -967,11 +955,11 @@ window.MBS_CONTENT = {
         { q: 'Was kostet es?', a: 'Nichts. Die Mitgliedschaft ist zu 100 % kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir finanzieren uns über Sponsoren und Partner, nicht über die Studierenden.' },
         { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, und wir würden dich ermutigen. Es gibt keinen Beitrag, auf den du warten musst, und das Netzwerk endet nicht, wenn du die Stadt verlässt.' },
         { q: 'Muss ich im ersten Semester sein?', a: 'Nein. Wir haben Bachelor-Studierende im ersten Semester und Master-Studierende, die ihre Thesis abschließen. Genau diese Mischung ist der Punkt.' },
-        { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Für offene Formate brauchst du keine Bewerbung: Melde dich einfach per E-Mail oder DM bei uns an, oder über ein bestehendes Mitglied, und schau, ob es zu dir passt.' },
+        { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Melde dich vor dem Event bei uns, und wir sagen dir, wie du dabei sein kannst.' },
         { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, aufzutauchen oder eine Rolle zu übernehmen.' },
         { q: 'Wie werden Unternehmen Teil davon?', a: 'Über die Seite „Für Unternehmen". Wir arbeiten mit Arbeitgebern an Events, Case-Challenges und Projekten, und teilen ihre Stellen mit Mitgliedern.' }
       ],
-      stillText: 'Noch am Abwägen? Komm zu einem offenen Event, bevor du entscheidest.',
+      stillText: 'Noch am Abwägen? Melde dich bei uns und komm zu einem Event, bevor du entscheidest.',
       joinBtn: 'Auf die Liste →', seeBtn: 'Zu den Terminen'
     },
     join: {
@@ -1004,11 +992,11 @@ window.MBS_CONTENT = {
       consent: 'Ich habe die ', consentLink: 'Datenschutzerklärung', consentEnd: ' gelesen und stimme der Verarbeitung meiner Daten zu.',
       submit: 'Bewerbung absenden →',
       successTitle: 'Deine Bewerbung ist eingegangen.',
-      successA: 'Wir prüfen sie und du erhältst unsere Entscheidung innerhalb weniger Tage. Komm in der Zwischenzeit gern direkt zum nächsten offenen Event: ', successC: '.',
+      successA: 'Wir prüfen sie und du erhältst unsere Entscheidung innerhalb weniger Tage. Du willst in der Zwischenzeit zu einem Event kommen? Melde dich einfach bei uns.',
       another: 'Weitere Adresse eintragen',
       faqLabel: 'Vor der Bewerbung', faqTitle: 'Die Fragen, die vor der Bewerbung aufkommen.',
       faqItems: [
-        { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Für offene Formate brauchst du keine Bewerbung: Melde dich einfach per E-Mail oder DM bei uns an, oder über ein bestehendes Mitglied, und schau, ob es zu dir passt.' },
+        { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Melde dich vor dem Event bei uns, und wir sagen dir, wie du dabei sein kannst.' },
         { q: 'Muss ich im ersten Semester sein?', a: 'Nein. Wir haben Bachelor-Studierende im ersten Semester und Master-Studierende, die ihre Thesis abschließen. Genau diese Mischung ist der Punkt.' },
         { q: 'Ist alles auf Deutsch oder Englisch?', a: 'Beides. Events laufen in der Sprache, die zum Raum und zur:zum Speaker:in passt; schriftliche Kommunikation ist auf Englisch, damit niemand außen vor bleibt.' },
         { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, aufzutauchen oder eine Rolle zu übernehmen.' }

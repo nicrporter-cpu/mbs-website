@@ -25,24 +25,6 @@ function MembershipScreen({ C }) {
       </Section>
 
       <Section tone="alt">
-        <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)', marginBottom: '32px' }}>
-          <SectionHeading title={M.tiersTitle} desc={M.tiersDesc} />
-        </div>
-        <div className="mbs-tiers" data-reveal>
-          {M.tiers.map((t, i) => (
-            <section key={t.name} className={'mbs-tier' + (i === 1 ? ' mbs-tier--member' : '')} aria-labelledby={'mbs-tier-' + i}>
-              <h3 id={'mbs-tier-' + i} className="mbs-tier-name">{t.name}</h3>
-              <dl className="mbs-tier-rows">
-                <div><dt>{M.tierRows.who}</dt><dd>{t.who}</dd></div>
-                <div><dt>{M.tierRows.how}</dt><dd>{t.how}</dd></div>
-                <div><dt>{M.tierRows.which}</dt><dd>{MBS_PH(t.which)}</dd></div>
-              </dl>
-            </section>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
         <SectionHeading label={M.getLabel} title={M.getTitle} style={{ marginBottom: '40px' }} />
         <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
           {M.get.map(g => (
