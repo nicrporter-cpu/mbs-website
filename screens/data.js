@@ -408,7 +408,7 @@ window.MBS_CONTENT = {
       { icon: 'target', title: 'Case Night',
         text: 'A team case, ninety to a hundred-twenty minutes, pitch and feedback at the end. The core of what we do.' },
       { icon: 'trophy', title: 'Case Competition',
-        text: 'A multi-stage competition that builds to a final in front of a jury. Once or twice a semester, for anyone who wants the case format with the stakes turned up.' },
+        text: 'A multi-stage competition that builds to a final in front of a jury. Once or twice a semester, for members who want the case format with the stakes turned up.' },
       { icon: 'building', title: 'Events & Workshops with Partners',
         text: 'A partner company brings a real case or runs a workshop from its own business, and shows you how the work is actually done there.' },
       { icon: 'mic', title: 'Guest Speaker',
@@ -469,7 +469,10 @@ window.MBS_CONTENT = {
       weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       prevMonth: 'Previous month', nextMonth: 'Next month', noEvents: 'No events this month.',
       label: 'Upcoming', title: "What's on",
-      empty: 'Nothing on the calendar yet. The first events are being scheduled now, check back soon or join the list to hear first.'
+      empty: 'Nothing on the calendar yet. The first events are being scheduled now, check back soon or join the list to hear first.',
+      emptyTitle: 'The first events are being planned.',
+      emptyText: 'Dates appear here as soon as they’re confirmed. Subscribe to the newsletter to hear first, or get in touch if you have a question.',
+      notifyBtn: 'Notify me →', contactBtn: 'Get in touch →'
     },
     network: {
       subtitle: "Munich Business Society isn't attached to a university. It's attached to a city.",
@@ -526,7 +529,7 @@ window.MBS_CONTENT = {
         { icon: 'users', title: 'A network across every Munich university', text: 'Plus alumni already working in consulting, finance, tech and industry.' },
         { icon: 'building', title: 'Direct contact with partner companies', text: "Including openings shared with members before they're advertised." },
         { icon: 'briefcase', title: 'A role, if you want one', text: 'Become a Case Coach or Campus Lead, run a format, own a partnership. Genuine responsibility, on your CV, with a reference behind it.' },
-        { icon: 'trophy', title: 'Hands-on experience', text: 'Real cases in every Case Night, soon also in Case Competitions.' },
+        { icon: 'trophy', title: 'Hands-on experience', text: 'Real cases at every Case Night and in every Case Competition.' },
         { icon: 'globe', title: 'Inspiring community', text: 'People who challenge you, support you, and stay connected for years.' }
       ],
       processLabel: 'How you join', processTitle: 'From application to full member.',
@@ -584,7 +587,8 @@ window.MBS_CONTENT = {
     team: {
       subtitle: 'Built and run entirely by students, alongside their degrees.',
       whoTitle: 'Founding team and current Board',
-      whoDesc: 'Munich Business Society is built and run entirely by students alongside their degrees. Every team is open to members who want to help shape it.',
+      whoDesc: 'The board leads the society, and six teams do the work. Every team is open to members who want to help shape it.',
+      ctaH: 'Want to build this with us?', ctaText: 'Apply for membership and tell us in your application which team you’d like to join.',
       boardTitle: 'The Board',
       board: [
         { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Programme & Education, External Affairs', photoSrc: '/assets/team-nicholas-porter.jpg' },
@@ -754,7 +758,7 @@ window.MBS_CONTENT = {
       { icon: 'target', title: 'Case Night',
         text: 'Team-Case, 90–120 Minuten mit Pitch & Feedback. Das Herzstück von dem, was wir tun.' },
       { icon: 'trophy', title: 'Case Competition',
-        text: 'Mehrstufiger Wettbewerb mit Finale und Jury, ein- bis zweimal pro Semester, für alle, die den Case mit echtem Einsatz wollen.' },
+        text: 'Mehrstufiger Wettbewerb mit Finale und Jury, ein- bis zweimal pro Semester, für Mitglieder, die den Case mit echtem Einsatz wollen.' },
       { icon: 'building', title: 'Events & Workshops mit Partnern',
         text: 'Ein Partnerunternehmen bringt einen echten Case mit oder leitet einen Workshop aus dem eigenen Geschäft und zeigt dir, wie dort wirklich gearbeitet wird.' },
       { icon: 'mic', title: 'Guest-Speaker',
@@ -814,7 +818,10 @@ window.MBS_CONTENT = {
       weekdays: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
       prevMonth: 'Vorheriger Monat', nextMonth: 'Nächster Monat', noEvents: 'Keine Termine in diesem Monat.',
       label: 'Demnächst', title: 'Was ansteht',
-      empty: 'Noch nichts im Kalender. Die ersten Termine werden gerade geplant, schau bald wieder vorbei oder trag dich in die Liste ein, um es zuerst zu erfahren.'
+      empty: 'Noch nichts im Kalender. Die ersten Termine werden gerade geplant, schau bald wieder vorbei oder trag dich in die Liste ein, um es zuerst zu erfahren.',
+      emptyTitle: 'Die ersten Events werden gerade geplant.',
+      emptyText: 'Termine erscheinen hier, sobald sie feststehen. Abonniere den Newsletter, um es zuerst zu erfahren, oder melde dich bei uns, wenn du Fragen hast.',
+      notifyBtn: 'Benachrichtige mich →', contactBtn: 'Kontakt aufnehmen →'
     },
     network: {
       subtitle: 'Die Munich Business Society hängt nicht an einer Hochschule. Sie hängt an einer Stadt.',
@@ -862,7 +869,7 @@ window.MBS_CONTENT = {
       canJoin: [
         'Eingeschrieben an einer Universität oder Hochschule im Raum München.',
         'Jedes Studienniveau, Bachelor, Master, MBA, Auslandssemester, Promotion.',
-        'Jedes Fach. Viele unserer Mitglieder studieren etwas anderes als Wirtschaft und gehen trotzdem hinein.',
+        'Jedes Fach. Viele unserer Mitglieder studieren etwas anderes als Wirtschaft und wollen trotzdem in die Wirtschaft.',
         'Sicher auf Deutsch oder Englisch. Unsere Events laufen in beiden; die Arbeitssprache ist, was der Raum braucht.'
       ],
       getLabel: 'Was du bekommst', getTitle: 'Alles, was Mitgliedschaft öffnet.',
@@ -871,7 +878,7 @@ window.MBS_CONTENT = {
         { icon: 'users', title: 'Ein Netzwerk über jede Münchner Hochschule', text: 'Plus Alumni, die schon in Consulting, Finance, Tech und Industrie arbeiten.' },
         { icon: 'building', title: 'Direkter Kontakt zu Partnerunternehmen', text: 'Inklusive Stellen, die Mitglieder vor der Ausschreibung sehen.' },
         { icon: 'briefcase', title: 'Eine Rolle, wenn du willst', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, im Lebenslauf, mit einer Referenz dahinter.' },
-        { icon: 'trophy', title: 'Praxiserfahrung', text: 'Echte Cases in jeder Case Night, bald auch in Case Competitions.' },
+        { icon: 'trophy', title: 'Praxiserfahrung', text: 'Echte Cases in jeder Case Night und jeder Case Competition.' },
         { icon: 'globe', title: 'Inspirierende Community', text: 'Menschen, die dich fordern, unterstützen und langfristig verbinden.' }
       ],
       processLabel: 'So wirst du Mitglied', processTitle: 'Von der Bewerbung bis zum Vollmitglied.',
@@ -929,7 +936,8 @@ window.MBS_CONTENT = {
     team: {
       subtitle: 'Komplett von Studierenden gebaut und geführt, neben dem Studium.',
       whoTitle: 'Das Gründerteam und aktueller Vorstand',
-      whoDesc: 'Die Munich Business Society wird komplett von Studierenden neben dem Studium gebaut und geführt. Jedes Team steht Mitgliedern offen, die mitgestalten wollen.',
+      whoDesc: 'Der Vorstand führt den Verein, sechs Teams machen die Arbeit. Jedes Team steht Mitgliedern offen, die mitgestalten wollen.',
+      ctaH: 'Lust, das mitzubauen?', ctaText: 'Bewirb dich für die Mitgliedschaft und schreib in deine Bewerbung, in welchem Team du mitmachen möchtest.',
       boardTitle: 'Der Vorstand',
       board: [
         { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Programm & Education, External Affairs', photoSrc: '/assets/team-nicholas-porter.jpg' },

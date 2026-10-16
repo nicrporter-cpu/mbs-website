@@ -1077,3 +1077,59 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
 @media (min-width: 681px) and (max-width: 1000px) {
   .mbs-formats > :last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
+
+/* Home pillars reuse the value row; the one-line promise under each title. */
+.mbs-value-row p.mbs-value-tag {
+  font-size: 15px;
+  font-weight: var(--mbs-fw-semibold);
+  line-height: 1.5;
+  color: var(--mbs-gold-text);
+  margin: -6px 0 12px;
+}
+
+/* ── Calendar before the first event ───────────────────────────────────────
+   One block instead of an empty month grid plus a second "nothing yet". */
+.mbs-cal-empty {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  padding: clamp(8px, 3vw, 32px) 0;
+}
+.mbs-cal-empty-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--mbs-gold-dim);
+  border: 1px solid var(--mbs-gold-border);
+  color: var(--mbs-gold-text);
+  margin-bottom: 24px;
+}
+.mbs-cal-empty h2 {
+  font-family: var(--mbs-font-serif);
+  font-size: var(--mbs-fs-h2);
+  font-weight: var(--mbs-fw-bold);
+  line-height: var(--mbs-lh-title);
+  letter-spacing: var(--mbs-tr-title);
+  color: var(--mbs-navy);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.mbs-cal-empty p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--mbs-gray);
+  margin: 0 auto 28px;
+  max-width: 34em;
+}
+.mbs-cal-empty-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* "Notify me" jumps to the footer signup; leave room under the sticky header. */
+#newsletter { scroll-margin-top: 96px; }
