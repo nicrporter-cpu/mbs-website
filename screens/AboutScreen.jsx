@@ -41,7 +41,7 @@ function AboutScreen({ C, openEvent }) {
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)', marginBottom: '40px' }}>
           <SectionHeading label={W.formatsLabel} title={W.formatsTitle} desc={W.formatsDesc} />
         </div>
-        <div className="mbs-grid-2" data-stagger>
+        <div className="mbs-grid-3 mbs-formats" data-stagger>
           {C.formats.map(f => (
             <Card key={f.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={f.icon} size="24px" /></div>

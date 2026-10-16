@@ -558,8 +558,8 @@ window.MBS_CONTENT = {
       whyGridLabel: 'The value',
       why: [
         { icon: 'target', title: 'Direct access to top talent', text: 'Meet engaged, capable students before the regular application season opens, a case competition shows you how people think, present and work in a team, in real time.' },
-        { icon: 'users', title: 'An efficient alternative to career fairs', text: "Talk to students who actually fit what you're hiring for, instead of a stand at a job fair or a lecture-hall mailing list." },
-        { icon: 'globe', title: 'Employer branding that means something', text: 'Workshops, real cases and company presentations put your brand in front of a self-selected audience of business talent, as a serious employer.' }
+        { icon: 'bulb', title: 'New ideas for your real questions', text: 'Students from different disciplines bring independent perspectives to your current challenges, from market entry and marketing to sustainability.' },
+        { icon: 'scale', title: 'Support that goes where it should', text: 'As a non-profit association, we put every contribution entirely into educational formats. That keeps Munich Business Society free for every student.' }
       ],
       waysLabel: 'Ways to work together', waysTitle: 'Four ways in.',
       ways: [
@@ -903,8 +903,8 @@ window.MBS_CONTENT = {
       whyGridLabel: 'Der Mehrwert',
       why: [
         { icon: 'target', title: 'Direkter Zugang zu Top-Talenten', text: 'Lernen Sie engagierte, leistungsstarke Studierende kennen, noch bevor die reguläre Bewerbungssaison beginnt. Eine Case Competition zeigt Ihnen in Echtzeit, wie jemand denkt, präsentiert und im Team arbeitet.' },
-        { icon: 'users', title: 'Effiziente Alternative zur Karrieremesse', text: 'Sprechen Sie gezielt Studierende an, die zu Ihrem Bedarf passen, statt einen Stand auf der Jobmesse oder einen Hörsaal-Verteiler zu bespielen.' },
-        { icon: 'globe', title: 'Employer Branding mit Substanz', text: 'Workshops, echte Cases und Unternehmenspräsentationen bringen Ihre Marke vor eine selbstselektierte, wirtschaftlich talentierte Zielgruppe, als ernstzunehmender Arbeitgeber.' }
+        { icon: 'bulb', title: 'Neue Ideen für Ihre echten Fragen', text: 'Studierende aus verschiedenen Fachrichtungen bringen unabhängige Perspektiven auf aktuelle Herausforderungen, von Markteintritt über Marketing bis Nachhaltigkeit.' },
+        { icon: 'scale', title: 'Unterstützung, die ankommt', text: 'Als Non-Profit-Verein stecken wir jede Unterstützung vollständig in Bildungsformate. So bleibt die Munich Business Society für alle Studierenden kostenlos.' }
       ],
       waysLabel: 'Wege der Zusammenarbeit', waysTitle: 'Vier Wege hinein.',
       ways: [

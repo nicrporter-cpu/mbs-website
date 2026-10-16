@@ -995,3 +995,85 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
   color: var(--mbs-gold-text);
   overflow-wrap: break-word;
 }
+
+/* ── Ledger: "What you get" on Membership ──────────────────────────────────
+   A two-column list on the section's own surface, not a wall of cards: the
+   serif title does the work the icon used to, hairlines keep the rows. */
+.mbs-ledger {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--mbs-grid-gap-xl);
+  border-bottom: 1px solid var(--mbs-border);
+}
+.mbs-ledger > li {
+  padding: 26px 0 28px;
+  border-top: 1px solid var(--mbs-border);
+}
+.mbs-ledger h3 {
+  font-family: var(--mbs-font-serif);
+  font-size: clamp(19px, 1.9vw, 22px);
+  font-weight: var(--mbs-fw-bold);
+  line-height: 1.25;
+  color: var(--mbs-navy);
+  margin: 0 0 8px;
+}
+.mbs-ledger p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--mbs-gray);
+  margin: 0;
+  max-width: 34em;
+}
+@media (max-width: 680px) {
+  .mbs-ledger { grid-template-columns: 1fr; }
+  .mbs-ledger > li { padding: 22px 0 24px; }
+}
+
+/* ── Value row: "The value" on For Companies ────────────────────────────────
+   Three arguments read side by side, divided by rules instead of boxed. */
+.mbs-value-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.mbs-value-row > div {
+  padding: 4px 32px 8px;
+  border-left: 1px solid var(--mbs-border);
+}
+.mbs-value-row > div:first-child { padding-left: 0; border-left: 0; }
+.mbs-value-row > div:last-child { padding-right: 0; }
+.mbs-value-row h3 {
+  font-family: var(--mbs-font-serif);
+  font-size: clamp(21px, 2.2vw, 26px);
+  font-weight: var(--mbs-fw-bold);
+  line-height: 1.2;
+  letter-spacing: var(--mbs-tr-title);
+  color: var(--mbs-navy);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.mbs-value-row p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--mbs-gray);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .mbs-value-row { grid-template-columns: 1fr; }
+  .mbs-value-row > div,
+  .mbs-value-row > div:first-child {
+    padding: 24px 0;
+    border-left: 0;
+    border-top: 1px solid var(--mbs-border);
+  }
+  .mbs-value-row > div:first-child { border-top: 0; padding-top: 0; }
+}
+
+/* ── About: the nine format cards ──────────────────────────────────────────
+   Nine fills a 3×3 grid exactly. Where the grid drops to two columns, the odd
+   last card takes the full row rather than standing alone in it. */
+@media (min-width: 681px) and (max-width: 1000px) {
+  .mbs-formats > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+}

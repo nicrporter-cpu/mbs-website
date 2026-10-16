@@ -26,15 +26,14 @@ function MembershipScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={M.getLabel} title={M.getTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
+        <ul className="mbs-ledger" data-stagger>
           {M.get.map(g => (
-            <Card key={g.title} padding="28px">
-              <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={g.icon} size="24px" /></div>
-              <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '17px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{g.title}</h3>
-              <p style={{ fontSize: '13.5px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{g.text}</p>
-            </Card>
+            <li key={g.title}>
+              <h3>{g.title}</h3>
+              <p>{g.text}</p>
+            </li>
           ))}
-        </div>
+        </ul>
       </Section>
 
       <Section tone="alt">
