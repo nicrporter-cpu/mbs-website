@@ -13,19 +13,17 @@ function CompaniesScreen({ C }) {
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.whyLabel} title={K.whyTitle} desc={K.whyDesc} />
-          <FormNote style={{ marginTop: '24px' }}>{K.legalNote}</FormNote>
         </div>
       </Section>
 
       <Section tone="alt">
         <SectionHeading label={K.whyGridLabel} title={K.why[0].title} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
+        <div className="mbs-value-row" data-stagger>
           {K.why.map(w => (
-            <Card key={w.title} padding="28px">
-              <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={w.icon} size="24px" /></div>
-              <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{w.title}</h3>
-              <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{w.text}</p>
-            </Card>
+            <div key={w.title}>
+              <h3>{w.title}</h3>
+              <p>{w.text}</p>
+            </div>
           ))}
         </div>
       </Section>
@@ -45,12 +43,11 @@ function CompaniesScreen({ C }) {
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label={K.partnersLabel} title={K.partnersTitle} />
-        <div data-reveal style={{
-          marginTop: '28px', textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)',
-          background: 'var(--mbs-white)', border: '1px dashed var(--mbs-border)'
-        }}>
-          <p style={{ fontSize: '16px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 20px' }}>{K.partnersDesc}</p>
+        <div className="mbs-founding" data-reveal>
+          <div>
+            <SectionHeading title={K.partnersTitle} desc={K.partnersDesc} />
+            <p style={{ fontSize: '14px', color: 'var(--mbs-navy)', lineHeight: 1.7, margin: '16px 0 0' }}>{MBS_PH(K.partnersPerks)}</p>
+          </div>
           <Button variant="gold" href={ROUTES.contact}>{K.partnersBtn}</Button>
         </div>
       </Section>

@@ -217,7 +217,7 @@ function Newsletter({ nl = {} }) {
   };
 
   return (
-    <div className="mbs-footer-news">
+    <div className="mbs-footer-news" id="newsletter">
       <div>
         <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 6px' }}>{nl.h}</h2>
         <p style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>{nl.body}</p>
@@ -438,8 +438,8 @@ function Field({ label, children, help, error, required, htmlFor, style }) {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '20px', ...style }}>
       {label && (
         <label htmlFor={id} style={{
-          fontSize: 'var(--mbs-fs-form-label)', fontWeight: 'var(--mbs-fw-semibold)',
-          color: 'var(--mbs-navy)', letterSpacing: '.5px', textTransform: 'uppercase'
+          fontSize: '13.5px', fontWeight: 'var(--mbs-fw-semibold)', lineHeight: 1.4,
+          color: 'var(--mbs-navy)'
         }}>
           {label}
           {required && <span aria-hidden="true" style={{ color: 'var(--mbs-danger)', marginLeft: '4px' }}>*</span>}
@@ -575,9 +575,9 @@ function Card({ children, tone = 'light', hover = true, accent, padding = '28px'
     <div style={base} onClick={onClick}
       onMouseEnter={() => setOver(true)} onMouseLeave={() => setOver(false)} {...rest}>
       {accent && <span style={{
-        position: 'absolute', top: 0, left: 0, width: '3px',
-        height: over ? '100%' : 0, background: 'var(--mbs-gold)',
-        borderRadius: '0 0 2px 2px', transition: 'height var(--mbs-dur-slow) var(--mbs-ease)'
+        position: 'absolute', top: 0, left: 0, width: '3px', height: '100%',
+        transform: over ? 'scaleY(1)' : 'scaleY(0)', transformOrigin: 'top', background: 'var(--mbs-gold)',
+        borderRadius: '0 0 2px 2px', transition: 'transform var(--mbs-dur-slow) var(--mbs-ease)'
       }} />}
       {children}
     </div>

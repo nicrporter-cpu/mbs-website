@@ -64,7 +64,7 @@ function JoinScreen({ C }) {
                 <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px' }}><Icon name="check" size="34px" /></div>
                 <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '22px', margin: '0 0 8px' }}>{J.successTitle}</h2>
                 <p style={{ fontSize: '14px', lineHeight: 1.8, maxWidth: '420px', margin: '0 auto 24px' }}>
-                  {J.successA}<span className="mbs-ph">[event]</span>{J.successC}
+                  {J.successA}
                 </p>
               </div>
               <Button variant="outline" onClick={() => { setSent(false); setErrors({}); }}>{J.another}</Button>

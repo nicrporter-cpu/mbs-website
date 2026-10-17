@@ -76,27 +76,39 @@ function CalendarScreen({ C, openEvent }) {
     <div>
       <PageHeader title={C.title.calendar} subtitle={E.subtitle} />
 
-      <Section>
-        <SectionHeading label={E.calLabel} title={E.calTitle} style={{ marginBottom: '32px' }} />
-        <MonthCalendar events={C.events} weekdays={E.weekdays} prevLabel={E.prevMonth}
-          nextLabel={E.nextMonth} emptyLabel={E.noEvents} locale={C.locale} onSelect={openEvent} />
-      </Section>
+      {C.events.length ? (
+        <>
+          <Section>
+            <SectionHeading label={E.calLabel} title={E.calTitle} style={{ marginBottom: '32px' }} />
+            <MonthCalendar events={C.events} weekdays={E.weekdays} prevLabel={E.prevMonth}
+              nextLabel={E.nextMonth} emptyLabel={E.noEvents} locale={C.locale} onSelect={openEvent} />
+          </Section>
 
-      <Section tone="alt">
-        <SectionHeading label={E.label} title={E.title} style={{ marginBottom: '40px' }} />
-        {C.events.length ? (
-          <div data-stagger style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {C.events.map(e => (
-              <EventListItem key={e.id} day={e.day} month={e.month} title={e.title} tag={e.tag}
-                location={e.location} time={e.time} onClick={() => openEvent(e.id)}>{e.teaser}</EventListItem>
-            ))}
+          <Section tone="alt">
+            <SectionHeading label={E.label} title={E.title} style={{ marginBottom: '40px' }} />
+            <div data-stagger style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {C.events.map(e => (
+                <EventListItem key={e.id} day={e.day} month={e.month} title={e.title} tag={e.tag}
+                  location={e.location} time={e.time} onClick={() => openEvent(e.id)}>{e.teaser}</EventListItem>
+              ))}
+            </div>
+          </Section>
+        </>
+      ) : (
+        /* Before the first event is announced: one honest block, not an empty
+           month grid followed by a second "nothing yet". */
+        <Section>
+          <div className="mbs-cal-empty" data-reveal>
+            <span className="mbs-cal-empty-icon" aria-hidden="true"><Icon name="calendar" size="28px" /></span>
+            <h2>{E.emptyTitle}</h2>
+            <p>{E.emptyText}</p>
+            <div className="mbs-cal-empty-actions">
+              <Button variant="gold" href="#newsletter">{E.notifyBtn}</Button>
+              <Button variant="outline" href={ROUTES.contact}>{E.contactBtn}</Button>
+            </div>
           </div>
-        ) : (
-          <div style={{ textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r)', background: 'var(--mbs-white)', border: '1px solid var(--mbs-border)' }}>
-            <p style={{ fontSize: '15px', color: 'var(--mbs-gray)', margin: 0 }}>{E.empty}</p>
-          </div>
-        )}
-      </Section>
+        </Section>
+      )}
     </div>
   );
 }

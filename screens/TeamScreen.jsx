@@ -23,14 +23,21 @@ function TeamScreen({ C }) {
 
       <Section tone="alt">
         <SectionHeading label={T.teamsLabel} title={T.teamsTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3 mbs-grid--lg" data-stagger>
+        <ul className="mbs-ledger" data-stagger>
           {T.teams.map(t => (
-            <Card key={t.title} padding="28px">
-              <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={t.icon} size="24px" /></div>
-              <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '17px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{t.title}</h3>
-              <p style={{ fontSize: '13.5px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{t.text}</p>
-            </Card>
+            <li key={t.title}>
+              <h3>{t.title}</h3>
+              <p>{t.text}</p>
+            </li>
           ))}
+        </ul>
+      </Section>
+
+      <Section>
+        <div data-reveal data-on-navy="" style={{ textAlign: 'center', padding: '48px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }}>
+          <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', color: 'var(--mbs-white)', margin: '0 0 10px' }}>{T.ctaH}</h2>
+          <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-70)', lineHeight: 1.8, maxWidth: '460px', margin: '0 auto 24px' }}>{T.ctaText}</p>
+          <Button variant="gold" href={ROUTES.join}>{C.ui.apply}</Button>
         </div>
       </Section>
     </div>

@@ -22,7 +22,7 @@ function HomeScreen({ C }) {
             }}><span className="mbs-hero-l1">Munich</span><br /><em className="mbs-hero-l2" style={{ fontStyle: 'normal', color: 'var(--mbs-gold-on-navy)' }}>Business Society</em></h1>
             <p className="mbs-hero-lead" style={{ fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-on-navy-70)', lineHeight: 'var(--mbs-lh-body)', margin: '0 0 24px' }}>{H.heroLead}</p>
             <div className="mbs-hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Button variant="gold" href={ROUTES.about}>{C.ui.aboutArrow}</Button>
+              <Button variant="gold" href={ROUTES.join}>{C.ui.apply}</Button>
               <Button variant="onNavy" href={ROUTES.calendar}>{H.seeEvents}</Button>
             </div>
           </div>
@@ -33,6 +33,7 @@ function HomeScreen({ C }) {
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={H.whyLabel} title={H.whyTitle} />
+          <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{H.whyIntro}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '20px' }}>{H.whyP1}</p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{H.whyP2}</p>
         </div>
@@ -40,15 +41,14 @@ function HomeScreen({ C }) {
 
       {/* The three pillars */}
       <Section tone="alt">
-        <SectionHeading align="center" label={H.pillarsLabel} title={H.pillarsTitle} style={{ marginBottom: '40px' }} />
-        <div className="mbs-grid-3" data-stagger>
+        <SectionHeading label={H.pillarsLabel} title={H.pillarsTitle} style={{ marginBottom: '40px' }} />
+        <div className="mbs-value-row" data-stagger>
           {C.pillars.map(p => (
-            <Card key={p.title} padding="32px">
-              <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '16px', lineHeight: 1 }}><Icon name={p.icon} size="28px" /></div>
-              <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '20px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{p.title}</h3>
-              <p style={{ fontSize: '13.5px', fontWeight: 600, lineHeight: 1.5, color: 'var(--mbs-gold-text)', margin: '0 0 12px' }}>{p.tag}</p>
-              <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{p.text}</p>
-            </Card>
+            <div key={p.title}>
+              <h3>{p.title}</h3>
+              <p className="mbs-value-tag">{p.tag}</p>
+              <p>{p.text}</p>
+            </div>
           ))}
         </div>
       </Section>
@@ -78,7 +78,10 @@ function HomeScreen({ C }) {
           <div style={{ padding: '40px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
             <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-navy)', margin: '0 0 12px' }}>{H.studentH}</h2>
             <p style={{ fontSize: '14px', lineHeight: 1.8, margin: '0 0 24px' }}>{H.studentText}</p>
-            <Button variant="gold" href={ROUTES.about}>{C.ui.aboutArrow}</Button>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <Button variant="gold" href={ROUTES.join}>{C.ui.apply}</Button>
+              <Button variant="outline" href={ROUTES.contact}>{H.contactBtn}</Button>
+            </div>
           </div>
           <div data-on-navy="" style={{ padding: '40px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-navy)' }}>
             <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '24px', fontWeight: 700, color: 'var(--mbs-white)', margin: '0 0 12px' }}>{H.companyH}</h2>

@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=cb39c433bc">
-<link rel="stylesheet" href="/site.css?v=cb39c433bc">
+<link rel="stylesheet" href="/design-system/styles.css?v=30c8f29eb3">
+<link rel="stylesheet" href="/site.css?v=30c8f29eb3">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=cb39c433bc"></script>
-<script src="/screens/data.js?v=cb39c433bc"></script>
-<script src="/site.js?v=cb39c433bc"></script>
+<script src="/design-system/_ds_bundle.js?v=30c8f29eb3"></script>
+<script src="/screens/data.js?v=30c8f29eb3"></script>
+<script src="/site.js?v=30c8f29eb3"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -240,7 +240,7 @@ function Newsletter({ nl = {} }) {
   };
 
   return (
-    <div className="mbs-footer-news">
+    <div className="mbs-footer-news" id="newsletter">
       <div>
         <h2 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-white)', margin: '0 0 6px' }}>{nl.h}</h2>
         <p style={{ fontSize: '13px', color: 'var(--mbs-on-navy-50)', lineHeight: 1.6, margin: 0, maxWidth: '420px' }}>{nl.body}</p>
@@ -461,8 +461,8 @@ function Field({ label, children, help, error, required, htmlFor, style }) {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '20px', ...style }}>
       {label && (
         <label htmlFor={id} style={{
-          fontSize: 'var(--mbs-fs-form-label)', fontWeight: 'var(--mbs-fw-semibold)',
-          color: 'var(--mbs-navy)', letterSpacing: '.5px', textTransform: 'uppercase'
+          fontSize: '13.5px', fontWeight: 'var(--mbs-fw-semibold)', lineHeight: 1.4,
+          color: 'var(--mbs-navy)'
         }}>
           {label}
           {required && <span aria-hidden="true" style={{ color: 'var(--mbs-danger)', marginLeft: '4px' }}>*</span>}
@@ -598,9 +598,9 @@ function Card({ children, tone = 'light', hover = true, accent, padding = '28px'
     <div style={base} onClick={onClick}
       onMouseEnter={() => setOver(true)} onMouseLeave={() => setOver(false)} {...rest}>
       {accent && <span style={{
-        position: 'absolute', top: 0, left: 0, width: '3px',
-        height: over ? '100%' : 0, background: 'var(--mbs-gold)',
-        borderRadius: '0 0 2px 2px', transition: 'height var(--mbs-dur-slow) var(--mbs-ease)'
+        position: 'absolute', top: 0, left: 0, width: '3px', height: '100%',
+        transform: over ? 'scaleY(1)' : 'scaleY(0)', transformOrigin: 'top', background: 'var(--mbs-gold)',
+        borderRadius: '0 0 2px 2px', transition: 'transform var(--mbs-dur-slow) var(--mbs-ease)'
       }} />}
       {children}
     </div>
@@ -1107,15 +1107,14 @@ function ContactScreen({ C }) {
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.label} title={K.title} desc={K.descA} />
         </div>
-        <div className="mbs-grid-3" data-stagger style={{ marginTop: '32px' }}>
-          {K.routes.map(r => (
-            <a key={r.label} href={'mailto:' + r.addr} style={{ display: 'block', padding: '24px', borderRadius: 'var(--mbs-r)', background: 'var(--mbs-off)', border: '1px solid var(--mbs-border)', textDecoration: 'none' }}>
-              <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '12px' }}><Icon name={r.icon} size="22px" /></div>
-              <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--mbs-navy)', marginBottom: '4px' }}>{r.label}</div>
-              <div style={{ fontSize: '13px', color: 'var(--mbs-gold-text)' }}>{r.addr}</div>
-            </a>
-          ))}
-        </div>
+        <a href={'mailto:' + K.inbox.addr} className="mbs-inbox" data-reveal>
+          <span style={{ color: 'var(--mbs-gold-text)', flexShrink: 0, lineHeight: 1 }}><Icon name="mail" size="24px" /></span>
+          <span style={{ minWidth: 0 }}>
+            <span style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: 'var(--mbs-navy)', marginBottom: '2px' }}>{K.inbox.label}</span>
+            <span className="mbs-inbox-addr">{K.inbox.addr.split('@')[0]}@<wbr />{K.inbox.addr.split('@')[1]}</span>
+            <span style={{ display: 'block', fontSize: '13px', color: 'var(--mbs-gray)', lineHeight: 1.6, marginTop: '6px' }}>{K.inbox.note}</span>
+          </span>
+        </a>
       </Section>
 
       <Section tone="alt">

@@ -126,6 +126,18 @@
 .mbs-grid-4 { grid-template-columns: repeat(4, 1fr); }
 .mbs-grid--lg { gap: var(--mbs-grid-gap-lg); }
 
+/* Same three-column rhythm as .mbs-grid-3, but flex-wrap so a trailing
+   partial row centers instead of hugging the left edge. */
+.mbs-grid-3-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--mbs-grid-gap-lg);
+}
+.mbs-grid-3-center > * {
+  flex: 0 1 calc((100% - 2 * var(--mbs-grid-gap-lg)) / 3);
+}
+
 /* The 2×2 figure block beside the "Wer wir sind" prose. */
 .mbs-stats {
   display: grid;
@@ -161,6 +173,7 @@
 @media (max-width: 1000px) {
   .mbs-grid-3 { grid-template-columns: repeat(2, 1fr); }
   .mbs-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .mbs-grid-3-center > * { flex-basis: calc((100% - var(--mbs-grid-gap-lg)) / 2); }
 }
 
 @media (max-width: 900px) {
@@ -182,6 +195,7 @@
   }
   .mbs-grid-2,
   .mbs-grid-3 { grid-template-columns: 1fr; }
+  .mbs-grid-3-center > * { flex-basis: 100%; }
   .mbs-form-row { grid-template-columns: 1fr; }
   .mbs-sec-head {
     align-items: flex-start;
@@ -943,3 +957,179 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
   from { opacity: 0; transform: scale(.965); }
   to   { opacity: 1; transform: none; }
 }
+
+/* ── For Companies: founding-partner offer ──────────────────────────────── */
+.mbs-founding {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 32px 48px;
+  padding: 40px;
+  border-radius: var(--mbs-r-lg);
+  background: var(--mbs-gold-dim);
+  border: 1px solid var(--mbs-gold-border);
+}
+@media (max-width: 760px) {
+  .mbs-founding { grid-template-columns: 1fr; padding: 28px 24px; }
+}
+
+/* ── Contact: the one inbox ─────────────────────────────────────────────── */
+.mbs-inbox {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  max-width: var(--mbs-prose-max);
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: var(--mbs-r);
+  background: var(--mbs-off);
+  border: 1px solid var(--mbs-border);
+  text-decoration: none;
+  transition: border-color var(--mbs-dur, .2s) ease;
+}
+.mbs-inbox:hover { border-color: var(--mbs-gold-border); }
+.mbs-inbox-addr {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--mbs-gold-text);
+  overflow-wrap: break-word;
+}
+
+/* ── Ledger: "What you get" on Membership ──────────────────────────────────
+   A two-column list on the section's own surface, not a wall of cards: the
+   serif title does the work the icon used to, hairlines keep the rows. */
+.mbs-ledger {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--mbs-grid-gap-xl);
+  border-bottom: 1px solid var(--mbs-border);
+}
+.mbs-ledger > li {
+  padding: 26px 0 28px;
+  border-top: 1px solid var(--mbs-border);
+}
+.mbs-ledger h3 {
+  font-family: var(--mbs-font-serif);
+  font-size: clamp(19px, 1.9vw, 22px);
+  font-weight: var(--mbs-fw-bold);
+  line-height: 1.25;
+  color: var(--mbs-navy);
+  margin: 0 0 8px;
+}
+.mbs-ledger p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--mbs-gray);
+  margin: 0;
+  max-width: 34em;
+}
+@media (max-width: 680px) {
+  .mbs-ledger { grid-template-columns: 1fr; }
+  .mbs-ledger > li { padding: 22px 0 24px; }
+}
+
+/* ── Value row: "The value" on For Companies ────────────────────────────────
+   Three arguments read side by side, divided by rules instead of boxed. */
+.mbs-value-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.mbs-value-row > div {
+  padding: 4px 32px 8px;
+  border-left: 1px solid var(--mbs-border);
+}
+.mbs-value-row > div:first-child { padding-left: 0; border-left: 0; }
+.mbs-value-row > div:last-child { padding-right: 0; }
+.mbs-value-row h3 {
+  font-family: var(--mbs-font-serif);
+  font-size: clamp(21px, 2.2vw, 26px);
+  font-weight: var(--mbs-fw-bold);
+  line-height: 1.2;
+  letter-spacing: var(--mbs-tr-title);
+  color: var(--mbs-navy);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.mbs-value-row p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--mbs-gray);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .mbs-value-row { grid-template-columns: 1fr; }
+  .mbs-value-row > div,
+  .mbs-value-row > div:first-child {
+    padding: 24px 0;
+    border-left: 0;
+    border-top: 1px solid var(--mbs-border);
+  }
+  .mbs-value-row > div:first-child { border-top: 0; padding-top: 0; }
+}
+
+/* ── About: the nine format cards ──────────────────────────────────────────
+   Nine fills a 3×3 grid exactly. Where the grid drops to two columns, the odd
+   last card takes the full row rather than standing alone in it. */
+@media (min-width: 681px) and (max-width: 1000px) {
+  .mbs-formats > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+/* Home pillars reuse the value row; the one-line promise under each title. */
+.mbs-value-row p.mbs-value-tag {
+  font-size: 15px;
+  font-weight: var(--mbs-fw-semibold);
+  line-height: 1.5;
+  color: var(--mbs-gold-text);
+  margin: -6px 0 12px;
+}
+
+/* ── Calendar before the first event ───────────────────────────────────────
+   One block instead of an empty month grid plus a second "nothing yet". */
+.mbs-cal-empty {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  padding: clamp(8px, 3vw, 32px) 0;
+}
+.mbs-cal-empty-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--mbs-gold-dim);
+  border: 1px solid var(--mbs-gold-border);
+  color: var(--mbs-gold-text);
+  margin-bottom: 24px;
+}
+.mbs-cal-empty h2 {
+  font-family: var(--mbs-font-serif);
+  font-size: var(--mbs-fs-h2);
+  font-weight: var(--mbs-fw-bold);
+  line-height: var(--mbs-lh-title);
+  letter-spacing: var(--mbs-tr-title);
+  color: var(--mbs-navy);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.mbs-cal-empty p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--mbs-gray);
+  margin: 0 auto 28px;
+  max-width: 34em;
+}
+.mbs-cal-empty-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* "Notify me" jumps to the footer signup; leave room under the sticky header. */
+#newsletter { scroll-margin-top: 96px; }

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "layout-transition",
+        "value": "*",
+        "files": [
+          "screens/_patches.jsx"
+        ],
+        "createdAt": "2026-10-14T19:41:17.078Z",
+        "reason": "pre-existing Card accent-bar hover effect (predates this session, commit f7ecb1d); absolutely-positioned 3px bar animates only its own height, no reflow of surrounding content"
+      }
+    ]
+  }
+}

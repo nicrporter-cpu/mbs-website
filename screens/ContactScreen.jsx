@@ -113,15 +113,14 @@ function ContactScreen({ C }) {
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
           <SectionHeading label={K.label} title={K.title} desc={K.descA} />
         </div>
-        <div className="mbs-grid-3" data-stagger style={{ marginTop: '32px' }}>
-          {K.routes.map(r => (
-            <a key={r.label} href={'mailto:' + r.addr} style={{ display: 'block', padding: '24px', borderRadius: 'var(--mbs-r)', background: 'var(--mbs-off)', border: '1px solid var(--mbs-border)', textDecoration: 'none' }}>
-              <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '12px' }}><Icon name={r.icon} size="22px" /></div>
-              <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--mbs-navy)', marginBottom: '4px' }}>{r.label}</div>
-              <div style={{ fontSize: '13px', color: 'var(--mbs-gold-text)' }}>{r.addr}</div>
-            </a>
-          ))}
-        </div>
+        <a href={'mailto:' + K.inbox.addr} className="mbs-inbox" data-reveal>
+          <span style={{ color: 'var(--mbs-gold-text)', flexShrink: 0, lineHeight: 1 }}><Icon name="mail" size="24px" /></span>
+          <span style={{ minWidth: 0 }}>
+            <span style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: 'var(--mbs-navy)', marginBottom: '2px' }}>{K.inbox.label}</span>
+            <span className="mbs-inbox-addr">{K.inbox.addr.split('@')[0]}@<wbr />{K.inbox.addr.split('@')[1]}</span>
+            <span style={{ display: 'block', fontSize: '13px', color: 'var(--mbs-gray)', lineHeight: 1.6, marginTop: '6px' }}>{K.inbox.note}</span>
+          </span>
+        </a>
       </Section>
 
       <Section tone="alt">

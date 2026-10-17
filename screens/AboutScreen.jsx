@@ -41,16 +41,12 @@ function AboutScreen({ C, openEvent }) {
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)', marginBottom: '40px' }}>
           <SectionHeading label={W.formatsLabel} title={W.formatsTitle} desc={W.formatsDesc} />
         </div>
-        <div className="mbs-grid-2" data-stagger>
+        <div className="mbs-grid-3 mbs-formats" data-stagger>
           {C.formats.map(f => (
             <Card key={f.title} padding="28px">
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '14px' }}>
-                <span style={{ color: 'var(--mbs-gold-text)', lineHeight: 1 }}><Icon name={f.icon} size="24px" /></span>
-                <Badge variant="tag">{f.pillar}</Badge>
-              </div>
+              <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={f.icon} size="24px" /></div>
               <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{f.title}</h3>
-              <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: '0 0 14px' }}>{f.text}</p>
-              <p style={{ fontSize: '12px', color: 'var(--mbs-gold-text)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.5px', margin: 0 }}>{f.access}</p>
+              <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{f.text}</p>
             </Card>
           ))}
         </div>
@@ -93,7 +89,7 @@ function AboutScreen({ C, openEvent }) {
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
           {C.ui.social.filter(s => s.href).map(s => (
             <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', background: 'var(--mbs-gold)', color: 'var(--mbs-navy)', borderRadius: 'var(--mbs-r)', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', background: 'var(--mbs-navy)', color: 'var(--mbs-white)', borderRadius: 'var(--mbs-r)', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>
               <Icon name={s.icon} size="18px" /> {s.label}
             </a>
           ))}
