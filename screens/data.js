@@ -114,7 +114,7 @@ Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen, etwa 
 
 ### Wofür nutzen wir Ihre Daten?
 
-Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Weitere Daten können zur Bearbeitung Ihrer Kontakt-, Mitglieds- oder Bewerbungsanfrage sowie [falls Analyse-Tools zum Einsatz kommen: zur Analyse Ihres Nutzerverhaltens] verwendet werden.
+Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Weitere Daten können zur Bearbeitung Ihrer Kontakt-, Mitglieds- oder Bewerbungsanfrage sowie zur anonymisierten, statistischen Analyse der Websitenutzung verwendet werden.
 
 ### Welche Rechte haben Sie bezüglich Ihrer Daten?
 
@@ -122,7 +122,7 @@ Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger
 
 ### Analyse-Tools und Tools von Drittanbietern
 
-[Zu bestätigen: Setzt Munich Business Society beim Website-Besuch ein Analyse- oder Cookie-Consent-Tool ein? Falls ja, hier kurz benennen und auf den Teil 5 unten verweisen. Falls nein, was für den aktuellen Stand der Planung gilt, diesen Absatz ersatzlos streichen.]
+Diese Website nutzt Cloudflare Web Analytics zur anonymisierten, statistischen Auswertung der Websitenutzung. Das Tool setzt keine Cookies, speichert keine Kennungen auf Ihrem Gerät und erstellt keine individuellen Nutzerprofile. Einzelheiten finden Sie unten im Abschnitt „Cloudflare Web Analytics".
 
 ## Allgemeine Hinweise und Pflichtinformationen
 
@@ -180,15 +180,7 @@ Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten z
 
 ### Cookies
 
-[Zu bestätigen und anzupassen, je nachdem welche Cookies tatsächlich gesetzt werden, z. B.: „Unsere Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Seite erforderlich sind. Diese werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO bzw. § 25 Abs. 2 TDDDG gesetzt und erfordern keine Einwilligung." Werden zusätzlich Analyse- oder Marketing-Cookies eingesetzt, ist ein Cookie-Consent-Banner mit Opt-in erforderlich, und dieser Abschnitt muss die eingesetzten Dienste einzeln auflisten.]
-
-### Cookie-Einwilligung mit Usercentrics
-
-[Nur einfügen, falls Munich Business Society sich für Usercentrics als Cookie-Consent-Tool entscheidet. Aktuell nicht vorgesehen, vor Go-live streichen oder durch das tatsächlich gewählte Tool ersetzen.]
-
-### Cookie-Einwilligung mit Consent Manager Provider
-
-[Nur einfügen, falls Munich Business Society ein anderes Consent-Management-Tool einsetzt (z. B. Cookiebot, Borlabs Cookie, CookieYes). Aktuell nicht vorgesehen, vor Go-live streichen oder durch das tatsächlich gewählte Tool ersetzen.]
+Unsere Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Seite erforderlich sind. Diese werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO bzw. § 25 Abs. 2 TDDDG gesetzt und erfordern keine Einwilligung. Das von uns eingesetzte Analysetool Cloudflare Web Analytics setzt ebenfalls keine Cookies (siehe unten, „Cloudflare Web Analytics"). Da weder technisch notwendige noch Analyse-Cookies eine Einwilligung voraussetzen, betreiben wir kein Cookie-Consent-Banner.
 
 ### Server-Log-Dateien
 
@@ -236,35 +228,15 @@ Auf unserer Website verlinken wir auf unser LinkedIn-Profil. Dabei handelt es si
 
 ## Analyse-Tools und Werbung
 
-### Google Analytics
+### Cloudflare Web Analytics
 
-[Zu bestätigen: Setzt Munich Business Society Google Analytics ein? Für einen kleinen Verein ist ein datensparsameres, oft ohne Cookie-Banner auskommendes Tool wie Matomo (selbst gehostet) oder Plausible/Fathom häufig die einfachere Wahl. Das ist eine Empfehlung, keine Vorgabe. Falls Google Analytics tatsächlich zum Einsatz kommt, hier ergänzen:]
+Wir setzen auf dieser Website Cloudflare Web Analytics ein, einen Dienst der Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA. Das Tool wertet den Websitebesuch ausschließlich aggregiert und statistisch aus (u. a. Seitenaufrufe, Verweisquelle, Land, Browser- und Gerätetyp). Dafür werden weder Cookies noch Local Storage noch sonstige auf Ihrem Gerät gespeicherte Kennungen verwendet; es werden keine individuellen Nutzerprofile erstellt und keine Besucher über mehrere Websites hinweg wiedererkannt.
 
-### IP-Anonymisierung
+Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer datensparsamen, anonymisierten Analyse der Websitenutzung). Da keine personenbezogene Profilbildung stattfindet, ist hierfür keine Einwilligung erforderlich.
 
-[Beschreibung, ob/wie IP-Adressen gekürzt übertragen werden]
+### Drittlandübermittlung
 
-### Browser-Plugin
-
-[Hinweis auf das Browser-Add-on zur Deaktivierung von Google Analytics]
-
-### Widerspruch gegen Datenerfassung
-
-[Opt-out-Möglichkeit für Nutzer beschreiben]
-
-### Auftragsverarbeitung
-
-[Hinweis auf den mit Google abgeschlossenen Auftragsverarbeitungsvertrag]
-
-### Demografische Merkmale bei Google Analytics
-
-[Nur relevant, falls die entsprechende Funktion aktiviert ist]
-
-### Speicherdauer
-
-[Aufbewahrungsfrist der erhobenen Daten]
-
-[Falls kein Google Analytics eingesetzt wird: gesamten Block streichen.]
+Da Cloudflare, Inc. ihren Sitz in den USA hat, ist beim Betrieb des Analyse-Scripts eine Übermittlung von Daten in die USA nicht ausgeschlossen. [Vorstand zu bestätigen: Mit Cloudflare besteht ein Data Processing Addendum auf Grundlage der EU-Standardvertragsklauseln; dieses ist im Cloudflare-Dashboard unter den Account-Einstellungen zu akzeptieren, falls noch nicht erfolgt.]
 
 ### etracker
 
