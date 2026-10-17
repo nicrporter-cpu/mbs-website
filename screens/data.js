@@ -236,7 +236,7 @@ Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer 
 
 ### Drittlandübermittlung
 
-Da Cloudflare, Inc. ihren Sitz in den USA hat, ist beim Betrieb des Analyse-Scripts eine Übermittlung von Daten in die USA nicht ausgeschlossen. [Vorstand zu bestätigen: Mit Cloudflare besteht ein Data Processing Addendum auf Grundlage der EU-Standardvertragsklauseln; dieses ist im Cloudflare-Dashboard unter den Account-Einstellungen zu akzeptieren, falls noch nicht erfolgt.]
+Da Cloudflare, Inc. ihren Sitz in den USA hat, ist beim Betrieb des Analyse-Scripts eine Übermittlung von Daten in die USA nicht ausgeschlossen. Cloudflare bindet sein Data Processing Addendum (DPA) auf Grundlage der EU-Standardvertragsklauseln automatisch in die mit jedem Konto geltende Self-Serve Subscription Agreement ein; für ein Konto auf dem kostenlosen Tarif wie unseres ist keine gesonderte Unterzeichnung vorgesehen oder möglich. [Vorstand: das öffentliche DPA-Dokument unter cloudflare.com/data-processing-addendum zu den Vereinsunterlagen nehmen.]
 
 ### etracker
 
