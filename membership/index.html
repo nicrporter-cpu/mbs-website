@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=1375d83bb9">
-<link rel="stylesheet" href="/site.css?v=1375d83bb9">
+<link rel="stylesheet" href="/design-system/styles.css?v=cb39c433bc">
+<link rel="stylesheet" href="/site.css?v=cb39c433bc">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=1375d83bb9"></script>
-<script src="/screens/data.js?v=1375d83bb9"></script>
-<script src="/site.js?v=1375d83bb9"></script>
+<script src="/design-system/_ds_bundle.js?v=cb39c433bc"></script>
+<script src="/screens/data.js?v=cb39c433bc"></script>
+<script src="/site.js?v=cb39c433bc"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1158,5 +1158,9 @@ function Page() {
 
 ReactDOM.createRoot(document.getElementById('root')).render(<Page />);
 </script>
+<!-- Cloudflare Web Analytics — cookie-free, no visitor-level tracking (see
+     datenschutz/ for the privacy-policy section). Second documented exception
+     to "fetches nothing from the internet", see README. -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "69fb53c2ba9b4f91b8a38ff6d32ffab5"}'></script>
 </body>
 </html>

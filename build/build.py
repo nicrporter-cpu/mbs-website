@@ -165,6 +165,10 @@ __PATCHES__
 __SOURCE__
 __SHELL__
 </script>
+<!-- Cloudflare Web Analytics — cookie-free, no visitor-level tracking (see
+     datenschutz/ for the privacy-policy section). Second documented exception
+     to "fetches nothing from the internet", see README. -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "69fb53c2ba9b4f91b8a38ff6d32ffab5"}'></script>
 </body>
 </html>
 '''

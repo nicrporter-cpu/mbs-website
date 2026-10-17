@@ -4,8 +4,11 @@ Ten pages wired into a browsable website, **bilingual (English EN-GB + German)**
 with the cross-university positioning from the copy deck (v1.0). Every nav item,
 logo, and in-page button loads a real page; the event dialog opens, closes on Esc,
 and can be deep-linked. The site itself fetches nothing from the internet — React,
-Babel and both webfonts are vendored locally. The one exception: the Join, Contact
-and Newsletter forms post to a small external backend — see `worker/README.md`.
+Babel and both webfonts are vendored locally. Two exceptions: the Join, Contact
+and Newsletter forms post to a small external backend (see `worker/README.md`),
+and every page loads Cloudflare's Web Analytics beacon — cookie-free, no
+visitor-level tracking, see `datenschutz/index.html` for the privacy-policy
+section and `build/build.py`'s `PAGE` template for the script tag itself.
 
 **Language switch.** The header carries a DE/EN tab. Both languages ship inside every
 page (`screens/data.js` holds `MBS_CONTENT.en` and `MBS_CONTENT.de`), so the switch
