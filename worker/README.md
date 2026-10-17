@@ -53,12 +53,32 @@ npx wrangler r2 bucket create mbs-form-uploads
    **Editor** access.
 6. Copy the Sheet's ID from its URL (`.../spreadsheets/d/THIS_PART/edit`).
 
+### 4. Cloudflare API token (optional — only for the traffic/form dashboard)
+
+Skip this unless you want `GET /dashboard` (see below). It's separate from
+the Cloudflare account itself — this Worker already runs on that account —
+and separate from the Web Analytics beacon token in `build/build.py`'s page
+template, which is public and needs no API token.
+
+1. In the Cloudflare dashboard, click your profile icon (top right) → **My
+   Profile** → **API Tokens** in the left sidebar.
+2. **Create Token** → **Create Custom Token**.
+3. Permissions: **Account** → **Account Analytics** → **Read**. Scope it to
+   this account only.
+4. Create it and copy the token — this is the one credential here that's
+   actually sensitive; don't paste it anywhere but `wrangler secret put`
+   below or your local `.dev.vars`.
+5. Find your **Account ID**: it's in the dashboard's URL
+   (`dash.cloudflare.com/<account-id>/...`) or the right sidebar of most
+   account pages. This one isn't secret — it goes in `wrangler.toml` directly.
+
 ## Configuration
 
 Edit `wrangler.toml`'s `[vars]` block: set `SPREADSHEET_ID` from step 3.6
-above. `NOTIFY_TO_EMAIL`, `ALLOWED_ORIGINS` and `FROM_EMAIL` already have
-sensible production defaults — change `FROM_EMAIL` if you verified a
-different sending domain/subdomain in Resend than the default.
+above, and `CF_ACCOUNT_ID` from step 4.5 if you're setting up the dashboard.
+`NOTIFY_TO_EMAIL`, `ALLOWED_ORIGINS` and `FROM_EMAIL` already have sensible
+production defaults — change `FROM_EMAIL` if you verified a different
+sending domain/subdomain in Resend than the default.
 
 Set secrets (never committed, never appear in `wrangler.toml`):
 
@@ -71,8 +91,11 @@ npx wrangler secret put GOOGLE_SERVICE_ACCOUNT_B64
 #   macOS/Linux: base64 -i path/to/key.json | tr -d '\n'
 
 npx wrangler secret put ADMIN_FILE_TOKEN
-# a long random string used to gate /files/:key downloads, e.g.:
+# a long random string used to gate /files/:key and /dashboard, e.g.:
 #   openssl rand -hex 32
+
+npx wrangler secret put CF_API_TOKEN
+# only if you're setting up the dashboard — paste the token from step 4.4
 ```
 
 ## Local development
@@ -105,6 +128,27 @@ that exact URL matches the production branch of `window.MBS_API_ENDPOINT` in
 `../screens/data.js` — if your Worker subdomain differs, update it there and
 rerun `../build/build.py` and `../build/build_single.py`.
 
+## Traffic & form stats dashboard
+
+`GET /dashboard?token=...&days=30` — visits per page from Cloudflare Web
+Analytics next to form submission counts from the Sheet, with a Join-page
+conversion rate called out. Only useful if you did setup step 4 above.
+
+```
+https://mbs-forms.<your-account>.workers.dev/dashboard?token=<ADMIN_FILE_TOKEN>&days=30
+```
+
+`token` must match the `ADMIN_FILE_TOKEN` secret (same one `/files/:key`
+uses). `days` is optional, defaults to 30, capped at 365.
+
+`lib/cfAnalytics.js`'s GraphQL query (dataset `rumPageloadEventsAdaptiveGroups`)
+was written from Cloudflare's documented API shape but never run against a
+live account — if the page shows a "Cloudflare Analytics error" block
+instead of a page-visits table, that's a field name needing a fix in that
+file, not a setup mistake. The Sheets side of the page doesn't have this
+caveat; it reuses the same request pattern `appendRow` already uses in
+production.
+
 ## Security model
 
 - **CORS** (`ALLOWED_ORIGINS` in `wrangler.toml`) only stops a browser from
@@ -119,10 +163,11 @@ rerun `../build/build.py` and `../build/build_single.py`.
 - `lib/validate.js` re-checks required fields and file types/sizes
   server-side, since the frontend's own validation can always be bypassed by
   calling `/submit` directly.
-- Uploaded files (`GET /files/:key`) are never public — every link requires
-  `?token=` to match the `ADMIN_FILE_TOKEN` secret. If you want per-person
-  access control instead of one shared token, Cloudflare Access is the
-  natural upgrade — not implemented here.
+- Uploaded files (`GET /files/:key`) and the traffic/form dashboard
+  (`GET /dashboard`) are never public — both require `?token=` to match the
+  `ADMIN_FILE_TOKEN` secret. If you want per-person access control instead
+  of one shared token, Cloudflare Access is the natural upgrade — not
+  implemented here.
 
 ## Known limits
 

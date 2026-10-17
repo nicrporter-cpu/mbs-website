@@ -2,10 +2,15 @@ import { corsHeaders, handlePreflight, jsonResponse } from './lib/cors.js';
 import { looksLikeSpam } from './lib/spam.js';
 import { validate } from './lib/validate.js';
 import { storeJoinFiles, getStoredFile } from './lib/files.js';
-import { appendRow } from './lib/sheets.js';
+import { appendRow, countRowsSince } from './lib/sheets.js';
 import { sendEmail } from './lib/email.js';
 import { joinNotification, contactNotification, newsletterNotification } from './templates/notify.js';
 import { confirmationFor } from './templates/confirm.js';
+import { getPageVisits } from './lib/cfAnalytics.js';
+import { renderDashboard } from './lib/dashboard.js';
+
+const SITE_HOSTNAME = 'munich-business-society.com';
+const SHEET_TABS = ['Join', 'Contact', 'Newsletter'];
 
 const EMAIL_FIELD = { join: 'email', contact: 'email', newsletter: 'news_email' };
 
@@ -178,6 +183,46 @@ async function handleGetFile(request, env, key) {
   return new Response(object.body, { status: 200, headers });
 }
 
+// Admin-only: Cloudflare Web Analytics visits next to form submission
+// counts from the Sheet, so "did the Join page traffic turn into
+// applications" is a glance instead of two manual lookups. Gated by the
+// same ADMIN_FILE_TOKEN as /files/:key — see README for setup (CF_API_TOKEN,
+// CF_ACCOUNT_ID).
+async function handleDashboard(request, env) {
+  const url = new URL(request.url);
+  const token = url.searchParams.get('token') || '';
+  if (!env.ADMIN_FILE_TOKEN || token !== env.ADMIN_FILE_TOKEN) {
+    return new Response('Forbidden', { status: 403, headers: corsHeaders(request, env) });
+  }
+
+  const days = Math.max(1, Math.min(365, parseInt(url.searchParams.get('days') || '30', 10) || 30));
+  const since = new Date(Date.now() - days * 86400000);
+
+  let pageVisits = [];
+  let cfError = null;
+  try {
+    pageVisits = await getPageVisits(env, SITE_HOSTNAME, days);
+  } catch (e) {
+    cfError = String(e.message || e);
+  }
+
+  const submissions = {};
+  let sheetsError = null;
+  try {
+    for (const tab of SHEET_TABS) {
+      submissions[tab] = env.SPREADSHEET_ID ? await countRowsSince(env, tab, since) : 0;
+    }
+  } catch (e) {
+    sheetsError = String(e.message || e);
+  }
+
+  const html = renderDashboard({ days, pageVisits, submissions, cfError, sheetsError });
+  return new Response(html, {
+    status: 200,
+    headers: { 'Content-Type': 'text/html; charset=utf-8', ...corsHeaders(request, env) }
+  });
+}
+
 export default {
   async fetch(request, env) {
     if (request.method === 'OPTIONS') return handlePreflight(request, env);
@@ -196,6 +241,10 @@ export default {
     if (request.method === 'GET' && url.pathname.startsWith('/files/')) {
       const key = decodeURIComponent(url.pathname.slice('/files/'.length));
       return handleGetFile(request, env, key);
+    }
+
+    if (request.method === 'GET' && url.pathname === '/dashboard') {
+      return handleDashboard(request, env);
     }
 
     return new Response('Not found', { status: 404, headers: corsHeaders(request, env) });

@@ -77,13 +77,17 @@ async function getAccessToken(serviceAccount) {
   return data.access_token;
 }
 
+async function getServiceAccountAccessToken(env) {
+  const json = atob(env.GOOGLE_SERVICE_ACCOUNT_B64);
+  const serviceAccount = JSON.parse(json);
+  return getAccessToken(serviceAccount);
+}
+
 // tab: 'Join' | 'Contact' | 'Newsletter' — must match an existing tab name
 // in the target Sheet (see worker/README.md step 3).
 // row: array of cell values, left to right.
 export async function appendRow(env, tab, row) {
-  const json = atob(env.GOOGLE_SERVICE_ACCOUNT_B64);
-  const serviceAccount = JSON.parse(json);
-  const accessToken = await getAccessToken(serviceAccount);
+  const accessToken = await getServiceAccountAccessToken(env);
 
   const range = encodeURIComponent(`${tab}!A:Z`);
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${env.SPREADSHEET_ID}/values/${range}:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`;
@@ -99,4 +103,27 @@ export async function appendRow(env, tab, row) {
   if (!res.ok) {
     throw new Error(`Sheets append failed: ${res.status} ${await res.text()}`);
   }
+}
+
+// Counts rows in `tab` whose column A (the submission timestamp — see
+// index.js's nowMunichTime, "YYYY-MM-DD HH:MM:SS" Munich wall-clock time)
+// falls on or after `sinceDate`. Reads only column A, not the whole sheet.
+// Used by the /dashboard endpoint, so a one-to-two-hour skew from comparing
+// Munich time against the Worker's UTC clock doesn't matter at day
+// granularity.
+export async function countRowsSince(env, tab, sinceDate) {
+  const accessToken = await getServiceAccountAccessToken(env);
+  const range = encodeURIComponent(`${tab}!A2:A`); // skip the header row
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${env.SPREADSHEET_ID}/values/${range}`;
+
+  const res = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` } });
+  if (!res.ok) {
+    throw new Error(`Sheets read failed: ${res.status} ${await res.text()}`);
+  }
+  const data = await res.json();
+  const rows = data.values || [];
+  return rows.filter(([timestamp]) => {
+    const parsed = new Date(String(timestamp || '').replace(' ', 'T'));
+    return !isNaN(parsed) && parsed >= sinceDate;
+  }).length;
 }

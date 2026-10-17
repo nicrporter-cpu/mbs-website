@@ -20,6 +20,10 @@ SPREADSHEET_ID = "1yQRg-ybbmaSl88SWm201mrUihs242h6ZVSMDoBcqhB4"
 # The "From" address used for outgoing mail. Must be on a domain verified in
 # Resend (see README step 2) before this will actually send anything.
 FROM_EMAIL = "Munich Business Society <no-reply@mail.munich-business-society.com>"
+# Powers GET /dashboard (see README's "Traffic & form stats dashboard"
+# section). Your Cloudflare account id, shown in the dashboard's URL/sidebar
+# on almost any page — not secret, unlike CF_API_TOKEN below.
+CF_ACCOUNT_ID = ""
 
 # Private file storage for Join-form uploads (CV, enrollment certificate).
 # Create the bucket first: `wrangler r2 bucket create mbs-form-uploads`
