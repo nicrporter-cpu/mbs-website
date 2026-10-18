@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=00127910aa">
-<link rel="stylesheet" href="/site.css?v=00127910aa">
+<link rel="stylesheet" href="/design-system/styles.css?v=d2ad0a931a">
+<link rel="stylesheet" href="/site.css?v=d2ad0a931a">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=00127910aa"></script>
-<script src="/screens/data.js?v=00127910aa"></script>
-<script src="/site.js?v=00127910aa"></script>
+<script src="/design-system/_ds_bundle.js?v=d2ad0a931a"></script>
+<script src="/screens/data.js?v=d2ad0a931a"></script>
+<script src="/site.js?v=d2ad0a931a"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1019,18 +1019,6 @@ function HomeScreen({ C }) {
               <Button variant="onNavy" href={ROUTES.calendar}>{H.seeEvents}</Button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Every campus, shown rather than claimed: the Munich universities from
-          the application form, A–Z, because any other order reads as a ranking. */}
-      <section className="mbs-campus" aria-labelledby="mbs-campus-h" data-on-navy="">
-        <div className="mbs-campus-inner" data-reveal>
-          <h2 id="mbs-campus-h">{H.campusTitle}</h2>
-          <ul className="mbs-campus-list">
-            {C.universities.slice(0, -1).slice().sort((a, b) => a.localeCompare(b, C.locale)).map(u => <li key={u}>{u}</li>)}
-          </ul>
-          <p className="mbs-campus-note">{H.campusNote}</p>
         </div>
       </section>
 
