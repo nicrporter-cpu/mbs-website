@@ -1132,4 +1132,4 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
 }
 
 /* "Notify me" jumps to the footer signup; leave room under the sticky header. */
-#newsletter { scroll-margin-top: 96px; }
+#newsletter, #how-to-join { scroll-margin-top: 96px; }

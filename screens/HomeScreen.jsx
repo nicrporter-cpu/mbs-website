@@ -23,7 +23,11 @@ function HomeScreen({ C }) {
             <p className="mbs-hero-lead" style={{ fontSize: 'var(--mbs-fs-lead)', color: 'var(--mbs-on-navy-70)', lineHeight: 'var(--mbs-lh-body)', margin: '0 0 24px' }}>{H.heroLead}</p>
             <div className="mbs-hero-cta" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Button variant="gold" href={ROUTES.join}>{C.ui.apply}</Button>
-              <Button variant="onNavy" href={ROUTES.calendar}>{H.seeEvents}</Button>
+              {/* Until the first event is announced, the calendar is empty, so the
+                  second button explains how joining works instead. */}
+              {C.events.length > 0
+                ? <Button variant="onNavy" href={ROUTES.calendar}>{H.seeEvents}</Button>
+                : <Button variant="onNavy" href={ROUTES.membership + '#how-to-join'}>{H.howJoin}</Button>}
             </div>
           </div>
         </div>

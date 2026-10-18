@@ -68,10 +68,10 @@ function Icon({ name, size = '1.15em', strokeWidth = 1.75, style, ...rest }) {
    copy of. Hoisted here once, and driven by classes so padding and gutters can
    follow the breakpoints. */
 
-function Section({ children, tone, className = '', style }) {
+function Section({ children, tone, className = '', style, id }) {
   const band = tone === 'alt' ? ' mbs-sec--alt' : tone === 'navy' ? ' mbs-sec--navy' : '';
   return (
-    <div className={'mbs-sec' + band + (className ? ' ' + className : '')} style={style}
+    <div id={id} className={'mbs-sec' + band + (className ? ' ' + className : '')} style={style}
       {...(tone === 'navy' ? { 'data-on-navy': '' } : {})}>
       <div className="mbs-sec-inner">{children}</div>
     </div>

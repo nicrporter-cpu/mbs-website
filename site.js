@@ -45,3 +45,28 @@ window.MBS_PH = function (text) {
       : part;
   });
 };
+
+/* Deep links into a section (/membership/#how-to-join) arrive before React has
+   rendered that section, so the browser's own jump finds nothing. Wait for
+   the target to appear, then scroll to it once. Gives up after 5 s. */
+(function () {
+  var hash = window.location.hash;
+  if (!hash || hash.length < 2 || !('MutationObserver' in window)) return;
+  var id = decodeURIComponent(hash.slice(1));
+  var done = false;
+  function go() {
+    var el = document.getElementById(id);
+    if (!el || done) return !!el;
+    done = true;
+    obs.disconnect();
+    /* a beat later, so layout has settled (a timer, not rAF: rAF can be
+       paused in background or embedded views and the jump would never run) */
+    setTimeout(function () { el.scrollIntoView({ block: 'start' }); }, 60);
+    return true;
+  }
+  var obs = new MutationObserver(go);
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!go()) obs.observe(document.body, { childList: true, subtree: true });
+  });
+  setTimeout(function () { obs.disconnect(); }, 5000);
+})();

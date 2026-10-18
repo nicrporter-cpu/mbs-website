@@ -36,7 +36,7 @@ function MembershipScreen({ C }) {
         </ul>
       </Section>
 
-      <Section tone="alt">
+      <Section tone="alt" id="how-to-join">
         <SectionHeading label={M.processLabel} title={M.processTitle} style={{ marginBottom: '48px' }} />
         <div className="mbs-process" data-reveal>
           {M.process.map((step, i) => (
@@ -85,7 +85,7 @@ function MembershipScreen({ C }) {
           <p style={{ fontSize: '14px', color: 'var(--mbs-on-navy-70)', lineHeight: 1.8, maxWidth: '460px', margin: '0 auto 24px' }}>{M.ctaText}</p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Button variant="gold" href={ROUTES.join}>{C.ui.apply}</Button>
-            <Button variant="onNavy" href={ROUTES.calendar}>{C.home.seeEvents}</Button>
+            {C.events.length > 0 && <Button variant="onNavy" href={ROUTES.calendar}>{C.home.seeEvents}</Button>}
           </div>
         </div>
       </Section>
