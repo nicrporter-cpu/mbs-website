@@ -464,12 +464,11 @@ function Field({ label, children, help, error, required, htmlFor, style }) {
 function SectionHeading({ label, title, desc, divider = true, tone = 'light', align = 'left', style }) {
   const light = tone === 'light';
   const center = align === 'center';
-  /* The gold eyebrow used to sit above a longer descriptive title; the eyebrow
-     text now carries the heading itself, at the title's size and in the
-     title's navy/white, so a section has one heading line, not two. Where no
-     label was given (a screen kept only `title`), title still renders on its
-     own the way it always has. */
-  const heading = label || title;
+  /* One heading line per section, and it is the descriptive title: the line
+     that makes the argument ("Cross-university by design, not by exception.")
+     rather than the generic label above it ("What makes us different"). The
+     short label only renders when a section has no title. No eyebrow. */
+  const heading = title || label;
   return (
     <div style={{ textAlign: align, ...style }}>
       {heading && <h2 style={{

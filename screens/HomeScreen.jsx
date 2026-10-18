@@ -29,6 +29,18 @@ function HomeScreen({ C }) {
         </div>
       </section>
 
+      {/* Every campus, shown rather than claimed: the Munich universities from
+          the application form, A–Z, because any other order reads as a ranking. */}
+      <section className="mbs-campus" aria-labelledby="mbs-campus-h" data-on-navy="">
+        <div className="mbs-campus-inner" data-reveal>
+          <h2 id="mbs-campus-h">{H.campusTitle}</h2>
+          <ul className="mbs-campus-list">
+            {C.universities.slice(0, -1).slice().sort((a, b) => a.localeCompare(b, C.locale)).map(u => <li key={u}>{u}</li>)}
+          </ul>
+          <p className="mbs-campus-note">{H.campusNote}</p>
+        </div>
+      </section>
+
       {/* Why we exist */}
       <Section>
         <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>

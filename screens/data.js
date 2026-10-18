@@ -413,7 +413,8 @@ window.MBS_CONTENT = {
       studentH: 'Two ways in. Both free.', studentText: "Apply for membership: it's free, for students from every Munich university. Up to 50 places, chosen through an application and a short interview. Not a member yet but want to come to an event? Get in touch with us.",
       contactBtn: 'Get in touch →',
       companyH: "Looking for direct access to Munich's talent?", companyText: "We're building a cross-university network connecting companies with business talent from across Munich. Reach out to find out more.",
-      partnerBtn: 'Learn more →'
+      partnerBtn: 'Learn more →',
+      campusTitle: 'One club for every campus.', campusNote: 'Studying somewhere else in Munich? You can apply too.'
     },
     about: {
       subtitle: 'One case club for all of Munich: student-run, free, every campus.',
@@ -527,10 +528,10 @@ window.MBS_CONTENT = {
     },
     companies: {
       subtitle: 'Reach every Munich university through one conversation.',
-      whyLabel: 'Why work with the Munich Business Society', whyTitle: 'Reach every Munich university through one conversation.',
+      whyLabel: 'Why work with the Munich Business Society', whyTitle: 'Talent from every campus, one point of contact.',
       whyDesc: "Munich Business Society is built and run entirely by students, volunteering their time, free for every student at every Munich university. Your support, as a sponsor, partner or through in-kind contributions, makes that possible, and puts you in front of the city's most driven young talent.",
       packBtn: 'Get the partner pack →', callBtn: 'Book a call',
-      whyGridLabel: 'The value',
+      whyGridLabel: 'The value', whyGridTitle: 'What you get out of it.',
       why: [
         { icon: 'target', title: 'Direct access to top talent', text: 'Meet engaged, capable students before the regular application season opens, a case competition shows you how people think, present and work in a team, in real time.' },
         { icon: 'bulb', title: 'New ideas for your real questions', text: 'Students from different disciplines bring independent perspectives to your current challenges, from market entry and marketing to sustainability.' },
@@ -763,7 +764,8 @@ window.MBS_CONTENT = {
       studentH: 'Zwei Wege rein. Beide kostenlos.', studentText: 'Bewirb dich für die Mitgliedschaft: kostenlos, für Studierende jeder Münchner Hochschule. Bis zu 50 Plätze, ausgewählt über Bewerbung und ein kurzes Interview. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
       contactBtn: 'Kontakt aufnehmen →',
       companyH: 'Sie suchen den direkten Draht zu Münchens Talenten?', companyText: 'Wir bauen ein hochschulübergreifendes Netzwerk auf, das Unternehmen mit Wirtschaftstalenten aus ganz München verbindet. Sprechen Sie uns an, um mehr zu erfahren.',
-      partnerBtn: 'Mehr erfahren →'
+      partnerBtn: 'Mehr erfahren →',
+      campusTitle: 'Ein Club für jeden Campus.', campusNote: 'Du studierst woanders in München? Du kannst dich auch bewerben.'
     },
     about: {
       subtitle: 'Ein Case Club für ganz München: studentisch geführt, kostenlos, jeder Campus.',
@@ -861,7 +863,7 @@ window.MBS_CONTENT = {
         { title: 'Aufnahmeentscheidung', text: 'Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum nächsten Semester auf.' },
         { title: 'Vollmitglied ab sofort', text: 'Kostenlos, mit Stimmrecht ab der nächsten Mitgliederversammlung.' }
       ],
-      expectLabel: 'Was wir erwarten', expectTitle: 'Tauch auf. Bring dich ein. Verhalte dich gut.',
+      expectLabel: 'Was wir erwarten', expectTitle: 'Komm vorbei. Bring dich ein. Geh fair miteinander um.',
       expectText: 'Komm zu ein paar Sachen im Semester. Bring irgendwann etwas ein, eine Idee, einen Abend, einen Kontakt, ein Projekt. Behandle die Menschen in diesem Netzwerk so, wie du in fünf Jahren von ihnen behandelt werden willst, wenn eine:r von ihnen einstellt.',
       feeLabel: 'Die Kosten', feeValue: '0 €', feePer: 'immer, für Studierende',
       feeText: 'Die Mitgliedschaft ist kostenlos und wird es immer bleiben. Wir finanzieren uns über Sponsoren, Partner und Sachleistungen, nicht über die Studierenden, für die es uns gibt.',
@@ -876,10 +878,10 @@ window.MBS_CONTENT = {
     },
     companies: {
       subtitle: 'Erreichen Sie jede Münchner Hochschule in einem Gespräch.',
-      whyLabel: 'Warum eine Zusammenarbeit mit der Munich Business Society', whyTitle: 'Erreichen Sie jede Münchner Hochschule in einem Gespräch.',
+      whyLabel: 'Warum eine Zusammenarbeit mit der Munich Business Society', whyTitle: 'Talente von jedem Campus, ein Ansprechpartner.',
       whyDesc: 'Die Munich Business Society wird komplett von Studierenden ehrenamtlich aufgebaut, kostenlos für jede:n Studierende:n an jeder Münchner Hochschule. Ihre Unterstützung, als Sponsor, Partner oder mit Sachleistungen, macht das erst möglich und bringt Sie gleichzeitig mit den engagiertesten Nachwuchstalenten der Stadt zusammen.',
       packBtn: 'Partner-Paket anfordern →', callBtn: 'Termin buchen',
-      whyGridLabel: 'Der Mehrwert',
+      whyGridLabel: 'Der Mehrwert', whyGridTitle: 'Was Sie davon haben.',
       why: [
         { icon: 'target', title: 'Direkter Zugang zu Top-Talenten', text: 'Lernen Sie engagierte, leistungsstarke Studierende kennen, noch bevor die reguläre Bewerbungssaison beginnt. Eine Case Competition zeigt Ihnen in Echtzeit, wie jemand denkt, präsentiert und im Team arbeitet.' },
         { icon: 'bulb', title: 'Neue Ideen für Ihre echten Fragen', text: 'Studierende aus verschiedenen Fachrichtungen bringen unabhängige Perspektiven auf aktuelle Herausforderungen, von Markteintritt über Marketing bis Nachhaltigkeit.' },

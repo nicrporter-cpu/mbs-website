@@ -17,7 +17,7 @@ function CompaniesScreen({ C }) {
       </Section>
 
       <Section tone="alt">
-        <SectionHeading label={K.whyGridLabel} title={K.why[0].title} style={{ marginBottom: '40px' }} />
+        <SectionHeading label={K.whyGridLabel} title={K.whyGridTitle} style={{ marginBottom: '40px' }} />
         <div className="mbs-value-row" data-stagger>
           {K.why.map(w => (
             <div key={w.title}>
