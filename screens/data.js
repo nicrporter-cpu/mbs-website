@@ -348,7 +348,7 @@ window.MBS_CONTENT = {
           { label: 'Imprint', to: 'impressum' }, { label: 'Privacy policy', to: 'datenschutz' } ] }
       ],
       newsletter: {
-        h: "We'll email you when the first Case Night is set",
+        h: "We'll email you when the first event is set",
         body: 'One short email as soon as the first date is confirmed, then news on events and application phases. Unsubscribe in one click.',
         placeholder: 'Your email', srEmail: 'Your email', btn: 'Keep me posted', sending: 'Sending…',
         done: "You're on the list. We'll be in touch as soon as the next dates are set.",
@@ -705,7 +705,7 @@ window.MBS_CONTENT = {
           { label: 'Impressum', to: 'impressum' }, { label: 'Datenschutz', to: 'datenschutz' } ] }
       ],
       newsletter: {
-        h: 'Wir schreiben dir, sobald die erste Case Night feststeht',
+        h: 'Wir schreiben dir, sobald das erste Event feststeht',
         body: 'Eine kurze E-Mail, sobald der erste Termin feststeht, danach Infos zu Events und Bewerbungsphasen. Abmeldung mit einem Klick.',
         placeholder: 'Deine E-Mail', srEmail: 'Deine E-Mail', btn: 'Halt mich auf dem Laufenden', sending: 'Wird gesendet…',
         done: 'Du bist auf der Liste. Wir melden uns, sobald die nächsten Termine feststehen.',
