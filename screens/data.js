@@ -616,10 +616,17 @@ window.MBS_CONTENT = {
         interests: 'e.g. consulting, finance, marketing, HR, M&A…' },
       help: { cv: 'Optional, PDF or Word, a page or two.',
         enrollment: "Optional, your Immatrikulationsbescheinigung, so we can confirm you're currently a student." },
-      levels: ['Bachelor', 'Master', 'Exchange semester', 'Leave of absence semester', 'Other'],
-      studyPrograms: ['Business Administration (BWL)', 'International Business', 'Business Informatics',
-        'Industrial Engineering & Management', 'Economics (VWL)', 'Business Law', 'Finance & Accounting',
-        'Business Psychology', 'Management', 'Marketing', 'Other degree programme'],
+      levels: ['Bachelor', 'Master', 'MBA', 'Doctorate / PhD', 'Exchange semester', 'Leave of absence semester', 'Other'],
+      /* Grouped so the list matches "any subject": business first, every other
+         field after it, and a catch-all that sits outside both groups. */
+      studyPrograms: [
+        { group: 'Business & economics', items: ['Business Administration (BWL)', 'International Business', 'Business Informatics',
+          'Industrial Engineering & Management', 'Economics (VWL)', 'Business Law', 'Finance & Accounting',
+          'Business Psychology', 'Management', 'Marketing'] },
+        { group: 'Other fields', items: ['Engineering', 'Computer Science', 'Mathematics & Statistics', 'Natural Sciences',
+          'Law', 'Medicine & Health', 'Social Sciences & Psychology', 'Humanities & Languages', 'Architecture & Design'] }
+      ],
+      studyProgramOther: 'Other degree programme',
       languages: ['German', 'English', 'Either / no preference'],
       note: "We review every application and get back to you within a few days. If you're shortlisted, we invite you to a 20-minute interview before the final decision. Say so in the message above if you'd like a role, such as Case Coach or Campus Lead, and we'll get back to you about that separately.",
       consent: "I've read the ", consentLink: 'privacy policy', consentEnd: ' and agree to my data being processed.',
@@ -965,10 +972,15 @@ window.MBS_CONTENT = {
         interests: 'z. B. Consulting, Finance, Marketing, HR, M&A …' },
       help: { cv: 'Optional, PDF oder Word, ein bis zwei Seiten.',
         enrollment: 'Optional, damit wir bestätigen können, dass du aktuell eingeschrieben bist.' },
-      levels: ['Bachelor', 'Master', 'Auslandssemester', 'Urlaubssemester', 'Sonstiges'],
-      studyPrograms: ['Betriebswirtschaftslehre (BWL)', 'International Business', 'Wirtschaftsinformatik',
-        'Wirtschaftsingenieurwesen', 'Volkswirtschaftslehre (VWL)', 'Wirtschaftsrecht', 'Finance & Accounting',
-        'Wirtschaftspsychologie', 'Management', 'Marketing', 'Anderer Studiengang'],
+      levels: ['Bachelor', 'Master', 'MBA', 'Promotion', 'Auslandssemester', 'Urlaubssemester', 'Sonstiges'],
+      studyPrograms: [
+        { group: 'Wirtschaft', items: ['Betriebswirtschaftslehre (BWL)', 'International Business', 'Wirtschaftsinformatik',
+          'Wirtschaftsingenieurwesen', 'Volkswirtschaftslehre (VWL)', 'Wirtschaftsrecht', 'Finance & Accounting',
+          'Wirtschaftspsychologie', 'Management', 'Marketing'] },
+        { group: 'Andere Fachrichtungen', items: ['Ingenieurwesen', 'Informatik', 'Mathematik & Statistik', 'Naturwissenschaften',
+          'Rechtswissenschaften (Jura)', 'Medizin & Gesundheit', 'Sozialwissenschaften & Psychologie', 'Geistes- & Sprachwissenschaften', 'Architektur & Design'] }
+      ],
+      studyProgramOther: 'Anderer Studiengang',
       languages: ['Deutsch', 'Englisch', 'Beide / keine Präferenz'],
       note: 'Wir prüfen jede Bewerbung und melden uns innerhalb weniger Tage. Kommst du in die engere Auswahl, laden wir dich vor der finalen Entscheidung zu einem 20-minütigen Interview ein. Schreib oben dazu, wenn du eine Rolle wie Case Coach oder Campus Lead willst. Wir melden uns dazu separat.',
       consent: 'Ich habe die ', consentLink: 'Datenschutzerklärung', consentEnd: ' gelesen und stimme der Verarbeitung meiner Daten zu.',

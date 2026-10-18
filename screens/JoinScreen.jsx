@@ -123,7 +123,12 @@ function JoinScreen({ C }) {
                 <Field label={J.f.studyprogram} required error={errors.studyprogram}>
                   <Select name="studyprogram" defaultValue="" onChange={clear('studyprogram')}>
                     <option value="">{J.ph.studyprogram}</option>
-                    {J.studyPrograms.map(s => <option key={s}>{s}</option>)}
+                    {J.studyPrograms.map(g => (
+                      <optgroup key={g.group} label={g.group}>
+                        {g.items.map(s => <option key={s}>{s}</option>)}
+                      </optgroup>
+                    ))}
+                    <option>{J.studyProgramOther}</option>
                   </Select>
                 </Field>
                 <Field label={J.f.language} required error={errors.language}>
