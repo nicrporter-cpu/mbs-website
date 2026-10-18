@@ -367,20 +367,20 @@ window.MBS_CONTENT = {
       { icon: 'users', title: 'Network', tag: "Meet people you'd never sit next to.",
         text: 'Your degree gives you one lecture hall. We give you the whole city: students from every Munich university, plus alumni and professionals who are already where you want to be.' },
       { icon: 'trending', title: 'Growth', tag: "Learn what the seminar room doesn't teach.",
-        text: 'Case Nights, partner workshops, Skillnights and leadership roles inside the society, all free. You practise the work before anyone asks you to do it for a salary.' },
-      { icon: 'target', title: 'Exposure', tag: 'Be in the room where you get noticed.',
+        text: 'Case Nights, partner workshops, Skillnights and leadership roles inside the society, all free. You practise what will count in your first job.' },
+      { icon: 'target', title: 'Exposure', tag: 'Get seen where it counts.',
         text: 'Company evenings, case competitions and partner projects put you in front of recruiters and founders as a person, not a PDF in a stack of applications.' }
     ],
     values: [
       { icon: 'users', title: 'Community', text: "We open doors for each other. No cliques, no price tag, and no one member's university ranked above another's." },
       { icon: 'rocket', title: 'Ambition', text: 'We take our own development seriously and expect the same from each other.' },
-      { icon: 'scale', title: 'Ownership', text: "You own what you sign up for - a Case Night, a project, a role. Nobody chases you to follow through, and nobody else will do it for you." }
+      { icon: 'scale', title: 'Ownership', text: 'You own what you sign up for: a Case Night, a project, a role. Nobody chases you to follow through, and nobody else will do it for you.' }
     ],
     formats: [
       { icon: 'target', title: 'Case Night',
         text: 'A team case, ninety to a hundred-twenty minutes, pitch and feedback at the end. The core of what we do.' },
       { icon: 'trophy', title: 'Case Competition',
-        text: 'A multi-stage competition that builds to a final in front of a jury. Once or twice a semester, for members who want the case format with the stakes turned up.' },
+        text: 'A multi-stage competition that builds to a final in front of a jury. Once or twice a semester, for members who take it seriously.' },
       { icon: 'building', title: 'Events & Workshops with Partners',
         text: 'A partner company brings a real case or runs a workshop from its own business, and shows you how the work is actually done there.' },
       { icon: 'mic', title: 'Guest Speaker',
@@ -388,11 +388,11 @@ window.MBS_CONTENT = {
       { icon: 'bolt', title: 'Skillnight',
         text: 'Two hours on one skill employers assume you already have: Excel, valuation, storytelling, the stuff nobody teaches in a lecture hall.' },
       { icon: 'users', title: 'Networking Nights',
-        text: 'An evening built for meeting people across universities, no pitch, no agenda beyond good conversation.' },
+        text: 'An evening for meeting people across universities. No pitch, just good conversation.' },
       { icon: 'star', title: 'Community Stammtisch',
-        text: 'A regular, relaxed get-together between Case Nights. No programme, just people who keep showing up.' },
+        text: 'A regular, relaxed get-together between Case Nights. No programme, just people who like to come back.' },
       { icon: 'globe', title: 'Excursions & Company Visits',
-        text: 'A visit to a partner company\'s office, you see how the place actually runs, not just its recruiting deck.' },
+        text: "A visit to a partner company's office, you see how the place actually runs, not just its careers page." },
       { icon: 'trending', title: 'Alumni Events',
         text: "Evenings with alumni who'll tell you what the job is actually like." }
     ],
@@ -401,16 +401,16 @@ window.MBS_CONTENT = {
 
     home: {
       heroLead: "Munich's first cross-university case club. Free for students at every university in the city.",
-      whyIntro: "Munich Business Society is Munich's first cross-university case-solving and business platform, free, with no membership fee, for students from every university in the city. Apply for membership, or, if you'd like to come to an event first, get in touch with us. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
+      whyIntro: "Munich Business Society is Munich's first cross-university case club, free for students from every university in the city. Apply for membership, or, if you'd like to come to an event first, get in touch with us. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
       seeEvents: "See what's coming up", howJoin: 'How joining works',
       whyLabel: 'Why we exist', whyTitle: 'Munich has students split across many universities, and almost none of them talk to each other',
-      whyP1: 'Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, giving visibility into that university\'s own talent, not across one shared, central club. Recruiters see one Munich talent pool; students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.',
-      whyP2: "Munich Business Society exists to close that gap: one free, cross-university platform with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you apply on the same terms, and it never costs anything.",
+      whyP1: "Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, showing one university's talent, not the whole city's. So students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
+      whyP2: "Munich Business Society exists to close that gap: one free, cross-university case club with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you apply on the same terms, and it never costs anything.",
       pillarsLabel: 'What you get', pillarsTitle: 'What you actually get out of it',
-      formatsLabel: 'What we do', formatsTitle: 'Nine formats, every semester',
+      formatsLabel: 'What we do', formatsTitle: 'Nine formats, one programme',
       formatsText: "Case Nights, plus Case Competitions, Events & Workshops with Partners, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free. Not a member yet but want to come along? Get in touch with us.",
       formatsLink: 'See the full programme →',
-      studentH: 'Two ways in. Both free', studentText: "Apply for membership: it's free, for students from every Munich university. Up to 50 places, chosen through an application and a short interview. Not a member yet but want to come to an event? Get in touch with us.",
+      studentH: 'Two ways in. Both free', studentText: "Apply for membership: it's free, for students from every Munich university. Up to 50 places until the coming semester, chosen through an application and a short interview. Not a member yet but want to come to an event? Get in touch with us.",
       contactBtn: 'Get in touch →',
       companyH: "Looking for direct access to Munich's talent?", companyText: "We're building a cross-university network connecting companies with business talent from across Munich. Reach out to find out more.",
       partnerBtn: 'Learn more →'
@@ -418,21 +418,21 @@ window.MBS_CONTENT = {
     about: {
       subtitle: 'One case club for all of Munich: student-run, free, every campus.',
       whoLabel: 'Who we are', whoTitle: 'One case club for all of Munich',
-      whoDesc: "Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
+      whoDesc: 'Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away.',
       storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join',
       storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has students spread across many universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
-      storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Anyone in Munich can apply on the same terms, whether they study business, economics, management, or something else entirely and are heading into business anyway.',
+      storyP2: 'So we built the thing we wanted to join: a free, cross-university club with no home campus. Anyone in Munich can apply on the same terms, whether they study business, economics, management, or something else entirely and are heading into business anyway.',
       storyP3: "Our next milestone is our first Case Night, planned for this year. Until then, we're building the partner and campus network to get there.",
-      diffLabel: 'What makes us different', diffTitle: 'Cross-university by design, not by exception',
+      diffLabel: 'What makes us different', diffTitle: 'Not an offshoot of one university',
       different: [
-        { icon: 'globe', title: 'Cross-university by design, not by exception', text: "Most student business clubs are an extension of one university. We're a platform that sits above all of them." },
-        { icon: 'building', title: 'Built for the city, not the campus', text: "Our partners, speakers and venues come from Munich's business ecosystem, not from one faculty's alumni list." },
-        { icon: 'briefcase', title: 'Roles with real responsibility', text: 'Become a Case Coach or Campus Lead, run a format or own a partnership. Genuine responsibility, on your CV, with a reference behind it.' },
+        { icon: 'globe', title: 'Not an offshoot of one university', text: "Most student business clubs are an extension of one university. We're one club for all of them." },
+        { icon: 'building', title: 'Built for the city, not the campus', text: "Our partners, speakers and venues come from Munich's business world, not from one faculty's alumni list." },
+        { icon: 'briefcase', title: 'Roles with real responsibility', text: 'Become a Case Coach or Campus Lead, run a format or own a partnership. Real responsibility that belongs on your CV, with a reference.' },
         { icon: 'bulb', title: 'Practice, not theory', text: "Case Competitions and partner workshops built on real business questions, presented to the leadership of the company that set them." }
       ],
       valuesLabel: 'Our values', valuesTitle: 'What we stand for',
       orgLabel: "How we're organised", orgTitle: 'Run by students, built to last',
-      orgText: "Munich Business Society runs on six teams. Programme & Education plans the semester's formats, socials and the business questions behind them. External Affairs owns company relationships and the partner pipeline. Members & Growth handles membership, onboarding and campus representatives. Brand & Communication runs the website and channels. Finance & Legal looks after the money and the legal side. Operations & Infrastructure keeps the tools and infrastructure running. Every team is led by students, alongside their degrees.",
+      orgText: "Munich Business Society runs on six teams. Programme & Education plans the semester's formats, socials and the business questions behind them. External Affairs looks after company contacts and new partners. Members & Growth handles membership, onboarding and campus representatives. Brand & Communication runs the website and channels. Finance & Legal looks after the money and the legal side. Operations & Infrastructure keeps the tools and infrastructure running. Every team is led by students, alongside their degrees.",
       meetTeam: 'Meet the team →'
     },
     calendarPage: {
@@ -476,44 +476,43 @@ window.MBS_CONTENT = {
       formatsLabel: 'The formats', formatsTitle: 'Widen your network, grow a skill, or get noticed',
       formatsDesc: 'Each one widens your network, grows a skill or gets you noticed, and all of them are free. Not a member yet but want to come to one? Get in touch with us.',
       projLabel: 'Partner projects', projTitle: 'Sometimes a company gives us a real problem',
-      projText: "Companies can get involved with us as a case workshop, a partner project, a speaker host or a Skillnight host. A case workshop brings a real business question straight to our students. A partner project is a small member team working on a defined question and presenting to the client at the end. Paid or credited depending on the partner.",
+      projText: 'Companies can get involved with us as a case workshop, a partner project, a speaker host or a Skillnight host. A case workshop brings a real business question straight to our students. A partner project is a small member team working on a defined question and presenting to the company at the end. Paid, depending on the partner.',
       projLink: 'Companies, set up a project →',
       projCard: "Case workshop, partner project, speaker host or Skillnight host, depending on what you want to achieve together.",
       progLabel: 'Programme', progTitle: 'Coming up this semester',
       progEmpty: "Our first event is coming soon. Details will land here shortly. Get on the list and we'll email you the moment it's confirmed.",
       progNote: '',
       recapLabel: 'Event recaps', recapTitle: 'Catch up on Instagram',
-      recapText: 'We share highlights and key takeaways from every event on our socials. Follow us to stay in the loop.'
+      recapText: "Once we're up and running, we'll share highlights on Instagram. Follow us to stay in the loop."
     },
     membership: {
-      subtitle: 'Free. Every campus. Up to 50 new members before next semester, chosen through an application and a 20-minute interview.',
+      subtitle: 'Free. Every campus. Up to 50 new members until the coming semester, chosen through an application and a 20-minute interview.',
       whoLabel: 'Who can join', whoTitle: 'Apply from any university in Munich',
       whoDesc: 'If you study in Munich, you can apply, and membership is free. We review every application and let you know our decision. We don’t filter by university, by grade average, or by whether your programme has “business” in the title. We look for talent, curiosity and commitment.',
       canJoin: [
         'Enrolled at any university or university of applied sciences in the Munich area.',
         'Any degree level, bachelor, master, MBA, exchange semester, doctorate.',
         'Any subject. You don’t need to study business to be heading into it.',
-        'Comfortable in English or German. Our events run in both; the working language is whatever the room needs.'
+        'Comfortable in English or German. Our events run in both; we speak whatever fits.'
       ],
-      getLabel: 'What you get', getTitle: 'Everything membership opens up',
+      getLabel: 'What you get', getTitle: 'What membership gives you',
       get: [
         { icon: 'star', title: 'Access to every format', text: 'Every Case Night, Skillnight, partner event and the rest of the programme, from day one.' },
         { icon: 'users', title: 'A network across every Munich university', text: 'And, as the society grows, alumni working in consulting, finance, tech and industry.' },
-        { icon: 'building', title: 'Direct contact with partner companies', text: 'As our first partnerships form, members are the first to hear about their openings.' },
-        { icon: 'briefcase', title: 'A role, if you want one', text: 'Become a Case Coach or Campus Lead, run a format, own a partnership. Genuine responsibility, on your CV, with a reference behind it.' },
+        { icon: 'briefcase', title: 'A role, if you want one', text: 'Become a Case Coach or Campus Lead, run a format, own a partnership. Real responsibility that belongs on your CV, with a reference.' },
         { icon: 'trophy', title: 'Hands-on experience', text: 'Real cases at every Case Night and in every Case Competition.' },
-        { icon: 'globe', title: 'A founding community', text: 'Be part of the first cohort: people who challenge you, support you and build this with you.' }
+        { icon: 'globe', title: 'Inspiring community', text: 'People who challenge you, support you, and stay connected for years.' }
       ],
       processLabel: 'How you join', processTitle: 'From application to full member',
       process: [
         { title: 'Meet us first, if you like', text: 'Not a member yet but want to come to an event first? Get in touch with us. Or apply online straight away.' },
-        { title: 'Screening', text: 'We review every application and the best fit move on.' },
+        { title: 'Screening', text: 'We review every application and the best fits move on.' },
         { title: 'Interview', text: '20 minutes.' },
-        { title: 'Admission decision', text: "We're currently admitting up to 50 new members before next semester." },
+        { title: 'Admission decision', text: "We're currently admitting up to 50 new members until the coming semester." },
         { title: 'Full member right away', text: 'No fee, and a vote at the next general meeting.' }
       ],
       expectLabel: 'What we expect', expectTitle: 'Show up. Contribute. Behave well',
-      expectText: "Show up to a few things a semester. Contribute something at some point, an idea, an evening, a contact, a project. Treat the people in this network the way you'd want to be treated by them in five years, when one of them is hiring.",
+      expectText: "Show up to a few things a semester. Contribute something at some point, an idea, an evening, a contact, a project. Treat everyone the way you'd want to be treated. One of them might be hiring you in a few years.",
       feeLabel: 'The cost', feeValue: '0 €', feePer: 'always, for students',
       feeText: "Membership is free and always will be. We're funded by sponsors, partners and in-kind support, not by charging the students we're here for.",
       ctaH: 'Ready to apply?', ctaText: "It takes a few minutes and costs nothing. We review every application and you'll hear back within a few days.",
@@ -522,13 +521,13 @@ window.MBS_CONTENT = {
         { q: 'What does it cost?', a: "Nothing. Membership is 100% free. We review every application and let you know our decision. We're funded by sponsors and partners, not by charging students." },
         { q: 'How much time does it take?', a: 'As much as you give it. The minimum is showing up to a few events a semester. Members who take a role typically spend two to four hours a week on it.' },
         { q: "I don't study a business-related subject. Can I still join?", a: "Yes. We want students from engineering, law, computer science and every other subject who are heading into business. What matters is that you're serious about it." },
-        { q: "I'm here for one exchange semester. Is it worth joining?", a: "Yes, and we'd encourage it. There's no fee to work around, and the network doesn't expire when you leave the city." }
+        { q: "I'm here for one exchange semester. Is it worth joining?", a: 'Yes, absolutely. It costs nothing, and the network stays with you when you leave the city.' }
       ]
     },
     companies: {
       subtitle: 'Reach every Munich university through one conversation.',
       whyLabel: 'Why work with the Munich Business Society', whyTitle: 'Talent from every campus, one point of contact',
-      whyDesc: "Munich Business Society is built and run entirely by students, volunteering their time, free for every student at every Munich university. Your support, as a sponsor, partner or through in-kind contributions, makes that possible, and puts you in front of the city's most driven young talent.",
+      whyDesc: 'Munich Business Society is built and run entirely by students, volunteering their time, free for every student at every Munich university. Your support, as a sponsor, partner or through in-kind contributions, makes that possible, and puts you in front of driven young talent.',
       packBtn: 'Get the partner pack →', callBtn: 'Book a call',
       whyGridLabel: 'The value', whyGridTitle: 'What you get out of it',
       why: [
@@ -536,12 +535,12 @@ window.MBS_CONTENT = {
         { icon: 'bulb', title: 'New ideas for your real questions', text: 'Students from different disciplines bring independent perspectives to your current challenges, from market entry and marketing to sustainability.' },
         { icon: 'scale', title: 'Support that goes where it should', text: 'As a non-profit association, we put every contribution entirely into educational formats. That keeps Munich Business Society free for every student.' }
       ],
-      waysLabel: 'Ways to work together', waysTitle: 'Four ways in',
+      waysLabel: 'Ways to work together', waysTitle: 'Four ways to work together',
       ways: [
-        { icon: 'mic', title: 'Speaker Events', text: "Your expertise, our audience. You host or co-host a Guest Speaker session, Skillnight or company evening, reaching engaged students from across Munich, not just one university." },
+        { icon: 'mic', title: 'Speaker Events', text: 'Your expertise, our audience. You run a Guest Speaker session, Skillnight or company evening with us, reaching engaged students from across Munich, not just one university.' },
         { icon: 'trophy', title: 'Case Events', text: 'Teams of students solve a real question from your company and present the results to your leadership. You see how someone thinks, structures and presents, long before the interview.' },
         { icon: 'briefcase', title: 'Partner Projects', text: 'A defined piece of work with a small member team and a documented deliverable.' },
-        { icon: 'star', title: 'Insight Events', text: 'You give our students exclusive insight into your day-to-day work, for example through a company visit or workshop, combined with ongoing visibility on site and in the newsletter and direct access to the membership for openings.' }
+        { icon: 'star', title: 'Insight Events', text: 'You give our students a look at your day-to-day work, for example through a company visit or workshop. You also get visibility on our website and in the newsletter, and a direct line to our members for open roles.' }
       ],
       partnersLabel: 'Founding partners', partnersTitle: 'Be one of our first partners',
       partnersDesc: "We're choosing our founding partners now. You'd shape our first partner events and workshops with us, rather than slot into a programme someone else already designed.",
@@ -553,12 +552,12 @@ window.MBS_CONTENT = {
         { q: 'What does a partnership cost?', a: "You decide what you want to offer our students, from know-how and your time to financial backing. Together, we'll figure out what works best for you." }
       ],
       closeH: 'Get in touch',
-      closeText: "Any of the reasons above, or you'd simply like to meet Munich's business talent early. Get in touch and we'll get back within a week.",
+      closeText: "Interested, or want to meet Munich's talent early? Get in touch and we'll reply within a week.",
       emailBtn: 'Contact the partnerships team →'
     },
     team: {
       subtitle: 'Built and run entirely by students, alongside their degrees.',
-      whoTitle: 'Founding team and current Board',
+      whoTitle: 'Founding team and current board',
       whoDesc: 'The board leads the society, and six teams do the work. Every team is open to members who want to help shape it.',
       ctaH: 'Want to build this with us?', ctaText: 'Apply for membership and tell us in your application which team you’d like to join.',
       boardTitle: 'The Board',
@@ -586,10 +585,10 @@ window.MBS_CONTENT = {
         { q: 'Is everything in German or English?', a: 'Both. Events run in whichever language suits the room and the speaker; written communication is in English so nobody is left out.' },
         { q: 'How much time does it take?', a: 'As much as you give it. The minimum is showing up to a few events a semester. Members who take a role typically spend two to four hours a week on it.' },
         { q: 'What does it cost?', a: "Nothing. Membership is 100% free. We review every application and let you know our decision. We're funded by sponsors and partners, not by charging students." },
-        { q: "I'm here for one exchange semester. Is it worth joining?", a: "Yes, and we'd encourage it. There's no fee to work around, and the network doesn't expire when you leave the city." },
-        { q: 'Do I need to be in my first year?', a: 'No. Whether you’re in your first bachelor semester or finishing your master’s thesis, you’re welcome. The mix is the point.' },
+        { q: "I'm here for one exchange semester. Is it worth joining?", a: 'Yes, absolutely. It costs nothing, and the network stays with you when you leave the city.' },
+        { q: 'Do I need to be in my first year?', a: 'No. Whether you’re in your first bachelor semester or finishing your master’s thesis, you’re welcome. That mix is what makes it work.' },
         { q: 'Can I come to something before I join?', a: "Yes. Get in touch with us before the event and we'll let you know how to come along." },
-        { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of showing up or taking on a role.' },
+        { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of attending regularly or taking on a role.' },
         { q: 'How do companies get involved?', a: 'Through the For Companies page. We work with employers on events, case challenges and projects, and share their openings with members.' }
       ],
       stillText: 'Still weighing it up? Get in touch and come to an event before you decide.',
@@ -637,18 +636,18 @@ window.MBS_CONTENT = {
       faqLabel: 'Before you apply', faqTitle: 'Questions people ask before applying',
       faqItems: [
         { q: 'Can I come to something before I join?', a: "Yes. Get in touch with us before the event and we'll let you know how to come along." },
-        { q: 'Do I need to be in my first year?', a: 'No. Whether you’re in your first bachelor semester or finishing your master’s thesis, you’re welcome. The mix is the point.' },
+        { q: 'Do I need to be in my first year?', a: 'No. Whether you’re in your first bachelor semester or finishing your master’s thesis, you’re welcome. That mix is what makes it work.' },
         { q: 'Is everything in German or English?', a: 'Both. Events run in whichever language suits the room and the speaker; written communication is in English so nobody is left out.' },
-        { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of showing up or taking on a role.' }
+        { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of attending regularly or taking on a role.' }
       ]
     },
     contact: {
-      subtitle: 'Ask us anything, student, company, or just curious.',
+      subtitle: "Questions? Whether you're a student, a company or just curious.",
       label: 'Ask us anything', title: 'Ask us anything',
       descA: "Whether you're a student weighing up joining, a company thinking about a partnership, or someone with an idea for a format. Write to us. We'll get back to you as soon as possible.",
       inbox: { label: 'Email us', addr: 'munichbusinesssociety@gmail.com', note: 'One inbox for everything: membership, partnerships and anything else.' },
-      formLabel: 'Send a message', formTitle: 'Straight to the right person',
-      formText: "Tell us who you are and what you're after. The form routes your message to the team that can actually help.",
+      formLabel: 'Send a message', formTitle: 'We read every message',
+      formText: "Tell us who you are and what you're after. We read every message and reply quickly.",
       findLabel: 'Find us', findText: 'We meet across Munich rather than on one campus. Venues are listed with each event.',
       follow: 'Follow: ',
       f: { firstname: 'First name', lastname: 'Last name', email: 'Email', role: "I'm a…", message: 'Your message' },
@@ -724,32 +723,32 @@ window.MBS_CONTENT = {
       { icon: 'users', title: 'Netzwerk', tag: 'Triff Menschen, neben denen du sonst nie sitzt.',
         text: 'Dein Studium gibt dir einen Hörsaal. Wir geben dir die ganze Stadt: Studierende von jeder Münchner Hochschule, dazu Alumni und Profis, die schon dort sind, wo du hinwillst.' },
       { icon: 'trending', title: 'Wachstum', tag: 'Lern, was der Seminarraum nicht lehrt.',
-        text: 'Case Nights, Partner-Workshops, Skillnights und Führungsrollen im Verein, alles kostenlos. Du übst die Arbeit, bevor sie jemand von dir gegen Gehalt verlangt.' },
-      { icon: 'target', title: 'Sichtbarkeit', tag: 'Sei im Raum, in dem du wahrgenommen wirst.',
+        text: 'Case Nights, Partner-Workshops, Skillnights und Führungsrollen im Verein, alles kostenlos. Du übst, was später im Job zählt.' },
+      { icon: 'target', title: 'Sichtbarkeit', tag: 'Werde gesehen, wo es zählt.',
         text: 'Unternehmensabende, Case-Competitions und Partnerprojekte bringen dich als Mensch vor Recruiter und Gründer, nicht als PDF im Bewerbungsstapel.' }
     ],
     values: [
       { icon: 'users', title: 'Gemeinschaft', text: 'Wir öffnen einander Türen. Keine Cliquen, kein Preisschild, keine Hochschule über einer anderen.' },
       { icon: 'rocket', title: 'Ambition', text: 'Wir nehmen unsere eigene Entwicklung ernst und erwarten das auch voneinander.' },
-      { icon: 'scale', title: 'Ownership', text: 'Du übernimmst, was du dir vornimmst - eine Case Night, ein Projekt, eine Rolle. Niemand rennt dir hinterher, und niemand macht es für dich.' }
+      { icon: 'scale', title: 'Verantwortung', text: 'Du übernimmst, was du dir vornimmst: eine Case Night, ein Projekt, eine Rolle. Niemand rennt dir hinterher, und niemand macht es für dich.' }
     ],
     formats: [
       { icon: 'target', title: 'Case Night',
         text: 'Team-Case, 90–120 Minuten mit Pitch & Feedback. Das Herzstück von dem, was wir tun.' },
       { icon: 'trophy', title: 'Case Competition',
-        text: 'Mehrstufiger Wettbewerb mit Finale und Jury, ein- bis zweimal pro Semester, für Mitglieder, die den Case mit echtem Einsatz wollen.' },
+        text: 'Mehrstufiger Wettbewerb mit Finale und Jury, ein- bis zweimal pro Semester, für Mitglieder, die es ernst meinen.' },
       { icon: 'building', title: 'Events & Workshops mit Partnern',
         text: 'Ein Partnerunternehmen bringt einen echten Case mit oder leitet einen Workshop aus dem eigenen Geschäft und zeigt dir, wie dort wirklich gearbeitet wird.' },
       { icon: 'mic', title: 'Guest-Speaker',
-        text: 'Ein Impulsvortrag zu einem Wirtschaftsthema oder einer konkreten Skill, mit Zeit für echte Fragen danach.' },
+        text: 'Ein Impulsvortrag zu einem Wirtschaftsthema oder einem konkreten Skill, mit Zeit für echte Fragen danach.' },
       { icon: 'bolt', title: 'Skillnight',
         text: 'Zwei Stunden zu einer Fähigkeit, die Arbeitgeber voraussetzen: Excel, Valuation, Storytelling, Dinge, die dir kein Seminar beibringt.' },
       { icon: 'users', title: 'Networking-Abende',
-        text: 'Ein Abend, der fürs Kennenlernen über Hochschulen hinweg gemacht ist, kein Pitch, keine Agenda außer gutem Gespräch.' },
+        text: 'Ein Abend zum Kennenlernen über Hochschulgrenzen hinweg. Kein Pitch, nur gute Gespräche.' },
       { icon: 'star', title: 'Community-Stammtisch',
-        text: 'Ein lockerer, regelmäßiger Treffpunkt zwischen den Case Nights. Kein Programm, nur Leute, die immer wieder auftauchen.' },
+        text: 'Ein lockerer, regelmäßiger Treffpunkt zwischen den Case Nights. Kein Programm, nur Leute, die gerne wiederkommen.' },
       { icon: 'globe', title: 'Exkursionen & Firmenbesuche',
-        text: 'Ein Besuch im Büro eines Partnerunternehmens. Du siehst, wie der Laden wirklich läuft, nicht nur das Recruiting-Deck.' },
+        text: 'Ein Besuch im Büro eines Partnerunternehmens. Du siehst, wie der Laden wirklich läuft, nicht nur die Karriereseite.' },
       { icon: 'trending', title: 'Alumni-Events',
         text: 'Abende mit Alumni, die dir ehrlich erzählen, wie der Job wirklich ist.' }
     ],
@@ -758,16 +757,16 @@ window.MBS_CONTENT = {
 
     home: {
       heroLead: 'Münchens erster hochschulübergreifender Case Club. Kostenlos für Studierende jeder Hochschule der Stadt.',
-      whyIntro: 'Die Munich Business Society ist Münchens erste hochschulübergreifende Case- und Wirtschafts-Plattform, kostenlos, ohne Mitgliedsbeitrag, für Studierende jeder Hochschule der Stadt. Bewirb dich für die Mitgliedschaft, oder melde dich bei uns, wenn du vorher zu einem Event kommen möchtest. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
+      whyIntro: 'Die Munich Business Society ist Münchens erster hochschulübergreifender Case Club, kostenlos für Studierende jeder Hochschule der Stadt. Bewirb dich für die Mitgliedschaft, oder melde dich bei uns, wenn du vorher zu einem Event kommen möchtest. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
       seeEvents: 'Zu den Terminen', howJoin: 'So läuft die Bewerbung',
       whyLabel: 'Warum es uns gibt', whyTitle: 'München hat Studierende, verteilt auf viele Hochschulen, und fast keine spricht mit der anderen',
-      whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie geben Sichtbarkeit auf die Talente der eigenen Uni, aber nicht hochschulübergreifend in einem zentralen Club. Recruiter sehen einen Münchner Talentpool; Studierende treffen immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
-      whyP2: 'Die Munich Business Society schließt genau diese Lücke: eine kostenlose, hochschulübergreifende Plattform mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bewirbst dich zu denselben Bedingungen, und es kostet dich nie etwas.',
+      whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie zeigen die Talente einer Uni, nicht die der ganzen Stadt. Studierende treffen so immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
+      whyP2: 'Die Munich Business Society schließt genau diese Lücke: ein kostenloser, hochschulübergreifender Case Club mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bewirbst dich zu denselben Bedingungen, und es kostet dich nie etwas.',
       pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du wirklich davon hast',
-      formatsLabel: 'Was wir tun', formatsTitle: 'Neun Formate, jedes Semester',
+      formatsLabel: 'Was wir tun', formatsTitle: 'Neun Formate, ein Programm',
       formatsText: 'Case Nights, dazu Case Competitions, Events & Workshops mit Partnern, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos. Noch kein Mitglied, willst aber dabei sein? Melde dich bei uns.',
       formatsLink: 'Zum ganzen Programm →',
-      studentH: 'Zwei Wege rein. Beide kostenlos', studentText: 'Bewirb dich für die Mitgliedschaft: kostenlos, für Studierende jeder Münchner Hochschule. Bis zu 50 Plätze, ausgewählt über Bewerbung und ein kurzes Interview. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
+      studentH: 'Zwei Wege rein. Beide kostenlos', studentText: 'Bewirb dich für die Mitgliedschaft: kostenlos, für Studierende jeder Münchner Hochschule. Bis zum kommenden Semester bis zu 50 Plätze, ausgewählt über Bewerbung und ein kurzes Interview. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
       contactBtn: 'Kontakt aufnehmen →',
       companyH: 'Sie suchen den direkten Draht zu Münchens Talenten?', companyText: 'Wir bauen ein hochschulübergreifendes Netzwerk auf, das Unternehmen mit Wirtschaftstalenten aus ganz München verbindet. Sprechen Sie uns an, um mehr zu erfahren.',
       partnerBtn: 'Mehr erfahren →'
@@ -775,24 +774,24 @@ window.MBS_CONTENT = {
     about: {
       subtitle: 'Ein Case Club für ganz München: studentisch geführt, kostenlos, jeder Campus.',
       whoLabel: 'Wer wir sind', whoTitle: 'Ein Case Club für ganz München',
-      whoDesc: 'Die Munich Business Society ist ein studentisch geführter Case Club, der wirtschaftlich interessierte Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Es gab keinen Case Club, der alle Münchner Studierenden erreichte statt nur die einer einzelnen Hochschule. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
+      whoDesc: 'Die Munich Business Society ist ein studentisch geführter Case Club, der wirtschaftlich interessierte Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Es gab keinen Case Club, der alle Münchner Studierenden erreichte statt nur die einer einzelnen Hochschule.',
       storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Verein gebaut, dem wir beitreten wollten',
       storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat Studierende, verteilt auf viele Hochschulen, doch jede Hochschule hat ihre eigenen Initiativen, die nur einzelne Themenfelder abdecken, und fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld oder filtern früh aus.',
-      storyP2: 'Also bauten wir das, dem wir beitreten wollten: eine kostenlose, hochschulübergreifende Plattform ohne Heim-Campus. Bewerben kann sich jede:r in München zu denselben Bedingungen, ob Wirtschaft, Ökonomie, Management oder ein ganz anderes Fach mit dem Ziel Wirtschaft.',
-      diffLabel: 'Was uns unterscheidet', diffTitle: 'Hochschulübergreifend by design, nicht als Ausnahme',
+      storyP2: 'Also bauten wir das, dem wir beitreten wollten: einen kostenlosen, hochschulübergreifenden Club ohne Heim-Campus. Bewerben kann sich jede:r in München zu denselben Bedingungen, ob Wirtschaft, Ökonomie, Management oder ein ganz anderes Fach mit dem Ziel Wirtschaft.',
+      diffLabel: 'Was uns unterscheidet', diffTitle: 'Kein Ableger einer Uni',
       different: [
-        { icon: 'globe', title: 'Hochschulübergreifend by design, nicht als Ausnahme', text: 'Die meisten studentischen Business-Clubs sind der Ableger einer Hochschule. Wir sind eine Plattform über allen.' },
-        { icon: 'building', title: 'Für die Stadt gebaut, nicht für den Campus', text: 'Unsere Partner, Speaker und Locations kommen aus dem Münchner Wirtschafts-Ökosystem, nicht aus der Alumni-Liste einer Fakultät.' },
-        { icon: 'briefcase', title: 'Rollen mit echter Verantwortung', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, im Lebenslauf, mit einer Referenz dahinter.' },
+        { icon: 'globe', title: 'Kein Ableger einer Uni', text: 'Die meisten studentischen Business-Clubs sind der Ableger einer Hochschule. Wir sind ein Club für alle Hochschulen.' },
+        { icon: 'building', title: 'Für die Stadt gebaut, nicht für den Campus', text: 'Unsere Partner, Speaker und Locations kommen aus der Münchner Wirtschaft, nicht aus der Alumni-Liste einer Fakultät.' },
+        { icon: 'briefcase', title: 'Rollen mit echter Verantwortung', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, die in deinen Lebenslauf gehört, mit Referenz.' },
         { icon: 'bulb', title: 'Praxis statt Theorie', text: 'Case Competitions und Partner-Workshops mit echten Geschäftsfragen, präsentiert vor der Führung des Unternehmens, das sie gestellt hat.' }
       ],
       valuesLabel: 'Unsere Werte', valuesTitle: 'Wofür wir stehen',
       orgLabel: 'Wie wir organisiert sind', orgTitle: 'Von Studierenden geführt, auf Dauer gebaut',
-      orgText: 'Die Munich Business Society läuft über sechs Teams. Programm & Education plant die Formate des Semesters, die Socials und die Fragestellungen dahinter. External Affairs verantwortet die Unternehmensbeziehungen und die Partner-Pipeline. Members & Growth kümmert sich um Mitgliedschaft, Onboarding und Campus-Vertretungen. Brand & Communication betreut Website und Kanäle. Finance & Legal kümmert sich um Finanzen und Rechtliches. Operations & Infrastruktur hält Tools und Infrastruktur am Laufen. Jedes Team wird von Studierenden geführt, neben ihrem Studium.',
+      orgText: 'Die Munich Business Society läuft über sechs Teams. Programm & Education plant die Formate des Semesters, die Socials und die Fragestellungen dahinter. External Affairs kümmert sich um Unternehmenskontakte und neue Partner. Members & Growth kümmert sich um Mitgliedschaft, Onboarding und Campus-Vertretungen. Brand & Communication betreut Website und Kanäle. Finance & Legal kümmert sich um Finanzen und Rechtliches. Operations & Infrastruktur hält Tools und Infrastruktur am Laufen. Jedes Team wird von Studierenden geführt, neben ihrem Studium.',
       meetTeam: 'Lern das Team kennen →'
     },
     calendarPage: {
-      subtitle: 'Jede Case Night, Skillnight und jeder Company Evening an einem Ort.',
+      subtitle: 'Jede Case Night, Skillnight und jeder Unternehmensabend an einem Ort.',
       calLabel: 'Kalender', calTitle: 'Dieser Monat',
       weekdays: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
       prevMonth: 'Vorheriger Monat', nextMonth: 'Nächster Monat', noEvents: 'Keine Termine in diesem Monat.',
@@ -832,44 +831,43 @@ window.MBS_CONTENT = {
       formatsLabel: 'Die Formate', formatsTitle: 'Netzwerk erweitern, Fähigkeit aufbauen oder auffallen',
       formatsDesc: 'Jedes erweitert dein Netzwerk, baut eine Fähigkeit auf oder macht dich sichtbar, und alle sind kostenlos. Noch kein Mitglied, willst aber zu einem kommen? Melde dich bei uns.',
       projLabel: 'Partnerprojekte', projTitle: 'Manchmal gibt uns ein Unternehmen ein echtes Problem',
-      projText: 'Unternehmen können sich bei uns einbringen: mit einem Case Workshop, einem Partnerprojekt, als Speaker-Host oder als Skillnight-Host. Ein Case Workshop bringt eine echte Geschäftsfrage direkt zu unseren Studierenden. Ein Partnerprojekt ist ein kleines Team aus Mitgliedern, das an einer definierten Fragestellung arbeitet und am Ende beim Kunden präsentiert. Bezahlt oder mit Credits, je nach Partner.',
+      projText: 'Unternehmen können sich bei uns einbringen: mit einem Case Workshop, einem Partnerprojekt, als Speaker-Host oder als Skillnight-Host. Ein Case Workshop bringt eine echte Geschäftsfrage direkt zu unseren Studierenden. Ein Partnerprojekt ist ein kleines Team aus Mitgliedern, das an einer definierten Fragestellung arbeitet und am Ende beim Unternehmen präsentiert. Je nach Partner vergütet.',
       projLink: 'Unternehmen, Projekt aufsetzen →',
       projCard: 'Case Workshop, Partnerprojekt, Speaker-Host oder Skillnight-Host, je nachdem, was Sie gemeinsam erreichen wollen.',
       progLabel: 'Programm', progTitle: 'Demnächst in diesem Semester',
       progEmpty: 'Unser erstes Event kommt bald. Infos folgen in Kürze hier. Trag dich in die Liste ein, dann schreiben wir dir, sobald es feststeht.',
       progNote: '',
       recapLabel: 'Event Einblicke', recapTitle: 'Schau auf Instagram vorbei',
-      recapText: 'Wir teilen Highlights und wichtige Erkenntnisse von jedem Event auf unseren Socials. Folge uns, um auf dem Laufenden zu bleiben.'
+      recapText: 'Sobald es losgeht, teilen wir Highlights auf Instagram. Folge uns, um auf dem Laufenden zu bleiben.'
     },
     membership: {
-      subtitle: 'Kostenlos. Jeder Campus. Bis zu 50 neue Mitglieder bis zum nächsten Semester, ausgewählt über Bewerbung und ein 20-minütiges Interview.',
+      subtitle: 'Kostenlos. Jeder Campus. Bis zu 50 neue Mitglieder bis zum kommenden Semester, ausgewählt über Bewerbung und ein 20-minütiges Interview.',
       whoLabel: 'Wer beitreten kann', whoTitle: 'Bewerben kannst du dich von jeder Münchner Hochschule',
       whoDesc: 'Wenn du in München studierst, kannst du dich bewerben, und die Mitgliedschaft ist kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir filtern nicht nach Hochschule, nach Notenschnitt oder danach, ob „Business" im Titel deines Studiengangs steht. Wir suchen Talent, Neugier und Engagement.',
       canJoin: [
         'Eingeschrieben an einer Universität oder Hochschule im Raum München.',
         'Jedes Studienniveau, Bachelor, Master, MBA, Auslandssemester, Promotion.',
         'Jedes Fach. Du musst nicht Wirtschaft studieren, um in die Wirtschaft zu wollen.',
-        'Sicher auf Deutsch oder Englisch. Unsere Events laufen in beiden; die Arbeitssprache ist, was der Raum braucht.'
+        'Sicher auf Deutsch oder Englisch. Unsere Events laufen in beiden Sprachen; wir sprechen, was gerade passt.'
       ],
-      getLabel: 'Was du bekommst', getTitle: 'Alles, was Mitgliedschaft öffnet',
+      getLabel: 'Was du bekommst', getTitle: 'Was dir die Mitgliedschaft bringt',
       get: [
         { icon: 'star', title: 'Zugang zu jedem Format', text: 'Jede Case Night, Skillnight, jedes Partner-Event und der Rest des Programms, ab Tag eins.' },
         { icon: 'users', title: 'Ein Netzwerk über jede Münchner Hochschule', text: 'Und, wenn der Verein wächst, Alumni in Consulting, Finance, Tech und Industrie.' },
-        { icon: 'building', title: 'Direkter Kontakt zu Partnerunternehmen', text: 'Sobald unsere ersten Partnerschaften stehen, erfahren Mitglieder als Erste von deren offenen Stellen.' },
-        { icon: 'briefcase', title: 'Eine Rolle, wenn du willst', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, im Lebenslauf, mit einer Referenz dahinter.' },
+        { icon: 'briefcase', title: 'Eine Rolle, wenn du willst', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, die in deinen Lebenslauf gehört, mit Referenz.' },
         { icon: 'trophy', title: 'Praxiserfahrung', text: 'Echte Cases in jeder Case Night und jeder Case Competition.' },
-        { icon: 'globe', title: 'Eine Gründungs-Community', text: 'Sei Teil der ersten Generation: Menschen, die dich fordern, unterstützen und das hier mit dir aufbauen.' }
+        { icon: 'globe', title: 'Inspirierende Community', text: 'Menschen, die dich fordern, unterstützen und langfristig verbinden.' }
       ],
       processLabel: 'So wirst du Mitglied', processTitle: 'Von der Bewerbung bis zum Vollmitglied',
       process: [
         { title: 'Erst kennenlernen, wenn du magst', text: 'Noch kein Mitglied, willst aber vorher zu einem Event kommen? Melde dich bei uns. Oder bewirb dich direkt online.' },
         { title: 'Sichtung', text: 'Wir prüfen jede Bewerbung, die passendsten kommen weiter.' },
         { title: 'Interview', text: '20 Minuten.' },
-        { title: 'Aufnahmeentscheidung', text: 'Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum nächsten Semester auf.' },
+        { title: 'Aufnahmeentscheidung', text: 'Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum kommenden Semester auf.' },
         { title: 'Vollmitglied ab sofort', text: 'Kostenlos, mit Stimmrecht ab der nächsten Mitgliederversammlung.' }
       ],
       expectLabel: 'Was wir erwarten', expectTitle: 'Komm vorbei. Bring dich ein. Geh fair miteinander um',
-      expectText: 'Komm zu ein paar Sachen im Semester. Bring irgendwann etwas ein, eine Idee, einen Abend, einen Kontakt, ein Projekt. Behandle die Menschen in diesem Netzwerk so, wie du in fünf Jahren von ihnen behandelt werden willst, wenn eine:r von ihnen einstellt.',
+      expectText: 'Komm zu ein paar Sachen im Semester. Bring irgendwann etwas ein, eine Idee, einen Abend, einen Kontakt, ein Projekt. Geh mit allen so um, wie du selbst behandelt werden willst. Vielleicht stellt dich eine:r von ihnen in ein paar Jahren ein.',
       feeLabel: 'Die Kosten', feeValue: '0 €', feePer: 'immer, für Studierende',
       feeText: 'Die Mitgliedschaft ist kostenlos und wird es immer bleiben. Wir finanzieren uns über Sponsoren, Partner und Sachleistungen, nicht über die Studierenden, für die es uns gibt.',
       ctaH: 'Bereit für die Bewerbung?', ctaText: 'Dauert ein paar Minuten und kostet nichts. Wir prüfen jede Bewerbung, und du hörst innerhalb weniger Tage von uns.',
@@ -878,13 +876,13 @@ window.MBS_CONTENT = {
         { q: 'Was kostet es?', a: 'Nichts. Die Mitgliedschaft ist zu 100 % kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir finanzieren uns über Sponsoren und Partner, nicht über die Studierenden.' },
         { q: 'Wie viel Zeit kostet es?', a: 'So viel, wie du gibst. Das Minimum ist, zu ein paar Events im Semester zu kommen. Mitglieder mit einer Rolle wenden meist zwei bis vier Stunden pro Woche auf.' },
         { q: 'Ich studiere kein wirtschaftsbezogenes Fach. Kann ich trotzdem beitreten?', a: 'Ja. Wir wollen Studierende aus Ingenieurwesen, Jura, Informatik und jedem anderen Fach, die in die Wirtschaft wollen. Wichtig ist, dass du es ernst meinst.' },
-        { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, und wir würden dich ermutigen. Es gibt keinen Beitrag, auf den du warten musst, und das Netzwerk endet nicht, wenn du die Stadt verlässt.' }
+        { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, unbedingt. Es kostet nichts, und das Netzwerk bleibt, auch wenn du die Stadt verlässt.' }
       ]
     },
     companies: {
       subtitle: 'Erreichen Sie jede Münchner Hochschule in einem Gespräch.',
       whyLabel: 'Warum eine Zusammenarbeit mit der Munich Business Society', whyTitle: 'Talente von jedem Campus, ein Ansprechpartner',
-      whyDesc: 'Die Munich Business Society wird komplett von Studierenden ehrenamtlich aufgebaut, kostenlos für jede:n Studierende:n an jeder Münchner Hochschule. Ihre Unterstützung, als Sponsor, Partner oder mit Sachleistungen, macht das erst möglich und bringt Sie gleichzeitig mit den engagiertesten Nachwuchstalenten der Stadt zusammen.',
+      whyDesc: 'Die Munich Business Society wird komplett von Studierenden ehrenamtlich aufgebaut, kostenlos für jede:n Studierende:n an jeder Münchner Hochschule. Ihre Unterstützung, als Sponsor, Partner oder mit Sachleistungen, macht das erst möglich und bringt Sie gleichzeitig mit engagierten Nachwuchstalenten zusammen.',
       packBtn: 'Partner-Paket anfordern →', callBtn: 'Termin buchen',
       whyGridLabel: 'Der Mehrwert', whyGridTitle: 'Was Sie davon haben',
       why: [
@@ -892,12 +890,12 @@ window.MBS_CONTENT = {
         { icon: 'bulb', title: 'Neue Ideen für Ihre echten Fragen', text: 'Studierende aus verschiedenen Fachrichtungen bringen unabhängige Perspektiven auf aktuelle Herausforderungen, von Markteintritt über Marketing bis Nachhaltigkeit.' },
         { icon: 'scale', title: 'Unterstützung, die ankommt', text: 'Als Non-Profit-Verein stecken wir jede Unterstützung vollständig in Bildungsformate. So bleibt die Munich Business Society für alle Studierenden kostenlos.' }
       ],
-      waysLabel: 'Wege der Zusammenarbeit', waysTitle: 'Vier Wege hinein',
+      waysLabel: 'Wege der Zusammenarbeit', waysTitle: 'Vier Wege der Zusammenarbeit',
       ways: [
-        { icon: 'mic', title: 'Speaker Events', text: 'Ihre Expertise, unser Publikum. Sie veranstalten oder co-hosten einen Guest-Speaker-Abend, ein Skillnight oder einen Unternehmensabend, und erreichen damit engagierte Studierende aus ganz München, nicht nur von einer einzelnen Hochschule.' },
+        { icon: 'mic', title: 'Speaker Events', text: 'Ihre Expertise, unser Publikum. Sie gestalten gemeinsam mit uns einen Speaker-Abend, eine Skillnight oder einen Unternehmensabend, und erreichen damit engagierte Studierende aus ganz München, nicht nur von einer einzelnen Hochschule.' },
         { icon: 'trophy', title: 'Case Events', text: 'Studierende lösen in Teams eine echte Fragestellung aus Ihrem Unternehmen und präsentieren das Ergebnis vor Ihrer Führung. Sie erleben, wie jemand denkt, strukturiert und präsentiert, lange bevor das Bewerbungsgespräch beginnt.' },
         { icon: 'briefcase', title: 'Partnerprojekte', text: 'Ein definiertes Stück Arbeit mit einem kleinen Mitgliederteam und einem dokumentierten Ergebnis.' },
-        { icon: 'star', title: 'Insight Events', text: 'Sie geben unseren Studierenden exklusive Einblicke in Ihre tägliche Arbeit, etwa durch einen Unternehmensbesuch oder Workshop, kombiniert mit fester Sichtbarkeit auf Website und im Newsletter sowie direktem Zugang zu unserer Mitgliedschaft für offene Stellen.' }
+        { icon: 'star', title: 'Insight Events', text: 'Sie geben unseren Studierenden Einblicke in Ihren Arbeitsalltag, etwa bei einem Unternehmensbesuch oder Workshop. Dazu kommen Sichtbarkeit auf unserer Website und im Newsletter und ein direkter Draht zu unseren Mitgliedern für offene Stellen.' }
       ],
       partnersLabel: 'Gründungspartner', partnersTitle: 'Werden Sie einer unserer ersten Partner',
       partnersDesc: 'Wir wählen gerade unsere Gründungspartner aus. Sie gestalten unsere ersten Partner-Events und Workshops mit uns, statt sich in ein fertiges Programm einzureihen.',
@@ -909,12 +907,12 @@ window.MBS_CONTENT = {
         { q: 'Was kostet eine Zusammenarbeit?', a: 'Sie entscheiden selbst, was Sie unseren Studierenden anbieten wollen, von Know-how und Ihrer Zeit bis zu finanzieller Unterstützung. Gemeinsam finden wir heraus, was für Sie am besten funktioniert.' }
       ],
       closeH: 'Melden Sie sich',
-      closeText: 'Einer der oben genannten Gründe, oder Sie möchten Münchens Wirtschaftstalente einfach früh kennenlernen. Melden Sie sich bei uns, wir antworten innerhalb einer Woche.',
+      closeText: 'Sie haben Interesse oder möchten Münchens Talente früh kennenlernen? Melden Sie sich, wir antworten innerhalb einer Woche.',
       emailBtn: 'Partnerschaftsteam kontaktieren →'
     },
     team: {
       subtitle: 'Komplett von Studierenden gebaut und geführt, neben dem Studium.',
-      whoTitle: 'Das Gründerteam und aktueller Vorstand',
+      whoTitle: 'Gründerteam und aktueller Vorstand',
       whoDesc: 'Der Vorstand führt den Verein, sechs Teams machen die Arbeit. Jedes Team steht Mitgliedern offen, die mitgestalten wollen.',
       ctaH: 'Lust, das mitzubauen?', ctaText: 'Bewirb dich für die Mitgliedschaft und schreib in deine Bewerbung, in welchem Team du mitmachen möchtest.',
       boardTitle: 'Der Vorstand',
@@ -942,10 +940,10 @@ window.MBS_CONTENT = {
         { q: 'Ist alles auf Deutsch oder Englisch?', a: 'Beides. Events laufen in der Sprache, die zum Raum und zur:zum Speaker:in passt; schriftliche Kommunikation ist auf Englisch, damit niemand außen vor bleibt.' },
         { q: 'Wie viel Zeit kostet es?', a: 'So viel, wie du gibst. Das Minimum ist, zu ein paar Events im Semester zu kommen. Mitglieder mit einer Rolle wenden meist zwei bis vier Stunden pro Woche auf.' },
         { q: 'Was kostet es?', a: 'Nichts. Die Mitgliedschaft ist zu 100 % kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir finanzieren uns über Sponsoren und Partner, nicht über die Studierenden.' },
-        { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, und wir würden dich ermutigen. Es gibt keinen Beitrag, auf den du warten musst, und das Netzwerk endet nicht, wenn du die Stadt verlässt.' },
-        { q: 'Muss ich im ersten Semester sein?', a: 'Nein. Ob erstes Bachelor-Semester oder Masterarbeit: Du bist willkommen. Genau diese Mischung ist der Punkt.' },
+        { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, unbedingt. Es kostet nichts, und das Netzwerk bleibt, auch wenn du die Stadt verlässt.' },
+        { q: 'Muss ich im ersten Semester sein?', a: "Nein. Ob erstes Bachelor-Semester oder Masterarbeit: Du bist willkommen. Genau diese Mischung macht's aus." },
         { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Melde dich vor dem Event bei uns, und wir sagen dir, wie du dabei sein kannst.' },
-        { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, aufzutauchen oder eine Rolle zu übernehmen.' },
+        { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, regelmäßig dabei zu sein oder eine Rolle zu übernehmen.' },
         { q: 'Wie werden Unternehmen Teil davon?', a: 'Über die Seite „Für Unternehmen". Wir arbeiten mit Arbeitgebern an Events, Case-Challenges und Projekten, und teilen ihre Stellen mit Mitgliedern.' }
       ],
       stillText: 'Noch am Abwägen? Melde dich bei uns und komm zu einem Event, bevor du entscheidest.',
@@ -991,18 +989,18 @@ window.MBS_CONTENT = {
       faqLabel: 'Vor der Bewerbung', faqTitle: 'Die Fragen, die vor der Bewerbung aufkommen',
       faqItems: [
         { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Melde dich vor dem Event bei uns, und wir sagen dir, wie du dabei sein kannst.' },
-        { q: 'Muss ich im ersten Semester sein?', a: 'Nein. Ob erstes Bachelor-Semester oder Masterarbeit: Du bist willkommen. Genau diese Mischung ist der Punkt.' },
+        { q: 'Muss ich im ersten Semester sein?', a: "Nein. Ob erstes Bachelor-Semester oder Masterarbeit: Du bist willkommen. Genau diese Mischung macht's aus." },
         { q: 'Ist alles auf Deutsch oder Englisch?', a: 'Beides. Events laufen in der Sprache, die zum Raum und zur:zum Speaker:in passt; schriftliche Kommunikation ist auf Englisch, damit niemand außen vor bleibt.' },
-        { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, aufzutauchen oder eine Rolle zu übernehmen.' }
+        { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, regelmäßig dabei zu sein oder eine Rolle zu übernehmen.' }
       ]
     },
     contact: {
-      subtitle: 'Frag uns alles, Studierende:r, Unternehmen oder einfach neugierig.',
+      subtitle: 'Fragen? Egal ob Studierende:r, Unternehmen oder einfach neugierig.',
       label: 'Frag uns alles', title: 'Frag uns alles',
       descA: 'Ob du Studierende:r bist und über einen Beitritt nachdenkst, ein Unternehmen, das über eine Partnerschaft nachdenkt, oder jemand mit einer Idee für ein Format. Schreib uns. Wir melden uns so schnell wie möglich.',
       inbox: { label: 'Schreib uns', addr: 'munichbusinesssociety@gmail.com', note: 'Ein Postfach für alles: Mitgliedschaft, Partnerschaften und alles andere.' },
-      formLabel: 'Nachricht senden', formTitle: 'Direkt an die richtige Person',
-      formText: 'Sag uns, wer du bist und was du suchst. Das Formular leitet deine Nachricht an das Team, das wirklich helfen kann.',
+      formLabel: 'Nachricht senden', formTitle: 'Wir lesen jede Nachricht',
+      formText: 'Sag uns, wer du bist und was du suchst. Wir lesen jede Nachricht und antworten schnell.',
       findLabel: 'Wo du uns findest', findText: 'Wir treffen uns in ganz München statt auf einem Campus. Locations stehen bei jedem Event.',
       follow: 'Folgen: ',
       f: { firstname: 'Vorname', lastname: 'Nachname', email: 'E-Mail', role: 'Ich bin…', message: 'Deine Nachricht' },
