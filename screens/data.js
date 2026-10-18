@@ -423,7 +423,7 @@ window.MBS_CONTENT = {
       storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has students spread across many universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
       storyP2: 'So we built the thing we wanted to join: a free, cross-university club with no home campus. Anyone in Munich can apply on the same terms, whether they study business, economics, management, or something else entirely and are heading into business anyway.',
       storyP3: "Our next milestone is our first Case Night, planned for this year. Until then, we're building the partner and campus network to get there.",
-      diffLabel: 'What makes us different', diffTitle: 'Not an offshoot of one university',
+      diffLabel: 'What makes us different', diffTitle: 'Cross-university by design, not by exception',
       different: [
         { icon: 'globe', title: 'Not an offshoot of one university', text: "Most student business clubs are an extension of one university. We're one club for all of them." },
         { icon: 'building', title: 'Built for the city, not the campus', text: "Our partners, speakers and venues come from Munich's business world, not from one faculty's alumni list." },
@@ -778,7 +778,7 @@ window.MBS_CONTENT = {
       storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Verein gebaut, dem wir beitreten wollten',
       storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat Studierende, verteilt auf viele Hochschulen, doch jede Hochschule hat ihre eigenen Initiativen, die nur einzelne Themenfelder abdecken, und fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld oder filtern früh aus.',
       storyP2: 'Also bauten wir das, dem wir beitreten wollten: einen kostenlosen, hochschulübergreifenden Club ohne Heim-Campus. Bewerben kann sich jede:r in München zu denselben Bedingungen, ob Wirtschaft, Ökonomie, Management oder ein ganz anderes Fach mit dem Ziel Wirtschaft.',
-      diffLabel: 'Was uns unterscheidet', diffTitle: 'Kein Ableger einer Uni',
+      diffLabel: 'Was uns unterscheidet', diffTitle: 'Hochschulübergreifend by design, nicht als Ausnahme',
       different: [
         { icon: 'globe', title: 'Kein Ableger einer Uni', text: 'Die meisten studentischen Business-Clubs sind der Ableger einer Hochschule. Wir sind ein Club für alle Hochschulen.' },
         { icon: 'building', title: 'Für die Stadt gebaut, nicht für den Campus', text: 'Unsere Partner, Speaker und Locations kommen aus der Münchner Wirtschaft, nicht aus der Alumni-Liste einer Fakultät.' },
