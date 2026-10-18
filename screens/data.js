@@ -314,7 +314,7 @@ window.MBS_CONTENT = {
       name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Every campus. One network.',
       metaDescription: "Munich's first cross-university case club.",
-      footerDescriptor: 'Munich Business Society, the cross-university case club for every student in Munich. Open to every university in the city.'
+      footerDescriptor: 'Munich Business Society, the cross-university case club for students in Munich. Free, every campus.'
     },
     nav: [
       { id: 'home', label: 'Home' },
@@ -405,23 +405,23 @@ window.MBS_CONTENT = {
       seeEvents: "See what's coming up",
       whyLabel: 'Why we exist', whyTitle: 'Munich has students split across many universities, and almost none of them talk to each other.',
       whyP1: 'Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, giving visibility into that university\'s own talent, not across one shared, central club. Recruiters see one Munich talent pool; students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.',
-      whyP2: "Munich Business Society exists to close that gap: one open, free, cross-university platform with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you get the same access, on the same terms, at no cost.",
+      whyP2: "Munich Business Society exists to close that gap: one free, cross-university platform with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you apply on the same terms, and it never costs anything.",
       pillarsLabel: 'What you get', pillarsTitle: 'What you actually get out of it.',
       formatsLabel: 'What we do', formatsTitle: 'Nine formats, every semester.',
       formatsText: "Case Nights, plus Case Competitions, Events & Workshops with Partners, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free. Not a member yet but want to come along? Get in touch with us.",
       formatsLink: 'See the full programme →',
-      studentH: 'Two ways in. Both free.', studentText: "Apply for membership: we review every application, and it's free for students at every Munich university. Not a member yet but want to come to an event? Get in touch with us.",
+      studentH: 'Two ways in. Both free.', studentText: "Apply for membership: it's free, for students from every Munich university. Up to 50 places, chosen through an application and a short interview. Not a member yet but want to come to an event? Get in touch with us.",
       contactBtn: 'Get in touch →',
       companyH: "Looking for direct access to Munich's talent?", companyText: "We're building a cross-university network connecting companies with business talent from across Munich. Reach out to find out more.",
       partnerBtn: 'Learn more →'
     },
     about: {
-      subtitle: 'One case club for all of Munich, student-run, cross-university, open to every campus in the city.',
+      subtitle: 'One case club for all of Munich: student-run, free, every campus.',
       whoLabel: 'Who we are', whoTitle: 'One case club for all of Munich.',
       whoDesc: "Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
       storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join.',
       storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has students spread across many universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
-      storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Open on identical terms to anyone in Munich studying business, economics, management, or studying something else entirely and heading into business anyway.',
+      storyP2: 'So we built the thing we wanted to join: a free, cross-university platform with no home campus. Anyone in Munich can apply on the same terms, whether they study business, economics, management, or something else entirely and are heading into business anyway.',
       storyP3: "Our next milestone is our first Case Night, planned for this year. Until then, we're building the partner and campus network to get there.",
       diffLabel: 'What makes us different', diffTitle: 'Cross-university by design, not by exception.',
       different: [
@@ -486,8 +486,8 @@ window.MBS_CONTENT = {
       recapText: 'We share highlights and key takeaways from every event on our socials. Follow us to stay in the loop.'
     },
     membership: {
-      subtitle: 'Open to every university in Munich, any subject, any degree level.',
-      whoLabel: 'Who can join', whoTitle: 'Open to every university in Munich.',
+      subtitle: 'Free. Every campus. Up to 50 new members before next semester, chosen through an application and a 20-minute interview.',
+      whoLabel: 'Who can join', whoTitle: 'Apply from any university in Munich.',
       whoDesc: 'If you study in Munich, you can apply, and membership is free. We review every application and let you know our decision. We don’t filter by university, by grade average, or by whether your programme has “business” in the title. We look for talent, curiosity and commitment.',
       canJoin: [
         'Enrolled at any university or university of applied sciences in the Munich area.',
@@ -581,7 +581,7 @@ window.MBS_CONTENT = {
       subtitle: 'The questions students ask before joining.',
       label: 'FAQ', title: 'Before you show up',
       items: [
-        { q: 'Which university is Munich Business Society part of?', a: "None, deliberately. Munich Business Society is a cross-university society. Students from every university in Munich join on identical terms. We're not a faculty initiative and no single school owns us." },
+        { q: 'Which university is Munich Business Society part of?', a: "None, deliberately. Munich Business Society is a cross-university society. Students from every university in Munich apply on identical terms. We're not a faculty initiative and no single school owns us." },
         { q: "I don't study a business-related subject. Can I still join?", a: "Yes. We want students from engineering, law, computer science and every other subject who are heading into business. What matters is that you're serious about it." },
         { q: 'Is everything in German or English?', a: 'Both. Events run in whichever language suits the room and the speaker; written communication is in English so nobody is left out.' },
         { q: 'How much time does it take?', a: 'As much as you give it. The minimum is showing up to a few events a semester. Members who take a role typically spend two to four hours a week on it.' },
@@ -596,7 +596,7 @@ window.MBS_CONTENT = {
       joinBtn: 'Get on the list →', seeBtn: "See what's coming up"
     },
     join: {
-      subtitle: "Free. We review every application and you'll receive our decision within a few days.",
+      subtitle: "Free. Up to 50 places: we review every application and invite a shortlist to a 20-minute interview.",
       required: { firstname: 'Please add your first name.', lastname: 'Please add your last name.',
         email: 'Please add your email address.', university: 'Please choose your university.',
         level: 'Please choose your degree level.', studyprogram: 'Please choose your degree programme.',
@@ -621,7 +621,7 @@ window.MBS_CONTENT = {
         'Industrial Engineering & Management', 'Economics (VWL)', 'Business Law', 'Finance & Accounting',
         'Business Psychology', 'Management', 'Marketing', 'Other degree programme'],
       languages: ['German', 'English', 'Either / no preference'],
-      note: "We review every application and you'll receive our decision within a few days. Say so in the message above if you'd like a role, such as Case Coach or Campus Lead, and we'll get back to you about that separately.",
+      note: "We review every application and get back to you within a few days. If you're shortlisted, we invite you to a 20-minute interview before the final decision. Say so in the message above if you'd like a role, such as Case Coach or Campus Lead, and we'll get back to you about that separately.",
       consent: "I've read the ", consentLink: 'privacy policy', consentEnd: ' and agree to my data being processed.',
       submit: 'Send application →',
       successTitle: "Your application is in.",
@@ -664,7 +664,7 @@ window.MBS_CONTENT = {
       name: 'Munich Business Society', short: 'Munich Business Society', domain: MBS_DOMAIN,
       tagline: 'Jeder Campus. Ein Netzwerk.',
       metaDescription: 'Münchens erster hochschulübergreifender Case Club.',
-      footerDescriptor: 'Munich Business Society, der hochschulübergreifende Case Club für jede:n Studierende:n in München. Offen für jede Hochschule der Stadt.'
+      footerDescriptor: 'Munich Business Society, der hochschulübergreifende Case Club für Studierende in München. Kostenlos, jeder Campus.'
     },
     nav: [
       { id: 'home', label: 'Start' },
@@ -755,23 +755,23 @@ window.MBS_CONTENT = {
       seeEvents: 'Zu den Terminen',
       whyLabel: 'Warum es uns gibt', whyTitle: 'München hat Studierende, verteilt auf viele Hochschulen, und fast keine spricht mit der anderen.',
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie geben Sichtbarkeit auf die Talente der eigenen Uni, aber nicht hochschulübergreifend in einem zentralen Club. Recruiter sehen einen Münchner Talentpool; Studierende treffen immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
-      whyP2: 'Die Munich Business Society schließt genau diese Lücke: eine offene, kostenlose, hochschulübergreifende Plattform mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bekommst denselben Zugang, zu denselben Bedingungen, ohne Kosten.',
+      whyP2: 'Die Munich Business Society schließt genau diese Lücke: eine kostenlose, hochschulübergreifende Plattform mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bewirbst dich zu denselben Bedingungen, und es kostet dich nie etwas.',
       pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du wirklich davon hast.',
       formatsLabel: 'Was wir tun', formatsTitle: 'Neun Formate, jedes Semester.',
       formatsText: 'Case Nights, dazu Case Competitions, Events & Workshops mit Partnern, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos. Noch kein Mitglied, willst aber dabei sein? Melde dich bei uns.',
       formatsLink: 'Zum ganzen Programm →',
-      studentH: 'Zwei Wege rein. Beide kostenlos.', studentText: 'Bewirb dich für die Mitgliedschaft: Wir prüfen jede Bewerbung, und sie ist kostenlos für Studierende jeder Münchner Hochschule. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
+      studentH: 'Zwei Wege rein. Beide kostenlos.', studentText: 'Bewirb dich für die Mitgliedschaft: kostenlos, für Studierende jeder Münchner Hochschule. Bis zu 50 Plätze, ausgewählt über Bewerbung und ein kurzes Interview. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
       contactBtn: 'Kontakt aufnehmen →',
       companyH: 'Sie suchen den direkten Draht zu Münchens Talenten?', companyText: 'Wir bauen ein hochschulübergreifendes Netzwerk auf, das Unternehmen mit Wirtschaftstalenten aus ganz München verbindet. Sprechen Sie uns an, um mehr zu erfahren.',
       partnerBtn: 'Mehr erfahren →'
     },
     about: {
-      subtitle: 'Ein Case Club für ganz München, studentisch geführt, hochschulübergreifend, offen für jeden Campus der Stadt.',
+      subtitle: 'Ein Case Club für ganz München: studentisch geführt, kostenlos, jeder Campus.',
       whoLabel: 'Wer wir sind', whoTitle: 'Ein Case Club für ganz München.',
       whoDesc: 'Die Munich Business Society ist ein studentisch geführter Case Club, der wirtschaftlich interessierte Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Es gab keinen Case Club, der alle Münchner Studierenden erreichte statt nur die einer einzelnen Hochschule. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
       storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Verein gebaut, dem wir beitreten wollten.',
       storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat Studierende, verteilt auf viele Hochschulen, doch jede Hochschule hat ihre eigenen Initiativen, die nur einzelne Themenfelder abdecken, und fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld oder filtern früh aus.',
-      storyP2: 'Also bauten wir das, dem wir beitreten wollten: eine kostenlose, hochschulübergreifende Plattform ohne Heim-Campus. Offen zu identischen Bedingungen für alle in München, die Wirtschaft, Ökonomie, Management studieren, oder etwas völlig anderes und trotzdem in die Wirtschaft gehen.',
+      storyP2: 'Also bauten wir das, dem wir beitreten wollten: eine kostenlose, hochschulübergreifende Plattform ohne Heim-Campus. Bewerben kann sich jede:r in München zu denselben Bedingungen, ob Wirtschaft, Ökonomie, Management oder ein ganz anderes Fach mit dem Ziel Wirtschaft.',
       diffLabel: 'Was uns unterscheidet', diffTitle: 'Hochschulübergreifend by design, nicht als Ausnahme.',
       different: [
         { icon: 'globe', title: 'Hochschulübergreifend by design, nicht als Ausnahme', text: 'Die meisten studentischen Business-Clubs sind der Ableger einer Hochschule. Wir sind eine Plattform über allen.' },
@@ -835,8 +835,8 @@ window.MBS_CONTENT = {
       recapText: 'Wir teilen Highlights und wichtige Erkenntnisse von jedem Event auf unseren Socials. Folge uns, um auf dem Laufenden zu bleiben.'
     },
     membership: {
-      subtitle: 'Offen für jede Münchner Hochschule, jedes Fach, jedes Studienniveau.',
-      whoLabel: 'Wer beitreten kann', whoTitle: 'Offen für jede Hochschule in München.',
+      subtitle: 'Kostenlos. Jeder Campus. Bis zu 50 neue Mitglieder bis zum nächsten Semester, ausgewählt über Bewerbung und ein 20-minütiges Interview.',
+      whoLabel: 'Wer beitreten kann', whoTitle: 'Bewerben kannst du dich von jeder Münchner Hochschule.',
       whoDesc: 'Wenn du in München studierst, kannst du dich bewerben, und die Mitgliedschaft ist kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir filtern nicht nach Hochschule, nach Notenschnitt oder danach, ob „Business" im Titel deines Studiengangs steht. Wir suchen Talent, Neugier und Engagement.',
       canJoin: [
         'Eingeschrieben an einer Universität oder Hochschule im Raum München.',
@@ -930,7 +930,7 @@ window.MBS_CONTENT = {
       subtitle: 'Die Fragen, die Studierende vor dem Mitmachen stellen.',
       label: 'FAQ', title: 'Bevor du auftauchst',
       items: [
-        { q: 'Zu welcher Hochschule gehört die Munich Business Society?', a: 'Zu keiner, bewusst. Die Munich Business Society ist ein hochschulübergreifender Verein. Studierende jeder Münchner Hochschule treten zu identischen Bedingungen bei. Wir sind keine Fakultätsinitiative, und keine einzelne Schule besitzt uns.' },
+        { q: 'Zu welcher Hochschule gehört die Munich Business Society?', a: 'Zu keiner, bewusst. Die Munich Business Society ist ein hochschulübergreifender Verein. Studierende jeder Münchner Hochschule bewerben sich zu identischen Bedingungen. Wir sind keine Fakultätsinitiative, und keine einzelne Schule besitzt uns.' },
         { q: 'Ich studiere kein wirtschaftsbezogenes Fach. Kann ich trotzdem beitreten?', a: 'Ja. Wir wollen Studierende aus Ingenieurwesen, Jura, Informatik und jedem anderen Fach, die in die Wirtschaft wollen. Wichtig ist, dass du es ernst meinst.' },
         { q: 'Ist alles auf Deutsch oder Englisch?', a: 'Beides. Events laufen in der Sprache, die zum Raum und zur:zum Speaker:in passt; schriftliche Kommunikation ist auf Englisch, damit niemand außen vor bleibt.' },
         { q: 'Wie viel Zeit kostet es?', a: 'So viel, wie du gibst. Das Minimum ist, zu ein paar Events im Semester zu kommen. Mitglieder mit einer Rolle wenden meist zwei bis vier Stunden pro Woche auf.' },
@@ -945,7 +945,7 @@ window.MBS_CONTENT = {
       joinBtn: 'Auf die Liste →', seeBtn: 'Zu den Terminen'
     },
     join: {
-      subtitle: 'Kostenlos. Wir prüfen jede Bewerbung und du erhältst unsere Entscheidung innerhalb weniger Tage.',
+      subtitle: 'Kostenlos. Bis zu 50 Plätze: Wir prüfen jede Bewerbung und laden die Passendsten zu einem 20-minütigen Interview ein.',
       required: { firstname: 'Bitte gib deinen Vornamen an.', lastname: 'Bitte gib deinen Nachnamen an.',
         email: 'Bitte gib deine E-Mail-Adresse an.', university: 'Bitte wähle deine Hochschule.',
         level: 'Bitte wähle dein Studienniveau.', studyprogram: 'Bitte wähle deinen Studiengang.',
@@ -970,7 +970,7 @@ window.MBS_CONTENT = {
         'Wirtschaftsingenieurwesen', 'Volkswirtschaftslehre (VWL)', 'Wirtschaftsrecht', 'Finance & Accounting',
         'Wirtschaftspsychologie', 'Management', 'Marketing', 'Anderer Studiengang'],
       languages: ['Deutsch', 'Englisch', 'Beide / keine Präferenz'],
-      note: 'Wir prüfen jede Bewerbung und du erhältst unsere Entscheidung innerhalb weniger Tage. Schreib oben dazu, wenn du eine Rolle wie Case Coach oder Campus Lead willst. Wir melden uns dazu separat.',
+      note: 'Wir prüfen jede Bewerbung und melden uns innerhalb weniger Tage. Kommst du in die engere Auswahl, laden wir dich vor der finalen Entscheidung zu einem 20-minütigen Interview ein. Schreib oben dazu, wenn du eine Rolle wie Case Coach oder Campus Lead willst. Wir melden uns dazu separat.',
       consent: 'Ich habe die ', consentLink: 'Datenschutzerklärung', consentEnd: ' gelesen und stimme der Verarbeitung meiner Daten zu.',
       submit: 'Bewerbung absenden →',
       successTitle: 'Deine Bewerbung ist eingegangen.',
