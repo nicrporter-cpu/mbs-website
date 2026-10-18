@@ -492,17 +492,17 @@ window.MBS_CONTENT = {
       canJoin: [
         'Enrolled at any university or university of applied sciences in the Munich area.',
         'Any degree level, bachelor, master, MBA, exchange semester, doctorate.',
-        'Any subject. Plenty of our members study something other than business and are heading into it anyway.',
+        'Any subject. You don’t need to study business to be heading into it.',
         'Comfortable in English or German. Our events run in both; the working language is whatever the room needs.'
       ],
       getLabel: 'What you get', getTitle: 'Everything membership opens up.',
       get: [
         { icon: 'star', title: 'Access to every format', text: 'Every Case Night, Skillnight, partner event and the rest of the programme, from day one.' },
-        { icon: 'users', title: 'A network across every Munich university', text: 'Plus alumni already working in consulting, finance, tech and industry.' },
-        { icon: 'building', title: 'Direct contact with partner companies', text: "Including openings shared with members before they're advertised." },
+        { icon: 'users', title: 'A network across every Munich university', text: 'And, as the society grows, alumni working in consulting, finance, tech and industry.' },
+        { icon: 'building', title: 'Direct contact with partner companies', text: 'As our first partnerships form, members are the first to hear about their openings.' },
         { icon: 'briefcase', title: 'A role, if you want one', text: 'Become a Case Coach or Campus Lead, run a format, own a partnership. Genuine responsibility, on your CV, with a reference behind it.' },
         { icon: 'trophy', title: 'Hands-on experience', text: 'Real cases at every Case Night and in every Case Competition.' },
-        { icon: 'globe', title: 'Inspiring community', text: 'People who challenge you, support you, and stay connected for years.' }
+        { icon: 'globe', title: 'A founding community', text: 'Be part of the first cohort: people who challenge you, support you and build this with you.' }
       ],
       processLabel: 'How you join', processTitle: 'From application to full member.',
       process: [
@@ -521,7 +521,7 @@ window.MBS_CONTENT = {
       faqItems: [
         { q: 'What does it cost?', a: "Nothing. Membership is 100% free. We review every application and let you know our decision. We're funded by sponsors and partners, not by charging students." },
         { q: 'How much time does it take?', a: 'As much as you give it. The minimum is showing up to a few events a semester. Members who take a role typically spend two to four hours a week on it.' },
-        { q: "I don't study a business-related subject. Can I still join?", a: "Yes. Plenty of our members study engineering, law, computer science or something else entirely and are heading into business anyway. What matters is that you're serious about it." },
+        { q: "I don't study a business-related subject. Can I still join?", a: "Yes. We want students from engineering, law, computer science and every other subject who are heading into business. What matters is that you're serious about it." },
         { q: "I'm here for one exchange semester. Is it worth joining?", a: "Yes, and we'd encourage it. There's no fee to work around, and the network doesn't expire when you leave the city." }
       ]
     },
@@ -553,7 +553,7 @@ window.MBS_CONTENT = {
         { q: 'What does a partnership cost?', a: "You decide what you want to offer our students, from know-how and your time to financial backing. Together, we'll figure out what works best for you." }
       ],
       closeH: 'Get in touch.',
-      closeText: "Any of the reasons above, or you've met one of our business talents and want to hire them directly. Get in touch and we'll get back within a week.",
+      closeText: "Any of the reasons above, or you'd simply like to meet Munich's business talent early. Get in touch and we'll get back within a week.",
       emailBtn: 'Contact the partnerships team →'
     },
     team: {
@@ -582,12 +582,12 @@ window.MBS_CONTENT = {
       label: 'FAQ', title: 'Before you show up',
       items: [
         { q: 'Which university is Munich Business Society part of?', a: "None, deliberately. Munich Business Society is a cross-university society. Students from every university in Munich join on identical terms. We're not a faculty initiative and no single school owns us." },
-        { q: "I don't study a business-related subject. Can I still join?", a: "Yes. Plenty of our members study engineering, law, computer science or something else entirely and are heading into business anyway. What matters is that you're serious about it." },
+        { q: "I don't study a business-related subject. Can I still join?", a: "Yes. We want students from engineering, law, computer science and every other subject who are heading into business. What matters is that you're serious about it." },
         { q: 'Is everything in German or English?', a: 'Both. Events run in whichever language suits the room and the speaker; written communication is in English so nobody is left out.' },
         { q: 'How much time does it take?', a: 'As much as you give it. The minimum is showing up to a few events a semester. Members who take a role typically spend two to four hours a week on it.' },
         { q: 'What does it cost?', a: "Nothing. Membership is 100% free. We review every application and let you know our decision. We're funded by sponsors and partners, not by charging students." },
         { q: "I'm here for one exchange semester. Is it worth joining?", a: "Yes, and we'd encourage it. There's no fee to work around, and the network doesn't expire when you leave the city." },
-        { q: 'Do I need to be in my first year?', a: 'No. We have first-semester bachelor students and master students finishing their theses. The mix is the point.' },
+        { q: 'Do I need to be in my first year?', a: 'No. Whether you’re in your first bachelor semester or finishing your master’s thesis, you’re welcome. The mix is the point.' },
         { q: 'Can I come to something before I join?', a: "Yes. Get in touch with us before the event and we'll let you know how to come along." },
         { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of showing up or taking on a role.' },
         { q: 'How do companies get involved?', a: 'Through the For Companies page. We work with employers on events, case challenges and projects, and share their openings with members.' }
@@ -630,7 +630,7 @@ window.MBS_CONTENT = {
       faqLabel: 'Before you apply', faqTitle: 'Questions people ask before applying.',
       faqItems: [
         { q: 'Can I come to something before I join?', a: "Yes. Get in touch with us before the event and we'll let you know how to come along." },
-        { q: 'Do I need to be in my first year?', a: 'No. We have first-semester bachelor students and master students finishing their theses. The mix is the point.' },
+        { q: 'Do I need to be in my first year?', a: 'No. Whether you’re in your first bachelor semester or finishing your master’s thesis, you’re welcome. The mix is the point.' },
         { q: 'Is everything in German or English?', a: 'Both. Events run in whichever language suits the room and the speaker; written communication is in English so nobody is left out.' },
         { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of showing up or taking on a role.' }
       ]
@@ -841,17 +841,17 @@ window.MBS_CONTENT = {
       canJoin: [
         'Eingeschrieben an einer Universität oder Hochschule im Raum München.',
         'Jedes Studienniveau, Bachelor, Master, MBA, Auslandssemester, Promotion.',
-        'Jedes Fach. Viele unserer Mitglieder studieren etwas anderes als Wirtschaft und wollen trotzdem in die Wirtschaft.',
+        'Jedes Fach. Du musst nicht Wirtschaft studieren, um in die Wirtschaft zu wollen.',
         'Sicher auf Deutsch oder Englisch. Unsere Events laufen in beiden; die Arbeitssprache ist, was der Raum braucht.'
       ],
       getLabel: 'Was du bekommst', getTitle: 'Alles, was Mitgliedschaft öffnet.',
       get: [
         { icon: 'star', title: 'Zugang zu jedem Format', text: 'Jede Case Night, Skillnight, jedes Partner-Event und der Rest des Programms, ab Tag eins.' },
-        { icon: 'users', title: 'Ein Netzwerk über jede Münchner Hochschule', text: 'Plus Alumni, die schon in Consulting, Finance, Tech und Industrie arbeiten.' },
-        { icon: 'building', title: 'Direkter Kontakt zu Partnerunternehmen', text: 'Inklusive Stellen, die Mitglieder vor der Ausschreibung sehen.' },
+        { icon: 'users', title: 'Ein Netzwerk über jede Münchner Hochschule', text: 'Und, wenn der Verein wächst, Alumni in Consulting, Finance, Tech und Industrie.' },
+        { icon: 'building', title: 'Direkter Kontakt zu Partnerunternehmen', text: 'Sobald unsere ersten Partnerschaften stehen, erfahren Mitglieder als Erste von deren offenen Stellen.' },
         { icon: 'briefcase', title: 'Eine Rolle, wenn du willst', text: 'Werde Case Coach oder Campus Lead, leite ein Format, verantworte eine Partnerschaft. Echte Verantwortung, im Lebenslauf, mit einer Referenz dahinter.' },
         { icon: 'trophy', title: 'Praxiserfahrung', text: 'Echte Cases in jeder Case Night und jeder Case Competition.' },
-        { icon: 'globe', title: 'Inspirierende Community', text: 'Menschen, die dich fordern, unterstützen und langfristig verbinden.' }
+        { icon: 'globe', title: 'Eine Gründungs-Community', text: 'Sei Teil der ersten Generation: Menschen, die dich fordern, unterstützen und das hier mit dir aufbauen.' }
       ],
       processLabel: 'So wirst du Mitglied', processTitle: 'Von der Bewerbung bis zum Vollmitglied.',
       process: [
@@ -870,7 +870,7 @@ window.MBS_CONTENT = {
       faqItems: [
         { q: 'Was kostet es?', a: 'Nichts. Die Mitgliedschaft ist zu 100 % kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir finanzieren uns über Sponsoren und Partner, nicht über die Studierenden.' },
         { q: 'Wie viel Zeit kostet es?', a: 'So viel, wie du gibst. Das Minimum ist, zu ein paar Events im Semester zu kommen. Mitglieder mit einer Rolle wenden meist zwei bis vier Stunden pro Woche auf.' },
-        { q: 'Ich studiere kein wirtschaftsbezogenes Fach. Kann ich trotzdem beitreten?', a: 'Ja. Viele unserer Mitglieder studieren Ingenieurwesen, Jura, Informatik oder etwas ganz anderes und gehen trotzdem in die Wirtschaft. Wichtig ist, dass du es ernst meinst.' },
+        { q: 'Ich studiere kein wirtschaftsbezogenes Fach. Kann ich trotzdem beitreten?', a: 'Ja. Wir wollen Studierende aus Ingenieurwesen, Jura, Informatik und jedem anderen Fach, die in die Wirtschaft wollen. Wichtig ist, dass du es ernst meinst.' },
         { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, und wir würden dich ermutigen. Es gibt keinen Beitrag, auf den du warten musst, und das Netzwerk endet nicht, wenn du die Stadt verlässt.' }
       ]
     },
@@ -902,7 +902,7 @@ window.MBS_CONTENT = {
         { q: 'Was kostet eine Zusammenarbeit?', a: 'Sie entscheiden selbst, was Sie unseren Studierenden anbieten wollen, von Know-how und Ihrer Zeit bis zu finanzieller Unterstützung. Gemeinsam finden wir heraus, was für Sie am besten funktioniert.' }
       ],
       closeH: 'Melden Sie sich.',
-      closeText: 'Einer der oben genannten Gründe, oder Sie haben eines unserer Wirtschaftstalente kennengelernt und möchten es direkt einstellen. Melden Sie sich bei uns, wir antworten innerhalb einer Woche.',
+      closeText: 'Einer der oben genannten Gründe, oder Sie möchten Münchens Wirtschaftstalente einfach früh kennenlernen. Melden Sie sich bei uns, wir antworten innerhalb einer Woche.',
       emailBtn: 'Partnerschaftsteam kontaktieren →'
     },
     team: {
@@ -931,12 +931,12 @@ window.MBS_CONTENT = {
       label: 'FAQ', title: 'Bevor du auftauchst',
       items: [
         { q: 'Zu welcher Hochschule gehört die Munich Business Society?', a: 'Zu keiner, bewusst. Die Munich Business Society ist ein hochschulübergreifender Verein. Studierende jeder Münchner Hochschule treten zu identischen Bedingungen bei. Wir sind keine Fakultätsinitiative, und keine einzelne Schule besitzt uns.' },
-        { q: 'Ich studiere kein wirtschaftsbezogenes Fach. Kann ich trotzdem beitreten?', a: 'Ja. Viele unserer Mitglieder studieren Ingenieurwesen, Jura, Informatik oder etwas ganz anderes und gehen trotzdem in die Wirtschaft. Wichtig ist, dass du es ernst meinst.' },
+        { q: 'Ich studiere kein wirtschaftsbezogenes Fach. Kann ich trotzdem beitreten?', a: 'Ja. Wir wollen Studierende aus Ingenieurwesen, Jura, Informatik und jedem anderen Fach, die in die Wirtschaft wollen. Wichtig ist, dass du es ernst meinst.' },
         { q: 'Ist alles auf Deutsch oder Englisch?', a: 'Beides. Events laufen in der Sprache, die zum Raum und zur:zum Speaker:in passt; schriftliche Kommunikation ist auf Englisch, damit niemand außen vor bleibt.' },
         { q: 'Wie viel Zeit kostet es?', a: 'So viel, wie du gibst. Das Minimum ist, zu ein paar Events im Semester zu kommen. Mitglieder mit einer Rolle wenden meist zwei bis vier Stunden pro Woche auf.' },
         { q: 'Was kostet es?', a: 'Nichts. Die Mitgliedschaft ist zu 100 % kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir finanzieren uns über Sponsoren und Partner, nicht über die Studierenden.' },
         { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, und wir würden dich ermutigen. Es gibt keinen Beitrag, auf den du warten musst, und das Netzwerk endet nicht, wenn du die Stadt verlässt.' },
-        { q: 'Muss ich im ersten Semester sein?', a: 'Nein. Wir haben Bachelor-Studierende im ersten Semester und Master-Studierende, die ihre Thesis abschließen. Genau diese Mischung ist der Punkt.' },
+        { q: 'Muss ich im ersten Semester sein?', a: 'Nein. Ob erstes Bachelor-Semester oder Masterarbeit: Du bist willkommen. Genau diese Mischung ist der Punkt.' },
         { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Melde dich vor dem Event bei uns, und wir sagen dir, wie du dabei sein kannst.' },
         { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, aufzutauchen oder eine Rolle zu übernehmen.' },
         { q: 'Wie werden Unternehmen Teil davon?', a: 'Über die Seite „Für Unternehmen". Wir arbeiten mit Arbeitgebern an Events, Case-Challenges und Projekten, und teilen ihre Stellen mit Mitgliedern.' }
@@ -979,7 +979,7 @@ window.MBS_CONTENT = {
       faqLabel: 'Vor der Bewerbung', faqTitle: 'Die Fragen, die vor der Bewerbung aufkommen.',
       faqItems: [
         { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Melde dich vor dem Event bei uns, und wir sagen dir, wie du dabei sein kannst.' },
-        { q: 'Muss ich im ersten Semester sein?', a: 'Nein. Wir haben Bachelor-Studierende im ersten Semester und Master-Studierende, die ihre Thesis abschließen. Genau diese Mischung ist der Punkt.' },
+        { q: 'Muss ich im ersten Semester sein?', a: 'Nein. Ob erstes Bachelor-Semester oder Masterarbeit: Du bist willkommen. Genau diese Mischung ist der Punkt.' },
         { q: 'Ist alles auf Deutsch oder Englisch?', a: 'Beides. Events laufen in der Sprache, die zum Raum und zur:zum Speaker:in passt; schriftliche Kommunikation ist auf Englisch, damit niemand außen vor bleibt.' },
         { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, aufzutauchen oder eine Rolle zu übernehmen.' }
       ]
