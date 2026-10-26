@@ -402,8 +402,8 @@ window.MBS_CONTENT = {
     universities: MBS_UNIVERSITIES.concat(['Other university in Munich']),
 
     home: {
-      heroLead: "Munich's first cross-university case club. Free for students at every university in the city.",
-      whyIntro: "Munich Business Society is Munich's first cross-university case club, free for students from every university in the city. Apply for membership, or, if you'd like to come to an event first, get in touch with us. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
+      heroLead: 'Case nights, workshops and partner events for students from every Munich university. Always free.',
+      whyIntro: "Whichever university you study at, you can join, and it costs nothing. Apply for membership, or, if you'd like to come to an event first, get in touch with us. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
       seeEvents: "See what's coming up", howJoin: 'How joining works',
       whyLabel: 'Why we exist', whyTitle: 'The first cross-university case club for all of Munich',
       whyP1: "Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, showing one university's talent, not the whole city's. So students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
@@ -760,8 +760,8 @@ window.MBS_CONTENT = {
     universities: MBS_UNIVERSITIES.concat(['Andere Hochschule in München']),
 
     home: {
-      heroLead: 'Münchens erster hochschulübergreifender Case Club. Kostenlos für Studierende jeder Hochschule der Stadt.',
-      whyIntro: 'Die Munich Business Society ist Münchens erster hochschulübergreifender Case Club, kostenlos für Studierende jeder Hochschule der Stadt. Bewirb dich für die Mitgliedschaft, oder melde dich bei uns, wenn du vorher zu einem Event kommen möchtest. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
+      heroLead: 'Case Nights, Workshops und Partner-Events für Studierende jeder Münchner Hochschule. Immer kostenlos.',
+      whyIntro: 'Egal an welcher Hochschule du studierst: Du kannst mitmachen, und es kostet nichts. Bewirb dich für die Mitgliedschaft, oder melde dich bei uns, wenn du vorher zu einem Event kommen möchtest. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
       seeEvents: 'Zu den Terminen', howJoin: 'So läuft die Bewerbung',
       whyLabel: 'Warum es uns gibt', whyTitle: 'Der erste hochschulübergreifende Case Club für ganz München',
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie zeigen die Talente einer Uni, nicht die der ganzen Stadt. Studierende treffen so immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
