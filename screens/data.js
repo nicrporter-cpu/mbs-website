@@ -728,7 +728,7 @@ window.MBS_CONTENT = {
     values: [
       { icon: 'users', title: 'Gemeinschaft', text: 'Wir öffnen einander Türen. Keine Cliquen, kein Preisschild, keine Hochschule über einer anderen.' },
       { icon: 'rocket', title: 'Ambition', text: 'Wir nehmen unsere eigene Entwicklung ernst und erwarten das auch voneinander.' },
-      { icon: 'scale', title: 'Verantwortung', text: 'Du übernimmst, was du dir vornimmst: eine Case Night, ein Projekt, eine Rolle. Niemand rennt dir hinterher, und niemand macht es für dich.' }
+      { icon: 'scale', title: 'Ownership', text: 'Du übernimmst, was du dir vornimmst: eine Case Night, ein Projekt, eine Rolle. Niemand rennt dir hinterher, und niemand macht es für dich.' }
     ],
     formats: [
       { icon: 'target', title: 'Case Night',
