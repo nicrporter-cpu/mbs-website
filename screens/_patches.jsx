@@ -190,11 +190,13 @@ function SocialTile({ item }) {
 function Newsletter({ nl = {} }) {
   const [done, setDone] = React.useState(false);
   const [error, setError] = React.useState(null);
+  const [consentError, setConsentError] = React.useState(null);
   const [submitting, setSubmitting] = React.useState(false);
   const doneRef = React.useRef(null);
   const renderedAtRef = React.useRef(Date.now());
   const id = useUid();
   const hpId = useUid();
+  const consentId = useUid();
 
   React.useEffect(() => { if (done && doneRef.current) doneRef.current.focus(); }, [done]);
 
@@ -202,11 +204,11 @@ function Newsletter({ nl = {} }) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const email = String(data.get('news_email') || '').trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
-      setError(nl.err || 'Please enter a valid email address.');
-      return;
-    }
-    setError(null);
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+    const consentOk = !!data.get('news_consent');
+    setError(emailOk ? null : (nl.err || 'Please enter a valid email address.'));
+    setConsentError(consentOk ? null : (nl.errConsent || 'Please agree to the privacy policy.'));
+    if (!emailOk || !consentOk) return;
     setSubmitting(true);
     data.set('mbs_rendered_at', String(renderedAtRef.current));
     window.MBS_SUBMIT_FORM(data, 'newsletter').then(result => {
@@ -237,6 +239,14 @@ function Newsletter({ nl = {} }) {
           </div>
           <button type="submit" className="mbs-nav-cta mbs-news-btn" disabled={submitting}>{submitting ? (nl.sending || nl.btn) : nl.btn}</button>
           {error && <span id={id + '-err'} role="alert" className="mbs-news-err">{error}</span>}
+          {/* Consent — required, mirrored in worker/src/lib/validate.js. */}
+          <Checkbox id={consentId} name="news_consent" value="yes"
+            onChange={() => setConsentError(null)}
+            aria-invalid={consentError ? 'true' : undefined}
+            aria-describedby={consentError ? consentId + '-err' : undefined}
+            style={{ flexBasis: '100%', alignItems: 'flex-start', fontSize: '12px', lineHeight: 1.5, color: 'var(--mbs-on-navy-50)' }}
+            label={<span>{nl.consent}<a href={R.datenschutz} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>{nl.consentLink}</a>{nl.consentEnd}</span>} />
+          {consentError && <span id={consentId + '-err'} role="alert" className="mbs-news-err">{consentError}</span>}
         </form>
       )}
     </div>

@@ -40,6 +40,8 @@ export function validate(formType, formData) {
   const email = String(formData.get(emailField) || '').trim();
   if (email && !EMAIL_RE.test(email)) errors[emailField] = 'invalid_email';
 
+  if (formType === 'newsletter' && !formData.get('news_consent')) errors.news_consent = 'required';
+
   if (formType === 'join') {
     if (!formData.get('consent')) errors.consent = 'required';
     const cv = formData.get('cv');

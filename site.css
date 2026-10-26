@@ -820,6 +820,7 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
   gap: 10px;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 480px; /* keeps the consent line from pushing the form below the copy */
 }
 .mbs-news-input {
   height: 44px;

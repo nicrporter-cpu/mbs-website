@@ -353,6 +353,8 @@ window.MBS_CONTENT = {
         placeholder: 'Your email', srEmail: 'Your email', btn: 'Keep me posted', sending: 'Sending…',
         done: "You're on the list. We'll be in touch as soon as the next dates are set.",
         err: 'Please enter a valid email address.',
+        consent: "I've read the ", consentLink: 'privacy policy', consentEnd: ' and agree to receive the newsletter. I can unsubscribe at any time.',
+        errConsent: 'Please agree to the privacy policy to sign up.',
         sendError: 'Something went wrong. Please email us directly at munichbusinesssociety@gmail.com instead.'
       },
       copyright: '© 2026 Munich Business Society'
@@ -709,6 +711,8 @@ window.MBS_CONTENT = {
         placeholder: 'Deine E-Mail', srEmail: 'Deine E-Mail', btn: 'Halt mich auf dem Laufenden', sending: 'Wird gesendet…',
         done: 'Du bist auf der Liste. Wir melden uns, sobald die nächsten Termine feststehen.',
         err: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+        consent: 'Ich habe die ', consentLink: 'Datenschutzerklärung', consentEnd: ' gelesen und willige ein, den Newsletter zu erhalten. Die Einwilligung kann ich jederzeit widerrufen.',
+        errConsent: 'Bitte stimme der Datenschutzerklärung zu, um dich anzumelden.',
         sendError: 'Etwas ist schiefgelaufen. Schreib uns stattdessen direkt an munichbusinesssociety@gmail.com.'
       },
       copyright: '© 2026 Munich Business Society'
