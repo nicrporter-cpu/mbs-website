@@ -389,14 +389,8 @@ window.MBS_CONTENT = {
         text: 'A talk from someone worth listening to, on a business topic, a specific skill, or their career path and what work looks like in their industry, with real time for questions after.' },
       { icon: 'bolt', title: 'Skillnight',
         text: 'Two hours on one skill you need to crack a case: structuring a problem, market sizing, Excel, storytelling, the stuff nobody teaches in a lecture hall.' },
-      { icon: 'users', title: 'Networking Nights',
-        text: 'An evening for meeting people across universities. No pitch, just good conversation.' },
-      { icon: 'star', title: 'Community Stammtisch',
-        text: 'A regular, relaxed get-together between Case Nights. No programme, just people who like to come back.' },
-      { icon: 'globe', title: 'Excursions & Company Visits',
-        text: "A visit to a partner company's office, you see how the place actually runs, not just its careers page." },
-      { icon: 'trending', title: 'Alumni Events',
-        text: "Evenings with alumni who'll tell you what the job is actually like." }
+      { icon: 'users', title: 'Networking Nights & Stammtisch',
+        text: 'Evenings for meeting people across universities, plus a relaxed, regular get-together between Case Nights. No pitch, no programme, just good conversation.' }
     ],
     events: [],
     universities: MBS_UNIVERSITIES.concat(['Other university in Munich']),
@@ -409,7 +403,7 @@ window.MBS_CONTENT = {
       whyP1: "Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, showing one university's talent, not the whole city's. So students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
       whyP2: "Munich Business Society exists to close that gap: one free, cross-university case club with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you apply on the same terms, and it never costs anything.",
       pillarsLabel: 'What you get', pillarsTitle: 'What you actually get out of it',
-      formatsLabel: 'What we do', formatsTitle: 'Nine formats, one programme',
+      formatsLabel: 'What we do', formatsTitle: 'Six formats, one programme',
       formatsText: "Case Nights, plus Case Competitions, Events & Workshops with Partners, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free. Not a member yet but want to come along? Get in touch with us.",
       formatsLink: 'See the full programme →',
       studentH: 'Two ways in. Both free', studentText: "Apply for membership: it's free, for students from every Munich university. Up to 50 places until the coming semester, chosen through an application and a short interview. Not a member yet but want to come to an event? Get in touch with us.",
@@ -474,7 +468,7 @@ window.MBS_CONTENT = {
       repBtn: 'Represent your university →'
     },
     whatwedo: {
-      subtitle: 'Nine formats. One semester. All of Munich.',
+      subtitle: 'Six formats. One semester. All of Munich.',
       formatsLabel: 'The formats', formatsTitle: 'Widen your network, grow a skill, or get noticed',
       formatsDesc: 'Each one widens your network, grows a skill or gets you noticed, and all of them are free. Not a member yet but want to come to one? Get in touch with us.',
       projLabel: 'Partner projects', projTitle: 'Sometimes a company gives us a real problem',
@@ -747,14 +741,8 @@ window.MBS_CONTENT = {
         text: 'Ein Impulsvortrag zu einem Wirtschaftsthema, einem konkreten Skill oder zu Karrierewegen und Einblicken in verschiedene Branchen, mit Zeit für echte Fragen danach.' },
       { icon: 'bolt', title: 'Skillnight',
         text: 'Zwei Stunden zu einer Fähigkeit, die du zum Lösen von Cases brauchst: Probleme strukturieren, Market Sizing, Excel, Storytelling, Dinge, die dir kein Seminar beibringt.' },
-      { icon: 'users', title: 'Networking-Abende',
-        text: 'Ein Abend zum Kennenlernen über Hochschulgrenzen hinweg. Kein Pitch, nur gute Gespräche.' },
-      { icon: 'star', title: 'Community-Stammtisch',
-        text: 'Ein lockerer, regelmäßiger Treffpunkt zwischen den Case Nights. Kein Programm, nur Leute, die gerne wiederkommen.' },
-      { icon: 'globe', title: 'Exkursionen & Firmenbesuche',
-        text: 'Ein Besuch im Büro eines Partnerunternehmens. Du siehst, wie der Laden wirklich läuft, nicht nur die Karriereseite.' },
-      { icon: 'trending', title: 'Alumni-Events',
-        text: 'Abende mit Alumni, die dir ehrlich erzählen, wie der Job wirklich ist.' }
+      { icon: 'users', title: 'Networking-Abende & Stammtisch',
+        text: 'Abende zum Kennenlernen über Hochschulgrenzen hinweg, dazu ein lockerer, regelmäßiger Stammtisch zwischen den Case Nights. Kein Pitch, kein Programm, nur gute Gespräche.' }
     ],
     events: [],
     universities: MBS_UNIVERSITIES.concat(['Andere Hochschule in München']),
@@ -767,7 +755,7 @@ window.MBS_CONTENT = {
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie zeigen die Talente einer Uni, nicht die der ganzen Stadt. Studierende treffen so immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
       whyP2: 'Die Munich Business Society schließt genau diese Lücke: ein kostenloser, hochschulübergreifender Case Club mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bewirbst dich zu denselben Bedingungen, und es kostet dich nie etwas.',
       pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du wirklich davon hast',
-      formatsLabel: 'Was wir tun', formatsTitle: 'Neun Formate, ein Programm',
+      formatsLabel: 'Was wir tun', formatsTitle: 'Sechs Formate, ein Programm',
       formatsText: 'Case Nights, dazu Case Competitions, Events & Workshops mit Partnern, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos. Noch kein Mitglied, willst aber dabei sein? Melde dich bei uns.',
       formatsLink: 'Zum ganzen Programm →',
       studentH: 'Zwei Wege rein. Beide kostenlos', studentText: 'Bewirb dich für die Mitgliedschaft: kostenlos, für Studierende jeder Münchner Hochschule. Bis zum kommenden Semester bis zu 50 Plätze, ausgewählt über Bewerbung und ein kurzes Interview. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
@@ -831,7 +819,7 @@ window.MBS_CONTENT = {
       repBtn: 'Vertritt deine Hochschule →'
     },
     whatwedo: {
-      subtitle: 'Neun Formate. Ein Semester. Ganz München.',
+      subtitle: 'Sechs Formate. Ein Semester. Ganz München.',
       formatsLabel: 'Die Formate', formatsTitle: 'Netzwerk erweitern, Fähigkeit aufbauen oder auffallen',
       formatsDesc: 'Jedes erweitert dein Netzwerk, baut eine Fähigkeit auf oder macht dich sichtbar, und alle sind kostenlos. Noch kein Mitglied, willst aber zu einem kommen? Melde dich bei uns.',
       projLabel: 'Partnerprojekte', projTitle: 'Manchmal gibt uns ein Unternehmen ein echtes Problem',
