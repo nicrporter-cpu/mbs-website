@@ -501,11 +501,11 @@ window.MBS_CONTENT = {
       ],
       processLabel: 'How you join', processTitle: 'From application to full member',
       process: [
-        { title: 'Meet us first, if you like', text: 'Not a member yet but want to come to an event first? Get in touch with us. Or apply online straight away.' },
-        { title: 'Screening', text: 'We review every application and the best fits move on.' },
-        { title: 'Interview', text: '20 minutes.' },
-        { title: 'Admission decision', text: "We're currently admitting up to 50 new members until the coming semester." },
-        { title: 'Full member right away', text: 'No fee, and a vote at the next general meeting.' }
+        { title: 'Meet us first, if you like', text: "Want to see what we're like before you apply? Get in touch and come along to an event as a guest. Already sure? Then apply online straight away. The form takes a few minutes: your details, your degree, and a few lines on what you're hoping to get out of Munich Business Society." },
+        { title: 'Screening', text: "We read every application ourselves. What counts is your motivation, what you've already got involved in, your CV if you send one, and what you want to take away from Munich Business Society. Your university and your grades don't come into it. The best fits are invited to an interview." },
+        { title: 'Interview', text: "Twenty minutes, relaxed, to get to know each other. We want to hear about you, your degree and why Munich Business Society, and you can ask us anything about the society. You don't need to prepare a case." },
+        { title: 'Admission decision', text: "After the interviews we decide together and let everyone know, whether it's a yes or a no. We're currently admitting up to 50 new members until the coming semester." },
+        { title: 'Full member right away', text: "Once you're in, you're a full member from day one: every format is open to you, you get to know the other members, and you can take on a role if you want one. No fee, and a vote at the next general meeting." }
       ],
       expectLabel: 'What we expect', expectTitle: 'Show up. Contribute. Behave well',
       expectText: "Show up to a few things a semester. Contribute something at some point, an idea, an evening, a contact, a project. Treat everyone the way you'd want to be treated. One of them might be hiring you in a few years.",
@@ -852,11 +852,11 @@ window.MBS_CONTENT = {
       ],
       processLabel: 'So wirst du Mitglied', processTitle: 'Von der Bewerbung bis zum Vollmitglied',
       process: [
-        { title: 'Erst kennenlernen, wenn du magst', text: 'Noch kein Mitglied, willst aber vorher zu einem Event kommen? Melde dich bei uns. Oder bewirb dich direkt online.' },
-        { title: 'Sichtung', text: 'Wir prüfen jede Bewerbung, die passendsten kommen weiter.' },
-        { title: 'Interview', text: '20 Minuten.' },
-        { title: 'Aufnahmeentscheidung', text: 'Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum kommenden Semester auf.' },
-        { title: 'Vollmitglied ab sofort', text: 'Kostenlos, mit Stimmrecht ab der nächsten Mitgliederversammlung.' }
+        { title: 'Erst kennenlernen, wenn du magst', text: 'Du willst uns erst erleben, bevor du dich bewirbst? Melde dich bei uns und komm als Gast zu einem Event. Du bist dir schon sicher? Dann bewirb dich direkt online. Das Formular dauert ein paar Minuten: deine Daten, dein Studium und ein paar Zeilen dazu, was du dir von der Munich Business Society erhoffst.' },
+        { title: 'Sichtung', text: 'Wir lesen jede Bewerbung selbst. Uns interessieren deine Motivation, dein bisheriges Engagement, dein Lebenslauf, falls du einen mitschickst, und was du aus der Munich Business Society mitnehmen willst. Hochschule und Notenschnitt spielen keine Rolle. Die passendsten Bewerbungen laden wir zum Interview ein.' },
+        { title: 'Interview', text: '20 Minuten, locker, zum gegenseitigen Kennenlernen. Wir wollen mehr über dich, dein Studium und deine Motivation erfahren, und du kannst uns alles über den Verein fragen. Einen Case musst du nicht vorbereiten.' },
+        { title: 'Aufnahmeentscheidung', text: 'Nach den Interviews entscheiden wir gemeinsam und melden uns bei allen, egal ob Zu- oder Absage. Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum kommenden Semester auf.' },
+        { title: 'Vollmitglied ab sofort', text: 'Mit der Zusage bist du ab dem ersten Tag Vollmitglied: Alle Formate stehen dir offen, du lernst die anderen Mitglieder kennen und kannst eine Rolle übernehmen, wenn du willst. Kostenlos, mit Stimmrecht ab der nächsten Mitgliederversammlung.' }
       ],
       expectLabel: 'Was wir erwarten', expectTitle: 'Komm vorbei. Bring dich ein. Geh fair miteinander um',
       expectText: 'Komm zu ein paar Sachen im Semester. Bring irgendwann etwas ein, eine Idee, einen Abend, einen Kontakt, ein Projekt. Geh mit allen so um, wie du selbst behandelt werden willst. Vielleicht stellt dich eine:r von ihnen in ein paar Jahren ein.',
