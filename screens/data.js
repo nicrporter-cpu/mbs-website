@@ -584,7 +584,7 @@ window.MBS_CONTENT = {
         { q: "I'm here for one exchange semester. Is it worth joining?", a: 'Yes, absolutely. It costs nothing, and the network stays with you when you leave the city.' },
         { q: 'Do I need to be in my first year?', a: 'No. Whether you’re in your first bachelor semester or finishing your master’s thesis, you’re welcome. That mix is what makes it work.' },
         { q: 'Can I come to something before I join?', a: "Yes. Get in touch with us before the event and we'll let you know how to come along." },
-        { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of attending regularly or taking on a role.' },
+        { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network and the mailing list, just without the expectation of attending regularly or taking on a role.' },
         { q: 'How do companies get involved?', a: 'Through the For Companies page. We work with employers on events, case challenges and projects, and share their openings with members.' }
       ],
       stillText: 'Still weighing it up? Get in touch and come to an event before you decide.',
@@ -634,7 +634,7 @@ window.MBS_CONTENT = {
         { q: 'Can I come to something before I join?', a: "Yes. Get in touch with us before the event and we'll let you know how to come along." },
         { q: 'Do I need to be in my first year?', a: 'No. Whether you’re in your first bachelor semester or finishing your master’s thesis, you’re welcome. That mix is what makes it work.' },
         { q: 'Is everything in German or English?', a: 'Both. Events run in whichever language suits the room and the speaker; written communication is in English so nobody is left out.' },
-        { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network, the alumni events and the mailing list, just without the expectation of attending regularly or taking on a role.' }
+        { q: "What's the difference between a member and an alum?", a: 'Alumni keep access to the network and the mailing list, just without the expectation of attending regularly or taking on a role.' }
       ]
     },
     contact: {
@@ -935,7 +935,7 @@ window.MBS_CONTENT = {
         { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, unbedingt. Es kostet nichts, und das Netzwerk bleibt, auch wenn du die Stadt verlässt.' },
         { q: 'Muss ich im ersten Semester sein?', a: "Nein. Ob erstes Bachelor-Semester oder Masterarbeit: Du bist willkommen. Genau diese Mischung macht's aus." },
         { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Melde dich vor dem Event bei uns, und wir sagen dir, wie du dabei sein kannst.' },
-        { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, regelmäßig dabei zu sein oder eine Rolle zu übernehmen.' },
+        { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk und zum Verteiler, nur ohne die Erwartung, regelmäßig dabei zu sein oder eine Rolle zu übernehmen.' },
         { q: 'Wie werden Unternehmen Teil davon?', a: 'Über die Seite „Für Unternehmen". Wir arbeiten mit Arbeitgebern an Events, Case-Challenges und Projekten, und teilen ihre Stellen mit Mitgliedern.' }
       ],
       stillText: 'Noch am Abwägen? Melde dich bei uns und komm zu einem Event, bevor du entscheidest.',
@@ -983,7 +983,7 @@ window.MBS_CONTENT = {
         { q: 'Kann ich zu etwas kommen, bevor ich beitrete?', a: 'Ja. Melde dich vor dem Event bei uns, und wir sagen dir, wie du dabei sein kannst.' },
         { q: 'Muss ich im ersten Semester sein?', a: "Nein. Ob erstes Bachelor-Semester oder Masterarbeit: Du bist willkommen. Genau diese Mischung macht's aus." },
         { q: 'Ist alles auf Deutsch oder Englisch?', a: 'Beides. Events laufen in der Sprache, die zum Raum und zur:zum Speaker:in passt; schriftliche Kommunikation ist auf Englisch, damit niemand außen vor bleibt.' },
-        { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk, den Alumni-Events und dem Verteiler, nur ohne die Erwartung, regelmäßig dabei zu sein oder eine Rolle zu übernehmen.' }
+        { q: 'Was ist der Unterschied zwischen Mitglied und Alumnus?', a: 'Alumni behalten Zugang zum Netzwerk und zum Verteiler, nur ohne die Erwartung, regelmäßig dabei zu sein oder eine Rolle zu übernehmen.' }
       ]
     },
     contact: {
