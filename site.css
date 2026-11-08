@@ -1161,9 +1161,5 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
   .mbs-case-arrow { margin: 0 0 4px 2px; transform: rotate(90deg); }
 }
 
-/* Text link in a card ("Interesse vormerken →"). */
-.mbs-text-link { color: var(--mbs-link); text-decoration: none; }
-.mbs-text-link:hover { color: var(--mbs-link-hover); text-decoration: underline; }
-
 /* "Notify me" jumps to the footer signup; leave room under the sticky header. */
 #newsletter, #how-to-join { scroll-margin-top: 96px; }

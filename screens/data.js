@@ -732,9 +732,8 @@ window.MBS_CONTENT = {
     formats: [
       { icon: 'target', title: 'Case Night',
         text: 'Team-Case, 90–120 Minuten mit Pitch & Feedback. Das Herzstück von dem, was wir tun.' },
-      { icon: 'trophy', title: 'Case Competition', status: 'In Planung',
-        text: 'Unser eigener hochschulübergreifender Wettbewerb: Vorrunde in Teams, Finale vor einer Jury aus der Praxis. Wer bei den Case Nights dranbleibt, kann sich außerdem für unser Competition Team bewerben und uns bei externen Wettbewerben vertreten.',
-        link: 'Interesse vormerken →', linkHref: '#newsletter' },
+      { icon: 'trophy', title: 'Case Competition',
+        text: 'Unser eigener hochschulübergreifender Wettbewerb: Vorrunde in Teams, Finale vor einer Jury aus der Praxis. Wer bei den Case Nights dranbleibt, kann sich außerdem für unser Competition Team bewerben und uns bei externen Wettbewerben vertreten.' },
       { icon: 'building', title: 'Events & Workshops mit Partnern',
         text: 'Ein Partnerunternehmen bringt einen echten Case mit oder leitet einen Workshop aus dem eigenen Geschäft und zeigt dir, wie dort wirklich gearbeitet wird.' },
       { icon: 'mic', title: 'Guest-Speaker',

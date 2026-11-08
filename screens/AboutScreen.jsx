@@ -45,10 +45,8 @@ function AboutScreen({ C, openEvent }) {
           {C.formats.map(f => (
             <Card key={f.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={f.icon} size="24px" /></div>
-              {f.status && <Badge variant="goldSoft" style={{ marginBottom: '10px' }}>{f.status}</Badge>}
               <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{f.title}</h3>
               <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{f.text}</p>
-              {f.link && <a href={f.linkHref} className="mbs-text-link" style={{ display: 'inline-block', marginTop: '14px', fontSize: '14px', fontWeight: 600 }}>{f.link}</a>}
             </Card>
           ))}
         </div>
