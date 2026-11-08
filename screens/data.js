@@ -756,11 +756,9 @@ window.MBS_CONTENT = {
       whyP2: 'Die Munich Business Society schließt genau diese Lücke: ein kostenloser, hochschulübergreifender Case Club mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bewirbst dich zu denselben Bedingungen, und es kostet dich nie etwas.',
       pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du davon hast',
       caseTitle: 'Was ist ein Case?',
-      caseText: 'Ein Case ist eine echte oder realitätsnahe Fragestellung aus einem Unternehmen. Du arbeitest im Team daran, entwickelst eine Lösung und stellst sie am Ende kurz vor. Vorwissen brauchst du dafür nicht, nur Neugier und Lust, gemeinsam nachzudenken.',
+      caseText: 'Ein Case ist eine echte oder realitätsnahe Fragestellung aus einem Unternehmen. Du arbeitest im Team daran, entwickelst eine Lösung und stellst sie am Ende kurz vor. Vorwissen brauchst du dafür nicht, nur Neugier, analytisches Verständnis und Lust, gemeinsam nachzudenken.',
       caseStepsLabel: 'Ablauf eines Case',
       caseSteps: ['Problem verstehen', 'Strukturieren', 'Analysieren', 'Empfehlung pitchen'],
-      caseExampleLabel: 'Ein Beispiel:',
-      caseExample: 'Ein Münchner Café macht morgens viel Umsatz, ist ab 14 Uhr aber fast leer. Welche drei Maßnahmen bringen den Nachmittag in Schwung, ohne zusätzliches Personal einzustellen?',
       formatsLabel: 'Was wir tun', formatsTitle: 'Sechs Formate – ein Ort',
       formatsText: 'Case Nights, dazu Case Competitions, Events & Workshops mit Partnern, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos. Noch kein Mitglied, willst aber dabei sein? Melde dich bei uns.',
       formatsLink: 'Zum ganzen Programm →',
@@ -874,7 +872,7 @@ window.MBS_CONTENT = {
         { q: 'Wie viel Zeit kostet es?', a: 'So viel, wie du gibst. Das Minimum ist, zu ein paar Events im Semester zu kommen. Mitglieder mit einer Rolle wenden meist zwei bis vier Stunden pro Woche auf.' },
         { q: 'Ich studiere kein wirtschaftsbezogenes Fach. Kann ich trotzdem beitreten?', a: 'Ja. Wir wollen Studierende aus Ingenieurwesen, Jura, Informatik und jedem anderen Fach, die in die Wirtschaft wollen. Wichtig ist, dass du es ernst meinst.' },
         { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, unbedingt. Es kostet nichts, und das Netzwerk bleibt, auch wenn du die Stadt verlässt.' },
-        { q: 'Was ist ein Case?', a: 'Ein Case ist eine echte oder realitätsnahe Fragestellung aus einem Unternehmen. Du arbeitest im Team daran, entwickelst eine Lösung und stellst sie am Ende kurz vor. Vorwissen brauchst du dafür nicht, nur Neugier und Lust, gemeinsam nachzudenken.' }
+        { q: 'Was ist ein Case?', a: 'Ein Case ist eine echte oder realitätsnahe Fragestellung aus einem Unternehmen. Du arbeitest im Team daran, entwickelst eine Lösung und stellst sie am Ende kurz vor. Vorwissen brauchst du dafür nicht, nur Neugier, analytisches Verständnis und Lust, gemeinsam nachzudenken.' }
       ]
     },
     companies: {
@@ -893,7 +891,7 @@ window.MBS_CONTENT = {
         { icon: 'mic', title: 'Speaker Events', text: 'Ihre Expertise, unser Publikum. Sie gestalten gemeinsam mit uns einen Speaker-Abend, eine Skillnight oder einen Unternehmensabend, und erreichen damit engagierte Studierende aus ganz München, nicht nur von einer einzelnen Hochschule.' },
         { icon: 'trophy', title: 'Case Events', text: 'Studierende lösen in Teams eine echte Fragestellung aus Ihrem Unternehmen und präsentieren das Ergebnis vor Ihrer Führung. Sie erleben, wie jemand denkt, strukturiert und präsentiert, lange bevor das Bewerbungsgespräch beginnt.' },
         { icon: 'briefcase', title: 'Partnerprojekte', text: 'Ein definiertes Stück Arbeit mit einem kleinen Mitgliederteam und einem dokumentierten Ergebnis.' },
-        { icon: 'star', title: 'Insight Events', text: 'Sie geben unseren Studierenden Einblicke in Ihren Arbeitsalltag, etwa bei einem Unternehmensbesuch oder Workshop. Dazu kommen Sichtbarkeit auf unserer Website und im Newsletter und ein direkter Draht zu unseren Mitgliedern für offene Stellen.' }
+        { icon: 'star', title: 'Insight Events', text: 'Sie geben unseren Studierenden Einblicke in Ihren Arbeitsalltag. Dazu kommen Sichtbarkeit auf unserer Website und im Newsletter und ein direkter Draht zu unseren Mitgliedern für offene Stellen.' }
       ],
       partnersLabel: 'Gründungspartner', partnersTitle: 'Werden Sie einer unserer ersten Partner',
       partnersDesc: 'Wir wählen gerade unsere Gründungspartner aus. Sie gestalten unsere ersten Partner-Events und Workshops mit uns, statt sich in ein fertiges Programm einzureihen.',
@@ -961,11 +959,11 @@ window.MBS_CONTENT = {
       f: { firstname: 'Vorname', lastname: 'Nachname', email: 'E-Mail-Adresse', university: 'Hochschule', level: 'Studienniveau',
         studyprogram: 'Studiengang', language: 'Bevorzugte Sprache', motivation: 'Was erhoffst du dir von der Munich Business Society?',
         interests: 'Fachliche Interessen, die du gerne im Club sehen würdest', cv: 'Lebenslauf', enrollment: 'Immatrikulationsbescheinigung' },
-      ph: { firstname: 'Dein Vorname', lastname: 'Dein Nachname', email: 'du@beispiel.de',
+      ph: { firstname: 'Dein Vorname', lastname: 'Dein Nachname', email: 'Deine E-Mail-Adresse',
         university: 'Hochschule wählen', level: 'Niveau wählen',
         studyprogram: 'Studiengang wählen', language: 'Sprache wählen',
         motivation: 'Ein, zwei Zeilen, Case Nights, eine Rolle, einfach neugierig…',
-        interests: 'z. B. Consulting, Finance, Marketing, HR, M&A …' },
+        interests: 'Deine Interessen' },
       help: { cv: 'Optional, PDF oder Word, ein bis zwei Seiten.',
         enrollment: 'Optional, damit wir bestätigen können, dass du aktuell eingeschrieben bist.' },
       levels: ['Bachelor', 'Master', 'MBA', 'Promotion', 'Auslandssemester', 'Urlaubssemester', 'Sonstiges'],
@@ -1002,7 +1000,7 @@ window.MBS_CONTENT = {
       findLabel: 'Wo du uns findest', findText: 'Wir treffen uns in ganz München statt auf einem Campus. Locations stehen bei jedem Event.',
       follow: 'Folgen: ',
       f: { firstname: 'Vorname', lastname: 'Nachname', email: 'E-Mail', role: 'Ich bin…', message: 'Deine Nachricht' },
-      ph: { firstname: 'Dein Vorname', lastname: 'Dein Nachname', email: 'du@beispiel.de', message: 'Was beschäftigt dich?' },
+      ph: { firstname: 'Dein Vorname', lastname: 'Dein Nachname', email: 'Deine E-Mail-Adresse', message: 'Was beschäftigt dich?' },
       roles: [ { v: 'student', label: 'Studierende:r' }, { v: 'company', label: 'Unternehmen' }, { v: 'founder', label: 'Unternehmer:in' }, { v: 'other', label: 'Sonstiges' } ],
       send: 'Absenden →', direct: 'Oder schreib uns direkt an munichbusinesssociety@gmail.com.',
       errFirstname: 'Bitte gib deinen Vornamen an.', errLastname: 'Bitte gib deinen Nachnamen an.', errEmail: 'Diese E-Mail-Adresse sieht nicht vollständig aus. Bitte prüf sie.', errMsg: 'Bitte gib eine Nachricht ein.',

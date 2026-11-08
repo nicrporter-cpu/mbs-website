@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=5fc92da04e">
-<link rel="stylesheet" href="/site.css?v=5fc92da04e">
+<link rel="stylesheet" href="/design-system/styles.css?v=3f09ce015a">
+<link rel="stylesheet" href="/site.css?v=3f09ce015a">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=5fc92da04e"></script>
-<script src="/screens/data.js?v=5fc92da04e"></script>
-<script src="/site.js?v=5fc92da04e"></script>
+<script src="/design-system/_ds_bundle.js?v=3f09ce015a"></script>
+<script src="/screens/data.js?v=3f09ce015a"></script>
+<script src="/site.js?v=3f09ce015a"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -1070,7 +1070,7 @@ function HomeScreen({ C }) {
           <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
             <SectionHeading title={H.caseTitle} />
             <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '24px' }}>{H.caseText}</p>
-            <ol className="mbs-case-steps" aria-label={H.caseStepsLabel}>
+            <ol className="mbs-case-steps" aria-label={H.caseStepsLabel} style={{ marginBottom: 0 }}>
               {H.caseSteps.map((step, i) => (
                 <li key={step}>
                   {i > 0 && <span className="mbs-case-arrow" aria-hidden="true">→</span>}
@@ -1078,10 +1078,6 @@ function HomeScreen({ C }) {
                 </li>
               ))}
             </ol>
-            <div style={{ padding: '28px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
-              <p style={{ fontSize: '14px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{H.caseExampleLabel}</p>
-              <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{H.caseExample}</p>
-            </div>
           </div>
         </Section>
       )}
