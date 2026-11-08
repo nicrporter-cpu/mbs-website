@@ -815,13 +815,21 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
   background: var(--mbs-on-navy-fill);
   border: 1px solid var(--mbs-on-navy-border);
 }
+/* Desktop: email and button share the first row (email takes the rest, button
+   is as wide as its label), consent and errors run full width below. The DOM
+   order is email → consent → button; grid placement lifts the button into
+   row one, so tab order still follows the mobile stack. */
 .mbs-news-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 10px;
-  flex-wrap: wrap;
   align-items: center;
-  max-width: 480px; /* keeps the consent line from pushing the form below the copy */
+  flex: 1 1 400px;
+  max-width: 520px; /* keeps the consent line from pushing the form below the copy */
 }
+.mbs-news-form > * { grid-column: 1 / -1; }
+.mbs-news-form > .mbs-news-input { grid-column: 1; grid-row: 1; }
+.mbs-news-form > .mbs-news-btn { grid-column: 2; grid-row: 1; white-space: nowrap; margin-left: 0; }
 .mbs-news-input {
   height: 44px;
   min-width: 220px;
@@ -847,7 +855,8 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
 }
 @media (max-width: 680px) {
   .mbs-footer-news { flex-direction: column; align-items: stretch; }
-  .mbs-news-form { flex-direction: column; align-items: stretch; }
+  /* Mobile: plain DOM order — email, consent, button — each full width. */
+  .mbs-news-form { display: flex; flex-direction: column; align-items: stretch; flex: none; max-width: none; }
   .mbs-news-input { min-width: 0; }
   .mbs-news-btn { justify-content: center; }
 }
@@ -1131,6 +1140,30 @@ button.mbs-calendar-cell.has-event:hover { background: var(--mbs-gold-soft); }
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* ── "Was ist ein Case?" step line (home) ─────────────────────────────────── */
+.mbs-case-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mbs-navy);
+}
+.mbs-case-steps li { display: flex; align-items: center; }
+.mbs-case-arrow { color: var(--mbs-gold-text); margin: 0 12px; }
+@media (max-width: 680px) {
+  .mbs-case-steps { flex-direction: column; gap: 4px; }
+  .mbs-case-steps li { flex-direction: column; align-items: flex-start; }
+  .mbs-case-arrow { margin: 0 0 4px 2px; transform: rotate(90deg); }
+}
+
+/* Text link in a card ("Interesse vormerken →"). */
+.mbs-text-link { color: var(--mbs-link); text-decoration: none; }
+.mbs-text-link:hover { color: var(--mbs-link-hover); text-decoration: underline; }
 
 /* "Notify me" jumps to the footer signup; leave room under the sticky header. */
 #newsletter, #how-to-join { scroll-margin-top: 96px; }

@@ -57,6 +57,29 @@ function HomeScreen({ C }) {
         </div>
       </Section>
 
+      {/* What is a case? — short explainer ahead of the formats. Only renders
+          for a language whose copy carries it (German for now). */}
+      {H.caseTitle && (
+        <Section>
+          <div data-reveal style={{ maxWidth: 'var(--mbs-prose-max)' }}>
+            <SectionHeading title={H.caseTitle} />
+            <p style={{ fontSize: '15px', lineHeight: 1.8, marginBottom: '24px' }}>{H.caseText}</p>
+            <ol className="mbs-case-steps" aria-label={H.caseStepsLabel}>
+              {H.caseSteps.map((step, i) => (
+                <li key={step}>
+                  {i > 0 && <span className="mbs-case-arrow" aria-hidden="true">→</span>}
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+            <div style={{ padding: '28px', borderRadius: 'var(--mbs-r-lg)', background: 'var(--mbs-gold-dim)', border: '1px solid var(--mbs-gold-border)' }}>
+              <p style={{ fontSize: '14px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{H.caseExampleLabel}</p>
+              <p style={{ fontSize: '15px', lineHeight: 1.8, margin: 0 }}>{H.caseExample}</p>
+            </div>
+          </div>
+        </Section>
+      )}
+
       {/* Formats teaser */}
       <Section>
         <div className="mbs-split">

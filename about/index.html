@@ -7,8 +7,8 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="description" content="Munich's first cross-university case club.">
-<link rel="stylesheet" href="/design-system/styles.css?v=1ce81ece62">
-<link rel="stylesheet" href="/site.css?v=1ce81ece62">
+<link rel="stylesheet" href="/design-system/styles.css?v=5fc92da04e">
+<link rel="stylesheet" href="/site.css?v=5fc92da04e">
 <style>html,body{margin:0}body{background:var(--mbs-white)}#root{min-height:100vh}</style>
 </head>
 <body>
@@ -17,9 +17,9 @@
 <script src="/vendor/react.development.js"></script>
 <script src="/vendor/react-dom.development.js"></script>
 <script src="/vendor/babel.min.js"></script>
-<script src="/design-system/_ds_bundle.js?v=1ce81ece62"></script>
-<script src="/screens/data.js?v=1ce81ece62"></script>
-<script src="/site.js?v=1ce81ece62"></script>
+<script src="/design-system/_ds_bundle.js?v=5fc92da04e"></script>
+<script src="/screens/data.js?v=5fc92da04e"></script>
+<script src="/site.js?v=5fc92da04e"></script>
 <script type="text/babel" data-presets="react">
 /* MBS site patches — loaded ahead of every screen, patches the design system in place.
  *
@@ -260,9 +260,11 @@ function Newsletter({ nl = {} }) {
             <label htmlFor={hpId}>Leave this field empty</label>
             <input id={hpId} type="text" name="mbs_hp_field" tabIndex={-1} autoComplete="off" />
           </div>
-          <button type="submit" className="mbs-nav-cta mbs-news-btn" disabled={submitting}>{submitting ? (nl.sending || nl.btn) : nl.btn}</button>
           {error && <span id={id + '-err'} role="alert" className="mbs-news-err">{error}</span>}
-          {/* Consent — required, mirrored in worker/src/lib/validate.js. */}
+          {/* Consent — required, mirrored in worker/src/lib/validate.js.
+              DOM order is email → consent → button, so tab order and screen
+              readers match the mobile stack; on desktop site.css lifts the
+              button into the email row with grid placement. */}
           <Checkbox id={consentId} name="news_consent" value="yes"
             onChange={() => setConsentError(null)}
             aria-invalid={consentError ? 'true' : undefined}
@@ -270,6 +272,7 @@ function Newsletter({ nl = {} }) {
             style={{ flexBasis: '100%', alignItems: 'flex-start', fontSize: '12px', lineHeight: 1.5, color: 'var(--mbs-on-navy-50)' }}
             label={<span>{nl.consent}<a href={R.datenschutz} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>{nl.consentLink}</a>{nl.consentEnd}</span>} />
           {consentError && <span id={consentId + '-err'} role="alert" className="mbs-news-err">{consentError}</span>}
+          <button type="submit" className="mbs-nav-cta mbs-news-btn" disabled={submitting}>{submitting ? (nl.sending || nl.btn) : nl.btn}</button>
         </form>
       )}
     </div>
@@ -1048,8 +1051,10 @@ function AboutScreen({ C, openEvent }) {
           {C.formats.map(f => (
             <Card key={f.title} padding="28px">
               <div style={{ color: 'var(--mbs-gold-text)', marginBottom: '14px', lineHeight: 1 }}><Icon name={f.icon} size="24px" /></div>
+              {f.status && <Badge variant="goldSoft" style={{ marginBottom: '10px' }}>{f.status}</Badge>}
               <h3 style={{ fontFamily: 'var(--mbs-font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--mbs-navy)', margin: '0 0 8px' }}>{f.title}</h3>
               <p style={{ fontSize: '14px', color: 'var(--mbs-gray)', lineHeight: 1.7, margin: 0 }}>{f.text}</p>
+              {f.link && <a href={f.linkHref} className="mbs-text-link" style={{ display: 'inline-block', marginTop: '14px', fontSize: '14px', fontWeight: 600 }}>{f.link}</a>}
             </Card>
           ))}
         </div>

@@ -732,8 +732,9 @@ window.MBS_CONTENT = {
     formats: [
       { icon: 'target', title: 'Case Night',
         text: 'Team-Case, 90–120 Minuten mit Pitch & Feedback. Das Herzstück von dem, was wir tun.' },
-      { icon: 'trophy', title: 'Case Competition',
-        text: 'Mehrstufiger Wettbewerb mit Finale und Jury, ein- bis zweimal pro Semester, für Mitglieder, die es ernst meinen.' },
+      { icon: 'trophy', title: 'Case Competition', status: 'In Planung',
+        text: 'Unser eigener hochschulübergreifender Wettbewerb: Vorrunde in Teams, Finale vor einer Jury aus der Praxis. Wer bei den Case Nights dranbleibt, kann sich außerdem für unser Competition Team bewerben und uns bei externen Wettbewerben vertreten.',
+        link: 'Interesse vormerken →', linkHref: '#newsletter' },
       { icon: 'building', title: 'Events & Workshops mit Partnern',
         text: 'Ein Partnerunternehmen bringt einen echten Case mit oder leitet einen Workshop aus dem eigenen Geschäft und zeigt dir, wie dort wirklich gearbeitet wird.' },
       { icon: 'mic', title: 'Guest-Speaker',
@@ -748,13 +749,19 @@ window.MBS_CONTENT = {
 
     home: {
       heroLead: 'Case Nights, Workshops und Partner-Events für Studierende jeder Münchner Hochschule. Immer kostenlos.',
-      whyIntro: 'Egal an welcher Hochschule du studierst: Du kannst mitmachen, und es kostet nichts. Bewirb dich für die Mitgliedschaft, oder melde dich bei uns, wenn du vorher zu einem Event kommen möchtest. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der Entscheidung, in welche Stadt man zieht.',
+      whyIntro: 'Egal an welcher Hochschule du studierst: Du kannst mitmachen, und es kostet nichts. Bewirb dich für die Mitgliedschaft, oder melde dich bei uns, wenn du vorher zu einem Event kommen möchtest. Wir glauben: Wer einen Case knacken kann, kann fast jedes Problem strukturieren, ob im Bewerbungsgespräch, im ersten Job oder bei der nächsten großen Entscheidung.',
       seeEvents: 'Zu den Terminen', howJoin: 'So läuft die Bewerbung',
       whyLabel: 'Warum es uns gibt', whyTitle: 'Der erste hochschulübergreifende Case Club für ganz München',
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie zeigen die Talente einer Uni, nicht die der ganzen Stadt. Studierende treffen so immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
       whyP2: 'Die Munich Business Society schließt genau diese Lücke: ein kostenloser, hochschulübergreifender Case Club mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bewirbst dich zu denselben Bedingungen, und es kostet dich nie etwas.',
-      pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du wirklich davon hast',
-      formatsLabel: 'Was wir tun', formatsTitle: 'Sechs Formate, ein Programm',
+      pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du davon hast',
+      caseTitle: 'Was ist ein Case?',
+      caseText: 'Ein Case ist eine echte oder realitätsnahe Fragestellung aus einem Unternehmen. Du arbeitest im Team daran, entwickelst eine Lösung und stellst sie am Ende kurz vor. Vorwissen brauchst du dafür nicht, nur Neugier und Lust, gemeinsam nachzudenken.',
+      caseStepsLabel: 'Ablauf eines Case',
+      caseSteps: ['Problem verstehen', 'Strukturieren', 'Analysieren', 'Empfehlung pitchen'],
+      caseExampleLabel: 'Ein Beispiel:',
+      caseExample: 'Ein Münchner Café macht morgens viel Umsatz, ist ab 14 Uhr aber fast leer. Welche drei Maßnahmen bringen den Nachmittag in Schwung, ohne zusätzliches Personal einzustellen?',
+      formatsLabel: 'Was wir tun', formatsTitle: 'Sechs Formate – ein Ort',
       formatsText: 'Case Nights, dazu Case Competitions, Events & Workshops mit Partnern, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos. Noch kein Mitglied, willst aber dabei sein? Melde dich bei uns.',
       formatsLink: 'Zum ganzen Programm →',
       studentH: 'Zwei Wege rein. Beide kostenlos', studentText: 'Bewirb dich für die Mitgliedschaft: kostenlos, für Studierende jeder Münchner Hochschule. Bis zum kommenden Semester bis zu 50 Plätze, ausgewählt über Bewerbung und ein kurzes Interview. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
@@ -766,9 +773,9 @@ window.MBS_CONTENT = {
       subtitle: 'Ein Case Club für ganz München: studentisch geführt, kostenlos, jeder Campus.',
       whoLabel: 'Wer wir sind', whoTitle: 'Ein Case Club für ganz München',
       whoDesc: 'Die Munich Business Society ist ein studentisch geführter Case Club, der wirtschaftlich interessierte Studierende über jede Münchner Hochschule hinweg verbindet. Gegründet von Studierenden, die immer wieder auf dasselbe Problem stießen: Es gab keinen Case Club, der alle Münchner Studierenden erreichte statt nur die einer einzelnen Hochschule.',
-      storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Verein gebaut, dem wir beitreten wollten',
+      storyLabel: 'Unsere Geschichte', storyTitle: 'Wir haben den Club gegründet, den wir selbst gesucht haben',
       storyP1: 'Die Munich Business Society begann mit drei Studierenden, Nicholas, Martijn und Lennart, und einer einfachen Beobachtung. München hat Studierende, verteilt auf viele Hochschulen, doch jede Hochschule hat ihre eigenen Initiativen, die nur einzelne Themenfelder abdecken, und fast keine spricht mit der anderen. Gute Case- und Networking-Formate gibt es, aber sie kosten meist Geld oder filtern früh aus.',
-      storyP2: 'Also bauten wir das, dem wir beitreten wollten: einen kostenlosen, hochschulübergreifenden Club ohne Heim-Campus. Bewerben kann sich jede:r in München zu denselben Bedingungen, ob Wirtschaft, Ökonomie, Management oder ein ganz anderes Fach mit dem Ziel Wirtschaft.',
+      storyP2: 'Also haben wir ihn selbst gegründet: einen kostenlosen, hochschulübergreifenden Club ohne Heim-Campus. Bewerben kann sich jede:r in München zu denselben Bedingungen, ob Wirtschaft, Ökonomie, Management oder ein ganz anderes Fach mit dem Ziel Wirtschaft.',
       diffLabel: 'Was uns unterscheidet', diffTitle: 'Hochschulübergreifend by design, nicht als Ausnahme',
       different: [
         { icon: 'globe', title: 'Kein Ableger einer Uni', text: 'Die meisten studentischen Business-Clubs sind der Ableger einer Hochschule. Wir sind ein Club für alle Hochschulen.' },
@@ -832,7 +839,7 @@ window.MBS_CONTENT = {
       recapText: 'Sobald es losgeht, teilen wir Highlights auf Instagram. Folge uns, um auf dem Laufenden zu bleiben.'
     },
     membership: {
-      subtitle: 'Kostenlos. Jeder Campus. Bis zu 50 neue Mitglieder bis zum kommenden Semester, ausgewählt über Bewerbung und ein 20-minütiges Interview.',
+      subtitle: 'Kostenlos. Jeder Campus. Die Mitglieder werden über eine Bewerbung und ein kurzes Gespräch ausgewählt.',
       whoLabel: 'Wer beitreten kann', whoTitle: 'Bewerben kannst du dich von jeder Münchner Hochschule',
       whoDesc: 'Wenn du in München studierst, kannst du dich bewerben, und die Mitgliedschaft ist kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir filtern nicht nach Hochschule, nach Notenschnitt oder danach, ob „Business" im Titel deines Studiengangs steht. Wir suchen Talent, Neugier und Engagement.',
       canJoin: [
@@ -866,7 +873,8 @@ window.MBS_CONTENT = {
         { q: 'Was kostet es?', a: 'Nichts. Die Mitgliedschaft ist zu 100 % kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir finanzieren uns über Sponsoren und Partner, nicht über die Studierenden.' },
         { q: 'Wie viel Zeit kostet es?', a: 'So viel, wie du gibst. Das Minimum ist, zu ein paar Events im Semester zu kommen. Mitglieder mit einer Rolle wenden meist zwei bis vier Stunden pro Woche auf.' },
         { q: 'Ich studiere kein wirtschaftsbezogenes Fach. Kann ich trotzdem beitreten?', a: 'Ja. Wir wollen Studierende aus Ingenieurwesen, Jura, Informatik und jedem anderen Fach, die in die Wirtschaft wollen. Wichtig ist, dass du es ernst meinst.' },
-        { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, unbedingt. Es kostet nichts, und das Netzwerk bleibt, auch wenn du die Stadt verlässt.' }
+        { q: 'Ich bin für ein Auslandssemester hier. Lohnt sich der Beitritt?', a: 'Ja, unbedingt. Es kostet nichts, und das Netzwerk bleibt, auch wenn du die Stadt verlässt.' },
+        { q: 'Was ist ein Case?', a: 'Ein Case ist eine echte oder realitätsnahe Fragestellung aus einem Unternehmen. Du arbeitest im Team daran, entwickelst eine Lösung und stellst sie am Ende kurz vor. Vorwissen brauchst du dafür nicht, nur Neugier und Lust, gemeinsam nachzudenken.' }
       ]
     },
     companies: {
@@ -904,7 +912,7 @@ window.MBS_CONTENT = {
       subtitle: 'Komplett von Studierenden gebaut und geführt, neben dem Studium.',
       whoTitle: 'Gründerteam und aktueller Vorstand',
       whoDesc: 'Der Vorstand führt den Verein, sechs Teams machen die Arbeit. Jedes Team steht Mitgliedern offen, die mitgestalten wollen.',
-      ctaH: 'Lust, das mitzubauen?', ctaText: 'Bewirb dich für die Mitgliedschaft und schreib in deine Bewerbung, in welchem Team du mitmachen möchtest.',
+      ctaH: 'Lust, mitzumachen?', ctaText: 'Bewirb dich für die Mitgliedschaft und schreib in deine Bewerbung, in welchem Team du mitmachen möchtest.',
       boardTitle: 'Der Vorstand',
       board: [
         { name: 'Nicholas Porter', role: '1. Vorsitzender', initials: 'NP', description: 'Programm & Education, External Affairs', photoSrc: '/assets/team-nicholas-porter.jpg' },

@@ -237,9 +237,11 @@ function Newsletter({ nl = {} }) {
             <label htmlFor={hpId}>Leave this field empty</label>
             <input id={hpId} type="text" name="mbs_hp_field" tabIndex={-1} autoComplete="off" />
           </div>
-          <button type="submit" className="mbs-nav-cta mbs-news-btn" disabled={submitting}>{submitting ? (nl.sending || nl.btn) : nl.btn}</button>
           {error && <span id={id + '-err'} role="alert" className="mbs-news-err">{error}</span>}
-          {/* Consent — required, mirrored in worker/src/lib/validate.js. */}
+          {/* Consent — required, mirrored in worker/src/lib/validate.js.
+              DOM order is email → consent → button, so tab order and screen
+              readers match the mobile stack; on desktop site.css lifts the
+              button into the email row with grid placement. */}
           <Checkbox id={consentId} name="news_consent" value="yes"
             onChange={() => setConsentError(null)}
             aria-invalid={consentError ? 'true' : undefined}
@@ -247,6 +249,7 @@ function Newsletter({ nl = {} }) {
             style={{ flexBasis: '100%', alignItems: 'flex-start', fontSize: '12px', lineHeight: 1.5, color: 'var(--mbs-on-navy-50)' }}
             label={<span>{nl.consent}<a href={R.datenschutz} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>{nl.consentLink}</a>{nl.consentEnd}</span>} />
           {consentError && <span id={consentId + '-err'} role="alert" className="mbs-news-err">{consentError}</span>}
+          <button type="submit" className="mbs-nav-cta mbs-news-btn" disabled={submitting}>{submitting ? (nl.sending || nl.btn) : nl.btn}</button>
         </form>
       )}
     </div>
