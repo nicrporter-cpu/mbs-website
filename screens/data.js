@@ -348,8 +348,8 @@ window.MBS_CONTENT = {
           { label: 'Imprint', to: 'impressum' }, { label: 'Privacy policy', to: 'datenschutz' } ] }
       ],
       newsletter: {
-        h: "We'll email you when the first event is set",
-        body: 'One short email as soon as the first date is confirmed, then news on events and application phases. Unsubscribe in one click.',
+        h: "We'll email you when the next event is set",
+        body: 'One short email as soon as the next date is confirmed, so you never miss an event. Plus news on application phases. Unsubscribe in one click.',
         placeholder: 'Your email', srEmail: 'Your email', btn: 'Keep me posted', sending: 'Sending…',
         done: "You're on the list. We'll be in touch as soon as the next dates are set.",
         err: 'Please enter a valid email address.',
@@ -403,10 +403,14 @@ window.MBS_CONTENT = {
       whyP1: "Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, showing one university's talent, not the whole city's. So students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
       whyP2: "Munich Business Society exists to close that gap: one free, cross-university case club with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you apply on the same terms, and it never costs anything.",
       pillarsLabel: 'What you get', pillarsTitle: 'What you actually get out of it',
+      caseTitle: 'What is a case?',
+      caseText: "A case is a real or realistic question from a company. You work on it as a team, develop a solution and present it briefly at the end. You don't need any prior knowledge, just curiosity, analytical thinking and an appetite for working through problems together.",
+      caseStepsLabel: 'How a case works',
+      caseSteps: ['Understand the problem', 'Structure', 'Analyse', 'Pitch your recommendation'],
       formatsLabel: 'What we do', formatsTitle: 'Six formats, one programme',
       formatsText: "Case Nights, plus Case Competitions, Events & Workshops with Partners, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free. Not a member yet but want to come along? Get in touch with us.",
       formatsLink: 'See the full programme →',
-      studentH: 'Two ways in. Both free', studentText: "Apply for membership: it's free, for students from every Munich university. Up to 50 places until the coming semester, chosen through an application and a short interview. Not a member yet but want to come to an event? Get in touch with us.",
+      studentH: 'Two ways in. Both free', studentText: "Apply for membership: it's free, for students from every Munich university. Members are chosen through an application and a short interview. Not a member yet but want to come to an event? Get in touch with us.",
       contactBtn: 'Get in touch →',
       companyH: "Looking for direct access to Munich's talent?", companyText: "We're building a cross-university network connecting companies with business talent from across Munich. Reach out to find out more.",
       partnerBtn: 'Learn more →'
@@ -482,7 +486,7 @@ window.MBS_CONTENT = {
       recapText: "Once we're up and running, we'll share highlights on Instagram. Follow us to stay in the loop."
     },
     membership: {
-      subtitle: 'Free. Every campus. Up to 50 new members until the coming semester, chosen through an application and a 20-minute interview.',
+      subtitle: 'Free. Every campus. Members are selected through an application and a short conversation.',
       whoLabel: 'Who can join', whoTitle: 'Apply from any university in Munich',
       whoDesc: 'If you study in Munich, you can apply, and membership is free. We review every application and let you know our decision. We don’t filter by university, by grade average, or by whether your programme has “business” in the title. We look for talent, curiosity and commitment.',
       canJoin: [
@@ -502,8 +506,8 @@ window.MBS_CONTENT = {
       processLabel: 'How you join', processTitle: 'From application to full member',
       process: [
         { title: 'Meet us first, if you like', text: "Want to see what we're like before you apply? Get in touch and come along to an event as a guest. Already sure? Then apply online straight away. The form takes a few minutes: your details, your degree, and a few lines on what you're hoping to get out of Munich Business Society." },
-        { title: 'Interview', text: "Twenty minutes, relaxed, to get to know each other. We want to hear about you, your degree and why Munich Business Society, and you can ask us anything about the society. You don't need to prepare a case." },
-        { title: 'Admission decision', text: "After the interviews we decide together and let everyone know, whether it's a yes or a no. We're currently admitting up to 50 new members until the coming semester." },
+        { title: 'Interview', text: "Relaxed, to get to know each other. We want to hear about you, your degree and why Munich Business Society, and you can ask us anything about the society. You don't need to prepare a case." },
+        { title: 'Admission decision', text: "After the interviews we decide together and let everyone know, whether it's a yes or a no." },
         { title: 'Full member right away', text: "Once you're in, you're a full member from day one: every format is open to you, you get to know the other members, and you can take on a role if you want one. No fee, and a vote at the next general meeting." }
       ],
       expectLabel: 'What we expect', expectTitle: 'Show up. Contribute. Behave well',
@@ -516,7 +520,8 @@ window.MBS_CONTENT = {
         { q: 'What does it cost?', a: "Nothing. Membership is 100% free. We review every application and let you know our decision. We're funded by sponsors and partners, not by charging students." },
         { q: 'How much time does it take?', a: 'As much as you give it. The minimum is showing up to a few events a semester. Members who take a role typically spend two to four hours a week on it.' },
         { q: "I don't study a business-related subject. Can I still join?", a: "Yes. We want students from engineering, law, computer science and every other subject who are heading into business. What matters is that you're serious about it." },
-        { q: "I'm here for one exchange semester. Is it worth joining?", a: 'Yes, absolutely. It costs nothing, and the network stays with you when you leave the city.' }
+        { q: "I'm here for one exchange semester. Is it worth joining?", a: 'Yes, absolutely. It costs nothing, and the network stays with you when you leave the city.' },
+        { q: 'What is a case?', a: "A case is a real or realistic question from a company. You work on it as a team, develop a solution and present it briefly at the end. You don't need any prior knowledge, just curiosity, analytical thinking and an appetite for working through problems together." }
       ]
     },
     companies: {
@@ -590,7 +595,7 @@ window.MBS_CONTENT = {
       joinBtn: 'Get on the list →', seeBtn: "See what's coming up"
     },
     join: {
-      subtitle: "Free. Up to 50 places: we review every application and invite a shortlist to a 20-minute interview.",
+      subtitle: "Free. We review every application and invite a shortlist to a short interview.",
       required: { firstname: 'Please add your first name.', lastname: 'Please add your last name.',
         email: 'Please add your email address.', university: 'Please choose your university.',
         level: 'Please choose your degree level.', studyprogram: 'Please choose your degree programme.',
@@ -622,7 +627,7 @@ window.MBS_CONTENT = {
       ],
       studyProgramOther: 'Other degree programme',
       languages: ['German', 'English', 'Either / no preference'],
-      note: "We review every application and get back to you within a few days. If you're shortlisted, we invite you to a 20-minute interview before the final decision. Say so in the message above if you'd like a role, such as Case Coach or Campus Lead, and we'll get back to you about that separately.",
+      note: "We review every application and get back to you within a few days. If you're shortlisted, we invite you to a short interview before the final decision. Say so in the message above if you'd like a role, such as Case Coach or Campus Lead, and we'll get back to you about that separately.",
       consent: "I've read the ", consentLink: 'privacy policy', consentEnd: ' and agree to my data being processed.',
       submit: 'Send application →',
       successTitle: "Your application is in",
@@ -699,8 +704,8 @@ window.MBS_CONTENT = {
           { label: 'Impressum', to: 'impressum' }, { label: 'Datenschutz', to: 'datenschutz' } ] }
       ],
       newsletter: {
-        h: 'Wir schreiben dir, sobald das erste Event feststeht',
-        body: 'Eine kurze E-Mail, sobald der erste Termin feststeht, danach Infos zu Events und Bewerbungsphasen. Abmeldung mit einem Klick.',
+        h: 'Wir schreiben dir, sobald das nächste Event feststeht',
+        body: 'Eine kurze E-Mail, sobald der nächste Termin feststeht, damit du kein Event verpasst. Dazu Infos zu Bewerbungsphasen. Abmeldung mit einem Klick.',
         placeholder: 'Deine E-Mail', srEmail: 'Deine E-Mail', btn: 'Halt mich auf dem Laufenden', sending: 'Wird gesendet…',
         done: 'Du bist auf der Liste. Wir melden uns, sobald die nächsten Termine feststehen.',
         err: 'Bitte gib eine gültige E-Mail-Adresse ein.',
@@ -761,7 +766,7 @@ window.MBS_CONTENT = {
       formatsLabel: 'Was wir tun', formatsTitle: 'Sechs Formate – ein Ort',
       formatsText: 'Case Nights, dazu Case Competitions, Events & Workshops mit Partnern, Guest-Speaker, Skillnights und die Social-Formate, die die Community zusammenhalten. Alles kostenlos. Noch kein Mitglied, willst aber dabei sein? Melde dich bei uns.',
       formatsLink: 'Zum ganzen Programm →',
-      studentH: 'Zwei Wege rein. Beide kostenlos', studentText: 'Bewirb dich für die Mitgliedschaft: kostenlos, für Studierende jeder Münchner Hochschule. Bis zum kommenden Semester bis zu 50 Plätze, ausgewählt über Bewerbung und ein kurzes Interview. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
+      studentH: 'Zwei Wege rein. Beide kostenlos', studentText: 'Bewirb dich für die Mitgliedschaft: kostenlos, für Studierende jeder Münchner Hochschule. Ausgewählt wird über eine Bewerbung und ein kurzes Interview. Noch kein Mitglied, willst aber zu einem Event kommen? Melde dich bei uns.',
       contactBtn: 'Kontakt aufnehmen →',
       companyH: 'Sie suchen den direkten Draht zu Münchens Talenten?', companyText: 'Wir bauen ein hochschulübergreifendes Netzwerk auf, das Unternehmen mit Wirtschaftstalenten aus ganz München verbindet. Sprechen Sie uns an, um mehr zu erfahren.',
       partnerBtn: 'Mehr erfahren →'
@@ -836,7 +841,7 @@ window.MBS_CONTENT = {
       recapText: 'Sobald es losgeht, teilen wir Highlights auf Instagram. Folge uns, um auf dem Laufenden zu bleiben.'
     },
     membership: {
-      subtitle: 'Kostenlos. Jeder Campus. Die Mitglieder werden über eine Bewerbung und ein kurzes Gespräch ausgewählt.',
+      subtitle: 'Kostenlos. Jeder Campus. Bewirb dich in wenigen Minuten, danach lernen wir uns in einem kurzen Gespräch kennen. Oder besuch uns bei einer unserer öffentlichen Veranstaltungen, um mehr über uns zu erfahren.',
       whoLabel: 'Wer beitreten kann', whoTitle: 'Bewerben kannst du dich von jeder Münchner Hochschule',
       whoDesc: 'Wenn du in München studierst, kannst du dich bewerben, und die Mitgliedschaft ist kostenlos. Wir prüfen jede Bewerbung und teilen dir unsere Entscheidung mit. Wir filtern nicht nach Hochschule, nach Notenschnitt oder danach, ob „Business" im Titel deines Studiengangs steht. Wir suchen Talent, Neugier und Engagement.',
       canJoin: [
@@ -856,8 +861,8 @@ window.MBS_CONTENT = {
       processLabel: 'So wirst du Mitglied', processTitle: 'Von der Bewerbung bis zum Vollmitglied',
       process: [
         { title: 'Erst kennenlernen, wenn du magst', text: 'Du willst uns erst erleben, bevor du dich bewirbst? Melde dich bei uns und komm als Gast zu einem Event. Du bist dir schon sicher? Dann bewirb dich direkt online. Das Formular dauert ein paar Minuten: deine Daten, dein Studium und ein paar Zeilen dazu, was du dir von der Munich Business Society erhoffst.' },
-        { title: 'Interview', text: '20 Minuten, locker, zum gegenseitigen Kennenlernen. Wir wollen mehr über dich, dein Studium und deine Motivation erfahren, und du kannst uns alles über den Verein fragen. Einen Case musst du nicht vorbereiten.' },
-        { title: 'Aufnahmeentscheidung', text: 'Nach den Interviews entscheiden wir gemeinsam und melden uns bei allen, egal ob Zu- oder Absage. Wir nehmen aktuell bis zu 50 neue Mitglieder bis zum kommenden Semester auf.' },
+        { title: 'Interview', text: 'Locker und zum gegenseitigen Kennenlernen. Wir wollen mehr über dich, dein Studium und deine Motivation erfahren, und du kannst uns alles über den Verein fragen. Einen Case musst du nicht vorbereiten.' },
+        { title: 'Aufnahmeentscheidung', text: 'Nach den Interviews entscheiden wir gemeinsam und melden uns bei allen, egal ob Zu- oder Absage.' },
         { title: 'Vollmitglied ab sofort', text: 'Mit der Zusage bist du ab dem ersten Tag Vollmitglied: Alle Formate stehen dir offen, du lernst die anderen Mitglieder kennen und kannst eine Rolle übernehmen, wenn du willst. Kostenlos, mit Stimmrecht ab der nächsten Mitgliederversammlung.' }
       ],
       expectLabel: 'Was wir erwarten', expectTitle: 'Komm vorbei. Bring dich ein. Geh fair miteinander um',
@@ -945,7 +950,7 @@ window.MBS_CONTENT = {
       joinBtn: 'Auf die Liste →', seeBtn: 'Zu den Terminen'
     },
     join: {
-      subtitle: 'Kostenlos. Bis zu 50 Plätze: Wir prüfen jede Bewerbung und laden die Passendsten zu einem 20-minütigen Interview ein.',
+      subtitle: 'Kostenlos. Wir prüfen jede Bewerbung und laden die Passendsten zu einem kurzen Interview ein.',
       required: { firstname: 'Bitte gib deinen Vornamen an.', lastname: 'Bitte gib deinen Nachnamen an.',
         email: 'Bitte gib deine E-Mail-Adresse an.', university: 'Bitte wähle deine Hochschule.',
         level: 'Bitte wähle dein Studienniveau.', studyprogram: 'Bitte wähle deinen Studiengang.',
@@ -975,7 +980,7 @@ window.MBS_CONTENT = {
       ],
       studyProgramOther: 'Anderer Studiengang',
       languages: ['Deutsch', 'Englisch', 'Beide / keine Präferenz'],
-      note: 'Wir prüfen jede Bewerbung und melden uns innerhalb weniger Tage. Kommst du in die engere Auswahl, laden wir dich vor der finalen Entscheidung zu einem 20-minütigen Interview ein. Schreib oben dazu, wenn du eine Rolle wie Case Coach oder Campus Lead willst. Wir melden uns dazu separat.',
+      note: 'Wir prüfen jede Bewerbung und melden uns innerhalb weniger Tage. Kommst du in die engere Auswahl, laden wir dich vor der finalen Entscheidung zu einem kurzen Interview ein. Schreib oben dazu, wenn du eine Rolle wie Case Coach oder Campus Lead willst. Wir melden uns dazu separat.',
       consent: 'Ich habe die ', consentLink: 'Datenschutzerklärung', consentEnd: ' gelesen und stimme der Verarbeitung meiner Daten zu.',
       submit: 'Bewerbung absenden →',
       successTitle: 'Deine Bewerbung ist eingegangen',
