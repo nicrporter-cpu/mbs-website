@@ -62,25 +62,19 @@ Telefon: +49 151 54209559
 
 Eintragung im Vereinsregister
 Registergericht: Amtsgericht München
-Registernummer: VR [Registernummer einsetzen]
+Registernummer: VR 211795
 
 ### Umsatzsteuer-Identifikationsnummer
 
-[Falls vorhanden gemäß § 27a UStG einsetzen; falls nicht vorhanden, diesen Absatz ersatzlos streichen]
+Beantragt.
 
 ### Gemeinnützigkeit
 
-[Nur einfügen, sobald der Freistellungsbescheid / die vorläufige Bescheinigung vorliegt, z. B.: „Der Verein ist durch Bescheid des Finanzamts München für Körperschaften vom [Datum] als gemeinnützig i. S. d. §§ 51 ff. AO anerkannt."]
-
-### Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV (nur falls die Seite journalistisch-redaktionelle Inhalte enthält, z. B. einen News- oder Blog-Bereich)
-
-[Name, gleiche Anschrift wie oben]
+Die Anerkennung der Gemeinnützigkeit ist beantragt.
 
 ### Verbraucherstreitbeilegung (§ 36 VSBG)
 
 Wir sind nicht bereit und nicht verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-
-[Falls der Vorstand stattdessen teilnehmen möchte, ersetzen durch: „Wir nehmen an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil. Zuständig ist die Universalschlichtungsstelle des Zentrums für Schlichtung e.V., Straßburger Straße 8, 77694 Kehl am Rhein."]
 
 ### Haftung für Inhalte
 
@@ -382,7 +376,7 @@ window.MBS_CONTENT = {
       { icon: 'target', title: 'Case Night',
         text: 'A team case, ninety to a hundred-twenty minutes, pitch and feedback at the end. The core of what we do.' },
       { icon: 'trophy', title: 'Case Competition',
-        text: 'A multi-stage competition that builds to a final in front of a jury. Once or twice a semester, for members who take it seriously.' },
+        text: 'Our own cross-university competition: a preliminary round in teams, then a final in front of a jury of practitioners. If you stick with the Case Nights, you can also apply for our Competition Team and represent us at external competitions.' },
       { icon: 'building', title: 'Events & Workshops with Partners',
         text: 'A partner company brings a real case or runs a workshop from its own business, and shows you how the work is actually done there.' },
       { icon: 'mic', title: 'Guest Speaker',
@@ -397,17 +391,17 @@ window.MBS_CONTENT = {
 
     home: {
       heroLead: 'Case nights, workshops and partner events for students from every Munich university. Always free.',
-      whyIntro: "Whichever university you study at, you can join, and it costs nothing. Apply for membership, or, if you'd like to come to an event first, get in touch with us. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when deciding which city to move to.",
+      whyIntro: "Whichever university you study at, you can join, and it costs nothing. Apply for membership, or, if you'd like to come to an event first, get in touch with us. We believe anyone who can crack a case can make sense of almost any problem, whether it shows up in an interview, in a first job or when facing your next big decision.",
       seeEvents: "See what's coming up", howJoin: 'How joining works',
       whyLabel: 'Why we exist', whyTitle: 'The first cross-university case club for all of Munich',
       whyP1: "Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, showing one university's talent, not the whole city's. So students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
       whyP2: "Munich Business Society exists to close that gap: one free, cross-university case club with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you apply on the same terms, and it never costs anything.",
-      pillarsLabel: 'What you get', pillarsTitle: 'What you actually get out of it',
+      pillarsLabel: 'What you get', pillarsTitle: 'What you get out of it',
       caseTitle: 'What is a case?',
       caseText: "A case is a real or realistic question from a company. You work on it as a team, develop a solution and present it briefly at the end. You don't need any prior knowledge, just curiosity, analytical thinking and an appetite for working through problems together.",
       caseStepsLabel: 'How a case works',
       caseSteps: ['Understand the problem', 'Structure', 'Analyse', 'Pitch your recommendation'],
-      formatsLabel: 'What we do', formatsTitle: 'Six formats, one programme',
+      formatsLabel: 'What we do', formatsTitle: 'Six formats, one place',
       formatsText: "Case Nights, plus Case Competitions, Events & Workshops with Partners, Guest Speakers, Skillnights and the social formats that hold the community together. Everything is free. Not a member yet but want to come along? Get in touch with us.",
       formatsLink: 'See the full programme →',
       studentH: 'Two ways in. Both free', studentText: "Apply for membership: it's free, for students from every Munich university. Members are chosen through an application and a short interview. Not a member yet but want to come to an event? Get in touch with us.",
@@ -419,9 +413,9 @@ window.MBS_CONTENT = {
       subtitle: 'One case club for all of Munich: student-run, free, every campus.',
       whoLabel: 'Who we are', whoTitle: 'One case club for all of Munich',
       whoDesc: 'Munich Business Society is a student-run society that connects business-minded students across every university in Munich. We were founded by students who kept running into the same problem: the most interesting people in this city were always one campus away.',
-      storyLabel: 'Our story', storyTitle: 'We built the society we wanted to join',
+      storyLabel: 'Our story', storyTitle: 'We started the club we were looking for',
       storyP1: "Munich Business Society started with three students, Nicholas, Martijn and Lennart, and a simple observation. Munich has students spread across many universities, but every university has its own career fair, and almost none of them talk to each other. Good case-solving and networking formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
-      storyP2: 'So we built the thing we wanted to join: a free, cross-university club with no home campus. Anyone in Munich can apply on the same terms, whether they study business, economics, management, or something else entirely and are heading into business anyway.',
+      storyP2: 'So we started it ourselves: a free, cross-university club with no home campus. Anyone in Munich can apply on the same terms, whether they study business, economics, management, or something else entirely and are heading into business anyway.',
       storyP3: "Our next milestone is our first Case Night, planned for this year. Until then, we're building the partner and campus network to get there.",
       diffLabel: 'What makes us different', diffTitle: 'Cross-university by design, not by exception',
       different: [
@@ -486,7 +480,7 @@ window.MBS_CONTENT = {
       recapText: "Once we're up and running, we'll share highlights on Instagram. Follow us to stay in the loop."
     },
     membership: {
-      subtitle: 'Free. Every campus. Members are selected through an application and a short conversation.',
+      subtitle: "Free. Every campus. Apply in a few minutes, then we'll get to know each other in a short conversation. Or come along to one of our public events to find out more about us.",
       whoLabel: 'Who can join', whoTitle: 'Apply from any university in Munich',
       whoDesc: 'If you study in Munich, you can apply, and membership is free. We review every application and let you know our decision. We don’t filter by university, by grade average, or by whether your programme has “business” in the title. We look for talent, curiosity and commitment.',
       canJoin: [
@@ -540,7 +534,7 @@ window.MBS_CONTENT = {
         { icon: 'mic', title: 'Speaker Events', text: 'Your expertise, our audience. You run a Guest Speaker session, Skillnight or company evening with us, reaching engaged students from across Munich, not just one university.' },
         { icon: 'trophy', title: 'Case Events', text: 'Teams of students solve a real question from your company and present the results to your leadership. You see how someone thinks, structures and presents, long before the interview.' },
         { icon: 'briefcase', title: 'Partner Projects', text: 'A defined piece of work with a small member team and a documented deliverable.' },
-        { icon: 'star', title: 'Insight Events', text: 'You give our students a look at your day-to-day work, for example through a company visit or workshop. You also get visibility on our website and in the newsletter, and a direct line to our members for open roles.' }
+        { icon: 'star', title: 'Insight Events', text: 'You give our students a look at your day-to-day work. You also get visibility on our website and in the newsletter, and a direct line to our members for open roles.' }
       ],
       partnersLabel: 'Founding partners', partnersTitle: 'Be one of our first partners',
       partnersDesc: "We're choosing our founding partners now. You'd shape our first partner events and workshops with us, rather than slot into a programme someone else already designed.",
@@ -559,7 +553,7 @@ window.MBS_CONTENT = {
       subtitle: 'Built and run entirely by students, alongside their degrees.',
       whoTitle: 'Founding team and current board',
       whoDesc: 'The board leads the society, and six teams do the work. Every team is open to members who want to help shape it.',
-      ctaH: 'Want to build this with us?', ctaText: 'Apply for membership and tell us in your application which team you’d like to join.',
+      ctaH: 'Want to get involved?', ctaText: 'Apply for membership and tell us in your application which team you’d like to join.',
       boardTitle: 'The Board',
       board: [
         { name: 'Nicholas Porter', role: 'Chairman', initials: 'NP', description: 'Programme & Education, External Affairs', photoSrc: '/assets/team-nicholas-porter.jpg' },
@@ -608,11 +602,11 @@ window.MBS_CONTENT = {
       f: { firstname: 'First name', lastname: 'Last name', email: 'Email address', university: 'University', level: 'Degree level',
         studyprogram: 'Degree programme', language: 'Preferred language', motivation: 'What are you hoping to get out of Munich Business Society?',
         interests: "Subject areas you'd like to see in the club", cv: 'CV / résumé', enrollment: 'Certificate of enrollment' },
-      ph: { firstname: 'Your first name', lastname: 'Your last name', email: 'you@example.com',
+      ph: { firstname: 'Your first name', lastname: 'Your last name', email: 'Your email address',
         university: 'Choose your university', level: 'Choose your level',
         studyprogram: 'Choose your degree programme', language: 'Choose your preferred language',
-        motivation: 'A line or two, Case Nights, a role, just curious…',
-        interests: 'e.g. consulting, finance, marketing, HR, M&A…' },
+        motivation: 'A line or two is enough.',
+        interests: 'Your interests' },
       help: { cv: 'Optional, PDF or Word, a page or two.',
         enrollment: "Optional, your Immatrikulationsbescheinigung, so we can confirm you're currently a student." },
       levels: ['Bachelor', 'Master', 'MBA', 'Doctorate / PhD', 'Exchange semester', 'Leave of absence semester', 'Other'],
@@ -651,7 +645,7 @@ window.MBS_CONTENT = {
       findLabel: 'Find us', findText: 'We meet across Munich rather than on one campus. Venues are listed with each event.',
       follow: 'Follow: ',
       f: { firstname: 'First name', lastname: 'Last name', email: 'Email', role: "I'm a…", message: 'Your message' },
-      ph: { firstname: 'Your first name', lastname: 'Your last name', email: 'you@example.com', message: "What's on your mind?" },
+      ph: { firstname: 'Your first name', lastname: 'Your last name', email: 'Your email address', message: "What's on your mind?" },
       roles: [ { v: 'student', label: 'Student' }, { v: 'company', label: 'Company' }, { v: 'founder', label: 'Entrepreneur' }, { v: 'other', label: 'Other' } ],
       send: 'Send it →', direct: 'Or write to us directly at munichbusinesssociety@gmail.com.',
       errFirstname: 'Please add your first name.', errLastname: 'Please add your last name.', errEmail: "That email address doesn't look complete. Please check it.", errMsg: 'Please add a message.',
@@ -966,7 +960,7 @@ window.MBS_CONTENT = {
       ph: { firstname: 'Dein Vorname', lastname: 'Dein Nachname', email: 'Deine E-Mail-Adresse',
         university: 'Hochschule wählen', level: 'Niveau wählen',
         studyprogram: 'Studiengang wählen', language: 'Sprache wählen',
-        motivation: 'Ein, zwei Zeilen, Case Nights, eine Rolle, einfach neugierig…',
+        motivation: 'Ein, zwei Zeilen reichen.',
         interests: 'Deine Interessen' },
       help: { cv: 'Optional, PDF oder Word, ein bis zwei Seiten.',
         enrollment: 'Optional, damit wir bestätigen können, dass du aktuell eingeschrieben bist.' },
