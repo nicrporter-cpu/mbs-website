@@ -311,7 +311,7 @@ window.MBS_CONTENT = {
         errConsent: 'Please agree to the privacy policy to sign up.',
         sendError: 'Something went wrong. Please email us directly at munichbusinesssociety@gmail.com instead.'
       },
-      copyright: '© 2026 Munich Business Society'
+      copyright: '© 2026 Munich Business Society e.V.'
     },
     title: { home: "Munich's first cross-university case club", about: 'About', network: 'The Network',
       whatwedo: 'What We Do', calendar: 'Events', membership: 'Membership', companies: 'For Companies', team: 'Team',
@@ -355,7 +355,7 @@ window.MBS_CONTENT = {
       seeEvents: "See what's coming up", howJoin: 'How joining works',
       whyLabel: 'Why we exist', whyTitle: 'The first cross-university case club for all of Munich',
       whyP1: "Every Munich university has strong people and its own bubble. Most case-solving and networking clubs are tied to a single university, showing one university's talent, not the whole city's. So students only ever meet their own seminar group. Good formats exist, but they tend to cost money, filter early, or cover just one narrow field.",
-      whyP2: "Munich Business Society exists to close that gap: one free, cross-university case club with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you apply on the same terms, and it never costs anything.",
+      whyP2: "Munich Business Society e.V. exists to close that gap: one free, cross-university case club with a broad focus on real business problems. We're deliberately not owned by one university. Whichever lecture hall you sit in, you apply on the same terms, and it never costs anything.",
       pillarsLabel: 'What you get', pillarsTitle: 'What you get out of it',
       caseTitle: 'What is a case?',
       caseText: "A case is a real or realistic question from a company. You work on it as a team, develop a solution and present it briefly at the end. You don't need any prior knowledge, just curiosity, analytical thinking and an appetite for working through problems together.",
@@ -667,7 +667,7 @@ window.MBS_CONTENT = {
         errConsent: 'Bitte stimme der Datenschutzerklärung zu, um dich anzumelden.',
         sendError: 'Etwas ist schiefgelaufen. Schreib uns stattdessen direkt an munichbusinesssociety@gmail.com.'
       },
-      copyright: '© 2026 Munich Business Society'
+      copyright: '© 2026 Munich Business Society e.V.'
     },
     title: { home: 'Münchens erster hochschulübergreifender Case Club', about: 'Über Uns', network: 'Das Netzwerk',
       whatwedo: 'Was wir tun', calendar: 'Termine', membership: 'Mitgliedschaft', companies: 'Für Unternehmen', team: 'Team',
@@ -711,7 +711,7 @@ window.MBS_CONTENT = {
       seeEvents: 'Zu den Terminen', howJoin: 'So läuft die Bewerbung',
       whyLabel: 'Warum es uns gibt', whyTitle: 'Der erste hochschulübergreifende Case Club für ganz München',
       whyP1: 'Jede Münchner Hochschule hat starke Leute und ihre eigene Blase. Die meisten Case- und Networking-Clubs sind an eine einzelne Hochschule gebunden: Sie zeigen die Talente einer Uni, nicht die der ganzen Stadt. Studierende treffen so immer nur ihre eigene Seminargruppe. Gute Case- und Networking-Angebote gibt es, aber sie kosten meist Geld, filtern früh aus oder decken nur ein einzelnes Themenfeld ab.',
-      whyP2: 'Die Munich Business Society schließt genau diese Lücke: ein kostenloser, hochschulübergreifender Case Club mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bewirbst dich zu denselben Bedingungen, und es kostet dich nie etwas.',
+      whyP2: 'Die Munich Business Society e.V. schließt genau diese Lücke: ein kostenloser, hochschulübergreifender Case Club mit breitem Fokus auf echte Wirtschaftsprobleme. Wir gehören bewusst keiner einzelnen Hochschule. Egal, in welchem Hörsaal du sitzt, du bewirbst dich zu denselben Bedingungen, und es kostet dich nie etwas.',
       pillarsLabel: 'Was du bekommst', pillarsTitle: 'Was du davon hast',
       caseTitle: 'Was ist ein Case?',
       caseText: 'Ein Case ist eine echte oder realitätsnahe Fragestellung aus einem Unternehmen. Du arbeitest im Team daran, entwickelst eine Lösung und stellst sie am Ende kurz vor. Vorwissen brauchst du dafür nicht, nur Neugier, analytisches Verständnis und Lust, gemeinsam nachzudenken.',
