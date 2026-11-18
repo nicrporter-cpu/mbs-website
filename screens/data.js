@@ -104,7 +104,7 @@ Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber, Mun
 
 ### Wie erfassen wir Ihre Daten?
 
-Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen, etwa über das Kontaktformular, eine Mitgliedsbewerbung, eine Bewerbung um eine ehrenamtliche Rolle oder die Anmeldung zum Newsletter. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Websitebesuch durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem, Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
+Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen, etwa über das Kontaktformular, eine Mitgliedsbewerbung oder die Anmeldung zum Newsletter. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Websitebesuch durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem, Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
 
 ### Wofür nutzen wir Ihre Daten?
 
@@ -172,53 +172,63 @@ Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten z
 
 ## Datenerfassung auf dieser Website
 
-### Cookies
+### Cookies und Speicherung auf Ihrem Endgerät
 
-Unsere Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Seite erforderlich sind. Diese werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO bzw. § 25 Abs. 2 TDDDG gesetzt und erfordern keine Einwilligung. Das von uns eingesetzte Analysetool Cloudflare Web Analytics setzt ebenfalls keine Cookies (siehe unten, „Cloudflare Web Analytics"). Da weder technisch notwendige noch Analyse-Cookies eine Einwilligung voraussetzen, betreiben wir kein Cookie-Consent-Banner.
+Diese Website setzt keine Cookies. Wenn Sie die Sprache der Website (Deutsch oder Englisch) umstellen, speichern wir diese Auswahl im lokalen Speicher Ihres Browsers (Local Storage), damit die Seite beim nächsten Aufruf in Ihrer Sprache erscheint. Dieser Eintrag enthält nur das Sprachkürzel, wird nicht an uns übertragen und kann jederzeit über die Einstellungen Ihres Browsers gelöscht werden. Die Speicherung ist für den von Ihnen ausdrücklich gewünschten Dienst unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG) und bedarf daher keiner Einwilligung. Das von uns eingesetzte Analysetool Cloudflare Web Analytics speichert ebenfalls nichts auf Ihrem Endgerät (siehe unten, „Cloudflare Web Analytics"). Ein Cookie-Banner ist deshalb nicht erforderlich.
 
-### Server-Log-Dateien
+### Hosting und Server-Log-Dateien
 
-Diese Website wird gehostet bei [Hosting-Anbieter einsetzen, z. B. Vercel, Netlify, All-Inkl, Strato, Hetzner …], [Anschrift des Anbieters].
+Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.
 
-Bei jedem Aufruf unserer Website erfasst unser Hostinganbieter automatisiert sogenannte Server-Logfiles, die Ihr Browser automatisch übermittelt. Dazu gehören: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage, IP-Adresse. Diese Daten werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien Darstellung und Optimierung der Website). Die Logfiles werden aus Sicherheitsgründen für [z. B. 7 Tage] gespeichert und danach gelöscht.
+Bei jedem Aufruf unserer Website erfasst GitHub automatisch Informationen, die Ihr Browser übermittelt, insbesondere Ihre IP-Adresse, Datum und Uhrzeit des Abrufs, die aufgerufene Seite, Browsertyp und -version, das verwendete Betriebssystem und die Referrer-URL. Diese Daten sind technisch erforderlich, um Ihnen die Website anzuzeigen und ihre Sicherheit zu gewährleisten. Wir selbst haben keinen Zugriff auf diese Daten und führen sie nicht mit anderen Datenquellen zusammen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren und fehlerfreien Bereitstellung der Website). Wie lange GitHub diese Daten speichert, richtet sich nach der Datenschutzerklärung von GitHub: https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
+
+Da GitHub seinen Sitz in den USA hat, werden dabei Daten in die USA übermittelt. Die Übermittlung stützt sich auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework, unter dem GitHub zertifiziert ist, sowie ergänzend auf die EU-Standardvertragsklauseln.
+
+### Verarbeitung der Formulare auf dieser Website
+
+Für das Bewerbungsformular, das Kontaktformular und die Newsletter-Anmeldung nutzen wir folgende Dienstleister. Mit ihnen bestehen Verträge zur Auftragsverarbeitung nach Art. 28 DSGVO; sie verarbeiten Ihre Daten nur nach unserer Weisung.
+
+Cloudflare Workers und Cloudflare R2 (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA): Ihre Formulareingaben werden an einen bei Cloudflare betriebenen Server-Dienst übertragen, dort geprüft und an die unten genannten Dienste weitergeleitet. Dateien, die Sie mit einer Mitgliedsbewerbung hochladen (Lebenslauf, Immatrikulationsbescheinigung), werden im Speicherdienst Cloudflare R2 abgelegt. Sie sind nicht öffentlich abrufbar, sondern nur für den Vorstand zugänglich.
+
+Google Sheets im Rahmen von Google Workspace (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland): Die Inhalte der Formulare werden in einer Tabelle gespeichert, auf die nur der Vorstand Zugriff hat. Bei Mitgliedsbewerbungen enthält die Tabelle außerdem Verweise auf die hochgeladenen Dateien.
+
+Resend (Plus Five Five, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA): Über diesen Dienst versenden wir eine Benachrichtigung über Ihre Eingabe an unser Vereinspostfach sowie eine automatische Eingangsbestätigung an die von Ihnen angegebene E-Mail-Adresse.
+
+Unser Vereinspostfach wird ebenfalls über Google Workspace geführt (Google Ireland Limited, Anschrift wie oben).
+
+Bei Cloudflare, Google und Resend kann eine Übermittlung von Daten in die USA nicht ausgeschlossen werden. Sie stützt sich auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework, unter dem alle drei Anbieter zertifiziert sind, sowie ergänzend auf die EU-Standardvertragsklauseln.
+
+Zum Schutz vor automatisierten Spam-Einsendungen enthalten die Formulare ein für Menschen unsichtbares Feld und eine Zeitprüfung. Dafür werden keine zusätzlichen Daten über Sie erhoben und keine Dienste Dritter (etwa reCAPTCHA) eingebunden.
 
 ### Kontaktformular
 
-Wenn Sie uns per Kontaktformular kontaktieren, werden die von Ihnen mitgeteilten Daten (Name, E-Mail-Adresse, Nachrichtentext, und ggf. weitere freiwillig mitgeteilte Angaben) zum Zweck der Bearbeitung Ihrer Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Anfrage) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Daten werden gelöscht, sobald sie für die Erreichung des Zwecks ihrer Erhebung nicht mehr erforderlich sind, spätestens nach [z. B. 12 Monaten] ohne weiteren Kontakt.
+Wenn Sie uns über das Kontaktformular schreiben, verarbeiten wir Ihren Namen, Ihre E-Mail-Adresse, die von Ihnen gewählte Angabe „Ich bin …" und Ihre Nachricht, um Ihre Anfrage zu beantworten und für mögliche Anschlussfragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit Ihre Anfrage mit einer Mitgliedschaft oder einer Zusammenarbeit zusammenhängt, und im Übrigen Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Wir löschen die Daten, sobald Ihre Anfrage abschließend bearbeitet ist, spätestens 12 Monate nach dem letzten Kontakt, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
 
-### Anfrage per E-Mail, Telefon oder Telefax
+### Anfrage per E-Mail oder Telefon
 
-Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage ist dieselbe wie beim Kontaktformular.
+Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Anfrage einschließlich der dabei mitgeteilten personenbezogenen Daten zur Bearbeitung Ihres Anliegens. Rechtsgrundlage und Speicherdauer entsprechen denen beim Kontaktformular.
 
-### Registrierung auf dieser Website
+### Mitgliedsbewerbung
 
-[Zu bestätigen: Bietet die Website ein Nutzerkonto bzw. Mitgliederportal mit Login an? Aktuell laut \`MBS_Website_Copy_EN.md\` nicht vorgesehen. Die Membership-Seite ist ein Bewerbungsformular, kein Login-Bereich. Diesen Absatz streichen, solange das so bleibt; nur ausformulieren, falls ein Mitgliederportal eingeführt wird.]
+Wenn Sie sich über unser Bewerbungsformular um eine Mitgliedschaft bewerben, verarbeiten wir die von Ihnen angegebenen Daten: Vor- und Nachname, E-Mail-Adresse, Hochschule, Studienniveau, Studiengang, bevorzugte Sprache, Ihre Motivation und Ihre fachlichen Interessen sowie, falls Sie diese freiwillig hochladen, Ihren Lebenslauf und Ihre Immatrikulationsbescheinigung. Wir nutzen diese Daten, um Ihre Bewerbung zu prüfen, Sie zu einem Kennenlerngespräch einzuladen und über die Aufnahme zu entscheiden. Wenn Sie in Ihrer Bewerbung Interesse an einer Rolle im Verein angeben, verwenden wir die Angaben auch für diese Auswahl.
+
+Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Maßnahmen zur Anbahnung der Mitgliedschaft auf Ihre Anfrage). Werden Sie aufgenommen, gelten die Angaben im Abschnitt „Mitgliederverwaltung". Kommt keine Mitgliedschaft zustande, löschen wir Ihre Angaben und hochgeladenen Dateien spätestens 6 Monate nach Abschluss des Auswahlverfahrens.
 
 ### Mitgliederverwaltung
 
-[Diese Rubrik hat kein Gegenstück im Referenz-Aufbau, ist für einen eingetragenen Verein aber zwingend nötig und bleibt deshalb erhalten:]
+Wenn Sie Mitglied bei Munich Business Society e.V. werden, verarbeiten wir die im Rahmen des Aufnahmeverfahrens von Ihnen mitgeteilten Daten (Name, Hochschule, Studiengang, Kontaktdaten und ggf. weitere in der Satzung vorgesehene Angaben) zur Begründung und Durchführung der Mitgliedschaft. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO in Verbindung mit der Vereinssatzung sowie, soweit gesetzlich vorgeschrieben, Art. 6 Abs. 1 lit. c DSGVO. Die Daten werden für die Dauer der Mitgliedschaft gespeichert und danach gelöscht, soweit keine gesetzlichen Aufbewahrungsfristen (z. B. nach § 147 AO) entgegenstehen.
 
-Wenn Sie Mitglied bei Munich Business Society e.V. werden, verarbeiten wir die im Rahmen des Aufnahmeverfahrens von Ihnen mitgeteilten Daten (Name, Hochschule, Studiengang, Kontaktdaten und ggf. weitere in der Satzung vorgesehene Angaben) zur Begründung und Durchführung der Mitgliedschaft. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO in Verbindung mit der Vereinssatzung sowie, soweit gesetzlich vorgeschrieben, Art. 6 Abs. 1 lit. c DSGVO (z. B. Mitgliederverzeichnis, Beitragsverwaltung). Die Daten werden für die Dauer der Mitgliedschaft und darüber hinaus so lange gespeichert, wie gesetzliche Aufbewahrungsfristen (z. B. handels- und steuerrechtliche Fristen nach §§ 147 AO, 257 HGB) dies erfordern.
+## Newsletter
+
+Wenn Sie sich für unseren Newsletter anmelden, speichern wir Ihre E-Mail-Adresse und den Zeitpunkt der Anmeldung. Wir nutzen Ihre Adresse, um Sie über neue Veranstaltungen und Bewerbungsphasen zu informieren. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie bei der Anmeldung durch Setzen des Häkchens erteilen. Die Anmeldung und der Nachweis Ihrer Einwilligung werden über die im Abschnitt „Verarbeitung der Formulare auf dieser Website" genannten Dienste verarbeitet.
+
+Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, über den Abmeldelink in jeder E-Mail oder mit einer kurzen Nachricht an munichbusinesssociety@gmail.com. Nach Ihrer Abmeldung löschen wir Ihre E-Mail-Adresse aus der Verteilerliste. Den Nachweis Ihrer früheren Einwilligung dürfen wir bis zu drei Jahre aufbewahren, um ihn bei Bedarf belegen zu können (Art. 6 Abs. 1 lit. f DSGVO).
 
 ## Soziale Medien
 
-[Grundsatz für alle vier Plattformen: Solange die Website nur auf die Munich Business Society-Profile verlinkt, ohne Plugins/Widgets/Embeds einzubetten, werden beim Aufruf unserer Seite keine Daten an die jeweilige Plattform übertragen. Erst ein Klick auf den Link führt zur Plattform und deren eigener Datenschutzerklärung. Erst wenn ein echtes Plugin eingebettet wird (z. B. ein Like-Button, ein eingebetteter Feed), greift die ausführlichere, unten skizzierte Beschreibung.]
+### Links zu Instagram und LinkedIn
 
-### Facebook Plugins (Like & Share-Button)
-
-[Munich Business Society nutzt laut aktuellem Stand kein Facebook-Profil und keine Facebook-Plugins (\`MBS_Website_Copy_EN.md\` nennt nur LinkedIn und Instagram), Abschnitt vor Go-live streichen, sofern sich das nicht ändert. Falls doch eingeführt: Anbieter, übertragene Daten (IP-Adresse u. a.), Rechtsgrundlage (Art. 6 Abs. 1 lit. a DSGVO, Einwilligung über Consent-Tool) und Link zur Datenschutzerklärung von Meta ergänzen.]
-
-### Instagram Plugin
-
-Auf unserer Website verlinken wir auf unser Instagram-Profil. Dabei handelt es sich um eine reine Verlinkung, nicht um ein eingebettetes Plugin. Es werden beim Aufruf unserer Seite keine Daten an Instagram übertragen. Erst wenn Sie aktiv auf den Link klicken und Instagram aufrufen, gilt die Datenschutzerklärung von Meta Platforms Ireland Limited.
-
-[Falls stattdessen ein eingebetteter Instagram-Feed verwendet wird, diesen Absatz durch eine Beschreibung der übertragenen Daten, der Rechtsgrundlage (Art. 6 Abs. 1 lit. a DSGVO) und einen Link zur Datenschutzerklärung des Anbieters ersetzen.]
-
-### LinkedIn Plugin
-
-Auf unserer Website verlinken wir auf unser LinkedIn-Profil. Dabei handelt es sich um eine reine Verlinkung, nicht um ein eingebettetes Plugin. Es werden beim Aufruf unserer Seite keine Daten an LinkedIn übertragen. Erst wenn Sie aktiv auf den Link klicken und LinkedIn aufrufen, gilt die Datenschutzerklärung der LinkedIn Ireland Unlimited Company.
-
-[Falls stattdessen ein eingebettetes LinkedIn-„Follow"-Widget verwendet wird, diesen Absatz entsprechend ersetzen.]
+Auf unserer Website verlinken wir auf unsere Profile bei Instagram und LinkedIn. Es handelt sich um einfache Links, nicht um eingebettete Plugins. Beim Aufruf unserer Seite werden keine Daten an Instagram oder LinkedIn übertragen. Erst wenn Sie auf einen Link klicken, gelangen Sie zur jeweiligen Plattform. Dort gelten die Datenschutzerklärungen von Meta Platforms Ireland Limited (Instagram) bzw. der LinkedIn Ireland Unlimited Company.
 
 ## Analyse-Tools und Werbung
 
@@ -228,73 +238,23 @@ Wir setzen auf dieser Website Cloudflare Web Analytics ein, einen Dienst der Clo
 
 Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer datensparsamen, anonymisierten Analyse der Websitenutzung). Da keine personenbezogene Profilbildung stattfindet, ist hierfür keine Einwilligung erforderlich.
 
-### Drittlandübermittlung
-
-Da Cloudflare, Inc. ihren Sitz in den USA hat, ist beim Betrieb des Analyse-Scripts eine Übermittlung von Daten in die USA nicht ausgeschlossen. Cloudflare bindet sein Data Processing Addendum (DPA) auf Grundlage der EU-Standardvertragsklauseln automatisch in die mit jedem Konto geltende Self-Serve Subscription Agreement ein; für ein Konto auf dem kostenlosen Tarif wie unseres ist keine gesonderte Unterzeichnung vorgesehen oder möglich. [Vorstand: das öffentliche DPA-Dokument unter cloudflare.com/data-processing-addendum zu den Vereinsunterlagen nehmen.]
+Da Cloudflare seinen Sitz in den USA hat, ist eine Übermittlung von Daten in die USA nicht ausgeschlossen. Sie stützt sich auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework, unter dem Cloudflare zertifiziert ist, sowie ergänzend auf die EU-Standardvertragsklauseln aus dem Data Processing Addendum von Cloudflare.
 
 ### etracker
 
-[Munich Business Society setzt aktuell kein etracker oder vergleichbares Tracking-Tool eines anderen Drittanbieters ein, Abschnitt streichen, sofern sich das nicht ändert. Falls doch: Anbieter, verarbeitete Daten, Rechtsgrundlage und Speicherdauer ergänzen.]
+Wir setzen außer Cloudflare Web Analytics keine weiteren Analyse- oder Tracking-Tools ein, insbesondere kein etracker.
 
 ### Google AdSense
 
-Munich Business Society schaltet keine Werbung Dritter auf dieser Website und setzt kein Google AdSense ein. [Sollte sich das ändern: Vorstand vorab mit dem Steuerberater abstimmen, da Werbeeinnahmen bei einem als gemeinnützig anerkannten Verein einen steuerpflichtigen wirtschaftlichen Geschäftsbetrieb auslösen können, siehe Abschnitt 0, Risikobereiche.]
+Wir schalten auf dieser Website keine Werbung Dritter und setzen kein Google AdSense ein.
 
-## Newsletter
+## Schriftarten
 
-### Newsletterdaten
-
-[Nur einfügen, falls ein Newsletter tatsächlich versendet wird, und an das eingesetzte Tool anpassen, z. B.: „Wenn Sie sich für unseren Newsletter anmelden, verwenden wir das sogenannte Double-Opt-in-Verfahren: Nach Ihrer Anmeldung erhalten Sie eine Bestätigungs-E-Mail, mit der Sie Ihre Anmeldung bestätigen müssen. Für den Versand nutzen wir [Anbieter, z. B. Mailchimp/Brevo], [Anschrift des Anbieters]. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO. Sie können den Newsletter jederzeit über den Abmeldelink in jeder E-Mail oder per Nachricht an munichbusinesssociety@gmail.com abbestellen."]
-
-## Plugins und Tools
-
-### Google Web Fonts
-
-[Prüfen: Werden Fraunces und DM Sans (siehe \`MBS_Design_System.md\`) über Googles Server oder lokal auf dem eigenen Server eingebunden? Lokal eingebunden (empfohlen) → keine gesonderte Angabe nötig, diesen Absatz streichen. Extern von Google geladen → eigenen Absatz mit übertragenen Daten (IP-Adresse) und Rechtsgrundlage ergänzen.]
-
-### Adobe Fonts
-
-[Nur einfügen, falls Adobe Fonts tatsächlich lizenziert und eingebunden wird. Aktuell nicht vorgesehen, streichen.]
-
-### Adobe-Stock-Lizenzen
-
-[Nur einfügen, falls Bildmaterial über Adobe Stock lizenziert wird, hier den Lizenztyp und ggf. Bildnachweise dokumentieren. Getrennt zu behandeln von der KI-Kennzeichnung aus Abschnitt 5: eine Stock-Lizenz regelt Nutzungsrechte, keine KI-Herkunftskennzeichnung.]
-
-### Pixabay-Lizenzen
-
-[Nur einfügen, falls Bildmaterial über Pixabay bezogen wird, Lizenztyp und Bildnachweise dokumentieren. Auch hier gilt: getrennt von Abschnitt 5 zu behandeln.]
-
-### Google Maps
-
-[Nur einfügen, falls eine Google-Maps-Karte eingebettet wird, z. B. für Event-Locations oder eine Kontaktseite. Bei Einbettung werden beim Laden der Karte Daten an Google in die USA übertragen. Dafür ist regelmäßig eine Einwilligung über ein Consent-Tool nötig (2-Klick-Lösung oder Cookie-Banner). Aktuell laut Website-Copy nicht vorgesehen („Where you'll find us: We meet across Munich rather than on one campus, venues are listed with each event"), streichen, solange keine Karte eingebettet wird.]
-
-### Google reCAPTCHA
-
-[Nur einfügen, falls das Kontakt- oder Mitgliedschaftsformular reCAPTCHA zum Spam-Schutz nutzt. Falls ja: Zweck, übertragene Daten und Rechtsgrundlage (Art. 6 Abs. 1 lit. f DSGVO, berechtigtes Interesse am Schutz vor Missbrauch) ergänzen. Aktuell nicht bestätigt. Vorstand sollte das mit der technischen Umsetzung klären.]
-
-## Eigene Dienste
-
-### Umgang mit Bewerbungsdaten für ehrenamtliche Rollen
-
-[Hinweis zur Einordnung: Der Referenz-Aufbau spricht von „Bewerberdaten" im arbeitsrechtlichen Sinn (§ 26 BDSG, bezahlte Anstellung). Munich Business Society-Rollen, Vorstand, Team, Campus Representative (vgl. \`MBS_Website_Copy_EN.md\`, „Take a role" / „Represent your university"), sind ehrenamtlich, kein Beschäftigungsverhältnis. § 26 BDSG passt daher nicht direkt; die Verarbeitung stützt sich stattdessen auf Art. 6 Abs. 1 lit. b DSGVO (vorvertragliches Verhältnis zur Begründung der ehrenamtlichen Tätigkeit) bzw. lit. f (berechtigtes Interesse an einer geordneten Rollenbesetzung). Inhaltlich unten trotzdem nach demselben Muster wie beim Referenz-Aufbau gegliedert, da die Fragen (Umfang, Aufbewahrung, Pool) dieselben sind.]
-
-### Umfang und Zweck der Datenerhebung
-
-Wenn Sie sich bei uns um eine ehrenamtliche Rolle bewerben (z. B. Vorstand, Teamrolle, Campus Representative), verarbeiten wir die von Ihnen mitgeteilten Daten (Name, Kontaktdaten, Hochschule, Motivation, ggf. Lebenslauf) ausschließlich zum Zweck der Auswahlentscheidung. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO analog bzw. Art. 6 Abs. 1 lit. f DSGVO.
-
-### Aufbewahrungsdauer der Daten
-
-[Zu entscheiden: Munich Business Society sollte eine Löschfrist für nicht erfolgreiche Bewerbungen um ehrenamtliche Rollen festlegen, z. B. „Bei Nichtberücksichtigung löschen wir Ihre Bewerbungsunterlagen spätestens [X] Monate nach Abschluss des Auswahlverfahrens."]
-
-### Aufnahme in den Kandidat:innen-Pool
-
-[Nur einfügen, falls Munich Business Society Bewerbungen für künftige Rollen aktiv vorhält, z. B.: „Mit Ihrer ausdrücklichen Einwilligung nehmen wir Ihre Unterlagen für [X] Monate in unseren Pool für künftige ehrenamtliche Rollen auf. Diese Einwilligung können Sie jederzeit widerrufen."]
+Die auf dieser Website verwendeten Schriftarten werden lokal von unserem eigenen Webspace geladen. Beim Aufruf der Seite wird keine Verbindung zu Servern von Google oder anderen Schriftanbietern hergestellt.
 
 ## Disclaimer
 
-[Einordnung: munichbfc.de führt hier vermutlich einen Anlage-/Finanzberatungs-Disclaimer, weil der Verein sich als "Business & Finance Club" positioniert und entsprechende Inhalte veröffentlicht. Für Munich Business Society als cross-universitäres Networking- und Event-Format (Speaker Nights, Case Workshops, Company Visits, vgl. \`MBS_Website_Copy_EN.md\`) ist ein wortgleicher Anlage-Disclaimer nicht einschlägig, ein allgemeiner Inhalts-Disclaimer aber sinnvoll, sobald Gastredner:innen aus Finance/Consulting auftreten. Vorschlag, vom Vorstand freizugeben:]
-
-Die auf dieser Website sowie im Rahmen von Veranstaltungen von Munich Business Society e.V. bereitgestellten Inhalte, einschließlich der Beiträge externer Gastredner:innen bei Guest-Speaker-Formaten, Case Nights und Firmenbesuchen, dienen ausschließlich der Information und dem Erfahrungsaustausch. Sie stellen keine rechtliche, steuerliche, finanzielle oder sonstige professionelle Beratung dar und begründen keinen Anspruch auf bestimmte Ergebnisse, insbesondere nicht auf eine Anstellung, ein Praktikum oder einen sonstigen wirtschaftlichen Erfolg. Meinungsäußerungen von Gastredner:innen und Partnerunternehmen geben deren eigene Auffassung wieder und nicht notwendigerweise die des Vereins.
+Die auf dieser Website sowie im Rahmen von Veranstaltungen von Munich Business Society e.V. bereitgestellten Inhalte, einschließlich der Beiträge externer Gastredner:innen bei Guest-Speaker-Formaten und Case Nights, dienen ausschließlich der Information und dem Erfahrungsaustausch. Sie stellen keine rechtliche, steuerliche, finanzielle oder sonstige professionelle Beratung dar und begründen keinen Anspruch auf bestimmte Ergebnisse, insbesondere nicht auf eine Anstellung, ein Praktikum oder einen sonstigen wirtschaftlichen Erfolg. Meinungsäußerungen von Gastredner:innen und Partnerunternehmen geben deren eigene Auffassung wieder und nicht notwendigerweise die des Vereins.
 `;
 
 window.MBS_CONTENT = {
